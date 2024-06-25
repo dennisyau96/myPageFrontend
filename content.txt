@@ -1,0 +1,8 @@
+1. color picker
+2. comment/blog(add comment card)
+3. authenication
+4. map
+5. resume display
+6. certificate display
+7. switch display
+8. switch color theme

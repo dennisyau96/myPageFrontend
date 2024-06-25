@@ -1,0 +1,106 @@
+.certDiv {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 10px;
+}
+
+.prevBtn {
+  cursor: pointer;
+  height: 100%;
+  width: 5vw;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 40px;
+  font-size: 30px;
+  padding: 3px;
+}
+
+.prevBtn:hover {
+  cursor: pointer;
+  border: solid grey 1px;
+  height: 100%;
+  width: 30vw;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 60px;
+  background-color: rgb(46, 45, 45);
+  transition: 300ms;
+  font-size: 40px;
+  color: #dc6c22;
+  padding: 3px;
+}
+
+.certMidDiv {
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  height: 100%;
+  /* width: 80vw; */
+  /* max-width: 1000px; */
+  color: black;
+  transition: 200ms;
+}
+.certMidDiv:hover {
+  text-align: center;
+  cursor: pointer;
+  height: 100%;
+  background-color: rgb(244, 159, 102);
+  transition: 200ms;
+  font-size: 25px;
+  color: white;
+}
+
+.cert {
+  height: auto;
+  width: auto;
+  margin: 0;
+}
+.pdf {
+  width: auto;
+  height: auto;
+  max-width: 70vw;
+  margin: 0;
+}
+
+.caption {
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 70vw;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.nextBtn {
+  cursor: pointer;
+  height: 100%;
+  width: 5vw;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 40px;
+  font-size: 30px;
+  padding: 3px;
+}
+
+.nextBtn:hover {
+  cursor: pointer;
+  border: solid grey 1px;
+  height: 100%;
+  width: 30vw;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 60px;
+  background-color: rgb(46, 45, 45);
+  transition: 300ms;
+  font-size: 40px;
+  color: #dc6c22;
+  padding: 3px;
+}

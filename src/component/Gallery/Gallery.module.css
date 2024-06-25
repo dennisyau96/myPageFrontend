@@ -1,0 +1,95 @@
+.albumDiv {
+  display: flex;
+  justify-content: flex-start;
+  width: ;
+  max-width: 50vw;
+  height: 100vh;
+}
+
+.prevBtn {
+  display: inline-block;
+  cursor: pointer;
+  border: solid grey 1px;
+  height: 100%;
+  width: 35px;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+}
+.prevBtn:hover {
+  display: inline-block;
+  cursor: pointer;
+  border: solid grey 1px;
+  height: 100%;
+  width: 50px;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(46, 45, 45);
+  transition: 300ms;
+  font-size: 40px;
+  color: #dc6c22;
+}
+
+.midDiv {
+  height: 100%;
+  width: auto;
+}
+
+.photo {
+  border: solid grey 1px;
+  width: auto;
+  height: 100%;
+  /* max-width: 1700px; */
+}
+.photo:hover {
+  border: solid grey 1px;
+  transition: 300ms;
+  width: auto;
+  height: 100%;
+  max-width: 1700px;
+}
+.nextBtn {
+  display: inline-block;
+  cursor: pointer;
+  border: solid grey 1px;
+  height: 100vh;
+  width: 35px;
+
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  /* max-width: 10vw; */
+}
+
+.nextBtn:hover {
+  display: inline-block;
+  cursor: pointer;
+  border: solid grey 1px;
+  height: 100vh;
+  width: 50px;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(46, 45, 45);
+  transition: 300ms;
+  font-size: 40px;
+  color: #dc6c22;
+  /* max-width: 20vw; */
+}
+
+.QRimg {
+  width: 200px;
+  height: auto;
+  max-width: 200px;
+}
+
+.QRFrame {
+  padding: 20px;
+  display: inline-block;
+  border: solid black;
+  margin: 20px;
+  border-radius: 10px;
+}

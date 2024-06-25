@@ -1,0 +1,39 @@
+.navBar {
+  justify-items: right;
+  text-align: right;
+}
+
+.navLink {
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2vh;
+  text-transform: uppercase;
+  font-family: monospace;
+  cursor: pointer;
+  display: inline-flex;
+  transition-duration: 0.2s;
+}
+
+.navLink:visited {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2vh;
+  padding: 10px;
+  text-transform: uppercase;
+  font-family: monospace;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+.navLink:hover {
+  transition-property: all;
+  transition-duration: 0.2s;
+  padding: 1.6vw;
+  text-decoration: none;
+  color: #dc6c22;
+  font-size: 1.5vh;
+  text-transform: uppercase;
+  font-family: monospace;
+  cursor: pointer;
+}
