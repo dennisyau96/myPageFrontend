@@ -12,7 +12,10 @@ function Education() {
   }, []);
 
   async function loadData() {
-    const eduData = await axios.get("http://localhost:3000/api/education");
+    const eduData = await axios.get([
+      "http://localhost:3000/api/education",
+      // "https://mypagebackend-eg0j.onrender.com/api/education",
+    ]);
     setEducation(eduData.data);
   }
 

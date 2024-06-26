@@ -10,7 +10,10 @@ function Skills() {
   }, []);
 
   async function loadData() {
-    const skillRes = await axios.get("http://localhost:3000/api/skills");
+    const skillRes = await axios.get([
+      "http://localhost:3000/api/skills",
+      // "https://mypagebackend-eg0j.onrender.com/api/skills",
+    ]);
     setSkills(skillRes.data);
   }
 

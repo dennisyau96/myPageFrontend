@@ -11,7 +11,10 @@ export default function Experience() {
   }, []);
 
   async function getData() {
-    const expData = await axios.get("http://localhost:3000/api/experience");
+    const expData = await axios.get([
+      "http://localhost:3000/api/experience",
+      // "https://mypagebackend-eg0j.onrender.com/api/experience",
+    ]);
     setExperience(expData.data);
   }
 
