@@ -14,6 +14,8 @@ import Skills from "./component/Skills/Skills";
 import ErrorPage from "./component/ErrorPage/ErrorPage";
 import Certificate from "./component/Certificate/Certificate";
 import About from "./component/About/About";
+import axios from "axios";
+axios.defaults.auth = true;
 
 function App() {
   return (

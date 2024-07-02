@@ -6,3 +6,7 @@
 6. certificate display
 7. switch display
 8. switch color theme
+//must have
+9. seperate remarks in skills
+10. fix number guessing
+11. styling
