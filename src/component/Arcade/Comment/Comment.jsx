@@ -61,12 +61,15 @@ function Comment() {
 
   async function leaveComment(e) {
     e.preventDefault();
-    const data = await axios.post("http://localhost:3000/api/leave-comment", {
-      person: person,
-      organization: organization,
-      comment: comment,
-      rating: rating,
-    });
+    const data = await axios.post(
+      "https://mypagebackend-n0m8.onrender.com/api/leave-comment",
+      {
+        person: person,
+        organization: organization,
+        comment: comment,
+        rating: rating,
+      }
+    );
 
     if (person != "" && comment != "" && rating != null) {
       toast.success(`${data.data}`);
