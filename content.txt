@@ -10,3 +10,4 @@
 9. seperate remarks in skills
 10. fix number guessing
 11. styling
+12. clock background when click
