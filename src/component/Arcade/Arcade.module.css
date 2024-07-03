@@ -423,6 +423,17 @@ input {
   box-shadow: grey 5px 5px;
 }
 
+.numberGuessingHint {
+  background-color: rgb(152, 236, 8);
+}
+
+.numberGuessingHint:hover {
+  background-color: rgb(84, 130, 4);
+  transition: all;
+  animation-duration: 300ms;
+  color: white;
+}
+
 /*----------------------------------Counter----------------------------------*/
 .counterDiv {
   border: solid black;

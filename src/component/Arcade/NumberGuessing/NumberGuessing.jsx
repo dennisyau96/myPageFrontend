@@ -10,19 +10,9 @@ export default function NumberGuessing() {
   const [ended, setEnded] = useState(false);
   const [exploded, setExploded] = useState(false);
   const [upRange, setUpRange] = useState(50);
-  const [downRange, setdownRange] = useState(1);
+  const [downRange, setDownRange] = useState(1);
   const [lifeDsp, setLifeDsp] = useState("❤️ ❤️ ❤️ ❤️ ❤️");
 
-  // const [countDown, setCountDown] = useState(60);
-
-  // var lifeDisplay = [
-  //   "❤️",
-  //   "❤️",
-  //   "❤️",
-  //   "❤️",
-  //   "❤️",
-
-  // ];
   useEffect(() => {
     setAnswer(Math.floor(Math.random() * 50) + 1);
     if (answer >= 50) {
@@ -30,58 +20,37 @@ export default function NumberGuessing() {
     } else if (answer <= 1) {
       setAnswer(2);
     }
-  }, []);
 
-  // setInterval(updateCountDown, 1000);
-  // function updateCountDown() {
-  //   setCountDown((c) => c - 1);
-  // }
+    if (lifeCount < 1) {
+      setExploded(true);
+      toast.error("Wrong guess... ❤️-1.Boom!!!!");
+      return setAttempt("");
+    }
+  }, []);
 
   //function guess
 
-  function guess(e) {
-    // if (attempt == answer) {
-    //   setSafe(true);
-    //   setEnded(true);
-    //   toast.success("Congratulation!");
-    // } else {
-    //   if (attempt > upRange || attempt < downRange) {
-    //     return toast.error(
-    //       `Please guess a number within ${downRange} and ${upRange}`
-    //     );
-    //   } else {
-    //     if (attempt > answer) {
-    //       setUpRange(attempt);
-    //     } else if (attempt < answer) {
-    //       setdownRange(attempt);
-    //     }
-    //     setAttempt("");
-    //     setLifeCount((l) => l - 1);
-    //     dspLife(lifeCount);
-    //     toast.error("Wrong guess, ❤️-1 ");
-    //     if (lifeCount <= 1) {
-    //       setExploded(true);
-    //       setEnded(true);
-    //     }
-    //   }
-    // if (attempt > upRange || attempt < downRange) {
-    //   return toast.error(
-    //     `Please guess a number within ${downRange} and ${upRange}.`
-    //   );
-    // } else {
-    // }
-    e.preventDefault();
+  function guess() {
+    // e.preventDefault();
+
+    //case 1: null input
+    if (attempt == "" || attempt == null) {
+      return toast.error("Please Enter a Value.");
+    }
+    //handling for non integer inout
+    if (attempt / 1 != attempt) {
+      setAttempt("");
+      return toast.error("Please Enter a Valid Value.");
+    }
+
+    //case 2: no life left
     if (lifeCount <= 0) {
       setExploded(true);
       setEnded(true);
       setAttempt("");
     }
 
-    if (attempt == "" || attempt == null) {
-      return toast.error("Please Enter a Value.");
-    }
-
-    //case 1 --- life > 0
+    //case 3: life > 0
     if (lifeCount > 0) {
       //case 1c --- correct
       if (attempt == answer) {
@@ -91,20 +60,23 @@ export default function NumberGuessing() {
         toast.success("Congratulation!");
         return;
       }
-      //case 1a --- attempt out of range
+      //case 3a --- attempt out of range
       if (attempt <= downRange || attempt >= upRange) {
         setAttempt("");
+
         toast.error(
           `Please Enter a Value between ${downRange} to ${upRange}(inclusive). `
         );
+        setUpRange(upRange);
+        setDownRange(downRange);
       }
-      //---case 1b---in range
+      //---case 3b---in range
       else {
-        //case 1b1 --- attempt to be down range(wrong)
-        if (attempt < answer) {
-          setdownRange(attempt);
+        //case 3b1 --- attempt to be down range(wrong)
+        if (attempt < answer && attempt > downRange) {
+          setDownRange(attempt);
           setLifeCount((l) => l - 1);
-          if (lifeCount < 1) {
+          if (lifeCount == 0) {
             setExploded(true);
             toast.error("Wrong guess... ❤️-1.Boom!!!!");
             return setAttempt("");
@@ -113,8 +85,8 @@ export default function NumberGuessing() {
           toast.error("Wrong guess... ❤️-1.");
           setAttempt("");
         }
-        //case 1b2 --- attempt to be up range(wrong)
-        if (attempt > answer) {
+        //case 3b2 --- attempt to be up range(wrong)
+        if (attempt > answer && attempt < upRange) {
           setUpRange(attempt);
           setLifeCount((l) => l - 1);
           if (lifeCount < 1) {
@@ -127,6 +99,7 @@ export default function NumberGuessing() {
           setAttempt("");
         }
       }
+
       return;
     }
   }
@@ -144,7 +117,7 @@ export default function NumberGuessing() {
     toast.success("Game restarted, secret code regenerated.");
     setAttempt("");
     setUpRange(50);
-    setdownRange(1);
+    setDownRange(1);
     setExploded(false);
     setSafe(false);
     setLifeCount(5);
@@ -165,9 +138,16 @@ export default function NumberGuessing() {
         {!exploded ? "Don't explode!" : "Exploded"}
       </p>
       <p>{lifeDsp}</p>
+      {/* testing display */}
       <p>
-        {answer}| {lifeCount}
+        ans:{answer}| life:{lifeCount}
+        <br></br>
+        Down:{downRange}
+        <br></br>
+        Up:{upRange}
       </p>
+
+      {/* testing display */}
       {!ended ? (
         <div className={styles.numberGuessingDiv}>
           <p className={styles.boomLifeCountMessage}>
@@ -175,9 +155,13 @@ export default function NumberGuessing() {
             {lifeCount} more times.
           </p>
           <div className={styles.numGuessHint}>
-            Hint: choose the number between {downRange}-{upRange}(inclusive).
+            Hint: choose the number between{" "}
+            <span className={styles.numberGuessingHint}>
+              {downRange}-{upRange}(inclusive)
+            </span>
+            .
           </div>
-          <div className="input-group" z-index="0">
+          <div className="input-group">
             <input
               value={attempt}
               onChange={(e) => setAttempt(e.target.value)}
@@ -185,7 +169,9 @@ export default function NumberGuessing() {
             ></input>
             <button
               className={(styles.guessBtn, "input-group-text")}
-              onClick={(e) => guess(e)}
+              onClick={(e) => {
+                guess(e);
+              }}
             >
               Make a Guess
             </button>
