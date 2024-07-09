@@ -20,7 +20,7 @@ function Skills() {
   return (
     <>
       <h1>Skills</h1>
-      <div>
+      <div className="flex flex-wrap">
         {skills.map((skill, index) => (
           <div key={index}>
             <SkillCard content={skill} />

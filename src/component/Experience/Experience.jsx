@@ -21,7 +21,7 @@ export default function Experience() {
   return (
     <>
       <h1> Experience </h1>
-      <div>
+      <div className="flex flex-wrap">
         {experience.map((exp, index) => (
           <div key={index}>
             <ExperienceCard content={exp} />

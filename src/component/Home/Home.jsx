@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import styles from "./Home.module.css";
+// import styles from "./Home.module.css";
 //import Arcade game
 import DigitalClock from "../Arcade/DigitalClock/DigitalClock";
 import Comment from "../Arcade/Comment/Comment";
@@ -28,7 +28,7 @@ function Home() {
       </div>
       <div>
         <button
-          className={("btn", styles.commentBtn)}
+          className={"btn"}
           data-bs-toggle="modal"
           data-bs-target="#commentModal"
         >
@@ -48,13 +48,18 @@ function Home() {
         </div>
       </div>
 
-      <div className={styles.arcadeDiv}>
+      <div className={""}>
         <div>Let have some fun!</div>
-        <DigitalClock />
-        {/* <Comment /> */}
-        <DiceRoller />
-        <NumberGuessing />
-        <Counter />
+        <div className="grid grid-cols-12 gap-4">
+          <DigitalClock className="col-span-3" />
+          {/* <Comment /> */}
+          <DiceRoller className="col-span-3" />
+          <NumberGuessing className="col-span-3" />
+        </div>
+        <div className="grid">
+          <Counter className="col-span-3" />
+        </div>
+
         {/* <CardShuffle /> */}
       </div>
     </>
