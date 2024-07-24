@@ -15,7 +15,9 @@ function Education() {
     const eduData = await axios.get([
       "https://mypagebackend-n0m8.onrender.com/api/education",
     ]);
-    setEducation(eduData.data);
+
+    setEducation((prev) => eduData.data);
+    setEducation((education) => education.sort((a, b) => b.sort - a.sort));
   }
 
   // const PrimaySchool = {
@@ -53,20 +55,13 @@ function Education() {
     <>
       <h1> Education </h1>
 
-      <div className={styles.educationDiv}>
+      <div className=" flex flex-wrap m-10 ">
         {education.map((edu, index) => (
           <div key={index}>
             <EducationCard content={edu} />
           </div>
         ))}
       </div>
-
-      {/* <div id="educationDiv" className={styles.educationDiv}>
-        <EducationCard content={primary} />
-        <EducationCard content={secondary} />
-        <EducationCard content={university} />
-        <EducationCard content={pdd} />
-      </div> */}
     </>
   );
 }

@@ -1,11 +1,11 @@
-.headerDiv {
+/* .headerDiv {
   background-color: #000000;
   margin: 0;
   padding: 0;
   top: 0;
   position: sticky;
   width: 100vw;
-}
+} */
 .header {
   /* color: #ffffff; */
   display: inline-block;

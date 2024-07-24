@@ -45,7 +45,80 @@ export default function Gallery() {
 
   return (
     <>
-      <h1>Gallery</h1>
+      {/*carousel */}
+      <div
+        id="carouselExampleAutoplaying"
+        className="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img src="..." className="d-block w-100" alt="..." />
+          </div>
+          <div className="carousel-item">
+            <img src="..." className="d-block w-100" alt="..." />
+          </div>
+          <div className="carousel-item">
+            <img src="..." className="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev"
+        >
+          <span
+            className="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next"
+        >
+          <span
+            className="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div>
+      {/*carousel */}
+
+      <div>
+        Want to see more photo?
+        <br />
+        <br />
+        Please visit{" "}
+        <Link
+          to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
+          target="blank"
+        >
+          den.y_photography@Instagram
+        </Link>
+        <br />
+        <br />
+        Like, Share and Follow will be appreciated!
+        <Link
+          to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
+          target="blank"
+        >
+          <br />
+          <div className={styles.QRFrame}>
+            <img className={styles.QRimg} alt="QR" src={QR}></img>
+          </div>
+        </Link>
+      </div>
+    </>
+  );
+}
+
+{
+  /* <h1>Gallery</h1>
 
       <p>
         I am a photography hobbist, who love taking landscape, cityscape and
@@ -54,11 +127,9 @@ export default function Gallery() {
       <p>Below are some of my favourite photo taken in recent years.</p>
 
       <div id="albumDiv" className={styles.albumDiv}>
-        {/*  prev Btn */}
         <div id="nextBtn" className={styles.nextBtn} onClick={prevPhoto}>
           &lt;
         </div>
-        {/* middle div */}
         <div className={styles.midDiv}>
           <img
             src={photos[index].pic}
@@ -66,7 +137,6 @@ export default function Gallery() {
             alt="photo"
           ></img>
         </div>
-        {/* next btn */}
 
         <div id="prevBtn" className={styles.prevBtn} onClick={nextPhoto}>
           &gt;
@@ -96,7 +166,5 @@ export default function Gallery() {
             <img className={styles.QRimg} alt="QR" src={QR}></img>
           </div>
         </Link>
-      </div>
-    </>
-  );
+      </div>*/
 }
