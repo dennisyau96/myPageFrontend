@@ -1,6 +1,6 @@
 import styles from "./Gallery.module.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import QR from "./photo/QR.jpg";
 import pic1 from "./photo/pic1.jpg";
 import pic2 from "./photo/pic2.jpg";
@@ -26,7 +26,7 @@ export default function Gallery() {
   ];
 
   const [index, setIndex] = useState(0);
-  const [photos, setPhotos] = useState([...photosSrc]);
+  const [photos, setPhotos] = useState([]);
 
   function nextPhoto() {
     if (index >= photos.length - 1) {
@@ -43,66 +43,70 @@ export default function Gallery() {
     }
   }
 
+  useEffect(() => {
+    setPhotos((prev) => photosSrc);
+  }, []);
+
   return (
     <>
+      <h1 className="font-bold text-3xl my-4">My Photography Journey</h1>
       {/*carousel */}
       <div
         id="carouselExampleAutoplaying"
-        className="carousel slide"
+        className="carousel slide z-1 max-w-96 "
         data-bs-ride="carousel"
       >
-        <div className="carousel-inner">
+        <div className="carousel-inner z-1 w-full">
           <div className="carousel-item active">
-            <img src="..." className="d-block w-100" alt="..." />
-          </div>
-          <div className="carousel-item">
-            <img src="..." className="d-block w-100" alt="..." />
-          </div>
-          <div className="carousel-item">
-            <img src="..." className="d-block w-100" alt="..." />
+            <img
+              src={photosSrc[index].pic}
+              className="d-block w-full"
+              alt="0"
+            />
           </div>
         </div>
+
         <button
-          className="carousel-control-prev"
+          className="carousel-control-prev bg-slate-300 z-1"
           type="button"
           data-bs-target="#carouselExampleAutoplaying"
           data-bs-slide="prev"
+          onClick={prevPhoto}
         >
           <span
-            className="carousel-control-prev-icon"
+            className="carousel-control-prev-icon bg-slate-800 z-1"
             aria-hidden="true"
           ></span>
-          <span className="visually-hidden">Previous</span>
+          <span className="visually-hidden z-0">Previous</span>
         </button>
+
         <button
-          className="carousel-control-next"
+          className="carousel-control-next bg-slate-300 z-1"
           type="button"
           data-bs-target="#carouselExampleAutoplaying"
           data-bs-slide="next"
+          onClick={nextPhoto}
         >
           <span
-            className="carousel-control-next-icon"
+            className="carousel-control-next-icon bg-slate-800 z-1"
             aria-hidden="true"
           ></span>
-          <span className="visually-hidden">Next</span>
+          <span className="visually-hidden z-0">Next</span>
         </button>
       </div>
       {/*carousel */}
 
       <div>
         Want to see more photo?
-        <br />
-        <br />
-        Please visit{" "}
+        <br /> Please visit{" "}
         <Link
+          className="hover:font-bold underline"
           to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
           target="blank"
         >
           den.y_photography@Instagram
         </Link>
-        <br />
-        <br />
-        Like, Share and Follow will be appreciated!
+        <div>Like, Share and Follow will be appreciated!</div>
         <Link
           to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
           target="blank"
@@ -120,11 +124,7 @@ export default function Gallery() {
 {
   /* <h1>Gallery</h1>
 
-      <p>
-        I am a photography hobbist, who love taking landscape, cityscape and
-        street photo.
-      </p>
-      <p>Below are some of my favourite photo taken in recent years.</p>
+     
 
       <div id="albumDiv" className={styles.albumDiv}>
         <div id="nextBtn" className={styles.nextBtn} onClick={prevPhoto}>
@@ -143,28 +143,6 @@ export default function Gallery() {
         </div>
       </div>
 
-      <div>
-        Want to see more photo?
-        <br />
-        <br />
-        Please visit{" "}
-        <Link
-          to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
-          target="blank"
-        >
-          den.y_photography@Instagram
-        </Link>
-        <br />
-        <br />
-        Like, Share and Follow will be appreciated!
-        <Link
-          to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
-          target="blank"
-        >
-          <br />
-          <div className={styles.QRFrame}>
-            <img className={styles.QRimg} alt="QR" src={QR}></img>
-          </div>
-        </Link>
-      </div>*/
+      
+*/
 }

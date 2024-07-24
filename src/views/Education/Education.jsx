@@ -53,7 +53,7 @@ function Education() {
 
   return (
     <>
-      <h1> Education </h1>
+      <h1 className="font-bold text-3xl my-4"> Education </h1>
 
       <div className=" flex flex-wrap m-10 ">
         {education.map((edu, index) => (

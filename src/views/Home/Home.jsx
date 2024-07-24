@@ -14,7 +14,7 @@ function Home() {
   // const [deckUrl, setDeckUrl] = useState("../Arcade/CardShuffle/img");
   return (
     <div>
-      <h1 className="font-bold text-2xl mb-2"> Ming Leuk YAU,Dennis</h1>
+      <h1 className="font-bold text-3xl my-4"> Ming Leuk YAU,Dennis</h1>
       <p className="font-bold">Full Time Student(graduate in August 2024)</p>
 
       <div className="w-60 h-60 bg-slate-400 inline-block m-4">
@@ -46,7 +46,7 @@ function Home() {
               <button
                 className="btn-close"
                 aria-label="close"
-                data-bs-dismiss="alert"
+                data-bs-dismiss="modal"
               />
               <Comment />
             </div>

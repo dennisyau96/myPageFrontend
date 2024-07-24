@@ -6,7 +6,7 @@ function Header() {
     <>
       <div
         id="headerDiv"
-        className="sticky inset-x-0 top-0 bg-black shadow-lg bg-image z-1000 "
+        className="sticky inset-x-0 top-0 bg-black shadow-lg bg-image z-10000 "
       >
         <header id="header" className="inline-block m-0">
           <p id="headerName" className="text-white p-4 text-2xl">
