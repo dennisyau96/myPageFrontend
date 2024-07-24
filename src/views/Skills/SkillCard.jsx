@@ -11,17 +11,17 @@ function SkillCard({ content }) {
           {content.skill}
         </p>
       ) : null}
-      {content.since ? (
+      {/* {content.since ? (
         <p>
           <span className={styles.label}>Since: </span>
           {content.since}
         </p>
-      ) : null}
+      ) : null} */}
       {content.remark ? (
         <p>
           <span className={styles.label}>Remark: </span>
           <br />
-          {content.remark}
+          {/* {content.remark} */}
         </p>
       ) : null}
     </div>

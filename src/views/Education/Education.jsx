@@ -20,37 +20,6 @@ function Education() {
     setEducation((education) => education.sort((a, b) => b.sort - a.sort));
   }
 
-  // const PrimaySchool = {
-  //   name: "Po Leung Kuk Horizon East Primary School",
-  //   year: "2003-2009",
-  //   achievement: "Primary 1 - Primary 6",
-  //   img: "",
-  // };
-
-  // const SecondarySchool = {
-  //   name: "Po Leung Kuk Centenery Li Shiu Chung Memorial College ",
-  //   year: "2009-2015",
-  //   achievement: "Secondary 1 - Secondary 6",
-  //   img: "",
-  // };
-
-  // const University = {
-  //   name: "The Chinese University of Hong Kong",
-  //   year: "2015-2019",
-  //   achievement: "Bachelor of Sciences(Biology)",
-  //   img: "",
-  // };
-
-  // const PDDICT = {
-  //   name: "Douglas College",
-  //   year: "2023-2024",
-  //   achievement: "Post-Degree Diploma of Information, Communication Technology",
-  // };
-  // const primary = education[0];
-  // const secondary = education[1];
-  // const university = education[2];
-  // const pdd = education[3];
-
   return (
     <>
       <h1 className="font-bold text-3xl my-4"> Education </h1>

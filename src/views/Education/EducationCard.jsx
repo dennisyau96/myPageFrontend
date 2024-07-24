@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import styles from "./Education.module.css";
 import { Link, NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -22,7 +23,7 @@ function EducationCard({ content }) {
 
         <ul className="list-group list-group-flush z-0 flex flex-wrap">
           {content.title && (
-            <li className="list-group-item z-0">
+            <li className="list-group-item z-0 font-bold text-xl">
               <span className={styles.label}>{content.title}</span>
             </li>
           )}
@@ -30,7 +31,7 @@ function EducationCard({ content }) {
           {content.ranking ? (
             <li className="list-group-item z-0">
               <span className={styles.label}>
-                Times Higher Education Ranking:
+                Times World Higher Education Ranking:
                 <br />
               </span>
               <span>{content.ranking}</span>
@@ -81,6 +82,12 @@ function EducationCard({ content }) {
             target="_blank"
             to={content.website}
             className="bg-slate-100 p-2 my-6"
+            onClick={() => {
+              const ctr = confirm("You will be redirected to another website");
+              if (!ctr) {
+                navigate(0);
+              }
+            }}
           >
             Webpage
           </Link>

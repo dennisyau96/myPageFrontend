@@ -12,6 +12,9 @@ import CardShuffle from "../../component/Arcade/CardShuffle/CardShuffle";
 //please add one photo to each phrase
 function Home() {
   // const [deckUrl, setDeckUrl] = useState("../Arcade/CardShuffle/img");
+
+  useEffect(() => {}, []);
+
   return (
     <div>
       <h1 className="font-bold text-3xl my-4"> Ming Leuk YAU,Dennis</h1>

@@ -15,6 +15,7 @@ import ErrorPage from "./views/ErrorPage/ErrorPage";
 import Certificate from "./views/Certificate/Certificate";
 import About from "./views/About/About";
 import axios from "axios";
+import Maintenance from "./views/ErrorPage/Maintenance";
 axios.defaults.auth = true;
 
 function App() {
@@ -29,10 +30,11 @@ function App() {
             <Route path="/education" element={<Education />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/gallery" element={<Gallery />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/projects" element={<Maintenance />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/certificates" element={<Certificate />} />
             <Route path="/about" element={<About />} />
+
             <Route path="*" element={<ErrorPage />} />
           </Route>
         </Routes>
