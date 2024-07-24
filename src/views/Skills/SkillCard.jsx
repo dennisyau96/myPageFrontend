@@ -1,5 +1,8 @@
 import styles from "./Skill.module.css";
+import { useState } from "react";
 function SkillCard({ content }) {
+  const [remark, setRemark] = useState(content.remark);
+  let remarkString = "";
   return (
     <div className={styles.skillCardDiv}>
       {content.skill ? (

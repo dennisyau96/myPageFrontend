@@ -5,8 +5,8 @@ function Header() {
   return (
     <>
       <div id="headerDiv" className={styles.headerDiv}>
-        <header id="header" className={styles.header}>
-          <p id="headerName" className={styles.headerName}>
+        <header id="header" className="inline-block m-0">
+          <p id="headerName" className="text-white p-4 text-2xl">
             Dennis Yau
           </p>
 

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 function About() {
   const javaSkills = [
     "variable",
@@ -61,6 +62,10 @@ function About() {
     "estate management",
     "college support",
   ];
+
+  const [studyContent, setStudyContent] = useState(
+    "Before coming to Canada, I decided to step into the Information Technology industry. Because I was a newbie to IT industry, I did some research on what to learn and which college or university I should apply. At last, I applied the Post-degree Diploma of Information, Communication Technology of Douglas College in Vancouver. This is a one-year program. I chose Douglas college because it is a renowned college with high education quality recognized by the British Columbia Quality Assurance program."
+  );
   return (
     <>
       <h1>About</h1>
@@ -73,14 +78,7 @@ function About() {
           </p>
           <p>
             <h4>Study</h4>
-            Before coming to Canada, I decided to step into the Information
-            Technology industry. Because I was a newbie to IT industry, I did
-            some research on what to learn and which college or university I
-            should apply. At last, I applied the Post-degree Diploma of
-            Information, Communication Technology of Douglas College in
-            Vancouver. This is a one-year program. I chose Douglas college
-            because it is a renowned college with high education quality
-            recognized by the British Columbia Quality Assurance program.
+            {studyContent}
           </p>
           <p>
             In the first semester, I start learning my first programming courses

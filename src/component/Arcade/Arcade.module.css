@@ -22,7 +22,6 @@ input {
   border: solid grey 2px;
   padding: 10px;
   justify-content: center;
-  align-self: flex-start;
   text-align: center;
   margin: 10px;
   border-radius: 5px;
@@ -33,7 +32,6 @@ input {
   border: solid rgb(232, 100, 39) 3px;
   padding: 10px;
   justify-content: center;
-  align-self: center;
   text-align: center;
   margin: 10px;
   border-radius: 5px;
@@ -48,7 +46,6 @@ input {
   border: solid grey 2px;
   padding: 10px;
   justify-content: center;
-  align-self: center;
   text-align: center;
   margin: 10px;
   border-radius: 5px;
@@ -62,7 +59,6 @@ input {
   border: solid rgb(232, 100, 39) 3px;
   padding: 10px;
   justify-content: center;
-  align-self: center;
   text-align: center;
   margin: 10px;
   border-radius: 5px;
@@ -72,19 +68,20 @@ input {
 .digitalClockDiv {
   border: solid black;
   padding: 20px;
+  min-width: 100px;
 }
 
 .dateDiv {
-  font-size: 20px;
+  font-size: 40px;
 }
 .timeDiv {
-  font-size: 30px;
+  font-size: 50px;
 }
 
 .clockTitle {
   /* background-color: black; */
   color: #ef5350;
-  font-size: 30px;
+  font-size: 50px;
 }
 /*----------------------------------Comment----------------------------------*/
 .commentDiv {
@@ -154,6 +151,7 @@ input {
 .diceRollerDiv {
   border: solid black;
   padding: 20px;
+  min-width: 400px;
 }
 .dice {
   border: solid white;
@@ -256,15 +254,15 @@ input {
 .diceCounterDiv {
   /* display: flex; */
   /* align-items: flex-start; */
-  height: 100%;
+  height: auto;
 }
 .diceCounterDiv:hover {
   /* display: flex; */
   /* align-items: flex-start; */
-  height: 120%;
+  height: auto;
 }
 .lessBtn {
-  height: 100%;
+  height: auto;
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
   font-size: 18px;
@@ -283,7 +281,7 @@ input {
   box-shadow: rgb(189, 186, 186) 3px 3px;
 }
 .moreBtn {
-  height: 100%;
+  height: auto;
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
   font-size: 18px;
@@ -350,6 +348,7 @@ input {
   align-items: center;
   align-content: center;
   max-width: 350px;
+  min-width: 300px;
 }
 .safeToGo {
   font-size: 35px;

@@ -1,13 +1,15 @@
 .navBar {
   justify-items: right;
   text-align: right;
+  height: 50px;
+  padding-right: 20px;
 }
 
 .navLink {
   padding: 5px;
   text-decoration: none;
   color: white;
-  font-size: 1.2vh;
+  font-size: 0.8rem;
   text-transform: uppercase;
   font-family: monospace;
   cursor: pointer;
@@ -18,7 +20,7 @@
 .navLink:visited {
   text-decoration: none;
   color: white;
-  font-size: 1.2vh;
+  font-size: 0.8rem;
   padding: 10px;
   text-transform: uppercase;
   font-family: monospace;
@@ -29,10 +31,10 @@
 .navLink:hover {
   transition-property: all;
   transition-duration: 0.2s;
-  padding: 1.6vw;
+  padding: 0.2rem;
   text-decoration: none;
   color: #dc6c22;
-  font-size: 1.5vh;
+  font-size: 1rem;
   text-transform: uppercase;
   font-family: monospace;
   cursor: pointer;

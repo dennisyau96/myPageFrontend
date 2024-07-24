@@ -53,7 +53,7 @@ function Education() {
     <>
       <h1> Education </h1>
 
-      <div className={(styles.educationDiv, "bg-slate-500 flex flex-wrap")}>
+      <div className={styles.educationDiv}>
         {education.map((edu, index) => (
           <div key={index}>
             <EducationCard content={edu} />

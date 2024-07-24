@@ -5,15 +5,15 @@ import { Toaster } from "react-hot-toast";
 
 //import component and page
 import Header from "./component/Header/Header";
-import Home from "./component/Home/Home";
-import Education from "./component/Education/Education";
-import Experience from "./component/Experience/Experience";
-import Gallery from "./component/Gallery/Gallery";
-import Projects from "./component/Projects/Projects";
-import Skills from "./component/Skills/Skills";
-import ErrorPage from "./component/ErrorPage/ErrorPage";
-import Certificate from "./component/Certificate/Certificate";
-import About from "./component/About/About";
+import Home from "./views/Home/Home";
+import Education from "./views/Education/Education";
+import Experience from "./views/Experience/Experience";
+import Gallery from "./views/Gallery/Gallery";
+import Projects from "./views/Projects/Projects";
+import Skills from "./views/Skills/Skills";
+import ErrorPage from "./views/ErrorPage/ErrorPage";
+import Certificate from "./views/Certificate/Certificate";
+import About from "./views/About/About";
 import axios from "axios";
 axios.defaults.auth = true;
 
@@ -28,7 +28,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="/education" element={<Education />} />
             <Route path="/experience" element={<Experience />} />
-            <Route path="/gallery" element={<Gallery />} />
+            {/* <Route path="/gallery" element={<Gallery />} /> */}
             <Route path="/projects" element={<Projects />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/certificates" element={<Certificate />} />

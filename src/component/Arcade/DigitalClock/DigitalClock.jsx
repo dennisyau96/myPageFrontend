@@ -78,7 +78,7 @@ function DigitalClock() {
     <div className={(styles.digitalClockDiv, styles.boxyWH)}>
       {/* <p className={styles.clockTitle}>The Time Now is</p> */}
       <div className={styles.dateDiv}>
-        {month} {date},{year}
+        {month.toUpperCase()} {date},{year}
       </div>
       <div className={styles.timeDiv}>
         {hour.toString() > 12 ? (hour - 12).toString().padStart(2, 0) : hour}:

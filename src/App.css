@@ -19,3 +19,36 @@ header {
 }
 
 /* @import "bootstrap/scss/bootstrap"; */
+
+/*for arcade card shuffle*/
+.card {
+  box-sizing: border-box;
+  background: white;
+  width: 222px;
+  height: 290px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.card:hover .remove-card {
+  background-color: lightgray;
+}
+
+.remove-card {
+  font-size: 1.15em;
+  border: dashed red;
+  outline: none;
+  /* visibility: hidden; */
+  color: #ef5350;
+  cursor: pointer;
+  margin: 0 0px 0 0;
+  padding: 0;
+  background: none;
+}
+
+.card div {
+  text-align: center;
+  padding: 1em;
+  margin-bottom: 1.5em;
+}
+/*end of for card shuffle*/
