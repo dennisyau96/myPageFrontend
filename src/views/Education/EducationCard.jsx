@@ -3,8 +3,18 @@ import styles from "./Education.module.css";
 import { Link, NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-function EducationCard({ content }) {
+function EducationCard({ content, index }) {
   const navigate = useNavigate();
+
+  function toggleCert(i) {
+    const certImgElement = document.getElementById("certImg" + i);
+    var certimgClass = certImgElement.classList;
+    if (certimgClass.contains("hidden")) {
+      certimgClass.remove("hidden");
+    } else {
+      certimgClass.add("hidden");
+    }
+  }
   return (
     <>
       <div
@@ -76,6 +86,15 @@ function EducationCard({ content }) {
             </li>
           ) : null}
         </ul>
+        {content.cert ? (
+          <div>
+            <img
+              src={content.cert}
+              id={"certImg" + { index }}
+              className="w-full hidden"
+            />
+          </div>
+        ) : null}
 
         <div className=" flex flex-wrap z-0 gap-3">
           <Link
@@ -92,9 +111,14 @@ function EducationCard({ content }) {
             Webpage
           </Link>
 
-          <Link to="/" className=" bg-yellow-200 p-2 my-6 ">
+          <button
+            className=" bg-yellow-200 p-2 my-6 "
+            onClick={(index) => {
+              toggleCert(index);
+            }}
+          >
             certificate
-          </Link>
+          </button>
         </div>
       </div>
     </>

@@ -1,11 +1,11 @@
 // import styles from "./style.css";
+import styles from "../../Arcade/Arcade.module.css";
 
-function Card({ card }) {
+function Card({ card, url }) {
   return (
     <>
-      <div className="card">
-        <img src={card.src} />
-        <div>{card.id}</div>
+      <div className="card mb-2 w-auto h-auto">
+        <img src={{ url }} alt={card.id} className="w-full" />
       </div>
     </>
   );

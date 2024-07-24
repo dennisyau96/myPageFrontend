@@ -521,15 +521,6 @@ input {
 }
 /*----------------------------------Card Shuffle----------------------------------*/
 
-.cardShuffleDiv {
-  max-width: 1100px;
-  margin: 1.1em auto;
-  text-align: center;
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
-}
-
 .card {
   box-sizing: border-box;
   background: white;
@@ -556,6 +547,47 @@ input {
 }
 
 .card div {
+  text-align: center;
+  padding: 1em;
+  margin-bottom: 1.5em;
+}
+
+.cardShuffleDiv {
+  max-width: 1100px;
+  width: 70%;
+  margin: 1.1em auto;
+  text-align: center;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+}
+
+.eachCard {
+  box-sizing: border-box;
+  background: white;
+  width: 111px;
+  height: 145px;
+  padding: 5px;
+  border-radius: 5px;
+  border: black 5px;
+}
+
+.eachCard:hover .remove-card {
+  background-color: lightgray;
+}
+
+.removeCard {
+  font-size: 1.15em;
+  border: dashed red;
+  outline: none;
+  color: #ef5350;
+  cursor: pointer;
+  margin: 0 0px 0 0;
+  padding: 0;
+  background: none;
+}
+
+.eachCard div {
   text-align: center;
   padding: 1em;
   margin-bottom: 1.5em;

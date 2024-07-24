@@ -44,7 +44,6 @@ export default function Gallery() {
   }
 
   useEffect(() => {
-    clearTimeout();
     setPhotos((prev) => photosSrc);
   }, []);
 
