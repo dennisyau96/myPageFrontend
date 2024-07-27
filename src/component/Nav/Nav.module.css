@@ -8,7 +8,7 @@
 .navLink {
   padding: 5px;
   text-decoration: none;
-  color: white;
+  color: rgba(255, 255, 255, 0.605);
   font-size: 0.8rem;
   text-transform: uppercase;
   font-family: monospace;

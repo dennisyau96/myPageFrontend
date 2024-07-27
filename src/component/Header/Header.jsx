@@ -10,7 +10,7 @@ function Header() {
       >
         <header id="header" className="inline-block m-0">
           <p id="headerName" className="text-white p-4 text-2xl">
-            Dennis Yau
+            Dennis, Ming Leuk Yau
           </p>
 
           <p id="headerDescription" className={styles.headerDescription}>

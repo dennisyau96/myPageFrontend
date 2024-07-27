@@ -53,7 +53,7 @@ function DiceRoller() {
   return (
     <div className={(styles.diceRollerDiv, styles.boxyBK)}>
       <h2 className="mb-3 text-xl">Dice Roller</h2>
-      <div className={styles.diceCounterDiv}>
+      <div className="flex flex-auto">
         <button className={styles.lessBtn} onClick={() => lessDie()}>
           one less
         </button>

@@ -16,20 +16,18 @@ function Home() {
   useEffect(() => {}, []);
 
   return (
-    <div>
-      <h1 className="font-bold text-3xl my-4"> Ming Leuk YAU,Dennis</h1>
+    <div className="container-md justify-center">
+      <h1 className="font-bold text-3xl "> Dennis, Ming Leuk YAU</h1>
       <p className="font-bold">
         Full Time Student
         <br />
         (anticipated graduate in August 2024)
       </p>
 
-      <div className="w-60 h-60 bg-slate-400 inline-block m-4">
-        image place holder
-      </div>
+      <div className="w-60 h-60  inline-block my-4 ">image place holder</div>
       <img className="w-full h-full"></img>
       <div>
-        <p className="text-justify flex my-6 mx-4">
+        <p className="text-justify flex ">
           I am currently a full-time student in Douglas College, Vancouver.
           During my study, I found myself being interested in Web Development. I
           am trying my best to learn different coding and programming skills and
@@ -38,7 +36,7 @@ function Home() {
         </p>
       </div>
 
-      <div id="commentLeavingDiv" className="mx-4">
+      <div id="commentLeavingDiv" className="justify-center my-4">
         <button
           className="p-2 rounded-md bg-slate-100 border-black border-0  hover:bg-slate-400  hover:text-white font-bold hover:transition-all hover:shadow-xl hover:border-4 hover:border-black"
           data-bs-toggle="modal"
@@ -61,14 +59,10 @@ function Home() {
         </div>
       </div>
 
-      <div className="col-span-2 mt-20" id="arcadeDiv">
+      <div className="fluid justify-center " id="arcadeDiv">
         <div className="text-center font-bold text-4xl">Let have some fun!</div>
-        <div className="container p-10">
-          {/*carousel */}
-
-          {/*carousel */}
-
-          <div id="arcadeDiv" className="flex flex-wrap">
+        <div className="container justify-center">
+          <div id="arcadeDiv" className="flex flex-wrap justify-center">
             <div className="">
               <DigitalClock />
             </div>

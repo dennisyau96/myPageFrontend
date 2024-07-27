@@ -32,7 +32,7 @@ function Counter() {
       <h1 className="mb-3 text-xl font-bold">Tally Counter</h1>
       <div className="flex gap-3">
         <div>
-          You can customize the number of count add or minus each time:
+          Customize the steps:
           <div>
             <input
               className={styles.numOfStep}

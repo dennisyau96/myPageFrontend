@@ -216,16 +216,6 @@ import Card from "./Card";
 export default function CardShuffle() {
   const [cards, setCards] = useState([]);
 
-  function toggleCert(i) {
-    const certImgElement = document.getElementById("certImg" + i);
-    var certimgClass = certImgElement.classList;
-    if (certimgClass.contains("hidden")) {
-      certimgClass.remove("hidden");
-    } else {
-      certimgClass.add("hidden");
-    }
-  }
-
   useEffect(() => {
     loadCard();
   }, []);
@@ -239,7 +229,7 @@ export default function CardShuffle() {
 
   return (
     <div className={styles.boxyWH}>
-      <h1>Card Shuffle</h1>
+      <h1 className="mb-3 text-xl">Card Shuffle</h1>
       <div className="flex flex-wrap gap-4 flex-row justify-center">
         {cards.map((card, index) => (
           <div key={index}>
