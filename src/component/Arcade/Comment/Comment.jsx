@@ -9,55 +9,6 @@ function Comment() {
   const [comment, setComment] = useState("");
   const [rating, setRating] = useState(null);
   const [after, setAfter] = useState(false);
-  /* <form>
-            <label htmlFor="person">Name</label>
-            <br />
-            <input
-              name="person"
-              id="personInput"
-              type="text"
-              onChange={(e) => setPerson(e.target.value)}
-              value={person}
-            ></input>
-            <br />
-            <label htmlFor="organization"> Organization(optional)</label>
-            <br />
-            <input
-              name="organization"
-              id="organizationInput"
-              type="text"
-              onChange={(e) => setOrganization(e.target.value)}
-              value={organization}
-            ></input>
-            <br />
-            <label htmlFor="comment">Comment</label>
-            <br />
-            <textarea
-              name="comment"
-              id="commentTextarea"
-              onChange={(e) => setComment(e.target.value)}
-              value={comment}
-            ></textarea>
-            <br />
-            <label htmlFor="rating">Rating(5 is highest)</label>
-            <br />
-            <select
-              name="rating"
-              id="ratingInput"
-              onChange={(e) => {
-                setRating(e.target.value);
-              }}
-            >
-              <option>please select</option>
-              <option value={1}>1</option>
-              <option value={2}>2</option>
-              <option value={3}>3</option>
-              <option value={4}>4</option>
-              <option value={5}>5</option>
-            </select>
-            <br />
-            <button onClick={() => leaveComment()}>Leave a comment</button>
-          </form> */
 
   async function leaveComment(e) {
     e.preventDefault();
@@ -77,23 +28,6 @@ function Comment() {
     } else {
       toast.error(`${data.data}`);
     }
-
-    //  else {
-    //   if (!person) {
-    //     window.alert(
-    //       "May I have your name so I know who provide me a great comment."
-    //     );
-    //     e.preventDefault();
-    //   } else if (!comment) {
-    //     window.alert("Your comment is important for me to make a big leap.");
-    //     e.preventDefault();
-    //   } else if (!rating) {
-    //     window.alert(
-    //       "Your rating to my webpage help me understand how much more harder I need to work."
-    //     );
-    //     e.preventDefault();
-    //   }
-    // }
   }
 
   function leaveOtherComment() {
@@ -115,80 +49,7 @@ function Comment() {
           <span className={styles.cmtTitle}>Feel Free to Make Comment</span>
           <br />
           <div className={styles.commentInputDiv}>
-            {/* <form className={styles.commentInputForm}> */}
-            {/* <table className={styles.commentInputTable}>
-              <tbody>
-                <tr>
-                  <td>
-                    <label htmlFor="person">Name</label>
-                  </td>
-                  <td>
-                    <input
-                      name="person"
-                      id="personInput"
-                      type="text"
-                      onChange={(e) => setPerson(e.target.value)}
-                      value={person}
-                    ></input>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <label htmlFor="organization">
-                      {" "}
-                      Organization(optional)
-                    </label>
-                  </td>
-                  <td>
-                    {" "}
-                    <input
-                      name="organization"
-                      id="organizationInput"
-                      type="text"
-                      onChange={(e) => setOrganization(e.target.value)}
-                      value={organization}
-                    ></input>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <label htmlFor="comment">Comment</label>
-                  </td>
-                  <td>
-                    <textarea
-                      name="comment"
-                      id="commentTextarea"
-                      onChange={(e) => setComment(e.target.value)}
-                      value={comment}
-                    ></textarea>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <label htmlFor="rating">Rating(5 is highest)</label>
-                  </td>
-                  <td>
-                    <select
-                      name="rating"
-                      id="ratingInput"
-                      onChange={(e) => {
-                        setRating(e.target.value);
-                      }}
-                      className={styles.ratingSelect}
-                    >
-                      <option value={null}>please select</option>
-                      <option value={1}>1</option>
-                      <option value={2}>2</option>
-                      <option value={3}>3</option>
-                      <option value={4}>4</option>
-                      <option value={5}>5</option>
-                    </select>
-                  </td>
-                </tr>
-              </tbody>
-            </table> */}
             <form>
-              {/* <table className={(styles.commentInputTable, "table  ")}> */}
               {/* -------- row 1  --------  */}
               <div className="form-floating">
                 <div className="row">
@@ -206,7 +67,7 @@ function Comment() {
                     ></input>
                   </div>
                 </div>
-                {/* -------- row 1  --------  */}
+                {/* -------- row 2  --------  */}
 
                 <div className="row">
                   <div className="col gy-2">
@@ -227,7 +88,7 @@ function Comment() {
                     ></input>
                   </div>
                 </div>
-                {/* -------- row 1  --------  */}
+                {/* -------- row 3  --------  */}
 
                 <div className="row">
                   <div className="col gy-2">
@@ -243,7 +104,7 @@ function Comment() {
                     ></textarea>
                   </div>
                 </div>
-                {/* -------- row 1  --------  */}
+                {/* -------- row 4  --------  */}
 
                 <div className="row">
                   <div className="col gy-2">
@@ -258,12 +119,12 @@ function Comment() {
                       }}
                       className={styles.ratingSelect}
                     >
-                      <option value={null}>please select</option>
-                      <option value={1}>1</option>
-                      <option value={2}>2</option>
-                      <option value={3}>3</option>
+                      <option value={null}>---please select---</option>
+                      <option value={5}>5(highest)</option>
                       <option value={4}>4</option>
-                      <option value={5}>5</option>
+                      <option value={3}>3</option>
+                      <option value={2}>2</option>
+                      <option value={1}>1(lowest)</option>
                     </select>
                   </div>
                 </div>

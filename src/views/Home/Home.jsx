@@ -16,15 +16,16 @@ function Home() {
   useEffect(() => {}, []);
 
   return (
-    <div className="container-md justify-center">
+    <div className="container-md text-center">
       <h1 className="font-bold text-3xl "> Dennis, Ming Leuk YAU</h1>
       <p className="font-bold">
-        Full Time Student
+        Full Stack Web Developer
         <br />
-        (anticipated graduate in August 2024)
       </p>
 
-      <div className="w-60 h-60  inline-block my-4 ">image place holder</div>
+      <div className="w-60 h-60  inline-block my-4 border-black border-1">
+        image place holder
+      </div>
       <img className="w-full h-full"></img>
       <div>
         <p className="text-justify flex ">
