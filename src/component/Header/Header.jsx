@@ -6,7 +6,7 @@ function Header() {
     <>
       <div
         id="headerDiv"
-        className="sticky-top navbar inset-x-0 top-0 bg-black shadow-lg bg-image z-10000 "
+        className=" sticky-top navbar inset-x-0 top-0 bg-black shadow-lg bg-image z-10000 "
       >
         <header id="header" className="inline-block m-0">
           <p id="headerName" className="text-white p-4 text-2xl">
@@ -17,7 +17,6 @@ function Header() {
             The Simpliest Way to Demostrate my Web Development Experience and
             Skills
           </p>
-
           <Nav />
         </header>
       </div>

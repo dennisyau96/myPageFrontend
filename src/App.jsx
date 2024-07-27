@@ -16,6 +16,7 @@ import Certificate from "./views/Certificate/Certificate";
 import About from "./views/About/About";
 import axios from "axios";
 import Maintenance from "./views/ErrorPage/Maintenance";
+import Footer from "./component/Footer/Footer";
 axios.defaults.auth = true;
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           </Route>
         </Routes>
       </div>
+      <Footer />
     </>
   );
 }

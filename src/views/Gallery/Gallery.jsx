@@ -54,7 +54,7 @@ export default function Gallery() {
         {/*carousel */}
         <div
           id="carouselExampleAutoplaying"
-          className="carousel slide max-w-96 my-4 text-center justify-center  "
+          className="carousel slide max-w-96 my-4 text-center justify-center   "
           data-bs-ride="carousel"
         >
           <div className="carousel-inner w-full justify-center ">

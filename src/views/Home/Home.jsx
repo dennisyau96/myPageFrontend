@@ -78,7 +78,7 @@ function Home() {
             </div>
           </div>
 
-          <CardShuffle />
+          {/* <CardShuffle /> */}
         </div>
       </div>
     </div>

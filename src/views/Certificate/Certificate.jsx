@@ -35,7 +35,7 @@ function Certificate() {
       {/*carousel */}
       <div
         id="carouselExampleAutoplaying"
-        className="carousel slide max-w-screen-lg justify-center text-center"
+        className="carousel slide max-w-screen-lg justify-center text-center mb-6"
         data-bs-ride="carousel"
       >
         <div className="carousel-inner justify-center text-center">

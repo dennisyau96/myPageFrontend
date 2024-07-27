@@ -13,9 +13,9 @@ import {
 function About() {
   return (
     <>
-      <h1 className="font-bold text-3xl my-4">About</h1>
+      <h1 className="font-bold text-3xl my-4 text-center">About</h1>
       <div className="container mb-4">
-        <div>
+        <div className="bg-orange-100 p-4 rounded-lg mb-4">
           <h3 className="font-bold text-xl my-4">
             Life in Canada(since July 2023)
           </h3>
@@ -90,8 +90,7 @@ function About() {
             This profile webpage is also created by the technologies above.
           </p>
         </div>
-        <hr></hr>
-        <div>
+        <div className="bg-blue-100 p-4 rounded-lg">
           <h3 className="font-bold text-xl my-4">
             Life in Hong Kong(before July 2023)
           </h3>
