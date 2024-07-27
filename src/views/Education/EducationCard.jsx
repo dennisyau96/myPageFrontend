@@ -19,11 +19,11 @@ function EducationCard({ content, index }) {
     <>
       <div
         id="eduCard"
-        className="p-4 m-5 border-2 rounded-lg bg-slate-200 z-0 max-w-md hover:shadow-xl hover:shadow-gray-500 hover:transition-all hover:duration-300"
+        className="p-4 m-4 border-2 rounded-2xl bg-slate-200 z-0 max-w-md min-w-96 hover:shadow-xl hover:shadow-gray-500 hover:transition-all hover:duration-300"
       >
         {/* <img className="eduCardImg" alt={content.institution} /> */}
 
-        <div className="font-bold text-2xl mb-7">
+        <div className="font-bold text-2xl mb-7 ">
           {content.institution ? (
             <span className={styles.label}> {content.institution}</span>
           ) : null}
@@ -31,9 +31,9 @@ function EducationCard({ content, index }) {
           <p className="card-text"></p>
         </div>
 
-        <ul className="list-group list-group-flush z-0 flex flex-wrap">
+        <ul className="list-group list-group-flush z-0 flex flex-wrap ">
           {content.title && (
-            <li className="list-group-item z-0 font-bold text-xl">
+            <li className="list-group-item z-0 font-bold text-xl bg-gray-700">
               <span className={styles.label}>{content.title}</span>
             </li>
           )}
@@ -96,11 +96,11 @@ function EducationCard({ content, index }) {
           </div>
         ) : null}
 
-        <div className=" flex flex-wrap z-0 gap-3">
+        <div className=" flex flex-wrap z-0 gap-3 ">
           <Link
             target="_blank"
             to={content.website}
-            className="bg-slate-100 p-2 my-6"
+            className="bg-orange-400 p-2 my-6 rounded-xl"
             onClick={() => {
               const ctr = confirm("You will be redirected to another website");
               if (!ctr) {
@@ -111,14 +111,14 @@ function EducationCard({ content, index }) {
             Webpage
           </Link>
 
-          <button
+          {/* <button
             className=" bg-yellow-200 p-2 my-6 "
             onClick={(index) => {
               toggleCert(index);
             }}
           >
             certificate
-          </button>
+          </button> */}
         </div>
       </div>
     </>

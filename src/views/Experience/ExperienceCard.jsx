@@ -8,7 +8,7 @@ function ExperienceCard({ content }) {
   const [des, setDes] = useState([content.description]);
 
   return (
-    <div className="p-4 m-5 border-2 rounded-lg bg-slate-200 z-0 max-w-md hover:shadow-xl hover:shadow-gray-500 hover:transition-all hover:duration-300">
+    <div className="p-4 m-5 border-2 rounded-lg bg-slate-200 z-0 max-w-md min-w-96 hover:shadow-xl hover:shadow-gray-500 hover:transition-all hover:duration-300">
       {content.position ? (
         <p className="font-bold text-2xl mb-7">
           <span className={styles.label}>{content.position}</span>

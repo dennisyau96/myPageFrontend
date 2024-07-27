@@ -19,8 +19,8 @@ function Skills() {
 
   return (
     <>
-      <h1 className="font-bold text-3xl my-4">Skills</h1>
-      <div className="flex flex-wrap gap-10">
+      <h1 className="font-bold text-3xl my-4 text-center">Skills</h1>
+      <div className="flex flex-wrap gap-10 justify-center">
         {skills.map((skill, index) => (
           <div key={index}>
             <SkillCard content={skill} remarks={skill.remark} />

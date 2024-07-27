@@ -86,9 +86,9 @@
 }
 
 .QRFrame {
-  padding: 20px;
+  padding: 10px;
   display: inline-block;
   border: solid black;
-  margin: 20px;
+  margin: 10px;
   border-radius: 10px;
 }

@@ -20,8 +20,8 @@ export default function Experience() {
 
   return (
     <>
-      <h1 className="font-bold text-3xl my-4"> Experience </h1>
-      <div className="flex flex-wrap">
+      <h1 className="font-bold text-3xl my-4 text-center"> Experience </h1>
+      <div className="flex flex-wrap justify-center">
         {experience.map((exp, index) => (
           <div key={index}>
             <ExperienceCard content={exp} />

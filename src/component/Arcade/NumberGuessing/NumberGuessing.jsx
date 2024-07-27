@@ -151,8 +151,7 @@ export default function NumberGuessing() {
       {!ended ? (
         <div className={styles.numberGuessingDiv}>
           <p className={styles.boomLifeCountMessage}>
-            The bomb will go off if you <u>CANNOT</u> guess the secret code in{" "}
-            {lifeCount} more times.
+            You have {lifeCount} chance to guess the secret code.
           </p>
           <div className={styles.numGuessHint}>
             Hint: choose the number between{" "}

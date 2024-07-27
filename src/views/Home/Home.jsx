@@ -23,7 +23,7 @@ function Home() {
         <br />
       </p>
 
-      <div className="w-60 h-60  inline-block my-4 border-black border-1">
+      <div className="w-100 h-auto  inline-block my-4 border-black border-1">
         image place holder
       </div>
       <img className="w-full h-full"></img>

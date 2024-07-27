@@ -49,73 +49,77 @@ export default function Gallery() {
 
   return (
     <>
-      <h1 className="font-bold text-3xl my-4">My Photography Journey</h1>
-      {/*carousel */}
-      <div
-        id="carouselExampleAutoplaying"
-        className="carousel slide max-w-96 "
-        data-bs-ride="carousel"
-      >
-        <div className="carousel-inner w-full">
-          <div className="carousel-item active">
-            <img
-              src={photosSrc[index].pic}
-              className="d-block w-full"
-              alt="0"
-            />
+      <div className="text-center justify-center container">
+        <h1 className="font-bold text-3xl my-4">My Photography Journey</h1>
+        {/*carousel */}
+        <div
+          id="carouselExampleAutoplaying"
+          className="carousel slide max-w-96 my-4 text-center justify-center  "
+          data-bs-ride="carousel"
+        >
+          <div className="carousel-inner w-full justify-center ">
+            <div className="carousel-item active justify-center">
+              <img
+                src={photosSrc[index].pic}
+                className="d-block w-full"
+                alt="0"
+              />
+            </div>
           </div>
+
+          <button
+            className="carousel-control-prev active:bg-slate-200 active:duration-700 "
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev"
+            onClick={prevPhoto}
+          >
+            <span
+              className="carousel-control-prev-icon  "
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden z-0">Previous</span>
+          </button>
+
+          <button
+            className="carousel-control-next active:bg-slate-200 active:duration-700 "
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next"
+            onClick={nextPhoto}
+          >
+            <span
+              className="carousel-control-next-icon  "
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden ">Next</span>
+          </button>
         </div>
+        {/*carousel */}
 
-        <button
-          className="carousel-control-prev active:bg-slate-200 active:duration-700 "
-          type="button"
-          data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="prev"
-          onClick={prevPhoto}
-        >
-          <span
-            className="carousel-control-prev-icon  "
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden z-0">Previous</span>
-        </button>
-
-        <button
-          className="carousel-control-next active:bg-slate-200 active:duration-700 "
-          type="button"
-          data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="next"
-          onClick={nextPhoto}
-        >
-          <span
-            className="carousel-control-next-icon  "
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden ">Next</span>
-        </button>
-      </div>
-      {/*carousel */}
-
-      <div>
-        Want to see more photo?
-        <br /> Please visit{" "}
-        <Link
-          className="hover:font-bold underline"
-          to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
-          target="blank"
-        >
-          den.y_photography@Instagram
-        </Link>
-        <div>Like, Share and Follow will be appreciated!</div>
-        <Link
-          to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
-          target="blank"
-        >
-          <br />
-          <div className={styles.QRFrame}>
-            <img className={styles.QRimg} alt="QR" src={QR}></img>
+        <div className="my-4">
+          Want to see more photo?
+          <br /> Please visit{" "}
+          <Link
+            className="hover:font-bold underline text-pink-700"
+            to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
+            target="blank"
+          >
+            den.y_photography@Instagram
+          </Link>
+          <div className="">
+            <strong>Like, Share and Follow</strong> will be appreciated!
           </div>
-        </Link>
+          <Link
+            to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
+            target="blank"
+          >
+            <br />
+            <div className={styles.QRFrame}>
+              <img className={styles.QRimg} alt="QR" src={QR}></img>
+            </div>
+          </Link>
+        </div>
       </div>
     </>
   );
