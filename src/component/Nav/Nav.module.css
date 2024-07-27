@@ -34,7 +34,19 @@
   padding: 0.2rem;
   text-decoration: none;
   color: #dc6c22;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-family: monospace;
+  cursor: pointer;
+}
+
+.navLink:active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  padding: 0.2rem;
+  text-decoration: none;
+  color: #dc6c22;
+  font-size: 0.9rem;
   text-transform: uppercase;
   font-family: monospace;
   cursor: pointer;

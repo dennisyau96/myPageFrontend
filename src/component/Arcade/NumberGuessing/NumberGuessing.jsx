@@ -134,18 +134,18 @@ export default function NumberGuessing() {
   //
   return (
     <div className={(styles.numberGuessingDiv, styles.boxyBK)}>
-      <p className={styles.numGuessTitle}>
+      <p className="mb-3 text-xl">
         {!exploded ? "Don't explode!" : "Exploded"}
       </p>
-      <p>{lifeDsp}</p>
+      <p className="my-3">{lifeDsp}</p>
       {/* testing display */}
-      <p>
+      {/* <p>
         ans:{answer}| life:{lifeCount}
         <br></br>
         Down:{downRange}
         <br></br>
         Up:{upRange}
-      </p>
+      </p> */}
 
       {/* testing display */}
       {!ended ? (
@@ -159,7 +159,6 @@ export default function NumberGuessing() {
             <span className={styles.numberGuessingHint}>
               {downRange}-{upRange}(inclusive)
             </span>
-            .
           </div>
           <div className="input-group">
             <input
@@ -168,7 +167,7 @@ export default function NumberGuessing() {
               className={(styles.numberGuessingInput, "form-control")}
             ></input>
             <button
-              className={(styles.guessBtn, "input-group-text")}
+              className="input-group-text hover:font-bold hover:bg-orange-500"
               onClick={(e) => {
                 guess(e);
               }}

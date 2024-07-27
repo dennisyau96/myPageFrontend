@@ -69,13 +69,15 @@ input {
   border: solid black;
   padding: 20px;
   min-width: 100px;
+  display: grid;
+  grid-column: 1;
 }
 
 .dateDiv {
-  font-size: 40px;
+  font-size: 30px;
 }
 .timeDiv {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .clockTitle {
@@ -101,7 +103,7 @@ input {
 }
 .commentInputForm {
   display: block;
-  text-align: center;
+  text-align: left;
   justify-content: center;
   align-items: center;
   width: auto;
@@ -152,6 +154,8 @@ input {
   border: solid black;
   padding: 20px;
   min-width: 400px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .dice {
   border: solid white;
@@ -348,8 +352,8 @@ input {
   align-items: center;
   align-content: center;
   max-width: 350px;
-  min-width: 300px;
 }
+
 .safeToGo {
   font-size: 35px;
   font-family: "Courier New", Courier, monospace;
@@ -357,18 +361,18 @@ input {
 }
 
 .boomDsp {
-  color: #ef5350;
+  color: #ed9d7e;
 }
 
 .numGuessHint {
   font-size: 20px;
   font-weight: bold;
   border-radius: 5px;
-  background-color: rgb(232, 100, 39);
+  background-color: rgb(231, 125, 75);
   color: black;
   margin: 10px;
   border: white solid 2px;
-  text-align: left;
+  text-align: center;
   padding: 10px;
 }
 .guessBtn {
@@ -423,11 +427,11 @@ input {
 }
 
 .numberGuessingHint {
-  background-color: rgb(152, 236, 8);
+  color: azure;
 }
 
 .numberGuessingHint:hover {
-  background-color: rgb(84, 130, 4);
+  text-decoration: underline;
   transition: all;
   animation-duration: 300ms;
   color: white;

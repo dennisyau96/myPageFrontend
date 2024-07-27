@@ -18,14 +18,18 @@ function Home() {
   return (
     <div>
       <h1 className="font-bold text-3xl my-4"> Ming Leuk YAU,Dennis</h1>
-      <p className="font-bold">Full Time Student(graduate in August 2024)</p>
+      <p className="font-bold">
+        Full Time Student
+        <br />
+        (anticipated graduate in August 2024)
+      </p>
 
       <div className="w-60 h-60 bg-slate-400 inline-block m-4">
         image place holder
       </div>
       <img className="w-full h-full"></img>
       <div>
-        <p className="text-justify flex my-6">
+        <p className="text-justify flex my-6 mx-4">
           I am currently a full-time student in Douglas College, Vancouver.
           During my study, I found myself being interested in Web Development. I
           am trying my best to learn different coding and programming skills and
@@ -34,9 +38,9 @@ function Home() {
         </p>
       </div>
 
-      <div id="commentLeavingDiv" className="m-2">
+      <div id="commentLeavingDiv" className="mx-4">
         <button
-          className="btn bg-slate-300 border-black border-b-2 border-r-2 hover:bg-slate-400  hover:text-white font-bold hover:transition-all hover:shadow-xl"
+          className="p-2 rounded-md bg-slate-100 border-black border-0  hover:bg-slate-400  hover:text-white font-bold hover:transition-all hover:shadow-xl hover:border-4 hover:border-black"
           data-bs-toggle="modal"
           data-bs-target="#commentModal"
         >

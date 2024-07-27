@@ -9,7 +9,7 @@ function Counter() {
     setCount((c) => c + 1);
   }
   function minusOne() {
-    setCount((c) => parseInt(c) - parseInt(step));
+    setCount((c) => c - 1);
   }
   function plusStep() {
     setCount((c) => parseInt(c) + parseInt(step));
@@ -29,51 +29,57 @@ function Counter() {
   }
   return (
     <div className={(styles.counterDiv, styles.boxyWH)}>
-      <h1>Tally Counter</h1>
-      <div>
-        <span>
-          You can customize the number of count add or minus each time:
-          <br></br>
-        </span>
+      <h1 className="mb-3 text-xl font-bold">Tally Counter</h1>
+      <div className="flex gap-3">
         <div>
-          <input
-            className={styles.numOfStep}
-            type="number"
-            min={2}
-            max={20}
-            value={step}
-            onChange={(e) => {
-              setStep(e.target.value);
-            }}
-          ></input>
+          You can customize the number of count add or minus each time:
+          <div>
+            <input
+              className={styles.numOfStep}
+              type="number"
+              min={2}
+              max={20}
+              value={step}
+              onChange={(e) => {
+                setStep(e.target.value);
+              }}
+            ></input>
+          </div>
         </div>
       </div>
       <div>
-        <div className={styles.counterBtn} onClick={minusStep}>
-          -{step ? step : "N"}
+        <div>
+          <div className={styles.counterBtn} onClick={minusStep}>
+            -{step ? step : "N"}
+          </div>
+          <div
+            className={styles.counterBtn}
+            onClick={() => {
+              minusOne();
+            }}
+          >
+            -1
+          </div>
         </div>
-        <div
-          className={styles.counterBtn}
-          onClick={() => {
-            minusOne();
-          }}
-        >
-          -1
-        </div>
+
         <div className={styles.counterDisplay} onClick={resetCount}>
           <div>{count}</div>
           <div className={styles.countHint}>Click to Reset</div>
         </div>
-        <div
-          className={styles.counterBtn}
-          onClick={() => {
-            plusOne();
-          }}
-        >
-          +1
-        </div>
-        <div className={styles.counterBtn} onClick={plusStep}>
-          +{step ? step : "N"}
+
+        <div>
+          {" "}
+          <div
+            className={styles.counterBtn}
+            onClick={() => {
+              plusOne();
+            }}
+          >
+            +1
+          </div>
+          <div className={styles.counterBtn} onClick={plusStep}>
+            +{step ? step : "N"}
+          </div>
         </div>
       </div>
     </div>

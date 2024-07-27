@@ -121,7 +121,7 @@ function Certificate() {
 
   return (
     <>
-      <h1 className="font-bold text-3xl my-4">Certificate </h1>
+      <h1 className="font-bold text-3xl my-10">Certificate </h1>
       <div className={styles.certDiv}>
         <div className={styles.prevBtn} onClick={prevCert}>
           &lt;

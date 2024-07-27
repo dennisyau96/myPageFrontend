@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import styles from "./Skill.module.css";
 import { useEffect, useState } from "react";
 function SkillCard({ content, remark }) {
