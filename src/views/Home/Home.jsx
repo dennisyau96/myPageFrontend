@@ -13,33 +13,36 @@ import CardShuffle from "../../component/Arcade/CardShuffle/CardShuffle";
 function Home() {
   // const [deckUrl, setDeckUrl] = useState("../Arcade/CardShuffle/img");
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="container-md text-center">
       <h1 className="font-bold text-3xl "> Dennis, Ming Leuk YAU</h1>
-      <p className="font-bold">
-        Full Stack Web Developer
+      <p className="font-bold my-2 text-lg text-orange-600">
+        Software Developer | Web Developer | IT | Data
         <br />
       </p>
 
-      <div className="w-100 h-auto  inline-block my-4 border-black border-1">
+      {/* <div className="w-100 h-auto  inline-block my-4 border-black border-1">
         image place holder
-      </div>
+      </div> */}
       <img className="w-full h-full"></img>
       <div>
         <p className="text-justify flex ">
-          I am currently a full-time student in Douglas College, Vancouver.
-          During my study, I found myself being interested in Web Development. I
-          am trying my best to learn different coding and programming skills and
-          technology to prepare myself to become a Web Developer. Please leave a
-          comment below.
+          I am graduating very soon from Douglas College, Vancouver. During my
+          study, I found myself being interested in Web and software
+          Development. I am trying my best to learn different coding and
+          programming skills and technology to prepare myself to become a Web
+          Developer, or any other tech-related position. Please feel free to
+          leave a comment below.
         </p>
       </div>
 
       <div id="commentLeavingDiv" className="justify-center my-4">
         <button
-          className="p-2 rounded-md bg-slate-100 border-black border-0  hover:bg-slate-400  hover:text-white font-bold hover:transition-all hover:shadow-xl hover:border-4 hover:border-black"
+          className="p-3 rounded-md bg-slate-100 border-black border-2  hover:bg-slate-400  hover:text-white font-bold hover:transition-all hover:shadow-xl hover:shadow-gray-400 hover:border-4 hover:border-gray-300 text-lg font-mono"
           data-bs-toggle="modal"
           data-bs-target="#commentModal"
         >

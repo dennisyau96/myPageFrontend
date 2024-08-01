@@ -3,18 +3,18 @@ import styles from "./Education.module.css";
 import education from "../../assets/education.js";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { baseURL } from "../../constant/constant.js";
 
 function Education() {
   const [education, setEducation] = useState([]);
 
   useEffect(() => {
     loadData();
+    scrollTo(0, 0);
   }, []);
 
   async function loadData() {
-    const eduData = await axios.get([
-      "https://mypagebackend-n0m8.onrender.com/api/education",
-    ]);
+    const eduData = await axios.get([`${baseURL}/education`]);
 
     setEducation((prev) => eduData.data);
     setEducation((education) => education.sort((a, b) => b.sort - a.sort));

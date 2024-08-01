@@ -9,6 +9,7 @@ function Certificate() {
   const [certificates, setCertificates] = useState([...certs]);
 
   useEffect(() => {
+    scrollTo(0, 0);
     certificates.sort((b, a) => b - a);
   }, []);
 

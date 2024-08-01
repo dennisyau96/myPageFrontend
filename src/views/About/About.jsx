@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   javaSkills,
   vtcDes,
@@ -11,6 +11,9 @@ import {
   fo2Work2,
 } from "../../content";
 function About() {
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, []);
   return (
     <>
       <h1 className="font-bold text-3xl my-4 text-center">About</h1>

@@ -2,19 +2,18 @@
 import ExperienceCard from "./ExperienceCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { baseURL } from "../../constant/constant";
 
 export default function Experience() {
   const [experience, setExperience] = useState([]);
 
   useEffect(() => {
     getData();
+    scrollTo(0, 0);
   }, []);
 
   async function getData() {
-    const expData = await axios.get([
-      "https://mypagebackend-n0m8.onrender.com/api/experience",
-      // "https://mypagebackend-eg0j.onrender.com/api/experience",
-    ]);
+    const expData = await axios.get([`${baseURL}/experience`]);
     setExperience(expData.data);
   }
 

@@ -273,6 +273,7 @@ input {
   color: black;
   border: solid rgb(0, 0, 0);
   margin: 10px;
+  padding: 10px;
 }
 .lessBtn:hover {
   background-color: rgb(0, 0, 0);
@@ -292,6 +293,7 @@ input {
   color: black;
   border: solid rgb(0, 0, 0);
   margin: 10px;
+  padding: 10px;
 }
 .moreBtn:hover {
   background-color: rgb(0, 0, 0);
@@ -311,6 +313,7 @@ input {
   color: black;
   border: solid rgb(0, 0, 0);
   margin: 10px;
+  padding: 10px;
 }
 .restartDRBtn:hover {
   background-color: rgb(0, 0, 0);
@@ -329,6 +332,7 @@ input {
   color: black;
   border: solid rgb(232, 100, 39);
   margin: 10px;
+  padding: 10px;
 }
 .rollDRBtn:hover {
   background-color: rgb(0, 0, 0);

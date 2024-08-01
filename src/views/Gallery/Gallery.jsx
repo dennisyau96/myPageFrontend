@@ -44,17 +44,18 @@ export default function Gallery() {
   }
 
   useEffect(() => {
+    scrollTo(0, 0);
     setPhotos((prev) => photosSrc);
   }, []);
 
   return (
     <>
-      <div className="text-center justify-center container">
+      <div className="text-center justify-center container justify-items-center justify-self-center grid grid-col-1">
         <h1 className="font-bold text-3xl my-4">My Photography Journey</h1>
         {/*carousel */}
         <div
           id="carouselExampleAutoplaying"
-          className="carousel slide max-w-96 my-4 text-center justify-center   "
+          className="carousel slide max-w-96 my-4 text-center justify-center bg-orange-300 p-2  rounded-xl "
           data-bs-ride="carousel"
         >
           <div className="carousel-inner w-full justify-center ">
