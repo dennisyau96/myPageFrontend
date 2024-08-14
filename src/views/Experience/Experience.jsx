@@ -13,7 +13,7 @@ export default function Experience() {
   }, []);
 
   async function getData() {
-    const expData = await axios.get([`${baseURL}/experience`]);
+    const expData = await axios.get([`${baseURL}/experiences`]);
     setExperience(expData.data);
   }
 

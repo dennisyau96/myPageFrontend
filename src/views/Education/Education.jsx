@@ -14,7 +14,7 @@ function Education() {
   }, []);
 
   async function loadData() {
-    const eduData = await axios.get([`${baseURL}/education`]);
+    const eduData = await axios.get([`${baseURL}/educations`]);
 
     setEducation((prev) => eduData.data);
     setEducation((education) => education.sort((a, b) => b.sort - a.sort));

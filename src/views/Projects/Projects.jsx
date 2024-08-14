@@ -1,10 +1,26 @@
-import { useEffect } from "react";
-
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { baseURL } from "../../constant/constant";
+import ProjectCard from "./ProjectCard";
 export default function Projects() {
-  useEffect(() => {}, []);
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    loadData();
+    scrollTo(0, 0);
+  }, []);
+
+  async function loadData() {
+    const projectData = await axios.get(`${baseURL}/projects`);
+    setProjects((prev) => projectData.data);
+  }
+
   return (
     <>
-      <h1 className="font-bold text-3xl my-4">This is the Project page</h1>
+      <h1 className="font-bold text-3xl my-4 text-center"> Projects </h1>
+
+      {projects.map((project, i) => {
+        <ProjectCard project={project} />;
+      })}
     </>
   );
 }
