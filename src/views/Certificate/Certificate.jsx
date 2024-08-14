@@ -31,55 +31,59 @@ function Certificate() {
 
   return (
     <>
-      <h1 className="font-bold text-3xl my-10 text-center">Certificate </h1>
+      <div className="justify-center container container-fluid container-lg">
+        <h1 className="font-bold text-3xl my-10 text-center justify-center">
+          Certificate{" "}
+        </h1>
 
-      {/*carousel */}
-      <div
-        id="carouselExampleAutoplaying"
-        className="carousel slide max-w-screen-lg justify-center text-center mb-6"
-        data-bs-ride="carousel"
-      >
-        <div className="carousel-inner justify-center text-center">
-          <div className="carousel-item active justify-center text-center">
-            <img
-              src={certificates[index].cert}
-              className="d-block w-100"
-              alt={certificates[index].title}
-            />
+        {/*carousel */}
+        <div
+          id="carouselExampleAutoplaying"
+          className="carousel slide max-w-screen-lg justify-center text-center mb-6 self-center justify-self-center"
+          data-bs-ride="carousel"
+        >
+          <div className="carousel-inner justify-center text-center">
+            <div className="carousel-item active justify-center text-center">
+              <img
+                src={certificates[index].cert}
+                className="d-block w-100"
+                alt={certificates[index].title}
+              />
+            </div>
           </div>
-        </div>
-        <div className="text-center  ">
-          {index + 1}. {certificates[index].title}
-        </div>
+          <div className="text-center  ">
+            {index + 1}. {certificates[index].title}
+          </div>
 
-        <button
-          className="carousel-control-prev "
-          type="button"
-          data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="prev"
-          onClick={prevCert}
-        >
-          <span
-            className="carousel-control-prev-icon hover:bg-slate-100 hover:transition-all duration-1000"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden ">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next "
-          type="button"
-          data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="next"
-          onClick={nextCert}
-        >
-          <span
-            className="carousel-control-next-icon hover:bg-slate-100 hover:transition-all duration-1000"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden ">Next</span>
-        </button>
+          <button
+            className="carousel-control-prev "
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev"
+            onClick={prevCert}
+          >
+            <span
+              className="carousel-control-prev-icon hover:bg-slate-100 hover:transition-all duration-1000"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden ">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next "
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next"
+            onClick={nextCert}
+          >
+            <span
+              className="carousel-control-next-icon hover:bg-slate-100 hover:transition-all duration-1000"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden ">Next</span>
+          </button>
+        </div>
+        {/* carousel*/}
       </div>
-      {/* carousel*/}
     </>
   );
 }

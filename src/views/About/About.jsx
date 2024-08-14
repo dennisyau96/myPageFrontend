@@ -10,10 +10,12 @@ import {
   fo2pm,
   fo2Work2,
 } from "../../content";
+
 function About() {
   useEffect(() => {
     scrollTo(0, 0);
   }, []);
+  
   return (
     <>
       <h1 className="font-bold text-3xl my-4 text-center">About</h1>
