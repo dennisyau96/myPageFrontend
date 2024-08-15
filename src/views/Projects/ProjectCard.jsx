@@ -5,10 +5,10 @@ export default function ProjectCard({ project }) {
   const navigate = useNavigate();
   return (
     <>
-      <div className="card w-80  m-4 border-2 rounded-xl hover: hover:shadow-xl hover:transition-all hover:bg-slate-100">
+      <div className="card w-80 p-1 m-4 border-2 rounded-xl hover:  hover:transition-all hover:duration-300 hover:bg-slate-100 hover:shadow-2xl hover:shadow-gray-300">
         <img
           src={project.thumbnail}
-          className="card-img-top "
+          className="card-img-top rounded-xl "
           alt="Project thumbnail"
         />
         <div className="card-body text-center">
@@ -31,7 +31,7 @@ export default function ProjectCard({ project }) {
                 navigate(0);
               }
             }}
-            className=" mt-3  btn cursor-pointer font-bold bg-orange-500 hover:shadow-xl hover:bg-gray-700 hover:text-white"
+            className=" mt-3  btn cursor-pointer font-bold bg-orange-400 hover:shadow-xl hover:bg-gray-700 hover:text-white hover:transition-all hover:duration-300"
           >
             <Link to={project.website} target="_blank">
               Visit

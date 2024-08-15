@@ -1,28 +1,29 @@
 import styles from "./Gallery.module.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import QR from "./photo/QR.jpg";
-import pic1 from "./photo/pic1.jpg";
-import pic2 from "./photo/pic2.jpg";
-import pic3 from "./photo/pic3.jpg";
-import pic4 from "./photo/pic4.jpg";
-import pic5 from "./photo/pic5.jpg";
-import pic6 from "./photo/pic6.jpg";
-import pic7 from "./photo/pic7.jpg";
-import pic8 from "./photo/pic8.jpg";
-import pic9 from "./photo/pic9.jpg";
-
+import QR from "../../assets/gallery/QR.jpg";
+import pic1 from "../../assets/gallery/pic1.jpg";
+import pic2 from "../../assets/gallery/pic2.jpg";
+import pic3 from "../../assets/gallery/pic3.jpg";
+import pic4 from "../../assets/gallery/pic4.jpg";
+import pic5 from "../../assets/gallery/pic5.jpg";
+import pic6 from "../../assets/gallery/pic6.jpg";
+import pic7 from "../../assets/gallery/pic7.jpg";
+import pic8 from "../../assets/gallery/pic8.jpg";
+import pic9 from "../../assets/gallery/pic9.jpg";
+import { useNavigate } from "react-router-dom";
 export default function Gallery() {
+  const navigate = useNavigate();
   const photosSrc = [
-    { href: "./photo/pic1.jpg", pic: pic1 },
-    { href: "./photo/pic2.jpg", pic: pic2 },
-    { href: "./photo/pic3.jpg", pic: pic3 },
-    { href: "./photo/pic4.jpg", pic: pic4 },
-    { href: "./photo/pic5.jpg", pic: pic5 },
-    { href: "./photo/pic6.jpg", pic: pic6 },
-    { href: "./photo/pic7.jpg", pic: pic7 },
-    { href: "./photo/pic8.jpg", pic: pic8 },
-    { href: "./photo/pic9.jpg", pic: pic9 },
+    { href: "../../assets/gallery/pic1.jpg", pic: pic1 },
+    { href: "../../assets/gallery/pic2.jpg", pic: pic2 },
+    { href: "../../assets/gallery/pic3.jpg", pic: pic3 },
+    { href: "../../assets/gallery/pic4.jpg", pic: pic4 },
+    { href: "../../assets/gallery/pic5.jpg", pic: pic5 },
+    { href: "../../assets/gallery/pic6.jpg", pic: pic6 },
+    { href: "../../assets/gallery/pic7.jpg", pic: pic7 },
+    { href: "../../assets/gallery/pic8.jpg", pic: pic8 },
+    { href: "../../assets/gallery/pic9.jpg", pic: pic9 },
   ];
 
   const [index, setIndex] = useState(0);
@@ -50,19 +51,19 @@ export default function Gallery() {
 
   return (
     <>
-      <div className="text-center justify-center container justify-items-center justify-self-center grid grid-col-1">
+      <div className="text-center justify-center container justify-items-center justify-self-center grid grid-col-1 w-auto">
         <h1 className="font-bold text-3xl my-4">My Photography Journey</h1>
         {/*carousel */}
         <div
           id="carouselExampleAutoplaying"
-          className="carousel slide max-w-96 my-4 text-center justify-center bg-orange-300 p-2  rounded-xl "
+          className="carousel slide  w-7/12 my-4 text-center justify-center border-2 border-gray-300 p-1  rounded-xl "
           data-bs-ride="carousel"
         >
           <div className="carousel-inner w-full justify-center ">
             <div className="carousel-item active justify-center">
               <img
                 src={photosSrc[index].pic}
-                className="d-block w-full"
+                className="d-block w-full rounded-lg"
                 alt="0"
               />
             </div>
@@ -98,7 +99,7 @@ export default function Gallery() {
         </div>
         {/*carousel */}
 
-        <div className="my-4">
+        <div className="my-4 justify-center text-center">
           Want to see more photo?
           <br /> Please visit{" "}
           <Link
@@ -116,8 +117,40 @@ export default function Gallery() {
             target="blank"
           >
             <br />
+            <div>
+              <button className="btn   btn cursor-pointer font-bold bg-orange-400 hover:shadow-xl hover:bg-gray-700 hover:text-white hover:transition-all hover:duration-300 ">
+                <Link
+                  className="hover:font-bold"
+                  to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
+                  target="_blank"
+                  onClick={() => {
+                    const ctr = confirm(
+                      "You will be redirected to the project website"
+                    );
+                    if (!ctr) {
+                      navigate(0);
+                    }
+                  }}
+                >
+                  Visit
+                </Link>
+              </button>
+            </div>
             <div className={styles.QRFrame}>
-              <img className={styles.QRimg} alt="QR" src={QR}></img>
+              <img
+                className={styles.QRimg}
+                alt="QR"
+                src={QR}
+                target="_blank"
+                onClick={() => {
+                  const ctr = confirm(
+                    "You will be redirected to the project website"
+                  );
+                  if (!ctr) {
+                    navigate(0);
+                  }
+                }}
+              ></img>
             </div>
           </Link>
         </div>

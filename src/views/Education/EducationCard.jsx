@@ -19,7 +19,7 @@ function EducationCard({ content, index }) {
     <>
       <div
         id="eduCard"
-        className="p-4 m-4 border-2 rounded-2xl bg-slate-200 z-0 max-w-md min-w-96 hover:shadow-xl hover:shadow-gray-500 hover:transition-all hover:duration-300"
+        className="p-4 m-4 border-2 rounded-2xl bg-white z-0 max-w-md min-w-96 hover:shadow-xl hover:shadow-gray-300 hover:transition-all hover:duration-300"
       >
         {/* <img className="eduCardImg" alt={content.institution} /> */}
 
@@ -33,7 +33,7 @@ function EducationCard({ content, index }) {
 
         <ul className="list-group list-group-flush z-0 flex flex-wrap ">
           {content.title && (
-            <li className="list-group-item z-0 font-bold text-xl bg-gray-700">
+            <li className="list-group-item z-0 font-bold text-xl bg-gray-400">
               <span className={styles.label}>{content.title}</span>
             </li>
           )}
@@ -100,7 +100,7 @@ function EducationCard({ content, index }) {
           <Link
             target="_blank"
             to={content.website}
-            className="btn cursor-pointer font-bold bg-orange-500 hover:shadow-xl hover:bg-gray-700 hover:text-white mt-2"
+            className="btn cursor-pointer font-bold bg-orange-400 hover:shadow-xl hover:bg-gray-700 hover:text-white mt-2 hover:transition-all hover:duration-300"
             onClick={() => {
               const ctr = confirm("You will be redirected to another website");
               if (!ctr) {

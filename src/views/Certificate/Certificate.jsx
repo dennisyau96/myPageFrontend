@@ -10,6 +10,7 @@ function Certificate() {
 
   useEffect(() => {
     scrollTo(0, 0);
+    setCertificates((prev) => certs);
     certificates.sort((b, a) => b - a);
   }, []);
 
@@ -31,7 +32,7 @@ function Certificate() {
 
   return (
     <>
-      <div className="justify-center container container-fluid container-lg">
+      <div className="text-center justify-center container justify-items-center justify-self-center grid grid-col-1 w-auto">
         <h1 className="font-bold text-3xl my-10 text-center justify-center">
           Certificate{" "}
         </h1>
@@ -39,7 +40,7 @@ function Certificate() {
         {/*carousel */}
         <div
           id="carouselExampleAutoplaying"
-          className="carousel slide max-w-screen-lg justify-center text-center mb-6 self-center justify-self-center"
+          className="carousel slide  w-auto my-4 text-center justify-center border-2 border-gray-300 p-1  rounded-xl "
           data-bs-ride="carousel"
         >
           <div className="carousel-inner justify-center text-center">

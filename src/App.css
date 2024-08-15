@@ -18,6 +18,10 @@ header {
   width: 100%;
 }
 
+body {
+  transition: all;
+  transition-duration: 3000;
+}
 /* @import "bootstrap/scss/bootstrap"; */
 
 /*for arcade card shuffle*/

@@ -9,7 +9,11 @@ function SkillCard({ content, remark }) {
   // }, []);
 
   return (
-    <div className={"bg-slate-100 w-96 rounded-xl p-10"}>
+    <div
+      className={
+        "bg-white w-96 rounded-xl p-10 border-2  hover:bg-slate-500  hover:transition-all hover:duration-300 hover:shadow-2xl hover:shadow-gray-300"
+      }
+    >
       {content.skill ? (
         <p>
           <span className={styles.label}>Skill: </span>
