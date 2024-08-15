@@ -9,9 +9,11 @@ function Comment() {
   const [comment, setComment] = useState("");
   const [rating, setRating] = useState(null);
   const [after, setAfter] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   async function leaveComment(e) {
     e.preventDefault();
+
     const data = await axios.post(
       "https://mypagebackend-n0m8.onrender.com/api/leave-comment",
       {
@@ -23,8 +25,12 @@ function Comment() {
     );
 
     if (person != "" && comment != "" && rating != null) {
-      toast.success(`${data.data}`);
+      setLoading(true);
+      if (data.data) {
+        setLoading(false);
+      }
       setAfter(true);
+      toast.success(`${data.data}`);
     } else {
       toast.error(`${data.data}`);
     }
@@ -35,8 +41,8 @@ function Comment() {
     resetInputs();
     toast.success(`A new comment is always welcomed, ${person}.`);
   }
+
   function resetInputs() {
-    // setPerson("");
     setOrganization("");
     setComment("");
     setRating(null);
@@ -53,7 +59,7 @@ function Comment() {
               {/* -------- row 1  --------  */}
               <div className="form-floating">
                 <div className="row">
-                  <div className="col gy-2 gy-3">
+                  <div className="col gy-2  text-right">
                     <label htmlFor="person">Name</label>
                   </div>
                   <div className="col gy-2">
@@ -70,9 +76,8 @@ function Comment() {
                 {/* -------- row 2  --------  */}
 
                 <div className="row">
-                  <div className="col gy-2">
+                  <div className="col gy-2 text-right">
                     <label htmlFor="organization responsive">
-                      {" "}
                       Organization (optional)
                     </label>
                   </div>
@@ -91,7 +96,7 @@ function Comment() {
                 {/* -------- row 3  --------  */}
 
                 <div className="row">
-                  <div className="col gy-2">
+                  <div className="col gy-2 text-right">
                     <label htmlFor="comment">Comment</label>
                   </div>
                   <div className="col gy-2">
@@ -107,7 +112,7 @@ function Comment() {
                 {/* -------- row 4  --------  */}
 
                 <div className="row">
-                  <div className="col gy-2">
+                  <div className="col gy-2 text-right">
                     <label htmlFor="rating">Rating(5 is highest)</label>
                   </div>
                   <div className="col gy-2">
@@ -139,6 +144,12 @@ function Comment() {
             >
               Leave a Comment
             </button>
+            {loading ? (
+              <svg
+                className="animate-spin h-5 w-5 mr-3 ..."
+                viewBox="0 0 24 24"
+              ></svg>
+            ) : null}
           </div>
         </div>
       ) : (
@@ -146,6 +157,7 @@ function Comment() {
           <h2>Thanks you, {person}</h2>
           <h3> Leave another comment? Sure</h3>
           <button
+            className="cursor-pointer"
             onClick={() => {
               leaveOtherComment();
             }}

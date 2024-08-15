@@ -87,7 +87,13 @@ function DiceRoller() {
       <div className={styles.diceDisplay} id="diceDisplay">
         {rolling ? (
           <div id="rollingDiv">
-            <p className={styles.rollingMsg}>The dice are beening rolled...</p>
+            <p className={styles.rollingMsg}>
+              The dice are beening rolled...{" "}
+              <svg
+                className="animate-spin h-5 w-5 mr-3"
+                viewBox="0 0 24 24"
+              ></svg>
+            </p>
           </div>
         ) : null}
 

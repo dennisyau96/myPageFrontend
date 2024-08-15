@@ -15,11 +15,11 @@ function About() {
   useEffect(() => {
     scrollTo(0, 0);
   }, []);
-  
+
   return (
     <>
       <h1 className="font-bold text-3xl my-4 text-center">About</h1>
-      <div className="container mb-4">
+      <div className="container container-md mb-4">
         <div className="bg-orange-100 p-4 rounded-lg mb-4">
           <h3 className="font-bold text-xl my-4">
             Life in Canada(since July 2023)

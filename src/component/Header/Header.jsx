@@ -6,10 +6,13 @@ function Header() {
     <>
       <div
         id="headerDiv"
-        className=" sticky-top navbar inset-x-0 top-0 bg-black shadow-lg bg-image z-10000 "
+        className=" sticky-top navbar inset-x-0 top-0 bg-slate-400 shadow-lg bg-image z-10000 "
       >
         <header id="header" className="inline-block m-0">
-          <p id="headerName" className="text-white p-4 text-2xl">
+          <p
+            id="headerName"
+            className="text-white p-4 text-2xl hover:motion-reduce:animate-pulse"
+          >
             Dennis, Ming Leuk YAU
           </p>
 
