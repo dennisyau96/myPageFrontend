@@ -118,7 +118,7 @@ export default function Gallery() {
           >
             <br />
             <div>
-              <button className="btn   btn cursor-pointer font-bold bg-orange-400 hover:shadow-xl hover:bg-gray-700 hover:text-white hover:transition-all hover:duration-300 ">
+              <button className="btn cursor-pointer font-bold bg-orange-400 hover:shadow-xl hover:bg-gray-700 hover:text-white hover:transition-all hover:duration-300 mb-3">
                 <Link
                   className="hover:font-bold"
                   to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
@@ -141,6 +141,7 @@ export default function Gallery() {
                 className={styles.QRimg}
                 alt="QR"
                 src={qr}
+                to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
                 target="_blank"
                 onClick={() => {
                   const ctr = confirm(
