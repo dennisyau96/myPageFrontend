@@ -15,6 +15,7 @@ export default function Experience() {
   async function getData() {
     const expData = await axios.get([`${baseURL}/experiences`]);
     setExperience(expData.data);
+    setExperience((experience) => experience.sort((a, b) => a.sort - b.sort));
   }
 
   return (
