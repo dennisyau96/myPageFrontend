@@ -42,8 +42,8 @@ function Home() {
 
       <div id="commentLeavingDiv" className="justify-center my-4">
         <button
-          className="p-3 rounded-md  border-gray-300 border-2      hover:transition-all  hover:shadow-gray-400 hover:border-4 hover:border-gray-300 text-lg font-mono
-          mt-3  btn cursor-pointer font-bold bg-orange-500 hover:shadow-xl hover:bg-gray-700 hover:text-white"
+          className="p-3 rounded-md  border-gray-400 border-2      hover:transition-all  hover:shadow-gray-400 hover:border-4 hover:border-gray-500 text-lg font-mono
+          mt-3  btn cursor-pointer text-uppercase bg-orange-400 hover:shadow-xl hover:bg-gray-700 hover:text-white font-semibold motion-reduce:animate-bounce duration-3000"
           data-bs-toggle="modal"
           data-bs-target="#commentModal"
         >
@@ -64,9 +64,9 @@ function Home() {
         </div>
       </div>
 
-      <div className="fluid justify-center " id="arcadeDiv">
+      <div className="fluid justify-center text-center" id="arcadeDiv">
         <div className="text-center font-bold text-4xl">Let have some fun!</div>
-        <div className="container justify-center">
+        <div className=" justify-center border-2 border-orange-400 rounded-md p-4 m-4">
           <div id="arcadeDiv" className="flex flex-wrap justify-center">
             <div className="">
               <DigitalClock />
