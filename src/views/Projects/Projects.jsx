@@ -14,14 +14,6 @@ export default function Projects() {
     const projectData = await axios.get(`${baseURL}/projects`);
     setProjects((prev) => projectData.data);
   }
-  const dummyProject = {
-    name: "dummy",
-    type: "dummy",
-    website: "",
-    role: "role",
-    remark: "dummy",
-    thumbnail: "src/assets/gallery/pic7.jpg",
-  };
 
   return (
     <>
@@ -32,7 +24,6 @@ export default function Projects() {
             <ProjectCard project={project} />
           </div>
         ))}
-        <ProjectCard project={dummyProject} />
       </div>
     </>
   );
