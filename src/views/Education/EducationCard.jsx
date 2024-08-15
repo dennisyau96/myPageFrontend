@@ -100,7 +100,7 @@ function EducationCard({ content, index }) {
           <Link
             target="_blank"
             to={content.website}
-            className="bg-orange-400 p-2 my-6 rounded-xl"
+            className="btn cursor-pointer font-bold bg-orange-500 hover:shadow-xl hover:bg-gray-700 hover:text-white mt-2"
             onClick={() => {
               const ctr = confirm("You will be redirected to another website");
               if (!ctr) {
@@ -110,15 +110,6 @@ function EducationCard({ content, index }) {
           >
             Webpage
           </Link>
-
-          {/* <button
-            className=" bg-yellow-200 p-2 my-6 "
-            onClick={(index) => {
-              toggleCert(index);
-            }}
-          >
-            certificate
-          </button> */}
         </div>
       </div>
     </>

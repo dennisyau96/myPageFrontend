@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { baseURL } from "../../constant/constant";
 import ProjectCard from "./ProjectCard";
+
 export default function Projects() {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
@@ -17,10 +18,13 @@ export default function Projects() {
   return (
     <>
       <h1 className="font-bold text-3xl my-4 text-center"> Projects </h1>
-
-      {projects.map((project, i) => {
-        <ProjectCard project={project} />;
-      })}
+      <div className="flex flex-wrap justify-center">
+        {projects.map((project, index) => (
+          <div key={index}>
+            <ProjectCard project={project} />
+          </div>
+        ))}
+      </div>
     </>
   );
 }

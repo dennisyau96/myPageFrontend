@@ -31,8 +31,8 @@ function Home() {
       <img className="w-full h-full"></img>
       <div>
         <p className="text-justify flex ">
-          I am graduating very soon from Douglas College, Vancouver. During my
-          study, I found myself being interested in Web and software
+          I am graduating in August 2024 from Douglas College, Vancouver. During
+          my study, I found myself being interested in Web and software
           Development. I am trying my best to learn different coding and
           programming skills and technology to prepare myself to become a Web
           Developer, or any other tech-related position. Please feel free to
@@ -42,7 +42,8 @@ function Home() {
 
       <div id="commentLeavingDiv" className="justify-center my-4">
         <button
-          className="p-3 rounded-md bg-slate-100 border-black border-2  hover:bg-slate-400  hover:text-white font-bold hover:transition-all hover:shadow-xl hover:shadow-gray-400 hover:border-4 hover:border-gray-300 text-lg font-mono"
+          className="p-3 rounded-md  border-gray-300 border-2      hover:transition-all  hover:shadow-gray-400 hover:border-4 hover:border-gray-300 text-lg font-mono
+          mt-3  btn cursor-pointer font-bold bg-orange-500 hover:shadow-xl hover:bg-gray-700 hover:text-white"
           data-bs-toggle="modal"
           data-bs-target="#commentModal"
         >
@@ -79,9 +80,11 @@ function Home() {
             <div className="">
               <Counter />
             </div>
+            <div>{/* <CardShuffle /> */}</div>
           </div>
-
-          {/* <CardShuffle /> */}
+          <div>
+            <span>More Features are coming...</span>
+          </div>
         </div>
       </div>
     </div>
