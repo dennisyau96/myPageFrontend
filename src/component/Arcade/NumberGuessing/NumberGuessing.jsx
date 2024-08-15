@@ -182,7 +182,7 @@ export default function NumberGuessing() {
               className={(styles.numberGuessingInput, "form-control")}
             ></input>
             <button
-              className="input-group-text hover:font-bold hover:bg-orange-500"
+              className="input-group-text hover:text-white hover:bg-black hover:border-2"
               onClick={(e) => {
                 guess(e);
               }}

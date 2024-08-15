@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 export default function Footer() {
   const navigate = useNavigate();
   return (
-    <div className="footer relative bottom-0  h-10/12 w-full bg-black m-0 p-6">
+    <div className="footer bottom-0 bottom h-10/12 w-full bg-slate-400 m-0 p-6">
       <div className="h-1/6  ">
         <p className="justify-self-start text-white">Dennis Yau</p>
         <div className="flex flex-wrap ">
@@ -32,7 +32,7 @@ export default function Footer() {
           >
             <img
               src={igicon}
-              className="h-10 my-2 mx-2 border-2 border-black hover:border-orange-400 hover:border-2 hover:rounded-lg hover:transition-all"
+              className="h-10 my-2 mx-2   hover:transition-all hover:motion-reduce:animate-pulse "
               alt="INSTA"
             />
           </Link>
@@ -50,7 +50,7 @@ export default function Footer() {
           >
             <img
               src={liicon}
-              className=" hover:border-orange-200 hover:border-1 hover:rounded-lg h-10 my-2 mx-2 hover:transition-all"
+              className=" h-10 my-2 mx-2    hover:transition-all hover:motion-reduce:animate-pulse"
               alt="LinkedIn"
             />
           </Link>

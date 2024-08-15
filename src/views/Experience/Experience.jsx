@@ -3,9 +3,11 @@ import ExperienceCard from "./ExperienceCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { baseURL } from "../../constant/constant";
+import Loading from "../../component/Loading/Loading";
 
 export default function Experience() {
   const [experience, setExperience] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     getData();
@@ -13,15 +15,23 @@ export default function Experience() {
   }, []);
 
   async function getData() {
-    const expData = await axios.get([`${baseURL}/experiences`]);
-    setExperience(expData.data);
-    setExperience((experience) => experience.sort((a, b) => a.sort - b.sort));
+    try {
+      const expData = await axios.get([`${baseURL}/experiences`]);
+      if (expData.data) {
+        setLoading(false);
+      }
+      setExperience(expData.data);
+      setExperience((experience) => experience.sort((a, b) => a.sort - b.sort));
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   return (
     <>
       <h1 className="font-bold text-3xl my-4 text-center"> Experience </h1>
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center mb-5">
+        {loading ? <Loading /> : null}
         {experience.map((exp, index) => (
           <div key={index}>
             <ExperienceCard content={exp} />
