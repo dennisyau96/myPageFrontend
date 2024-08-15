@@ -1,6 +1,5 @@
 import EducationCard from "./EducationCard.jsx";
 import styles from "./Education.module.css";
-import education from "../../assets/education.js";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { baseURL } from "../../constant/constant.js";

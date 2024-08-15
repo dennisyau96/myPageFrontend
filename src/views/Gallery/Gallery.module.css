@@ -80,15 +80,17 @@
 }
 
 .QRimg {
-  width: 200px;
+  width: 300px;
   height: auto;
-  max-width: 200px;
+  max-width: 300px;
 }
 
 .QRFrame {
   padding: 10px;
   display: inline-block;
-  border: solid black;
+  border: solid gray 3px;
   margin: 10px;
   border-radius: 10px;
+  transition: all;
+  transition-duration: 300;
 }
