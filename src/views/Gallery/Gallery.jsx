@@ -1,29 +1,29 @@
 import styles from "./Gallery.module.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import qr from "../../assets/gallery/QR.jpg";
-import pic1 from "../../assets/gallery/pic1.jpg";
-import pic2 from "../../assets/gallery/pic2.jpg";
-import pic3 from "../../assets/gallery/pic3.jpg";
-import pic4 from "../../assets/gallery/pic4.jpg";
-import pic5 from "../../assets/gallery/pic5.jpg";
-import pic6 from "../../assets/gallery/pic6.jpg";
-import pic7 from "../../assets/gallery/pic7.jpg";
-import pic8 from "../../assets/gallery/pic8.jpg";
-import pic9 from "../../assets/gallery/pic9.jpg";
+import qr from "../../../src/assets/gallery/QR.jpg";
+import pic1 from "../../../src/assets/gallery/pic1.jpg";
+import pic2 from "../../../src/assets/gallery/pic2.jpg";
+import pic3 from "../../../src/assets/gallery/pic3.jpg";
+import pic4 from "../../../src/assets/gallery/pic4.jpg";
+import pic5 from "../../../src/assets/gallery/pic5.jpg";
+import pic6 from "../../../src/assets/gallery/pic6.jpg";
+import pic7 from "../../../src/assets/gallery/pic7.jpg";
+import pic8 from "../../../src/assets/gallery/pic8.jpg";
+import pic9 from "../../../src/assets/gallery/pic9.jpg";
 import { useNavigate } from "react-router-dom";
 export default function Gallery() {
   const navigate = useNavigate();
   const photosSrc = [
-    { href: "../../assets/gallery/pic1.jpg", pic: pic1 },
-    { href: "../../assets/gallery/pic2.jpg", pic: pic2 },
-    { href: "../../assets/gallery/pic3.jpg", pic: pic3 },
-    { href: "../../assets/gallery/pic4.jpg", pic: pic4 },
-    { href: "../../assets/gallery/pic5.jpg", pic: pic5 },
-    { href: "../../assets/gallery/pic6.jpg", pic: pic6 },
-    { href: "../../assets/gallery/pic7.jpg", pic: pic7 },
-    { href: "../../assets/gallery/pic8.jpg", pic: pic8 },
-    { href: "../../assets/gallery/pic9.jpg", pic: pic9 },
+    { href: "../../../src/assets/gallery/pic1.jpg", pic: pic1 },
+    { href: "../../../src/assets/gallery/pic2.jpg", pic: pic2 },
+    { href: "../../../src/assets/gallery/pic3.jpg", pic: pic3 },
+    { href: "../../../src/assets/gallery/pic4.jpg", pic: pic4 },
+    { href: "../../../src/assets/gallery/pic5.jpg", pic: pic5 },
+    { href: "../../../src/assets/gallery/pic6.jpg", pic: pic6 },
+    { href: "../../../src/assets/gallery/pic7.jpg", pic: pic7 },
+    { href: "../../../src/assets/gallery/pic8.jpg", pic: pic8 },
+    { href: "../../../src/assets/gallery/pic9.jpg", pic: pic9 },
   ];
 
   const [index, setIndex] = useState(0);
@@ -103,7 +103,7 @@ export default function Gallery() {
           Want to see more photo?
           <br /> Please visit{" "}
           <Link
-            className="hover:font-bold underline text-pink-700"
+            className="hover:font-bold underline "
             to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
             target="blank"
           >
