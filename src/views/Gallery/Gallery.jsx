@@ -1,7 +1,7 @@
 import styles from "./Gallery.module.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import QR from "../../assets/gallery/QR.jpg";
+import qr from "../../assets/gallery/QR.jpg";
 import pic1 from "../../assets/gallery/pic1.jpg";
 import pic2 from "../../assets/gallery/pic2.jpg";
 import pic3 from "../../assets/gallery/pic3.jpg";
@@ -140,7 +140,7 @@ export default function Gallery() {
               <img
                 className={styles.QRimg}
                 alt="QR"
-                src={QR}
+                src={qr}
                 target="_blank"
                 onClick={() => {
                   const ctr = confirm(
