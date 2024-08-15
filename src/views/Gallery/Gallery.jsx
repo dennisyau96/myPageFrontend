@@ -158,29 +158,3 @@ export default function Gallery() {
     </>
   );
 }
-
-{
-  /* <h1>Gallery</h1>
-
-     
-
-      <div id="albumDiv" className={styles.albumDiv}>
-        <div id="nextBtn" className={styles.nextBtn} onClick={prevPhoto}>
-          &lt;
-        </div>
-        <div className={styles.midDiv}>
-          <img
-            src={photos[index].pic}
-            className={styles.photo}
-            alt="photo"
-          ></img>
-        </div>
-
-        <div id="prevBtn" className={styles.prevBtn} onClick={nextPhoto}>
-          &gt;
-        </div>
-      </div>
-
-      
-*/
-}
