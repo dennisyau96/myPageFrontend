@@ -15,11 +15,15 @@ export default function ProjectCard({ project }) {
           <h5 className="card-title font-bold text-xl mb-2 text-center">
             {project.name}
           </h5>
-          <h5 className="card-subtitle mb-2 text-center italic">
+          <h5 className="card-subtitle mb-4 text-center italic">
             {project.type}
           </h5>
-          <p className="card-text text-center">
+          <p className="card-text text-left mx-3">
             I participated in this project as {project.role}.
+          </p>
+          <hr className="my-2" />
+          <p className="mt-2 card-text text-left mx-3">
+            {project.remark && project.remark}.
           </p>
 
           <button
