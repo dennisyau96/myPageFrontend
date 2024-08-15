@@ -14,17 +14,11 @@ export default function NumberGuessing() {
   const [lifeDsp, setLifeDsp] = useState("❤️ ❤️ ❤️ ❤️ ❤️");
 
   useEffect(() => {
-    setAnswer(Math.floor(Math.random() * 50) + 1);
-    if (answer >= 50) {
+    start();
+    if (answer > 49) {
       setAnswer(49);
-    } else if (answer <= 1) {
+    } else if (answer < 2) {
       setAnswer(2);
-    }
-
-    if (lifeCount < 1) {
-      setExploded(true);
-      toast.error("Wrong guess... ❤️-1.Boom!!!!");
-      return setAttempt("");
     }
   }, []);
 
@@ -38,16 +32,16 @@ export default function NumberGuessing() {
       return toast.error("Please Enter a Value.");
     }
     //handling for non integer inout
-    if (attempt / 1 != attempt) {
+    if (attempt % 1 != 0) {
       setAttempt("");
       return toast.error("Please Enter a Valid Value.");
     }
 
     //case 2: no life left
-    if (lifeCount <= 0) {
+    if (lifeCount < 1) {
       setExploded(true);
       setEnded(true);
-      setAttempt("");
+      // setAttempt("");
     }
 
     //case 3: life > 0
@@ -62,22 +56,23 @@ export default function NumberGuessing() {
       }
       //case 3a --- attempt out of range
       if (attempt <= downRange || attempt >= upRange) {
-        setAttempt("");
-
         toast.error(
           `Please Enter a Value between ${downRange} to ${upRange}(inclusive). `
         );
-        setUpRange(upRange);
-        setDownRange(downRange);
+        setAttempt("");
+
+        // setUpRange(upRange);
+        // setDownRange(downRange);
       }
       //---case 3b---in range
       else {
         //case 3b1 --- attempt to be down range(wrong)
         if (attempt < answer && attempt > downRange) {
           setDownRange(attempt);
-          setLifeCount((l) => l - 1);
-          if (lifeCount == 0) {
+          setLifeCount((l) => lifeCount - 1);
+          if (lifeCount < 1) {
             setExploded(true);
+            setEnded(true);
             toast.error("Wrong guess... ❤️-1.Boom!!!!");
             return setAttempt("");
           }
@@ -91,6 +86,7 @@ export default function NumberGuessing() {
           setLifeCount((l) => l - 1);
           if (lifeCount < 1) {
             setExploded(true);
+            setEnded(true);
             toast.error("Wrong guess... ❤️-1.Boom!!!!");
             return setAttempt("");
           }
@@ -107,6 +103,25 @@ export default function NumberGuessing() {
   //--------------------------------------------
 
   function restart() {
+    setAnswer(Math.ceil(Math.random() * 49) + 1);
+    if (answer >= 50) {
+      setAnswer(49);
+    }
+    if (answer <= 1) {
+      setAnswer(2);
+    }
+    setAttempt("");
+    setUpRange(50);
+    setDownRange(1);
+    setExploded(false);
+    setSafe(false);
+    setLifeCount(5);
+    setLifeDsp("❤️ ❤️ ❤️ ❤️ ❤️");
+    setEnded(false);
+    toast.success("Game restarted, secret code regenerated.");
+  }
+
+  function start() {
     setAnswer(Math.ceil(Math.random() * 50) + 1);
     if (answer >= 50) {
       setAnswer(49);
@@ -114,7 +129,6 @@ export default function NumberGuessing() {
     if (answer <= 1) {
       setAnswer(2);
     }
-    toast.success("Game restarted, secret code regenerated.");
     setAttempt("");
     setUpRange(50);
     setDownRange(1);
@@ -133,7 +147,7 @@ export default function NumberGuessing() {
   }
   //
   return (
-    <div className={(styles.numberGuessingDiv, styles.boxyBK)}>
+    <div className={(styles.numberGuessingDiv, styles.boxyBK)} id="numGuessDiv">
       <p className="mb-3 text-xl">
         {!exploded ? "Don't explode!" : "Exploded"}
       </p>
@@ -145,6 +159,8 @@ export default function NumberGuessing() {
         Down:{downRange}
         <br></br>
         Up:{upRange}
+        <br></br>
+        attempt:{attempt}
       </p> */}
 
       {/* testing display */}
@@ -179,8 +195,11 @@ export default function NumberGuessing() {
       ) : null}
       {!exploded ? null : <h1 className={styles.boomDsp}>BOOOOOOOM!!!!!</h1>}
       {!safe ? null : (
-        <div className={styles.safeToGo}>You are safe to go.</div>
+        <div className={styles.safeToGo}>
+          The secret code is {answer}. You are safe to go.
+        </div>
       )}
+
       <button onClick={() => restart()} className={styles.restartBtn}>
         Restart
       </button>
