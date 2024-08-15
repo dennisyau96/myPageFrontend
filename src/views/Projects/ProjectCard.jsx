@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 
 export default function ProjectCard({ project }) {
   const navigate = useNavigate();
-  const thumbnailStr = `../../../src/assets/${project.thumbnail}`;
   return (
     <>
       <div className="card w-80 p-1 m-4 border-2 rounded-xl hover:  hover:transition-all hover:duration-300 hover:bg-slate-100 hover:shadow-2xl hover:shadow-gray-300">

@@ -56,45 +56,48 @@ export default function Gallery() {
         {/*carousel */}
         <div
           id="carouselExampleAutoplaying"
-          className="carousel slide  w-7/12 my-4 text-center justify-center border-2 border-gray-300 p-1  rounded-xl "
-          data-bs-ride="carousel"
+          className="carousel slide  carousel-fade w-7/12 my-4 text-center justify-center border-2 border-gray-300 p-1  rounded-xl "
+          // data-bs-ride="carousel"
+          // data-ride="carousel"
+          // data-pause="false"
+          // data-interval="1000"
         >
           <div className="carousel-inner w-full justify-center ">
             <div className="carousel-item active justify-center">
               <img
                 src={photosSrc[index].pic}
-                className="d-block w-full rounded-lg"
-                alt="0"
+                className="d-block w-full rounded-lg transition-all duration-300 "
+                alt=""
               />
             </div>
           </div>
 
           <button
-            className="carousel-control-prev active:bg-slate-200 active:duration-700 "
+            className="carousel-control-prev hover:bg-gray-100 transition-all ease-in-out duration-300"
             type="button"
             data-bs-target="#carouselExampleAutoplaying"
             data-bs-slide="prev"
             onClick={prevPhoto}
           >
             <span
-              className="carousel-control-prev-icon  "
+              className="carousel-control-prev-icon"
               aria-hidden="true"
             ></span>
-            <span className="visually-hidden z-0">Previous</span>
+            <span className="visually-hidden">Previous</span>
           </button>
 
           <button
-            className="carousel-control-next active:bg-slate-200 active:duration-700 "
+            className="carousel-control-next hover:bg-gray-100 transition-all ease-in-out duration-300"
             type="button"
             data-bs-target="#carouselExampleAutoplaying"
             data-bs-slide="next"
             onClick={nextPhoto}
           >
             <span
-              className="carousel-control-next-icon  "
+              className="carousel-control-next-icon"
               aria-hidden="true"
             ></span>
-            <span className="visually-hidden ">Next</span>
+            <span className="visually-hidden">Next</span>
           </button>
         </div>
         {/*carousel */}

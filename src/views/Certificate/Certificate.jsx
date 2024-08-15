@@ -57,30 +57,31 @@ function Certificate() {
           </div>
 
           <button
-            className="carousel-control-prev "
+            className="carousel-control-prev hover:bg-orange-100 transition-all ease-in-out duration-300"
             type="button"
-            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-target="#carouselExampleCaptions"
             data-bs-slide="prev"
             onClick={prevCert}
           >
             <span
-              className="carousel-control-prev-icon hover:bg-slate-100 hover:transition-all duration-1000"
+              className="carousel-control-prev-icon "
               aria-hidden="true"
             ></span>
-            <span className="visually-hidden ">Previous</span>
+            <span className="visually-hidden">Previous</span>
           </button>
+
           <button
-            className="carousel-control-next "
+            className="carousel-control-next hover:bg-orange-100 transition-all ease-in-out duration-300"
             type="button"
-            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-target="#carouselExampleCaptions"
             data-bs-slide="next"
             onClick={nextCert}
           >
             <span
-              className="carousel-control-next-icon hover:bg-slate-100 hover:transition-all duration-1000"
+              className="carousel-control-next-icon"
               aria-hidden="true"
             ></span>
-            <span className="visually-hidden ">Next</span>
+            <span className="visually-hidden">Next</span>
           </button>
         </div>
         {/* carousel*/}
