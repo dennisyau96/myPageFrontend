@@ -6,7 +6,7 @@ function Header() {
     <>
       <div
         id="headerDiv"
-        className=" sticky-top navbar inset-x-0 top-0 bg-slate-400 shadow-lg bg-image z-10000 "
+        className=" sticky-top navbar inset-x-0 top-0  shadow-lg bg-image z-10000 theme1 "
       >
         <header id="header" className="inline-block m-0">
           <p
@@ -16,7 +16,10 @@ function Header() {
             Dennis, Ming Leuk YAU
           </p>
 
-          <p id="headerDescription" className={styles.headerDescription}>
+          <p
+            id="headerDescription"
+            className="text-white px-4 pt-3 pb-5 text-md hover:motion-reduce:animate-pulse"
+          >
             The Simpliest Way to Demostrate my Web Development Experience and
             Skills
           </p>

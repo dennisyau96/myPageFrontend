@@ -2,11 +2,13 @@ body {
   /* margin: 0;
   padding: 0; */
   font-family: "Courier", "Courier New", "Georgia", "Times New Roman", serif;
+  min-height: 70vh;
+  height: 100vh;
+  transition: all;
+  transition-duration: 3000;
 }
-
-.mainContent {
-  /* justify-items: center; */
-  /* max-width: 80%; */
+.bodyContainer {
+  min-height: 100vh;
 }
 
 html {
@@ -18,10 +20,35 @@ header {
   width: 100%;
 }
 
-body {
-  transition: all;
-  transition-duration: 3000;
+.theme1 {
+  background-color: rgb(100, 130, 173);
 }
+.theme1font {
+  color: rgb(100, 130, 173);
+}
+.theme2 {
+  background-color: rgb(127, 161, 195);
+}
+
+.theme2font {
+  color: rgb(127, 161, 195);
+}
+
+.theme3 {
+  background-color: rgb(226, 218, 214);
+}
+
+.theme3font {
+  color: rgb(226, 218, 214);
+}
+.theme4 {
+  background-color: rgb(245, 237, 237);
+}
+
+.theme4font {
+  color: rgb(245, 237, 237);
+}
+
 /* @import "bootstrap/scss/bootstrap"; */
 
 /*for arcade card shuffle*/

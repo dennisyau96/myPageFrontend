@@ -24,7 +24,7 @@ function App() {
     <>
       <Toaster position="bottom-center" duration="5000" />
       <Header z-index="10" />
-      <div className="mainContent container">
+      <div className="mainContent container bodyContainer">
         <Routes>
           <Route path="/">
             <Route index element={<Home />} />

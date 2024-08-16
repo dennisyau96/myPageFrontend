@@ -30,7 +30,7 @@ export default function Experience() {
   return (
     <>
       <h1 className="font-bold text-3xl my-4 text-center"> Experience </h1>
-      <div className="flex flex-wrap justify-center mb-5">
+      <div className="flex flex-wrap justify-center mb-5 gap-5">
         {loading ? <Loading /> : null}
         {experience.map((exp, index) => (
           <div key={index}>

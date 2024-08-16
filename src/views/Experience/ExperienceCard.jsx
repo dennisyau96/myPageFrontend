@@ -8,28 +8,30 @@ function ExperienceCard({ content }) {
   const [des, setDes] = useState([content.description]);
 
   return (
-    <div className="p-4 m-3 border-2 rounded-lg bg-white z-0 max-w-md min-w-96 hover:shadow-xl hover:shadow-gray-300 hover:transition-all hover:duration-300">
+    <div className="p-4 m-3 border-2 rounded-lg bg-white z-0 max-w-md min-w-96  hover:shadow-gray-300 hover:transition-all   hover:shadow-xl  hover:duration-300 min-h-100 h-100">
       {content.position ? (
         <p className="font-bold text-2xl mb-7">
           <span className={styles.label}>{content.position}</span>
         </p>
       ) : null}
       <div className="grid grid-cols-5 gap-y-2">
-        <div className="col-span-2 text-orange-500">Organization:</div>
+        <div className="col-span-2 theme1font">Organization:</div>
         <div className="col-span-3">{content.organization}</div>
-        <div className="col-span-2 text-orange-500">Period:</div>
+        <div className="col-span-2 theme1font">Period:</div>
         <div className="col-span-3">{content.period}</div>{" "}
-        <div className="col-span-2 text-orange-500">Location:</div>
+        <div className="col-span-2 theme1font">Location:</div>
         <div className="col-span-3">{content.location}</div>{" "}
-        <div className="col-span-2 text-orange-500">Description:</div>
-        <div className="col-span-3">
-          <ul>
-            {des.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-          {JSON.stringify(content.description)}
-        </div>
+        {desArray ? (
+          <div>
+            <div className="col-span-2 theme1font">Description:</div>
+            <div className="col-span-3">
+              <ul>
+                {desArray &&
+                  desArray.map((item, index) => <li key={index}>{item}</li>)}
+              </ul>
+            </div>
+          </div>
+        ) : null}
       </div>
     </div>
   );
