@@ -344,8 +344,8 @@ input {
   text-align: center;
   align-items: center;
   align-content: center;
-  width: 350px;
   padding: 10px;
+  width: 100px;
 }
 
 .safeToGo {

@@ -147,7 +147,7 @@ export default function NumberGuessing() {
   }
   //
   return (
-    <div className={(styles.numberGuessingDiv, styles.boxyBK)} id="numGuessDiv">
+    <div className={styles.boxyBK} id="numGuessDiv">
       <p className="mb-3 text-xl">
         {!exploded ? "Don't explode!" : "Exploded"}
       </p>
@@ -165,7 +165,7 @@ export default function NumberGuessing() {
 
       {/* testing display */}
       {!ended ? (
-        <div className={styles.numberGuessingDiv}>
+        <div className=" justify-center text-center justify-items-center w-80">
           <p className={styles.boomLifeCountMessage}>
             You have {lifeCount} chance(s) to guess the secret code.
           </p>
