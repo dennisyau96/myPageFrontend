@@ -28,7 +28,7 @@ function Counter() {
     }
   }
   return (
-    <div className={(styles.counterDiv, styles.boxyWH)}>
+    <div className={(styles.counterDiv, styles.boxyBK)}>
       <h1 className="mb-3 text-xl font-bold">Tally Counter</h1>
       <div className="flex gap-3">
         <div>

@@ -52,8 +52,8 @@ function DiceRoller() {
 
   return (
     <div className={(styles.diceRollerDiv, styles.boxyBK)}>
-      <h2 className="mb-3 text-xl">Dice Roller</h2>
-      <div className="flex flex-auto justify-center items-center ease-in-out transition-all ">
+      <h2 className="mb-3 text-xl font-bold">Dice Roller</h2>
+      <div className="flex flex-auto justify-center items-center ease-in-out ">
         <button className={styles.lessBtn} onClick={() => lessDie()}>
           -1
         </button>
@@ -88,7 +88,7 @@ function DiceRoller() {
         {rolling ? (
           <div id="rollingDiv">
             <p className={styles.rollingMsg}>
-              The dice are being rolled...{" "}
+              The dice are beening rolled...{" "}
               <svg
                 className="animate-spin h-5 w-5 mr-3"
                 viewBox="0 0 24 24"
