@@ -20,7 +20,7 @@ function About() {
     <>
       <h1 className="font-bold text-3xl my-4 text-center">About</h1>
       <div className="container container-md mb-4">
-        <div className="bg-orange-100 p-4 rounded-lg mb-4">
+        <div className="text-slate-600 bg-slate-200 p-4 rounded-lg mb-4">
           <h3 className="font-bold text-xl my-4">
             Life in Canada(since July 2023)
           </h3>
@@ -95,7 +95,7 @@ function About() {
             This profile webpage is also created by the technologies above.
           </p>
         </div>
-        <div className="bg-blue-100 p-4 rounded-lg">
+        <div className="bg-blue-50 p-4 rounded-lg text-gray-600">
           <h3 className="font-bold text-xl my-4">
             Life in Hong Kong(before July 2023)
           </h3>

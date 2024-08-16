@@ -20,7 +20,7 @@ function Home() {
   return (
     <div className="container-md text-center">
       <h1 className="font-bold text-3xl "> Dennis, Ming Leuk YAU</h1>
-      <p className="font-bold my-2 text-lg text-orange-600">
+      <p className="font-bold my-2 text-lg theme2font">
         Software Developer | Web Developer | IT | Data
         <br />
       </p>
@@ -40,10 +40,13 @@ function Home() {
         </p>
       </div>
 
-      <div id="commentLeavingDiv" className="justify-center my-4">
+      <div
+        id="commentLeavingDiv"
+        className="justify-center justify-items-center text-center my-4"
+      >
         <button
-          className="p-3 rounded-md  border-gray-400 border-2      hover:transition-all  hover:shadow-gray-400 hover:border-4 hover:border-gray-500 text-lg font-mono
-          mt-3  btn cursor-pointer text-uppercase bg-orange-400 hover:shadow-xl hover:bg-gray-700 hover:text-white font-semibold motion-reduce:animate-bounce duration-3000"
+          className="p-3 rounded-md  border-gray-400 border-2 hover:transition-all  hover:shadow-gray-400 hover:border-4 hover:border-gray-500 text-lg font-mono
+          mt-3 cursor-pointer btn text-uppercase theme2 hover:shadow-xl hover:bg-gray-700 hover:text-white font-semibold duration-3000 hover:animate-pulse ease-in-out"
           data-bs-toggle="modal"
           data-bs-target="#commentModal"
         >
@@ -66,8 +69,11 @@ function Home() {
 
       <div className="fluid justify-center text-center" id="arcadeDiv">
         <div className="text-center font-bold text-4xl">Let have some fun!</div>
-        <div className=" justify-center border-2 border-orange-400 rounded-md p-4 m-4">
-          <div id="arcadeDiv" className="flex flex-wrap justify-center">
+        <div className=" justify-center border-2 border-slate-400 rounded-md p-4 m-4">
+          <div
+            id="arcadeDiv"
+            className="flex flex-wrap justify-center hover:transition-all hover:duration-300 "
+          >
             <div className="">
               <DigitalClock />
             </div>
@@ -83,7 +89,7 @@ function Home() {
             <div>{/* <CardShuffle /> */}</div>
           </div>
           <div>
-            <span>More Features are coming...</span>
+            <span className="my-4 theme1font">More Features are coming...</span>
           </div>
         </div>
       </div>

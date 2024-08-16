@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 export default function Footer() {
   const navigate = useNavigate();
   return (
-    <div className="footer bottom-0 bottom h-10/12 w-full bg-slate-400 m-0 p-6">
+    <div className="footer bottom-0 h-10/12 w-full theme1 m-0 p-6">
       <div className="h-1/6  ">
         <p className="justify-self-start text-white">Dennis Yau</p>
         <div className="flex flex-wrap ">
@@ -52,7 +52,7 @@ export default function Footer() {
               src={liicon}
               className=" h-10 my-2 mx-2    hover:transition-all hover:motion-reduce:animate-pulse"
               alt="LinkedIn"
-            />
+            ></img>
           </Link>
         </div>
       </div>

@@ -3,11 +3,11 @@
   color: white;
   padding: 20px;
   margin: 30px;
-  width: 400px;
   justify-content: center;
   border-radius: 10px;
 }
 
 .label {
-  color: #dc6c22;
+  color: #6482ad;
+  font-weight: bold;
 }

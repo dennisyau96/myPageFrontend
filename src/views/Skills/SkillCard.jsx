@@ -12,7 +12,7 @@ function SkillCard({ content, remarks }) {
   return (
     <div
       className={
-        "bg-white w-96 rounded-xl p-10 border-2  hover:bg-slate-500  hover:transition-all hover:duration-300 hover:shadow-2xl hover:shadow-gray-300"
+        "bg-slate-200 hover:bg-white w-96 rounded-xl p-10 border-2    hover:transition-all hover:duration-300 hover:shadow-2xl hover:shadow-gray-300"
       }
     >
       {content.skill ? (

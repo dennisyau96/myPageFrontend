@@ -15,21 +15,23 @@ function ExperienceCard({ content }) {
         </p>
       ) : null}
       <div className="grid grid-cols-5 gap-y-2">
-        <div className="col-span-2 text-orange-500">Organization:</div>
+        <div className="col-span-2 theme1font">Organization:</div>
         <div className="col-span-3">{content.organization}</div>
-        <div className="col-span-2 text-orange-500">Period:</div>
+        <div className="col-span-2 theme1font">Period:</div>
         <div className="col-span-3">{content.period}</div>{" "}
-        <div className="col-span-2 text-orange-500">Location:</div>
+        <div className="col-span-2 theme1font">Location:</div>
         <div className="col-span-3">{content.location}</div>{" "}
-        <div className="col-span-2 text-orange-500">Description:</div>
-        <div className="col-span-3">
-          <ul>
-            {des.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-          {JSON.stringify(content.description)}
-        </div>
+        {desArray ? (
+          <div>
+            <div className="col-span-2 theme1font">Description:</div>
+            <div className="col-span-3">
+              <ul>
+                {desArray &&
+                  desArray.map((item, index) => <li key={index}>{item}</li>)}
+              </ul>
+            </div>
+          </div>
+        ) : null}
       </div>
     </div>
   );

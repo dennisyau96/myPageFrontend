@@ -20,7 +20,7 @@ input {
   display: inline-block;
   text-align: justify;
   /* border: solid rgb(209, 208, 208) 2px; */
-  background: rgb(242, 255, 251);
+  background: #ece4e0;
   background-repeat: no-repeat;
   background-attachment: local;
   padding: 10px;
@@ -32,18 +32,17 @@ input {
 .boxyWH:hover {
   display: inline-block;
   text-align: justify;
-  border: solid #9ec8b9 3px;
+  transition: 300ms;
   padding: 10px;
   justify-content: center;
   text-align: center;
   margin: 10px;
   border-radius: 5px;
-  transition: 300ms;
-  box-shadow: 10px 10px #e4e4e4;
+  border: #7fa1c3 solid 3px;
 }
 .boxyBK {
   display: inline-block;
-  background: #5c8374;
+  background: #6482ad;
   background-repeat: no-repeat;
   color: white;
   text-align: justify;
@@ -58,13 +57,12 @@ input {
   transition: 300ms;
   color: white;
   text-align: justify;
-  border: solid #1b4242 3px;
+  border: solid #f5eded 3px;
   padding: 10px;
   justify-content: center;
   text-align: center;
   margin: 10px;
   border-radius: 5px;
-  box-shadow: 10px 10px #bfbfbf;
 }
 /*----------------------------------Digital clock----------------------------------*/
 .digitalClockDiv {
@@ -126,7 +124,7 @@ input {
 
 .leaveCommentBtn {
   margin: 10px;
-  border: solid black 2px;
+  border: solid #6482ad 2px;
   background-color: white;
   border-radius: 5px;
   padding: 8px;
@@ -135,14 +133,13 @@ input {
 }
 .leaveCommentBtn:hover {
   margin: 10px;
-  border: solid black;
-  background-color: black;
+  border: solid #f5eded;
+  background-color: #6482ad;
   border-radius: 5px;
   padding: 8px;
   font-size: 21px;
   transition: 300ms;
   color: white;
-  box-shadow: grey 5px 5px;
 }
 .commentAfter {
   justify-content: center;
@@ -162,7 +159,6 @@ input {
 .dice {
   border: solid white;
   border-radius: 5px;
-  box-shadow: 5px 5px rgb(94, 94, 94);
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -175,7 +171,6 @@ input {
 .dice:hover {
   border: solid rgb(0, 0, 0);
   border-radius: 5px;
-  box-shadow: 5px 5px rgb(89, 89, 89);
   display: inline-block;
   width: 60px;
   height: 60px;
@@ -183,7 +178,7 @@ input {
   font-size: 40px;
   color: black;
   transition: 300ms;
-  background-color: rgb(255, 255, 255);
+  background-color: #f5eded;
   cursor: default;
 }
 
@@ -237,7 +232,6 @@ input {
   justify-content: center;
   background-color: black;
   color: white;
-  border: white;
   border: solid rgb(191, 191, 191);
 }
 .dieCounter:hover {
@@ -249,12 +243,11 @@ input {
   text-align: center;
   align-content: center;
   justify-content: center;
-  background-color: white;
-  color: #ef5350;
+  background-color: #f5eded;
+  color: #6482ad;
   border: solid rgb(0, 0, 0);
   transition: 300ms;
   cursor: default;
-  box-shadow: rgb(189, 186, 186) 3px 3px;
 }
 
 .diceCounterDiv {
@@ -269,7 +262,7 @@ input {
 }
 .lessBtn {
   height: auto;
-  background-color: rgb(255, 255, 255);
+  background-color: #e2dad6;
   border-radius: 5px;
   font-size: 18px;
   color: black;
@@ -285,11 +278,10 @@ input {
   transition: 300ms;
   font-size: 20px;
   margin: 10px;
-  box-shadow: rgb(189, 186, 186) 3px 3px;
 }
 .moreBtn {
   height: auto;
-  background-color: rgb(255, 255, 255);
+  background-color: #f5eded;
   border-radius: 5px;
   font-size: 18px;
   color: black;
@@ -305,7 +297,6 @@ input {
   transition: 300ms;
   font-size: 20px;
   margin: 10px;
-  box-shadow: rgb(189, 186, 186) 3px 3px;
 }
 
 .restartDRBtn {
@@ -325,14 +316,13 @@ input {
   transition: 300ms;
   font-size: px;
   margin: 10px;
-  box-shadow: rgb(189, 186, 186) 3px 3px;
 }
 .rollDRBtn {
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
   font-size: 18px;
   color: black;
-  border: solid rgb(232, 100, 39);
+  border: solid #7fa1c3;
   margin: 10px;
   padding: 10px;
 }
@@ -344,7 +334,6 @@ input {
   transition: 300ms;
   font-size: 20px;
   margin: 10px;
-  box-shadow: rgb(189, 186, 186) 3px 3px;
 }
 /*----------------------------------Number Guessing----------------------------------*/
 .numGuessTitle {
@@ -410,7 +399,6 @@ input {
   border-radius: 5px;
   font-size: 22px;
   background-color: white;
-  box-shadow: rgb(189, 186, 186) 3px 3px;
   margin: 10px;
 }
 
@@ -431,7 +419,6 @@ input {
   border: solid rgb(191, 191, 191);
   transition: 300ms;
   font-size: 20px;
-  box-shadow: grey 5px 5px;
 }
 
 .numberGuessingHint {
@@ -468,7 +455,6 @@ input {
   margin: 5px;
   padding: 5px;
   border-radius: 5px;
-  box-shadow: rgb(189, 186, 186) 3px 3px;
 
   /* cursor: pointer; */
 }
@@ -501,7 +487,6 @@ input {
   margin: 10px;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: rgb(189, 186, 186) 3px 3px;
 }
 .countHint {
   font-size: 10px;
@@ -529,7 +514,6 @@ input {
   background-color: black;
   color: white;
   transition: 350ms;
-  box-shadow: rgb(189, 186, 186) 3px 3px;
 }
 /*----------------------------------Card Shuffle----------------------------------*/
 
