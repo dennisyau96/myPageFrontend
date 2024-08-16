@@ -6,6 +6,7 @@ import Loading from "../../component/Loading/Loading";
 function Skills() {
   const [skills, setSkills] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [remarks, setRemarks] = useState([]);
 
   useEffect(() => {
     loadData();
@@ -19,6 +20,7 @@ function Skills() {
       if (skillRes.data) {
         setLoading(false);
         setSkills(skillRes.data);
+        setRemarks(skillRes.data.remark);
       }
     } catch (err) {
       console.log(err);
@@ -32,7 +34,7 @@ function Skills() {
         {loading ? <Loading /> : null}
         {skills.map((skill, index) => (
           <div key={index}>
-            <SkillCard content={skill} remarks={skill.remark} />
+            <SkillCard content={skill} remarks={remarks} />
           </div>
         ))}
       </div>
