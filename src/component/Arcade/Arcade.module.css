@@ -337,7 +337,7 @@ input {
 .numGuessTitle {
   font-size: 30px;
 }
-.numberGuessingDiv {
+/* .numberGuessingDiv {
   border: none;
   justify-content: center;
   justify-items: center;
@@ -345,7 +345,7 @@ input {
   align-items: center;
   align-content: center;
   padding: 10px;
-}
+} */
 
 .safeToGo {
   font-size: 35px;
@@ -358,7 +358,7 @@ input {
 }
 
 .numGuessHint {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 800;
   border-radius: 5px;
   background-color: rgb(240, 237, 235);
