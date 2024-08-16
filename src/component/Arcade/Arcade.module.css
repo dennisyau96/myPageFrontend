@@ -42,7 +42,7 @@ input {
 }
 .boxyBK {
   display: inline-block;
-  background: #7fa1c3;
+  background: #8aa9c8;
   background-repeat: no-repeat;
   color: white;
   text-align: justify;
@@ -50,7 +50,7 @@ input {
   justify-content: center;
   text-align: center;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 .boxyBK:hover {
   display: inline-block;
@@ -62,15 +62,16 @@ input {
   justify-content: center;
   text-align: center;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 /*----------------------------------Digital clock----------------------------------*/
 .digitalClockDiv {
-  border: solid black;
   padding: 20px;
   min-width: 100px;
   display: grid;
+  border-radius: 15px;
   grid-column: 1;
+  background-color: #c0c4cc67;
 }
 
 .dateDiv {
@@ -343,7 +344,8 @@ input {
   text-align: center;
   align-items: center;
   align-content: center;
-  max-width: 350px;
+  width: 350px;
+  padding: 10px;
 }
 
 .safeToGo {
@@ -437,10 +439,12 @@ input {
 .counterBtn {
   display: inline-block;
   border: solid black 2px;
+  background-color: white;
   margin: 5px;
   padding: 5px;
   border-radius: 5px;
   cursor: pointer;
+  color: #3d495a;
 }
 .counterBtn:hover {
   display: inline-block;
@@ -496,6 +500,7 @@ input {
   font-size: 20px;
   cursor: pointer;
   border: solid black 3px;
+  color: #3d495a;
   padding: 5px;
   border-radius: 5px;
 }

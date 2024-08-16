@@ -18,7 +18,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="container-md text-center">
+    <div className="container-fluid text-center">
       <h1 className="font-bold text-3xl "> Dennis, Ming Leuk YAU</h1>
       <p className="font-bold my-2 text-lg theme2font">
         Software Developer | Web Developer | IT | Data
@@ -32,10 +32,10 @@ function Home() {
       <div>
         <p className="text-justify flex ">
           I am graduating in August 2024 from Douglas College, Vancouver. During
-          my study, I found myself being interested in Web and software
-          Development. I am trying my best to learn different coding and
+          my study, I found myself being interested in web and software
+          development. I am trying my best to learn different coding and
           programming skills and technology to prepare myself to become a Web
-          Developer, or any other tech-related position. Please feel free to
+          Developer, or any other tech-related positions. Please feel free to
           leave a comment below.
         </p>
       </div>
@@ -74,11 +74,8 @@ function Home() {
         <div className=" justify-center border-2 border-slate-400 rounded-md p-4 m-4">
           <div
             id="arcadeDiv"
-            className="flex flex-wrap justify-center hover:transition-all hover:duration-300 "
+            className="flex flex-wrap justify-center hover:transition-all hover:duration-300 gap-4 "
           >
-            <div className="">
-              <DigitalClock />
-            </div>
             <div className="">
               <DiceRoller />
             </div>
@@ -88,10 +85,14 @@ function Home() {
             <div className="">
               <Counter />
             </div>
+            <div className="">
+              <DigitalClock />
+            </div>
+
             <div>{/* <CardShuffle /> */}</div>
           </div>
           <div>
-            <span className="my-4 theme1font">More Features are coming...</span>
+            <span className="my-4 theme1font">More features are coming...</span>
           </div>
         </div>
       </div>

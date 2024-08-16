@@ -175,7 +175,7 @@ export default function NumberGuessing() {
               {downRange}-{upRange}(inclusive)
             </span>
           </div>
-          <div className="input-group">
+          <div className="input-group  ">
             <input
               value={attempt}
               onChange={(e) => setAttempt(e.target.value)}

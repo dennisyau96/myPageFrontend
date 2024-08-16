@@ -4,6 +4,7 @@ body {
   font-family: "Courier", "Courier New", "Georgia", "Times New Roman", serif;
   min-height: 70vh;
   height: 100vh;
+  width: 100vw;
   transition: all;
   transition-duration: 3000;
 }

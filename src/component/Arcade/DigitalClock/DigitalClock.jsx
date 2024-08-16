@@ -75,7 +75,7 @@ function DigitalClock() {
   }
   setInterval(updateClock, 1000);
   return (
-    <div className={(styles.digitalClockDiv, styles.boxyWH)}>
+    <div className={styles.digitalClockDiv}>
       {/* <p className={styles.clockTitle}>The Time Now is</p> */}
       <div className={styles.dateDiv}>
         {month.toUpperCase()} {date},{year}
