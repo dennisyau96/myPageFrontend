@@ -13,9 +13,6 @@ function Nav() {
         <NavLink className={styles.navLink} to="/experience">
           Experience
         </NavLink>
-        <NavLink className={styles.navLink} to="/gallery">
-          Gallery
-        </NavLink>
         <NavLink className={styles.navLink} to="/projects">
           Projects
         </NavLink>
@@ -24,6 +21,9 @@ function Nav() {
         </NavLink>
         <NavLink className={styles.navLink} to="/certificates">
           Certificate
+        </NavLink>
+        <NavLink className={styles.navLink} to="/gallery">
+          Gallery
         </NavLink>
         <NavLink className={styles.navLink} to="/about">
           About

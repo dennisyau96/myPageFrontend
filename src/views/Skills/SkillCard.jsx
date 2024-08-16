@@ -12,12 +12,12 @@ function SkillCard({ content, remarks }) {
   return (
     <div
       className={
-        "bg-slate-200 hover:bg-white w-96 rounded-xl p-10 border-2    hover:transition-all hover:duration-300 hover:shadow-2xl hover:shadow-gray-300"
+        "bg-slate-200 hover:bg-slate-400 w-80 rounded-xl hover:italic content-center p-10 border-2  text-center  hover:transition-all hover:duration-300 hover:shadow-2xl hover:shadow-gray-300 min-h-36 hover:text-white text-2xl hover:text-3xl"
       }
     >
       {content.skill ? (
-        <p>
-          <span className={styles.label}>Skill: </span>
+        <p className=" ">
+          {/* <span className={styles.label}>Skill: </span> */}
           {content.skill}
         </p>
       ) : null}

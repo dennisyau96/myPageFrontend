@@ -42,7 +42,7 @@ input {
 }
 .boxyBK {
   display: inline-block;
-  background: #6482ad;
+  background: #7fa1c3;
   background-repeat: no-repeat;
   color: white;
   text-align: justify;
@@ -157,28 +157,25 @@ input {
   flex-wrap: wrap;
 }
 .dice {
-  border: solid white;
   border-radius: 5px;
   display: inline-block;
   width: 50px;
   height: 50px;
   margin: 10px;
-  font-size: 30px;
-  color: white(4, 35, 238);
-  background-color: rgb(9, 8, 8);
+  font-size: 35px;
+  color: rgb(203, 16, 16);
+  background-color: white;
   cursor: default;
 }
 .dice:hover {
-  border: solid rgb(0, 0, 0);
   border-radius: 5px;
   display: inline-block;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   margin: 10px;
-  font-size: 40px;
-  color: black;
+  font-size: 35px;
   transition: 300ms;
-  background-color: #f5eded;
+  box-shadow: 5px 5px #3d495a;
   cursor: default;
 }
 
@@ -237,9 +234,9 @@ input {
 .dieCounter:hover {
   border-radius: 5px;
   display: inline-block;
-  font-size: 40px;
-  height: 65px;
-  width: 65px;
+  font-size: 35px;
+  height: 60px;
+  width: 60px;
   text-align: center;
   align-content: center;
   justify-content: center;
@@ -262,7 +259,7 @@ input {
 }
 .lessBtn {
   height: auto;
-  background-color: #e2dad6;
+  background-color: white;
   border-radius: 5px;
   font-size: 18px;
   color: black;
@@ -281,7 +278,7 @@ input {
 }
 .moreBtn {
   height: auto;
-  background-color: #f5eded;
+  background-color: white;
   border-radius: 5px;
   font-size: 18px;
   color: black;
@@ -332,7 +329,7 @@ input {
   color: #ffffff;
   border: solid rgb(255, 255, 255);
   transition: 300ms;
-  font-size: 20px;
+  font-size: 18px;
   margin: 10px;
 }
 /*----------------------------------Number Guessing----------------------------------*/

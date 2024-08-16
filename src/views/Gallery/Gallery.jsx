@@ -109,11 +109,19 @@ export default function Gallery() {
             className="hover:font-bold underline "
             to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
             target="blank"
+            onClick={() => {
+              const ctr = confirm(
+                "You will be redirected to the project website"
+              );
+              if (!ctr) {
+                navigate(0);
+              }
+            }}
           >
             den.y_photography@Instagram
           </Link>
           <div className="">
-            <strong>Like, Share and Follow</strong> will be appreciated!
+            <strong>Like, Share and Follow</strong>
           </div>
           <Link
             to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
@@ -121,7 +129,7 @@ export default function Gallery() {
           >
             <br />
             <div>
-              <button className="btn cursor-pointer font-bold bg-orange-400 hover:shadow-xl hover:bg-gray-700 hover:text-white hover:transition-all hover:duration-300 mb-3">
+              <button className="btn cursor-pointer text-xl text-white font-bold theme1 hover:shadow-xl hover:bg-gray-700 hover:text-white hover:transition-all hover:duration-300 mb-3">
                 <Link
                   className="hover:font-bold"
                   to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"

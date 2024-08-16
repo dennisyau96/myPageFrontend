@@ -6,7 +6,7 @@ export default function ProjectCard({ project }) {
   const navigate = useNavigate();
   return (
     <>
-      <div className="card w-80 h-auto p-2 m-4 border-2 rounded-xl hover:  hover:transition-all hover:duration-300 ease-in-out hover:bg-slate-200 hover:shadow-2xl hover:bg-slate-100">
+      <div className="card w-96 h-auto p-2 m-4 border-2 rounded-xl hover:  hover:transition-all hover:duration-300 ease-in-out  hover:shadow-2xl hover:bg-slate-100">
         {project.thumbnail && (
           <img
             src={project.thumbnail}

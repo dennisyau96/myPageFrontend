@@ -68,7 +68,9 @@ function Home() {
       </div>
 
       <div className="fluid justify-center text-center" id="arcadeDiv">
-        <div className="text-center font-bold text-4xl">Let have some fun!</div>
+        <div className="text-center font-bold text-4xl">
+          Let&apos;s have some fun!
+        </div>
         <div className=" justify-center border-2 border-slate-400 rounded-md p-4 m-4">
           <div
             id="arcadeDiv"

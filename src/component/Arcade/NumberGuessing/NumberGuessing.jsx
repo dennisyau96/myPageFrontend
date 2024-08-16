@@ -167,7 +167,7 @@ export default function NumberGuessing() {
       {!ended ? (
         <div className={styles.numberGuessingDiv}>
           <p className={styles.boomLifeCountMessage}>
-            You have {lifeCount} chance to guess the secret code.
+            You have {lifeCount} chance(s) to guess the secret code.
           </p>
           <div className={styles.numGuessHint}>
             Hint: choose the number between{" "}

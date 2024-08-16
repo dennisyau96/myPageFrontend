@@ -2,12 +2,13 @@ body {
   /* margin: 0;
   padding: 0; */
   font-family: "Courier", "Courier New", "Georgia", "Times New Roman", serif;
-  min-height: 50vh;
+  min-height: 70vh;
+  height: 100vh;
   transition: all;
   transition-duration: 3000;
 }
 .bodyContainer {
-  min-height: 70vh;
+  min-height: 100vh;
 }
 
 html {

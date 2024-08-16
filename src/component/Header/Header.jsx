@@ -11,12 +11,15 @@ function Header() {
         <header id="header" className="inline-block m-0">
           <p
             id="headerName"
-            className="theme3font p-4 text-2xl hover:motion-reduce:animate-pulse"
+            className="text-white p-4 text-2xl hover:motion-reduce:animate-pulse"
           >
             Dennis, Ming Leuk YAU
           </p>
 
-          <p id="headerDescription" className={styles.headerDescription}>
+          <p
+            id="headerDescription"
+            className="text-white px-4 pt-3 pb-5 text-md hover:motion-reduce:animate-pulse"
+          >
             The Simpliest Way to Demostrate my Web Development Experience and
             Skills
           </p>

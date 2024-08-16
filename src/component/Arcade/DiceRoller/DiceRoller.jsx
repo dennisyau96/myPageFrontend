@@ -53,13 +53,13 @@ function DiceRoller() {
   return (
     <div className={(styles.diceRollerDiv, styles.boxyBK)}>
       <h2 className="mb-3 text-xl">Dice Roller</h2>
-      <div className="flex flex-auto">
+      <div className="flex flex-auto justify-center items-center ease-in-out transition-all ">
         <button className={styles.lessBtn} onClick={() => lessDie()}>
-          one less
+          -1
         </button>
         <div className={styles.dieCounter}>{diceNumber}</div>
         <button className={styles.moreBtn} onClick={() => moreDie()}>
-          one more
+          +1
         </button>
       </div>
 
@@ -70,7 +70,7 @@ function DiceRoller() {
           rollDice(e);
         }}
       >
-        {diceNumber != 0 ? `Roll ${diceNumber} dice` : "Grab dice"}{" "}
+        {diceNumber != 0 ? `Roll ${diceNumber} dice` : "Grab dice to start"}{" "}
       </button>
 
       <button
@@ -82,13 +82,13 @@ function DiceRoller() {
           toast.success("The dice were given back to me.");
         }}
       >
-        Start over
+        Restart
       </button>
       <div className={styles.diceDisplay} id="diceDisplay">
         {rolling ? (
           <div id="rollingDiv">
             <p className={styles.rollingMsg}>
-              The dice are beening rolled...{" "}
+              The dice are being rolled...{" "}
               <svg
                 className="animate-spin h-5 w-5 mr-3"
                 viewBox="0 0 24 24"

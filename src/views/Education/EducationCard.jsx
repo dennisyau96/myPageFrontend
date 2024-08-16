@@ -19,7 +19,7 @@ function EducationCard({ content, index }) {
     <>
       <div
         id="eduCard"
-        className="p-4 m-4 border-2 rounded-2xl bg-white z-0 max-w-md min-w-96 hover:shadow-xl hover:shadow-gray-300 hover:transition-all hover:duration-300"
+        className="p-4 m-4 border-2 rounded-2xl bg-white z-0 max-w-lg min-w-96 hover:shadow-xl hover:shadow-gray-300 hover:transition-all hover:duration-300 min-h-100 h-100"
       >
         {/* <img className="eduCardImg" alt={content.institution} /> */}
 
@@ -40,7 +40,7 @@ function EducationCard({ content, index }) {
             )}
 
             {content.ranking ? (
-              <li className="list-group-item z-0 theme4">
+              <li className="list-group-item z-0 bg-gray-100">
                 <span className={styles.label}>
                   Times World Higher Education Ranking:
                   <br />
@@ -50,38 +50,38 @@ function EducationCard({ content, index }) {
             ) : null}
 
             {content.education_level ? (
-              <li className="list-group-item z-0 theme4">
+              <li className="list-group-item z-0 bg-gray-100">
                 <span className={styles.label}>Education level: </span>
                 <span>{content.education_level}</span>
               </li>
             ) : null}
 
             {content.major ? (
-              <li className="list-group-item z-0 theme4">
+              <li className="list-group-item z-0 bg-gray-100">
                 <span className={styles.label}>Major: </span>
                 <span>{content.major}</span>
               </li>
             ) : null}
 
-            <li className="list-group-item z-0 theme4">
+            <li className="list-group-item z-0 bg-gray-100">
               <span className={styles.label}>Location: </span>
               <span>{content.location}</span>
             </li>
 
-            <li className="list-group-item z-0 theme4">
+            <li className="list-group-item z-0 bg-gray-100">
               <span className={styles.label}>Year: </span>
               <span>{content.year}</span>
             </li>
 
             {content.honor ? (
-              <li className="list-group-item z-0 theme4">
+              <li className="list-group-item z-0 bg-gray-100">
                 <span className={styles.label}>Honor: </span>
                 <span>{content.honor}</span>
               </li>
             ) : null}
 
             {content.acheivement ? (
-              <li className="list-group-item z-0 theme4">
+              <li className="list-group-item z-0 bg-gray-100">
                 <span className={styles.label}>Acheivement: </span>
                 <span>{content.acheivement}</span>
               </li>
@@ -99,7 +99,7 @@ function EducationCard({ content, index }) {
           </div>
         ) : null} */}
 
-        <div className=" flex flex-wrap z-0 ">
+        <div className=" flex flex-wrap z-0 mt-3 ">
           <Link
             target="_blank"
             to={content.website}
