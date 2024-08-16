@@ -66,7 +66,7 @@ function Counter() {
         </div>
 
         <div
-          className=" bg-white rounded-xl text-center justify-center align-middle p-3 cursor-pointer"
+          className=" bg-white rounded-xl text-center justify-center align-middle p-3 cursor-pointer hover:bg-slate-600"
           onClick={resetCount}
         >
           <div className="text-center text-4xl">{count}</div>

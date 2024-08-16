@@ -70,7 +70,7 @@ function DiceRoller() {
           rollDice(e);
         }}
       >
-        {diceNumber != 0 ? `Roll ${diceNumber} dice` : "Grab dice to start"}{" "}
+        {diceNumber != 0 ? `Roll ${diceNumber} dice` : "No Dice"}{" "}
       </button>
 
       <button
