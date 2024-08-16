@@ -147,8 +147,8 @@ export default function NumberGuessing() {
   }
   //
   return (
-    <div className={styles.boxyBK} id="numGuessDiv">
-      <p className="mb-3 text-xl">
+    <div className="theme2 rounded-xl p-4 w-auto max-w-96" id="numGuessDiv">
+      <p className="mb-3 text-xl font-bold text-white">
         {!exploded ? "Don't explode!" : "Exploded"}
       </p>
       <p className="my-3">{lifeDsp}</p>
@@ -169,20 +169,20 @@ export default function NumberGuessing() {
           <p className={styles.boomLifeCountMessage}>
             You have {lifeCount} chance(s) to guess the secret code.
           </p>
-          <div className={styles.numGuessHint}>
+          <div className="text-xs bg-white rounded-lg my-2 py-2">
             Hint: choose the number between{" "}
-            <span className={styles.numberGuessingHint}>
+            <span className="">
               {downRange}-{upRange}(inclusive)
             </span>
           </div>
-          <div className="input-group  ">
+          <div className="input-group   ">
             <input
               value={attempt}
               onChange={(e) => setAttempt(e.target.value)}
               className={(styles.numberGuessingInput, "form-control")}
             ></input>
             <button
-              className="input-group-text hover:text-white hover:bg-black hover:border-2"
+              className="input-group-text hover:text-white hover:bg-slate-600 hover:border-2"
               onClick={(e) => {
                 guess(e);
               }}

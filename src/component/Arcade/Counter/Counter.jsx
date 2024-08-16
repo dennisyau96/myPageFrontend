@@ -28,14 +28,14 @@ function Counter() {
     }
   }
   return (
-    <div className={(styles.counterDiv, styles.boxyBK)}>
-      <h1 className="mb-3 text-xl font-bold">Tally Counter</h1>
+    <div className="theme2 rounded-xl p-4 w-auto max-w-96">
+      <h1 className=" text-xl font-bold text-white">Tally Counter</h1>
       <div className="flex gap-3">
-        <div>
-          Customize the steps:
+        <div className="">
+          <p className="my-2">Customize the steps:</p>
           <div>
             <input
-              className={styles.numOfStep}
+              className="w-20 text-center text-lg rounded-sm"
               type="number"
               min={2}
               max={20}
@@ -47,13 +47,16 @@ function Counter() {
           </div>
         </div>
       </div>
-      <div>
-        <div>
-          <div className={styles.counterBtn} onClick={minusStep}>
+      <div className="grid ">
+        <div className="flex justify-center cursor-pointer">
+          <div
+            className="bg-white p-2 m-3 rounded-lg hover:shadow-xl transition-all ease-in-out cursor-pointer"
+            onClick={minusStep}
+          >
             -{step ? step : "N"}
           </div>
           <div
-            className={styles.counterBtn}
+            className="bg-white p-2 m-3 rounded-lg hover:shadow-xl transition-all ease-in-out cursor-pointer"
             onClick={() => {
               minusOne();
             }}
@@ -62,22 +65,27 @@ function Counter() {
           </div>
         </div>
 
-        <div className={styles.counterDisplay} onClick={resetCount}>
-          <div>{count}</div>
-          <div className={styles.countHint}>Click to Reset</div>
+        <div
+          className=" bg-white rounded-xl text-center justify-center align-middle p-3 cursor-pointer"
+          onClick={resetCount}
+        >
+          <div className="text-center text-4xl">{count}</div>
+          <div className="text-center">Click to Reset</div>
         </div>
 
-        <div>
-          {" "}
+        <div className="flex justify-center">
           <div
-            className={styles.counterBtn}
+            className="bg-white p-2 m-3 rounded-lg hover:shadow-xl transition-all ease-in-out cursor-pointer"
             onClick={() => {
               plusOne();
             }}
           >
             +1
           </div>
-          <div className={styles.counterBtn} onClick={plusStep}>
+          <div
+            className="bg-white p-2 m-3 rounded-lg hover:shadow-xl transition-all ease-in-outs cursor-pointer"
+            onClick={plusStep}
+          >
             +{step ? step : "N"}
           </div>
         </div>
