@@ -19,8 +19,8 @@ input {
 .boxyWH {
   display: inline-block;
   text-align: justify;
-  border: solid rgb(209, 208, 208) 2px;
-  background: linear-gradient(to bottom, #e6e4e4, white);
+  /* border: solid rgb(209, 208, 208) 2px; */
+  background: rgb(242, 255, 251);
   background-repeat: no-repeat;
   background-attachment: local;
   padding: 10px;
@@ -32,23 +32,21 @@ input {
 .boxyWH:hover {
   display: inline-block;
   text-align: justify;
-  border: solid rgb(232, 100, 39) 3px;
+  border: solid #9ec8b9 3px;
   padding: 10px;
   justify-content: center;
   text-align: center;
   margin: 10px;
   border-radius: 5px;
   transition: 300ms;
-  box-shadow: 10px 10px #bfbfbf;
+  box-shadow: 10px 10px #e4e4e4;
 }
 .boxyBK {
   display: inline-block;
-  background: linear-gradient(to bottom, #bfbfbf, black);
+  background: #5c8374;
   background-repeat: no-repeat;
-  background-attachment: local;
   color: white;
   text-align: justify;
-  border: solid rgb(172, 164, 164) 2px;
   padding: 10px;
   justify-content: center;
   text-align: center;
@@ -57,11 +55,10 @@ input {
 }
 .boxyBK:hover {
   display: inline-block;
-
   transition: 300ms;
   color: white;
   text-align: justify;
-  border: solid rgb(232, 100, 39) 3px;
+  border: solid #1b4242 3px;
   padding: 10px;
   justify-content: center;
   text-align: center;

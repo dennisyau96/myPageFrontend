@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 import styles from "./Skill.module.css";
 import { useEffect, useState } from "react";
-function SkillCard({ content, remark }) {
-  const [remarks, setRemarks] = useState([]);
+
+function SkillCard({ content, remarks }) {
+  const [remarksUS, setRemarks] = useState(remarks);
 
   // useEffect(() => {
-  //   setRemarks((prev) => remark);
+  //   setRemarksUS(remarks);
   // }, []);
 
   return (
@@ -21,11 +22,10 @@ function SkillCard({ content, remark }) {
         </p>
       ) : null}
 
-      {remarks ? (
+      {remarksUS ? (
         <div>
           <span className={styles.label}>Remark: </span>
-
-          {remarks.map((point, i) => (
+          {remarksUS.map((point, i) => (
             <li key={i}>
               {i}. {point}
             </li>
