@@ -147,7 +147,7 @@ export default function NumberGuessing() {
   }
   //
   return (
-    <div className="theme2 rounded-xl px-3 py-3 " id="">
+    <div className="theme2 rounded-xl px-3 py-3 max-w-72" id="">
       <p className="mb-3 text-xl font-bold text-white">
         {!exploded ? "Don't explode!" : "Exploded"}
       </p>
