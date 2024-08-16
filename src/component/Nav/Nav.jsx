@@ -3,29 +3,50 @@ import styles from "./Nav.module.css";
 function Nav() {
   return (
     <>
-      <nav className={styles.navBar}>
-        <NavLink className={styles.navLink} to="/">
+      <nav className="text-right flex flex-wrap justify-end my-2 mx-4">
+        <NavLink className="text-sm text-white hover:animate-pulse mx-2" to="/">
           Home
         </NavLink>
-        <NavLink className={styles.navLink} to="/education">
+        <NavLink
+          className="text-sm text-white hover:animate-pulse mx-2"
+          to="/education"
+        >
           Education
         </NavLink>
-        <NavLink className={styles.navLink} to="/experience">
+        <NavLink
+          className="text-sm text-white hover:animate-pulse mx-2"
+          to="/experience"
+        >
           Experience
         </NavLink>
-        <NavLink className={styles.navLink} to="/projects">
+        <NavLink
+          className="text-sm text-white hover:animate-pulse mx-2"
+          to="/projects"
+        >
           Projects
         </NavLink>
-        <NavLink className={styles.navLink} to="/skills">
+        <NavLink
+          className="text-sm text-white hover:animate-pulse mx-2"
+          to="/skills"
+        >
           Skills
         </NavLink>
-        <NavLink className={styles.navLink} to="/certificates">
+        <NavLink
+          className="text-sm text-white hover:animate-pulse mx-2"
+          to="/certificates"
+        >
           Certificate
         </NavLink>
-        <NavLink className={styles.navLink} to="/gallery">
+        <NavLink
+          className="text-sm text-white hover:animate-pulse mx-2"
+          to="/gallery"
+        >
           Gallery
         </NavLink>
-        <NavLink className={styles.navLink} to="/about">
+        <NavLink
+          className="text-sm text-white hover:animate-pulse mx-2"
+          to="/about"
+        >
           About
         </NavLink>
       </nav>

@@ -147,7 +147,7 @@ export default function NumberGuessing() {
   }
   //
   return (
-    <div className="theme2 rounded-xl p-4 w-auto max-w-96" id="numGuessDiv">
+    <div className="theme2 rounded-xl p-4 w-auto max-w-96 m-2" id="numGuessDiv">
       <p className="mb-3 text-xl font-bold text-white">
         {!exploded ? "Don't explode!" : "Exploded"}
       </p>
@@ -187,7 +187,7 @@ export default function NumberGuessing() {
                 guess(e);
               }}
             >
-              Make a Guess
+              Guess
             </button>
           </div>
           <br />
