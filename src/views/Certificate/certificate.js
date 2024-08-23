@@ -20,6 +20,7 @@ import cert19 from "../../assets/certificates/cert19.pdf";
 import cert20 from "../../assets/certificates/cert20.pdf";
 import cert21 from "../../assets/certificates/cert21.pdf";
 import cert22 from "../../assets/certificates/cert22.pdf";
+import cert23 from "../../assets/certificates/cert22.pdf";
 
 export const certs = [
   { cert: cert1, title: "Learning Node.js" },
@@ -86,4 +87,5 @@ export const certs = [
   { cert: cert20, title: "Adobe Illustrator CC" },
   { cert: cert21, title: "Git Essential Training" },
   { cert: cert22, title: "Kotlin Essential Training" },
+  { cert: cert23, title: "Java: Testing with JUnit" },
 ];
