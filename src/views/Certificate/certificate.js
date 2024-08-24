@@ -20,7 +20,7 @@ import cert19 from "../../assets/certificates/cert19.pdf";
 import cert20 from "../../assets/certificates/cert20.pdf";
 import cert21 from "../../assets/certificates/cert21.pdf";
 import cert22 from "../../assets/certificates/cert22.pdf";
-import cert23 from "../../assets/certificates/cert22.pdf";
+import cert23 from "../../assets/certificates/cert23.pdf";
 
 export const certs = [
   { cert: cert1, title: "Learning Node.js" },
