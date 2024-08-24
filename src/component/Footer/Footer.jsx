@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 export default function Footer() {
   const navigate = useNavigate();
   return (
-    <div className="footer bottom-0 h-10/12 w-full theme1 m-0 p-6">
+    <div className="footer relative botton-0 text-center bottom-0 h-10/12 w-full theme1 m-0 p-6">
       <div className="h-1/6  ">
         <p className="justify-self-start text-white">Dennis Yau</p>
         <div className="flex flex-wrap ">

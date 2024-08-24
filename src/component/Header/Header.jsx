@@ -6,7 +6,7 @@ function Header() {
     <>
       <div
         id="headerDiv"
-        className=" sticky-top navbar inset-x-0 top-0  shadow-lg  z-10000 theme1 h-auto  flex "
+        className="  sticky-top inset-x-0 top-0 right-0 left-0 shadow-lg  theme1 h-auto flex w-100"
       >
         <header id="header" className="inline-block m-0 ">
           <p
