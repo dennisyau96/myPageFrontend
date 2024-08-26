@@ -30,11 +30,11 @@ function Education() {
   return (
     <>
       <div className="">
-        <h1 className="font-bold text-3xl my-4 text-center h-full">
+        <h1 className="font-bold text-3xl my-4 text-center h-full theme4font">
           Education
         </h1>
 
-        <div className=" flex flex-wrap m-10 justify-center gap-4">
+        <div className=" flex flex-wrap m-10 justify-center gap-24">
           {education.map((edu, index) => (
             <div key={index}>
               <EducationCard content={edu} />

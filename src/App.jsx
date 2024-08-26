@@ -21,10 +21,10 @@ axios.defaults.auth = true;
 
 function App() {
   return (
-    <>
+    <div className="bg-gray-950  ">
       <Toaster position="bottom-center" duration="5000" />
       <Header z-index="10" />
-      <div className="mainContent container bodyContainer">
+      <div className="mainContent relative min-h-screen mb-20">
         <Routes>
           <Route path="/">
             <Route index element={<Home />} />
@@ -35,13 +35,12 @@ function App() {
             <Route path="/skills" element={<Skills />} />
             <Route path="/certificates" element={<Certificate />} />
             <Route path="/about" element={<About />} />
-
             <Route path="*" element={<ErrorPage />} />
           </Route>
         </Routes>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

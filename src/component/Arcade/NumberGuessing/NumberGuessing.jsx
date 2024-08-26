@@ -147,7 +147,10 @@ export default function NumberGuessing() {
   }
   //
   return (
-    <div className="theme2 rounded-xl px-3 py-3 max-w-72" id="">
+    <div
+      className="theme2 rounded-xl px-4 py-3 max-w-72 duration-300 hover:transition-all hover:shadow-xl hover:shadow-gray-500"
+      id=""
+    >
       <p className="mb-3 text-xl font-bold text-white">
         {!exploded ? "Don't explode!" : "Exploded"}
       </p>
@@ -169,8 +172,8 @@ export default function NumberGuessing() {
           <p className="flex flex-wrap w-auto">
             You have {lifeCount} chance(s) to guess the secret code.
           </p>
-          <div className="text-xs bg-white rounded-lg my-2 py-2">
-            Hint: choose the number between{" "}
+          <div className="text-md bg-white rounded-lg my-2 py-2 text-">
+            Hint:
             <span className="">
               {downRange}-{upRange}(inclusive)
             </span>
@@ -182,7 +185,7 @@ export default function NumberGuessing() {
               className={(styles.numberGuessingInput, "form-control")}
             ></input>
             <button
-              className="input-group-text hover:text-white hover:bg-slate-600 hover:border-2"
+              className="input-group-text hover:text-white hover:bg-slate-600 hover:border-2 ease-in-out  "
               onClick={(e) => {
                 guess(e);
               }}

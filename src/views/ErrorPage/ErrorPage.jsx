@@ -14,8 +14,10 @@ export default function ErrorPage() {
 
   return (
     <div id="ErrorDiv" className={styles.errorPage}>
-      <h1 className="font-bold text-3xl my-4">Oops! Somethings went wrong. </h1>
-      <p>
+      <h1 className="font-bold text-3xl my-4 theme4font">
+        Oops! Somethings went wrong.{" "}
+      </h1>
+      <p className="theme3font">
         No worries. You will be redirected to the previous page in{" "}
         {timeout / 1000}s
       </p>
