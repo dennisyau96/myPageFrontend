@@ -1,3 +1,9 @@
+export const title = "Full-Stack Web and Software Developer";
+export const currentLearning = "Java, Python and SQL";
+export const currentFocus =
+  "MERN Stack(MongoDB,Express.js, React.js and Node.js)";
+// export const about = `I am Dennis Yau. I am a ${title}. I am continuously learning on various coding skills such as advanced ${currentLearning}. I am currently focused on ${currentFocus}`;
+
 // import {
 //   javaSkills,
 //   vtcDes,

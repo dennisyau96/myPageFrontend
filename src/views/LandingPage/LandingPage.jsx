@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import ParticlesBG from "../../component/ParticlesBG/ParticleBG";
 export default function LandingPage() {
   const navigate = useNavigate();
   return (
     <>
+      <ParticlesBG />
       <div className=" w-screen h-screen bg-black  place-self-center text-center place-content-center justify-center my-30">
         <div className="text-center content-center container w-60 h-60 border-white border-1 static hover:border-3 hover:border-gray-300 hover:shadow-2xl hover:shadow-sky-300 transition:all duration-300 ease-in-out hover:animate-pulse motion-reduce:">
           <h1 className="text-white">I am Dennis</h1>
