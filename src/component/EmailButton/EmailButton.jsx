@@ -16,7 +16,7 @@ const EmailButton = () => {
       onClick={handleEmailClick}
       className=" btn theme4font border-sky-700 hover:border-sky-200 hover:shadow-xl border-0.5 hover:shadow-sky-700 hover:bg-slate-500 hover:text-slate-100 transition-all ease-in-out "
     >
-      Send Me Email
+      Send Me an Email
     </button>
   );
 };
