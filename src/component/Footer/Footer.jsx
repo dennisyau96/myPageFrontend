@@ -41,6 +41,26 @@ export default function Footer() {
           >
             <i className="fa fa-linkedin m-2 text-white"></i>
           </Link>
+
+          <Link
+            target="_blank"
+            onClick={() => {
+              const ctr = confirm(
+                "You will be redirected to the GitHub website"
+              );
+              if (!ctr) {
+                navigate(0);
+              }
+            }}
+            to="https://github.com/dennisyau96"
+          >
+            <i className="fa fa-github m-2 text-white"></i>
+          </Link>
+        </div>
+        <div className="text-right h-fit">
+          <a href="#" className="text-xs text-white">
+            Back to top
+          </a>
         </div>
       </div>
     </div>

@@ -23,7 +23,7 @@ function Home() {
       <LandingPage />
       <div className="container-fluid text-center" id="homeStart">
         <div className="">
-          <h1 className="font-bold text-3xl mb-10 pt-40 text-center justify-center theme4font">
+          <h1 className="font-bold text-3xl mb-10 pt-40 text-center justify-center theme4font ">
             Dennis, Ming Leuk YAU
           </h1>
           <p className="font-bold my-2 text-lg theme2font">
@@ -38,8 +38,8 @@ function Home() {
               my study, I found myself being interested in web and software
               development. I am trying my best to learn different coding and
               programming skills and technology to prepare myself to become a
-              Web Developer, or any other tech-related positions. Please feel
-              free to leave a comment below.
+              <span className="text-sky-300"> Web Developer</span>, or any other
+              tech-related positions. Please feel free to leave a comment below.
             </p>
           </div>
 
@@ -48,7 +48,7 @@ function Home() {
             className="justify-center justify-items-center text-center my-4"
           >
             <button
-              className="p-3 rounded-md  border-gray-400 border-2 transition-all  hover:shadow-gray-400 hover:border-4 hover:border-gray-500 text-lg font-mono
+              className="p-3 rounded-md text  border-gray-400 border-2 transition-all  hover:shadow-gray-400 hover:border-4 hover:border-sky-500 text-lg font-mono
           mt-3 cursor-pointer btn text-uppercase theme2 hover:shadow-xl hover:bg-gray-700 hover:text-white font-semibold duration-500 hover:animate-pulse ease-in-out"
               data-bs-toggle="modal"
               data-bs-target="#commentModal"
@@ -71,17 +71,20 @@ function Home() {
           </div>
         </div>
 
-        <div className="text-center font-bold text-4xl theme3font">
+        <div className="text-center font-bold text-4xl theme3font justify-center">
           Let&apos;s have some fun!
+          <a href="#arcadeDiv" className=" block w-screen scroll-smooth pb-52">
+            <i className="fa fa-arrow-down mt-10 text-gray-500 text-3xl  cursor-pointer transition-all ease-in-out hover:scale-120 "></i>
+          </a>
         </div>
-        <a href="#arcadeDiv" className=" scroll-smooth">
-          <i className="fa fa-arrow-down mt-10 text-gray-500 text-3xl hover:scale-130 cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce "></i>
-        </a>
 
-        <div
-          className="fluid justify-center text-center mt-52 pt-24 bg-black"
-          id="arcadeDiv"
-        >
+        <div className=" justify-center text-center bg-black " id="arcadeDiv">
+          <a
+            href="#homeStart"
+            className=" block w-screen scroll-smooth text-center pt-36"
+          >
+            <i className="text-center fa fa-arrow-up mt-0 text-gray-500 text-3xl  cursor-pointer transition-all ease-in-out hover:scale-120 "></i>
+          </a>
           <div className=" justify-center border-2 border-slate-400 rounded-md p-4 m-4">
             <div
               id="arcadeDiv"

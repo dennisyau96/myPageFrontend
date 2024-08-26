@@ -37,7 +37,7 @@ function Certificate() {
 
   return (
     <>
-      <div className="text-center justify-center container justify-items-center justify-self-center grid grid-col-1 w-auto">
+      <div className="text-center justify-center container justify-items-center justify-self-center grid grid-col-1 w-auto ">
         <h1 className="font-bold text-3xl my-4 text-center theme4font">
           Certificate{" "}
         </h1>
@@ -47,7 +47,7 @@ function Certificate() {
         ) : (
           <div
             id="carouselExampleAutoplaying"
-            className="carousel slide  w-auto my-4 text-center justify-center border-2 border-gray-300 p-4  rounded-xl "
+            className="carousel slide  w-auto my-4 text-center justify-center border-2 border-gray-300 p-4  rounded-xl hover:shadow-sky-300 hover:shadow-xl transition-all duration-500 ease-in-out"
             data-bs-ride="carousel"
           >
             <div className="carousel-inner justify-center text-center">
@@ -59,7 +59,7 @@ function Certificate() {
                 />
               </div>
             </div>
-            <div className="text-center theme3font mt-2 ">
+            <div className="text-center theme4font mt-2 ">
               {index + 1}. {certificates[index].title}
             </div>
 
