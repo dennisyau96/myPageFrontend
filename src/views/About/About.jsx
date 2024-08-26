@@ -28,7 +28,7 @@ function About() {
             I am more than happy to receive your email for any job or
             collaboration.
           </span>
-          <span>
+          <span className="block justify-center text-center">
             <EmailButton />
           </span>
         </span>
