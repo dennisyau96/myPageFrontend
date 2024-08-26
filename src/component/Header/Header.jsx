@@ -11,16 +11,15 @@ function Header() {
         <header id="header" className="inline-block m-0 ">
           <p
             id="headerName"
-            className="text-white pt-4 px-4 pb-4 text-2xl hover:motion-reduce:animate-pulse"
+            className="text-white pt-2 px-2 pb-2 text-2xl hover:motion-reduce:animate-pulse "
           >
-            Dennis, Ming Leuk YAU
+            Dennis YAU
             <br />
-            <span className="text-sm">
+            {/* <span className="text-sm">
               The Simpliest Way to Demostrate my Web Development Experience and
               Skills
-            </span>
+            </span> */}
           </p>
-          <hr></hr>
           <Nav />
         </header>
       </div>

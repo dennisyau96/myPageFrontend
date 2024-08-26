@@ -28,14 +28,14 @@ function Counter() {
     }
   }
   return (
-    <div className="theme2 rounded-xl p-4 w-auto max-w-96">
+    <div className="theme2 rounded-xl px-4 py-3 max-w-96 duration-300 hover:transition-all hover:shadow-xl hover:shadow-gray-500">
       <h1 className=" text-xl font-bold text-white">Tally Counter</h1>
       <div className="flex gap-3">
         <div className="">
           <p className="my-2">Customize the steps:</p>
           <div>
             <input
-              className="w-20 text-center text-lg rounded-sm"
+              className="w-20 text-center text-2xl rounded-lg"
               type="number"
               min={2}
               max={20}
@@ -50,23 +50,23 @@ function Counter() {
       <div className="grid ">
         <div className="flex justify-center cursor-pointer">
           <div
-            className="bg-white p-2 m-3 rounded-lg hover:shadow-xl transition-all ease-in-out cursor-pointer"
-            onClick={minusStep}
-          >
-            -{step ? step : "N"}
-          </div>
-          <div
-            className="bg-white p-2 m-3 rounded-lg hover:shadow-xl transition-all ease-in-out cursor-pointer"
+            className="bg-white p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer"
             onClick={() => {
               minusOne();
             }}
           >
             -1
           </div>
+          <div
+            className="bg-white p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer"
+            onClick={minusStep}
+          >
+            -{step ? step : "N"}
+          </div>
         </div>
 
         <div
-          className=" bg-white rounded-xl text-center justify-center align-middle p-3 cursor-pointer hover:bg-slate-600"
+          className=" bg-white rounded-xl text-center justify-center align-middle p-3 hover:shadow-gray-500 hover:shadow-xl cursor-pointer hover:bg-slate-600"
           onClick={resetCount}
         >
           <div className="text-center text-4xl">{count}</div>
@@ -75,7 +75,7 @@ function Counter() {
 
         <div className="flex justify-center">
           <div
-            className="bg-white p-2 m-3 rounded-lg hover:shadow-xl transition-all ease-in-out cursor-pointer"
+            className="bg-white p-2 m-3 rounded-lg hover:shadow-xl transition-all ease-in-out hover:shadow-gray-500 cursor-pointer"
             onClick={() => {
               plusOne();
             }}
@@ -83,7 +83,7 @@ function Counter() {
             +1
           </div>
           <div
-            className="bg-white p-2 m-3 rounded-lg hover:shadow-xl transition-all ease-in-outs cursor-pointer"
+            className="bg-white p-2 m-3 rounded-lg hover:shadow-xl transition-all ease-in-outs hover:shadow-gray-500 cursor-pointer"
             onClick={plusStep}
           >
             +{step ? step : "N"}
