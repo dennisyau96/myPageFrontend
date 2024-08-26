@@ -71,19 +71,22 @@ function Home() {
           </div>
         </div>
 
-        <div className="text-center font-bold text-4xl theme3font justify-center">
+        <div className="text-center font-bold text-4xl theme3font justify-center w-screen">
           Let&apos;s have some fun!
-          <a href="#arcadeDiv" className=" block w-screen scroll-smooth pb-52">
+          <a href="#arcadeDiv" className=" block  scroll-smooth pb-52">
             <i className="fa fa-arrow-down mt-10 text-gray-500 text-3xl  cursor-pointer transition-all ease-in-out hover:scale-120 "></i>
           </a>
         </div>
 
-        <div className=" justify-center text-center bg-black " id="arcadeDiv">
+        <div
+          className=" justify-center text-center bg-black w-screen "
+          id="arcadeDiv"
+        >
           <a
             href="#homeStart"
-            className=" block w-screen scroll-smooth text-center pt-36"
+            className=" block  scroll-smooth text-center pt-24"
           >
-            <i className="text-center fa fa-arrow-up mt-0 text-gray-500 text-3xl  cursor-pointer transition-all ease-in-out hover:scale-120 "></i>
+            <i className="text-center justify-center fa fa-arrow-up mt-0 text-gray-500 text-3xl  cursor-pointer transition-all ease-in-out hover:scale-120 "></i>
           </a>
           <div className=" justify-center border-2 border-slate-400 rounded-md p-4 m-4">
             <div

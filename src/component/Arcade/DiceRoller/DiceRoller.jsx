@@ -90,10 +90,10 @@ function DiceRoller() {
       >
         Restart
       </button>
-      <div className={styles.diceDisplay} id="diceDisplay">
+      <div className="text-white" id="diceDisplay">
         {rolling ? (
           <div id="rollingDiv">
-            <p className={styles.rollingMsg}>
+            <p className="text-white">
               The dice are beening rolled...{" "}
               <svg
                 className="animate-spin h-5 w-5 mr-3"
