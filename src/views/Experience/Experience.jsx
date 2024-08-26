@@ -29,7 +29,10 @@ export default function Experience() {
 
   return (
     <>
-      <h1 className="font-bold text-3xl my-4 text-center"> Experience </h1>
+      <h1 className="font-bold text-3xl my-4 text-center theme4font">
+        {" "}
+        Experience{" "}
+      </h1>
       <div className="flex flex-wrap justify-center mb-5 gap-5">
         {loading ? <Loading /> : null}
         {experience.map((exp, index) => (

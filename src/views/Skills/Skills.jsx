@@ -29,7 +29,7 @@ function Skills() {
 
   return (
     <>
-      <h1 className="font-bold text-3xl my-4 text-center">Skills</h1>
+      <h1 className="font-bold text-3xl my-4 text-center theme4font">Skills</h1>
       <div className="flex flex-wrap gap-10 justify-center my-10">
         {loading ? <Loading /> : null}
         {skills.map((skill, index) => (

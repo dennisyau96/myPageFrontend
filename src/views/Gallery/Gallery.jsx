@@ -52,15 +52,15 @@ export default function Gallery() {
   return (
     <>
       <div className="text-center justify-center container justify-items-center justify-self-center grid grid-col-1 w-auto">
-        <h1 className="font-bold text-3xl my-4">My Photography Journey</h1>
+        <h1 className="font-bold text-3xl my-4 theme4font">Gallery</h1>
         {/*carousel */}
         <div
           id="carouselExampleAutoplaying"
           className="carousel slide  carousel-fade w-7/12 my-4 text-center justify-center border-2 border-gray-300 p-1  rounded-xl "
-          // data-bs-ride="carousel"
-          // data-ride="carousel"
-          // data-pause="false"
-          // data-interval="1000"
+          data-bs-ride="carousel"
+          data-ride="carousel"
+          data-pause="false"
+          data-interval="1000"
         >
           <div className="carousel-inner w-full justify-center ">
             <div className="carousel-item active justify-center">
@@ -73,21 +73,21 @@ export default function Gallery() {
           </div>
 
           <button
-            className="carousel-control-prev hover:bg-gray-100 transition-all ease-in-out duration-300"
+            className="carousel-control-prev hover:bg-gray-100 hover:opacity-35 transition-all ease-in-out duration-300"
             type="button"
             data-bs-target="#carouselExampleAutoplaying"
             data-bs-slide="prev"
             onClick={prevPhoto}
           >
             <span
-              className="carousel-control-prev-icon"
+              className="carousel-control-prev-icon "
               aria-hidden="true"
             ></span>
             <span className="visually-hidden">Previous</span>
           </button>
 
           <button
-            className="carousel-control-next hover:bg-gray-100 transition-all ease-in-out duration-300"
+            className="carousel-control-next hover:bg-gray-100 hover:opacity-35 transition-all ease-in-out duration-300"
             type="button"
             data-bs-target="#carouselExampleAutoplaying"
             data-bs-slide="next"
