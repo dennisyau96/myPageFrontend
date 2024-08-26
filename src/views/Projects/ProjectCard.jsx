@@ -1,20 +1,19 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import thumbnail from "../../assets/project/doggo.png";
-
 export default function ProjectCard({ project }) {
   const navigate = useNavigate();
+
+  async function loadThumbnail() {
+    const photoData = "";
+  }
+
   return (
     <>
       <div className="card w-96 h-auto p-2 m-4 border-2 rounded-xl hover:  hover:transition-all hover:duration-300 ease-in-out  hover:shadow-2xl hover:bg-slate-100">
         {project.thumbnail && (
-          <img
-            src={project.thumbnail}
-            className="card-img-top rounded-xl "
-            alt="Project Snapshot"
-          />
+          <img src={project.thumbnail} className="card-img-top rounded-xl " />
         )}
-
         <div className="card-body text-center">
           <h5 className="card-title font-bold text-xl mb-2 text-center">
             {project.name}

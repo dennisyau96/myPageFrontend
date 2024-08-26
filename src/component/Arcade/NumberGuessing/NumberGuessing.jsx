@@ -147,7 +147,7 @@ export default function NumberGuessing() {
   }
   //
   return (
-    <div className="theme2 rounded-xl p-4 w-auto max-w-96 m-2" id="numGuessDiv">
+    <div className="theme2 rounded-xl px-3 py-3 max-w-72" id="">
       <p className="mb-3 text-xl font-bold text-white">
         {!exploded ? "Don't explode!" : "Exploded"}
       </p>
@@ -165,8 +165,8 @@ export default function NumberGuessing() {
 
       {/* testing display */}
       {!ended ? (
-        <div className=" justify-center text-center justify-items-center w-80">
-          <p className={styles.boomLifeCountMessage}>
+        <div className=" justify-center text-center justify-items-center">
+          <p className="flex flex-wrap w-auto">
             You have {lifeCount} chance(s) to guess the secret code.
           </p>
           <div className="text-xs bg-white rounded-lg my-2 py-2">

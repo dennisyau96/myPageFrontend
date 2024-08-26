@@ -3,7 +3,7 @@ import styles from "./Nav.module.css";
 function Nav() {
   return (
     <>
-      <nav className="text-right flex flex-wrap justify-end my-2 mx-4">
+      <nav className="text-right flex flex-wrap justify-end my-2 mx-4 w-auto">
         <NavLink className="text-sm text-white hover:animate-pulse mx-2" to="/">
           Home
         </NavLink>
