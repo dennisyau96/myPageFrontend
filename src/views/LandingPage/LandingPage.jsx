@@ -5,8 +5,11 @@ export default function LandingPage() {
   const navigate = useNavigate();
   return (
     <>
-      <div className=" w-screen h-screen bg-black  place-self-center text-center place-content-center justify-center ">
-        <div className="text-center content-center container w-60 h-60 border-white border-1 static hover:border-3 hover:border-gray-300 hover:shadow-2xl hover:shadow-sky-300 transition:all duration-300 ease-in-out  motion-reduce:">
+      <div
+        className=" w-screen h-screen bg-black  place-self-center text-center place-content-center justify-center glow"
+        id="landingPage"
+      >
+        <div className="text-center  place-content-center  content-center container w-60 h-60 border-white border-1 static hover:border-3 hover:border-gray-300 hover:shadow-2xl hover:shadow-sky-300 transition:all duration-300 ease-in-out  motion-reduce:">
           <h1 className="text-white">I am Dennis</h1>
           <span className="text-white">I am a Full Stack Developer.</span>
           <span className="block">
@@ -58,7 +61,9 @@ export default function LandingPage() {
           </span>
 
           <a href="#homeStart" className="scroll-smooth inset-0">
-            <i className="block fa fa-arrow-down pt-10 text-gray-700 text-2xl hover:scale-130 cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce "></i>
+            <a href="#homeStart" className=" block  scroll-smooth pb-auto">
+              <i className="fa fa-arrow-down mt-10 text-gray-500 text-3xl  hover:scale-120  cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce "></i>
+            </a>
           </a>
         </div>
       </div>
