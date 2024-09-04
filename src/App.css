@@ -1,54 +1,54 @@
 @media (min-width: 0px) {
   .navBar {
-    display: none;
-    visibility: hidden;
+    /* display: none; */
+    /* visibility: hidden; */
   }
   #shrinkNavBar {
-    visibility: visible;
-    display: block;
+    /* visibility: visible; */
+    display: none;
   }
 
   .navBtn {
     font-size: xx-small;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
   }
 }
 @media (min-width: 450px) {
   .navBar {
-    display: none;
-    visibility: hidden;
+    /* display: none; */
+    /* visibility: hidden; */
   }
   #shrinkNavBar {
-    visibility: visible;
-    display: block;
+    /* visibility: visible; */
+    display: none;
   }
   .navBtn {
     font-size: xx-small;
-    margin-left: 0.4rem;
-    margin-right: 0.4rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
   }
 }
 
 @media (min-width: 640px) {
   .navBar {
-    display: none;
-    visibility: hidden;
+    /* display: none; */
+    /* visibility: hidden; */
   }
   #shrinkNavBar {
-    visibility: visible;
-    display: block;
+    /* visibility: visible; */
+    /* display: block; */
   }
   .navBtn {
     font-size: x-small;
-    margin-left: 0.45rem;
-    margin-right: 0.45rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
   }
 }
 
 @media (min-width: 800px) {
   .navBar {
-    visibility: visible;
+    /* visibility: visible; */
     display: flex;
     flex-wrap: wrap;
   }
@@ -57,14 +57,14 @@
   }
   .navBtn {
     font-size: small;
-    margin-left: 0.6rem;
-    margin-right: 0.6rem;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
   }
 }
 
 @media (min-width: 1280px) {
   .navBar {
-    visibility: visible;
+    /* visibility: visible; */
     display: flex;
     flex-wrap: wrap;
   }
@@ -73,8 +73,8 @@
   }
   .navBtn {
     font-size: small;
-    margin-left: 0.75rem;
-    margin-right: 0.75rem;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
   }
 }
 
@@ -98,7 +98,7 @@ html {
 }
 
 header {
-  display: flex;
+  /* display: flex; */
   width: 100%;
 }
 
