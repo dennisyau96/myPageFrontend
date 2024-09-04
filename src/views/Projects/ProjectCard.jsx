@@ -10,9 +10,13 @@ export default function ProjectCard({ project }) {
 
   return (
     <>
-      <div className="card w-96 h-auto p-2 m-4 border-2 rounded-xl hover:  hover:transition-all hover:duration-300 ease-in-out  hover:shadow-2xl hover:bg-slate-100">
+      <div className="card w-80 h-auto  m-4 border-2 rounded-xl hover:  hover:transition-all hover:duration-300 ease-in-out  hover:shadow-2xl hover:shadow-sky-400 hover:bg-slate-100 opacity-95">
         {project.thumbnail && (
-          <img src={project.thumbnail} className="card-img-top rounded-xl " />
+          <img
+            src={project.thumbnail}
+            className="card-img-top rounded-xl bg-gray-950 text-white"
+            alt={project.thumbnail}
+          />
         )}
         <div className="card-body text-center">
           <h5 className="card-title font-bold text-xl mb-2 text-center">

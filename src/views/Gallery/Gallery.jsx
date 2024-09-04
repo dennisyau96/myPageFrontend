@@ -52,15 +52,15 @@ export default function Gallery() {
   return (
     <>
       <div className="text-center justify-center container justify-items-center justify-self-center grid grid-col-1 w-auto">
-        <h1 className="font-bold text-3xl my-4">My Photography Journey</h1>
+        <h1 className="font-bold text-3xl my-4 theme4font">Gallery</h1>
         {/*carousel */}
         <div
           id="carouselExampleAutoplaying"
-          className="carousel slide  carousel-fade w-7/12 my-4 text-center justify-center border-2 border-gray-300 p-1  rounded-xl "
-          // data-bs-ride="carousel"
-          // data-ride="carousel"
-          // data-pause="false"
-          // data-interval="1000"
+          className="carousel slide  carousel-fade w-8/12 my-4 text-center justify-center border-2 border-gray-300 p-1  rounded-xl hover:shadow-sky-300 hover:shadow-xl duration-500 ease-in-out transition-all"
+          data-bs-ride="carousel"
+          data-ride="carousel"
+          data-pause="false"
+          data-interval="1000"
         >
           <div className="carousel-inner w-full justify-center ">
             <div className="carousel-item active justify-center">
@@ -73,21 +73,21 @@ export default function Gallery() {
           </div>
 
           <button
-            className="carousel-control-prev hover:bg-gray-100 transition-all ease-in-out duration-300"
+            className="carousel-control-prev hover:bg-gray-100 hover:opacity-35 transition-all ease-in-out duration-300"
             type="button"
             data-bs-target="#carouselExampleAutoplaying"
             data-bs-slide="prev"
             onClick={prevPhoto}
           >
             <span
-              className="carousel-control-prev-icon"
+              className="carousel-control-prev-icon "
               aria-hidden="true"
             ></span>
             <span className="visually-hidden">Previous</span>
           </button>
 
           <button
-            className="carousel-control-next hover:bg-gray-100 transition-all ease-in-out duration-300"
+            className="carousel-control-next hover:bg-gray-100 hover:opacity-35 transition-all ease-in-out duration-300"
             type="button"
             data-bs-target="#carouselExampleAutoplaying"
             data-bs-slide="next"
@@ -103,68 +103,67 @@ export default function Gallery() {
         {/*carousel */}
 
         <div className="my-4 justify-center text-center">
-          Want to see more photo?
-          <br /> Please visit{" "}
-          <Link
-            className="hover:font-bold underline "
-            to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
-            target="blank"
-            onClick={() => {
-              const ctr = confirm(
-                "You will be redirected to the project website"
-              );
-              if (!ctr) {
-                navigate(0);
-              }
-            }}
-          >
-            den.y_photography@Instagram
-          </Link>
+          <span className="theme3font">
+            Want to see more photo?
+            <br /> Please visit{" "}
+            <Link
+              className="hover:text-slate-300 underline transition-all duration-500 ease-in-out "
+              to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
+              target="blank"
+              onClick={() => {
+                const ctr = confirm(
+                  "You will be redirected to the project website"
+                );
+                if (!ctr) {
+                  navigate(0);
+                }
+              }}
+            >
+              den.y_photography@Instagram
+            </Link>
+          </span>
+
           <div className="">
-            <strong>Like, Share and Follow</strong>
+            <strong className="theme4font">Like, Share and Follow</strong>
           </div>
-          <Link
-            to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
-            target="blank"
-          >
-            <br />
-            <div>
-              <button className="btn cursor-pointer text-xl text-white font-bold theme1 hover:shadow-xl hover:bg-gray-700 hover:text-white hover:transition-all hover:duration-300 mb-3">
-                <Link
-                  className="hover:font-bold"
-                  to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
-                  target="_blank"
-                  onClick={() => {
-                    const ctr = confirm(
-                      "You will be redirected to the project website"
-                    );
-                    if (!ctr) {
-                      navigate(0);
-                    }
-                  }}
-                >
-                  Visit
-                </Link>
-              </button>
-            </div>
-            <div className={styles.QRFrame}>
-              <img
-                className={styles.QRimg}
-                alt="QR"
-                src={qr}
+
+          <br />
+          <div>
+            <button className=" hover:shadow-xl hover:shadow-sky-300 btn cursor-pointer text-lg   hover:bg-gray-600 hover:text-slate-700 text-white  theme1  hover:transition-all hover:duration-300 mb-3">
+              <Link
+                className=""
                 to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
                 target="_blank"
                 onClick={() => {
                   const ctr = confirm(
-                    "You will be redirected to the project website"
+                    "You will be redirected to the Instagram website"
                   );
                   if (!ctr) {
                     navigate(0);
                   }
                 }}
-              ></img>
-            </div>
-          </Link>
+              >
+                Visit
+              </Link>
+            </button>
+          </div>
+          <div className={styles.QRFrame}>
+            <img
+              className={styles.QRimg}
+              alt="QR"
+              src={qr}
+              to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
+              target="_blank"
+              onClick={() => {
+                const ctr = confirm(
+                  "You will be redirected to the Instagram website"
+                );
+                if (!ctr) {
+                  navigate(0);
+                }
+              }}
+            ></img>
+          </div>
         </div>
       </div>
     </>

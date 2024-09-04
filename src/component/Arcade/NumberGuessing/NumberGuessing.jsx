@@ -147,7 +147,10 @@ export default function NumberGuessing() {
   }
   //
   return (
-    <div className="theme2 rounded-xl px-3 py-3 max-w-72" id="">
+    <div
+      className="bg-slate-800 rounded-xl px-4 py-3 max-w-72 duration-300 hover:transition-all hover:shadow-xl hover:shadow-sky-300 opacity-90"
+      id=""
+    >
       <p className="mb-3 text-xl font-bold text-white">
         {!exploded ? "Don't explode!" : "Exploded"}
       </p>
@@ -166,29 +169,21 @@ export default function NumberGuessing() {
       {/* testing display */}
       {!ended ? (
         <div className=" justify-center text-center justify-items-center">
-          <p className="flex flex-wrap w-auto">
+          <p className="flex flex-wrap w-auto text-white">
             You have {lifeCount} chance(s) to guess the secret code.
           </p>
-          <div className="text-xs bg-white rounded-lg my-2 py-2">
-            Hint: choose the number between{" "}
+          <div className="text-md bg-white rounded-lg my-2 py-2 max-w-sm">
+            Hint:
             <span className="">
               {downRange}-{upRange}(inclusive)
             </span>
           </div>
-          <div className="input-group   ">
+          <div className="justify-center text-center">
             <input
               value={attempt}
               onChange={(e) => setAttempt(e.target.value)}
-              className={(styles.numberGuessingInput, "form-control")}
+              className="form-control border-sky-300 "
             ></input>
-            <button
-              className="input-group-text hover:text-white hover:bg-slate-600 hover:border-2"
-              onClick={(e) => {
-                guess(e);
-              }}
-            >
-              Guess
-            </button>
           </div>
           <br />
         </div>
@@ -199,8 +194,18 @@ export default function NumberGuessing() {
           The secret code is {answer}. You are safe to go.
         </div>
       )}
-
-      <button onClick={() => restart()} className={styles.restartBtn}>
+      <button
+        className="bg-red-200 text-gray-800 p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-red-600 duration-500  "
+        onClick={(e) => {
+          guess(e);
+        }}
+      >
+        Guess
+      </button>
+      <button
+        onClick={() => restart()}
+        className="bg-green-200 text-gray-800 p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-green-600 duration-500  "
+      >
         Restart
       </button>
     </div>

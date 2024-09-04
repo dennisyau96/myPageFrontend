@@ -85,6 +85,13 @@
   max-width: 300px;
 }
 
+.QRimg:hover {
+  width: 300px;
+  height: auto;
+  max-width: 300px;
+  cursor: pointer;
+}
+
 .QRFrame {
   padding: 10px;
   display: inline-block;
@@ -93,4 +100,14 @@
   border-radius: 10px;
   transition: all;
   transition-duration: 300;
+}
+.QRFrame:hover {
+  padding: 10px;
+  display: inline-block;
+  border: solid gray 3px;
+  margin: 10px;
+  border-radius: 10px;
+  transition: all;
+  transition-duration: 300;
+  cursor: pointer;
 }

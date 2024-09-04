@@ -51,21 +51,27 @@ function DiceRoller() {
   }
 
   return (
-    <div className="theme2 rounded-xl px-2 py-3 max-w-96">
-      <h2 className="mb-3 text-xl font-bold">Dice Roller</h2>
+    <div className="bg-slate-700 rounded-xl px-2 py-3 max-w-96 duration-300 hover:transition-all hover:shadow-xl hover:shadow-sky-300 bg-opacity-90">
+      <h2 className="mb-3 text-xl font-bold text-white">Dice Roller</h2>
       <div className="flex flex-auto justify-center items-center ease-in-out ">
-        <button className={styles.lessBtn} onClick={() => lessDie()}>
+        <button
+          className="bg-slate-400 text-gray-900 p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-gray-600 "
+          onClick={() => lessDie()}
+        >
           -1
         </button>
         <div className={styles.dieCounter}>{diceNumber}</div>
-        <button className={styles.moreBtn} onClick={() => moreDie()}>
+        <button
+          className="bg-slate-400 text-gray-900 p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-gray-600"
+          onClick={() => moreDie()}
+        >
           +1
         </button>
       </div>
 
       <br />
       <button
-        className={styles.rollDRBtn}
+        className="bg-red-200 text-gray-800 p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-red-600 duration-500 "
         onClick={(e) => {
           rollDice(e);
         }}
@@ -74,7 +80,7 @@ function DiceRoller() {
       </button>
 
       <button
-        className={styles.restartDRBtn}
+        className="bg-green-200 text-gray-800 p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-green-600 duration-500"
         onClick={() => {
           setDiceNumber(0);
           setResult([]);
@@ -84,10 +90,10 @@ function DiceRoller() {
       >
         Restart
       </button>
-      <div className={styles.diceDisplay} id="diceDisplay">
+      <div className="text-white" id="diceDisplay">
         {rolling ? (
           <div id="rollingDiv">
-            <p className={styles.rollingMsg}>
+            <p className="text-white">
               The dice are beening rolled...{" "}
               <svg
                 className="animate-spin h-5 w-5 mr-3"

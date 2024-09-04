@@ -7,17 +7,12 @@ import { useNavigate } from "react-router-dom";
 export default function Footer() {
   const navigate = useNavigate();
   return (
-    <div className="footer relative botton-0 text-center bottom-0 h-10/12 w-full theme1 m-0 p-6">
-      <div className="h-1/6  ">
-        <p className="justify-self-start text-white">Dennis Yau</p>
-        <div className="flex flex-wrap ">
-          {/* <Link to="/">
-            <img
-              src={fbicon}
-              className="h-10 my-2 mx-2 hover:bg-orange-500 hover:rounded-lg"
-              alt="FB"
-            />
-          </Link> */}
+    <div className="botton-0    text-center justify-center  h-10/12 w-screen theme1 m-0 p-6">
+      <div className="h-1/6 ">
+        <p className="justify-self-start text-white">
+          <Link to="/">Dennis Yau</Link>
+        </p>
+        <div className="flex flex-wrap text-center justify-center">
           <Link
             target="_blank"
             onClick={() => {
@@ -30,11 +25,7 @@ export default function Footer() {
             }}
             to="https://www.instagram.com/den.y_photography/?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
           >
-            <img
-              src={igicon}
-              className="h-10 my-2 mx-2   hover:transition-all hover:motion-reduce:animate-pulse "
-              alt="INSTA"
-            />
+            <i className="fa fa-instagram m-2 text-white"></i>
           </Link>
           <Link
             target="_blank"
@@ -48,12 +39,28 @@ export default function Footer() {
             }}
             to="https://www.linkedin.com/in/dennis-yau-314755248/"
           >
-            <img
-              src={liicon}
-              className=" h-10 my-2 mx-2    hover:transition-all hover:motion-reduce:animate-pulse"
-              alt="LinkedIn"
-            ></img>
+            <i className="fa fa-linkedin m-2 text-white"></i>
           </Link>
+
+          <Link
+            target="_blank"
+            onClick={() => {
+              const ctr = confirm(
+                "You will be redirected to the GitHub website"
+              );
+              if (!ctr) {
+                navigate(0);
+              }
+            }}
+            to="https://github.com/dennisyau96"
+          >
+            <i className="fa fa-github m-2 text-white"></i>
+          </Link>
+        </div>
+        <div className="text-right h-fit">
+          <a href="#" className="text-xs text-white">
+            Back to top
+          </a>
         </div>
       </div>
     </div>

@@ -19,7 +19,7 @@ function EducationCard({ content, index }) {
     <>
       <div
         id="eduCard"
-        className="p-4 m-4 border-2 rounded-2xl bg-white z-0 max-w-lg min-w-96 hover:shadow-xl hover:shadow-gray-300 hover:transition-all hover:duration-300 min-h-100 h-100"
+        className="p-4 m-4 border-2 rounded-2xl bg-white z-0 max-w-lg min-w-84 hover:shadow-xl hover:shadow-sky-300 transition-all hover:duration-500 min-h-100 h-100 opacity-90 ease-in-out"
       >
         {/* <img className="eduCardImg" alt={content.institution} /> */}
 

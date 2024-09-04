@@ -75,7 +75,7 @@ function DigitalClock() {
   }
   setInterval(updateClock, 1000);
   return (
-    <div className={styles.digitalClockDiv}>
+    <div className="bg-gray-950 theme4font rounded-xl px-4 py-3 max-w-96 duration-300 hover:transition-all hover:shadow-xl hover:shadow-sky-300">
       {/* <p className={styles.clockTitle}>The Time Now is</p> */}
       <div className={styles.dateDiv}>
         {month.toUpperCase()} {date},{year}
