@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (max-width: 1325px) {
+/* @media (max-width: 1325px) {
   .headerDiv {
   }
   .headerName {
     font-size: 0.8rem;
   }
-}
+} */
