@@ -12,7 +12,7 @@ function Certificate() {
 
   useEffect(() => {
     scrollTo(0, 0);
-    setCertificates((prev) => certs);
+    // setCertificates((prev) => certs);
     if (certificates != null) {
       setLoading(false);
     }
@@ -39,8 +39,11 @@ function Certificate() {
     <>
       <div className="text-center justify-center container justify-items-center justify-self-center grid grid-col-1 w-auto ">
         <h1 className="font-bold text-3xl my-4 text-center theme4font">
-          Certificate{" "}
+          Certificate
         </h1>
+        <span className="text-xs text-white">
+          * some browser may not be able to display the certificate pdf.
+        </span>
 
         {loading ? (
           <Loading />
