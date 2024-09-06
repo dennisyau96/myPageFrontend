@@ -49,22 +49,27 @@ function Comment() {
   }
 
   return (
-    <div id="commentDiv" className={(styles.commentDiv, styles.boxyWH)}>
+    <div
+      id="commentDiv"
+      className="bg-black transition-all ease-in-out duration-500 border-x-2 border-b-2 rounded-lg p-4"
+    >
       {!after ? (
         <div className={styles.commentBefore}>
-          <span className={styles.cmtTitle}>Feel Free to Make Comment</span>
+          <span className="text-white text-lg">Leave a Comment</span>
           <br />
           <div className={styles.commentInputDiv}>
             <form>
-              {/* -------- row 1  --------  */}
               <div className="form-floating">
-                <div className="row">
+                {/* -------- row 1  --------  */}
+                <div className="row mb-2">
                   <div className="col gy-2  text-right">
-                    <label htmlFor="person">Name</label>
+                    <label htmlFor="person " className="text-white">
+                      Name
+                    </label>
                   </div>
                   <div className="col gy-2">
                     <input
-                      className="form-control"
+                      className="form-control "
                       name="person"
                       id="personInput"
                       type="text"
@@ -75,9 +80,12 @@ function Comment() {
                 </div>
                 {/* -------- row 2  --------  */}
 
-                <div className="row">
+                <div className="row mb-2">
                   <div className="col gy-2 text-right">
-                    <label htmlFor="organization responsive">
+                    <label
+                      htmlFor="organization responsive"
+                      className="text-white"
+                    >
                       Organization (optional)
                     </label>
                   </div>
@@ -95,9 +103,11 @@ function Comment() {
                 </div>
                 {/* -------- row 3  --------  */}
 
-                <div className="row">
+                <div className="row mb-2">
                   <div className="col gy-2 text-right">
-                    <label htmlFor="comment">Comment</label>
+                    <label htmlFor="comment" className="text-white">
+                      Comment
+                    </label>
                   </div>
                   <div className="col gy-2">
                     <textarea
@@ -111,9 +121,11 @@ function Comment() {
                 </div>
                 {/* -------- row 4  --------  */}
 
-                <div className="row">
+                <div className="row mb-2">
                   <div className="col gy-2 text-right">
-                    <label htmlFor="rating">Rating(5 is highest)</label>
+                    <label htmlFor="rating" className="text-white">
+                      Rating(5 is highest)
+                    </label>
                   </div>
                   <div className="col gy-2">
                     <select
@@ -137,7 +149,7 @@ function Comment() {
               </div>
             </form>
             <button
-              className={styles.leaveCommentBtn}
+              className="bg-slate-200 m-4 btn hover:bg-slate-600 transition-all ease-in-out duration-500 hover:text-white hover:shadow-sky-300 hover:shadow-xl"
               onClick={(e) => {
                 leaveComment(e);
               }}

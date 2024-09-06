@@ -16,7 +16,7 @@ export default function ProjectCard({ project }) {
             <img
               src={project.thumbnail}
               className="card-img-top rounded-xl bg-gray-950 text-white"
-              alt={project.thumbnail}
+              alt={project.name}
             />
           </a>
         )}

@@ -156,7 +156,7 @@ export default function NumberGuessing() {
       </p>
       <p className="my-3">{lifeDsp}</p>
       {/* testing display */}
-      {/* <p>
+      <p className="text-white">
         ans:{answer}| life:{lifeCount}
         <br></br>
         Down:{downRange}
@@ -164,7 +164,7 @@ export default function NumberGuessing() {
         Up:{upRange}
         <br></br>
         attempt:{attempt}
-      </p> */}
+      </p>
 
       {/* testing display */}
       {!ended ? (
@@ -188,14 +188,16 @@ export default function NumberGuessing() {
           <br />
         </div>
       ) : null}
-      {!exploded ? null : <h1 className={styles.boomDsp}>BOOOOOOOM!!!!!</h1>}
+      {!exploded ? null : (
+        <h1 className="text-white text-2xl">BOOOOOOOM!!!!!</h1>
+      )}
       {!safe ? null : (
-        <div className={styles.safeToGo}>
+        <div className="text-white text-2xl">
           The secret code is {answer}. You are safe to go.
         </div>
       )}
       <button
-        className="bg-red-200 text-gray-800 p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-red-600 duration-500  "
+        className="bg-slate-200 text-gray-800 p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-red-500 duration-500  "
         onClick={(e) => {
           guess(e);
         }}
@@ -204,7 +206,7 @@ export default function NumberGuessing() {
       </button>
       <button
         onClick={() => restart()}
-        className="bg-green-200 text-gray-800 p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-green-600 duration-500  "
+        className="bg-slate-200 text-gray-800 p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-green-500 duration-500  "
       >
         Restart
       </button>
