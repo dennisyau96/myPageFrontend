@@ -71,7 +71,7 @@ function DiceRoller() {
 
       <br />
       <button
-        className="bg-red-200 text-gray-800 p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-red-600 duration-500 "
+        className="bg-slate-200 text-gray-800 p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-red-500 duration-500 "
         onClick={(e) => {
           rollDice(e);
         }}
@@ -80,7 +80,7 @@ function DiceRoller() {
       </button>
 
       <button
-        className="bg-green-200 text-gray-800 p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-green-600 duration-500"
+        className="bg-slate-200 text-gray-800 p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-green-500 duration-500"
         onClick={() => {
           setDiceNumber(0);
           setResult([]);

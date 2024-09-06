@@ -48,19 +48,25 @@ function Home() {
             className="justify-center justify-items-center text-center my-4"
           >
             <button
-              className="p-3 rounded-md text  border-gray-400 border-2 transition-all  hover:shadow-gray-400 hover:border-4 hover:border-sky-500 text-lg font-mono
+              className="px-3 rounded-md text   border-2 transition-all  hover:shadow-gray-400 hover:border-1 hover:border-gray-200 text-lg font-mono
           mt-3 cursor-pointer btn text-uppercase theme2 hover:shadow-xl hover:bg-gray-700 hover:text-white font-semibold duration-500 hover:animate-pulse ease-in-out"
               data-bs-toggle="modal"
               data-bs-target="#commentModal"
+              type="button"
             >
               Leave a Comment
             </button>
 
-            <div className="modal fade" id="commentModal" role="alert">
-              <div className="modal-dialog">
-                <div className="modal-content">
+            <div
+              className="modal fade transition-all ease-in-out duration-500"
+              id="commentModal"
+              role="alert"
+            >
+              <div className="modal-dialog" role="document">
+                <div className="modal-content bg-slate-600">
                   <button
-                    className="btn-close"
+                    type="button"
+                    className="btn-close p-2 text-white bg-white opacity-30 transition-all ease-in-out duration-500"
                     aria-label="close"
                     data-bs-dismiss="modal"
                   />
@@ -73,21 +79,21 @@ function Home() {
 
         <div className="text-center font-bold text-4xl theme3font justify-center w-screen">
           Let&apos;s have some fun!
-          <a href="#arcadeDiv" className=" block  scroll-smooth pb-52">
-            <i className="fa fa-arrow-down mt-10 text-gray-500 text-3xl  hover:scale-120  cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce "></i>
-          </a>
         </div>
-
+        <a href="#arcadeArrow" className=" block  scroll-smooth pb-52">
+          <i className="fa fa-arrow-down mt-10 text-gray-500 text-3xl    cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce "></i>
+        </a>
+        <a
+          href="#homeStart"
+          className=" block  scroll-smooth text-center pt-24 border-none"
+          id="arcadeArrow"
+        >
+          <i className="fa fa-arrow-up mt-0 text-gray-500 text-3xl    cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce "></i>
+        </a>
         <div
           className=" justify-center text-center bg-black w-screen "
           id="arcadeDiv"
         >
-          <a
-            href="#homeStart"
-            className=" block  scroll-smooth text-center pt-24"
-          >
-            <i className="fa fa-arrow-up mt-0 text-gray-500 text-3xl  hover:scale-120  cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce "></i>
-          </a>
           <div className=" justify-center border-2 border-slate-400 rounded-md p-4 m-4">
             <div
               id="arcadeDiv"
