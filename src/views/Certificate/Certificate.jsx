@@ -41,9 +41,6 @@ function Certificate() {
         <h1 className="font-bold text-3xl my-4 text-center theme4font">
           Certificate
         </h1>
-        <span className="text-xs text-white">
-          * some browser may not be able to display the certificate pdf.
-        </span>
 
         {loading ? (
           <Loading />

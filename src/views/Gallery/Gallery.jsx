@@ -51,7 +51,7 @@ export default function Gallery() {
 
   return (
     <>
-      <div className="text-center justify-center container justify-items-center justify-self-center grid grid-col-1 w-auto">
+      <div className="text-center justify-center container justify-items-center justify-self-center grid grid-col-1 w-auto transition-all duration-500 ease-in-out">
         <h1 className="font-bold text-3xl my-4 theme4font">Gallery</h1>
         {/*carousel */}
         <div
@@ -63,10 +63,10 @@ export default function Gallery() {
           data-interval="1000"
         >
           <div className="carousel-inner w-full justify-center ">
-            <div className="carousel-item active justify-center">
+            <div className="carousel-item active justify-center transition-all duration-500 ease-in-out">
               <img
                 src={photosSrc[index].pic}
-                className="d-block w-full rounded-lg transition-all duration-300 "
+                className="d-block w-full rounded-lg transition-all duration-300 ease-in-out"
                 alt=""
               />
             </div>
