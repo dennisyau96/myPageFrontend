@@ -14,9 +14,9 @@ export default function ProjectCard({ project }) {
         {project.thumbnail && (
           <a href={project.thumbnail}>
             <img
-              src={project.thumbnail}
+              src="./doggo.jpg"
               className="card-img-top rounded-xl bg-gray-950 text-white"
-              alt={project.thumbnail}
+              alt={project.name}
             />
           </a>
         )}
