@@ -156,7 +156,7 @@ export default function NumberGuessing() {
       </p>
       <p className="my-3">{lifeDsp}</p>
       {/* testing display */}
-      <p className="text-white">
+      {/* <p className="text-white">
         ans:{answer}| life:{lifeCount}
         <br></br>
         Down:{downRange}
@@ -164,7 +164,7 @@ export default function NumberGuessing() {
         Up:{upRange}
         <br></br>
         attempt:{attempt}
-      </p>
+      </p> */}
 
       {/* testing display */}
       {!ended ? (
