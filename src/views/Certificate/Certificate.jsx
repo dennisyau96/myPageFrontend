@@ -9,6 +9,10 @@ function Certificate() {
   const [index, setIndex] = useState(0);
   const [certificates, setCertificates] = useState([...certs]);
   const [loading, setLoading] = useState(true);
+  //http://localhost:5173/assets/certificates/pdf/cert1.pdf
+  const openPDF = () => {
+    window.open(certificates[index].link);
+  };
 
   useEffect(() => {
     scrollTo(0, 0);
@@ -41,9 +45,6 @@ function Certificate() {
         <h1 className="font-bold text-3xl my-4 text-center theme4font">
           Certificate
         </h1>
-        <span className="text-xs text-white">
-          * some browser may not be able to display the certificate pdf.
-        </span>
 
         {loading ? (
           <Loading />
@@ -59,6 +60,7 @@ function Certificate() {
                   src={certificates[index].cert}
                   className="d-block w-100"
                   alt={certificates[index].title}
+                  onClick={() => openPDF([index])}
                 />
               </div>
             </div>
