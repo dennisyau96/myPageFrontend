@@ -9,9 +9,10 @@ function Certificate() {
   const [index, setIndex] = useState(0);
   const [certificates, setCertificates] = useState([...certs]);
   const [loading, setLoading] = useState(true);
+  const [album, setAblum] = useState(true);
   //http://localhost:5173/assets/certificates/pdf/cert1.pdf
   const openPDF = () => {
-    window.open(certificates[index].link);
+    window.open(certificates[index].link, "_blank");
   };
 
   useEffect(() => {
@@ -39,6 +40,17 @@ function Certificate() {
     }
   }
 
+  function switchMode() {
+    let button = document.getElementById("certModeButton");
+    if (album == true) {
+      button.textContent = "Album mode";
+      setAblum(false);
+    } else if (album == false) {
+      button.textContent = "List mode";
+      setAblum(true);
+    }
+  }
+
   return (
     <>
       <div className="text-center justify-center container justify-items-center justify-self-center grid grid-col-1 w-auto ">
@@ -46,57 +58,80 @@ function Certificate() {
           Certificate
         </h1>
 
-        {loading ? (
-          <Loading />
-        ) : (
-          <div
-            id="carouselExampleAutoplaying"
-            className="carousel slide  w-auto my-4 text-center justify-center border-2 border-gray-300 p-4  rounded-xl hover:shadow-sky-300 hover:shadow-xl transition-all duration-500 ease-in-out"
-            data-bs-ride="carousel"
+        <div>
+          <button
+            id="certModeButton"
+            onClick={switchMode}
+            className="bg-gray-700 text-white py-1 px-2 rounded-md hover:shadow-sky-300 hover:shadow-lg transition-all ease-in-out duration-300 hover:border-2 hover:border-gray-400 m-3"
           >
-            <div className="carousel-inner justify-center text-center">
-              <div className="carousel-item active justify-center text-center">
-                <img
-                  src={certificates[index].cert}
-                  className="d-block w-100"
-                  alt={certificates[index].title}
-                  onClick={() => openPDF([index])}
-                />
+            List mode
+          </button>
+        </div>
+        {album ? (
+          loading ? (
+            <Loading />
+          ) : (
+            <div
+              id="carouselExampleAutoplaying"
+              className="carousel slide  w-auto my-4 text-center justify-center border-2 border-gray-300 p-4  rounded-xl hover:shadow-sky-300 hover:shadow-xl transition-all duration-500 ease-in-out"
+              data-bs-ride="carousel"
+            >
+              <div className="carousel-inner justify-center text-center">
+                <div className="carousel-item active justify-center text-center">
+                  <img
+                    src={certificates[index].cert}
+                    className="d-block w-100 cursor-pointer"
+                    alt={certificates[index].title}
+                    onClick={() => openPDF([index])}
+                  />
+                </div>
               </div>
-            </div>
-            <div className="text-center theme4font mt-2 ">
-              {index + 1}. {certificates[index].title}
-            </div>
+              <div className="text-center theme4font mt-2 ">
+                {index + 1}. {certificates[index].title}
+              </div>
 
-            <button
-              className="carousel-control-prev hover:bg-slate-100 transition-all hover:opacity-35 ease-in-out duration-300"
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide="prev"
-              onClick={prevCert}
-            >
-              <span
-                className="carousel-control-prev-icon "
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Previous</span>
-            </button>
+              <button
+                className="carousel-control-prev hover:bg-slate-100 transition-all hover:opacity-35 ease-in-out duration-300"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev"
+                onClick={prevCert}
+              >
+                <span
+                  className="carousel-control-prev-icon "
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
 
-            <button
-              className="carousel-control-next hover:bg-slate-100 transition-all  hover:opacity-35 ease-in-out duration-300"
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide="next"
-              onClick={nextCert}
-            >
-              <span
-                className="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Next</span>
-            </button>
+              <button
+                className="carousel-control-next hover:bg-slate-100 transition-all  hover:opacity-35 ease-in-out duration-300"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next"
+                onClick={nextCert}
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Next</span>
+              </button>
+            </div>
+          )
+        ) : null}
+
+        {!album ? (
+          <div className=" p-3">
+            <ul className="justify-center border-1 border-white flex-row p-4 overflow-auto">
+              {certs.map((cert, i) => (
+                <li key={i} className="text-gray-400 text-left m-1">
+                  {i + 1}. {cert.title}
+                </li>
+              ))}
+            </ul>
           </div>
-        )}
+        ) : null}
       </div>
     </>
   );

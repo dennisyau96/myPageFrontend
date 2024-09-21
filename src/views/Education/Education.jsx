@@ -17,6 +17,7 @@ function Education() {
   async function loadData() {
     try {
       const eduData = await axios.get([`${baseURL}/educations`]);
+
       if (eduData.data) {
         setLoading(false);
         setEducation((prev) => eduData.data);

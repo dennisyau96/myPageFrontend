@@ -23,6 +23,10 @@ import cert22 from "../../assets/certificates/cert22.jpg";
 import cert23 from "../../assets/certificates/cert23.jpg";
 import cert24 from "../../assets/certificates/cert24.jpg";
 import cert25 from "../../assets/certificates/cert25.jpg";
+import cert26 from "../../assets/certificates/cert26.jpg";
+import cert27 from "../../assets/certificates/cert27.jpg";
+import cert28 from "../../assets/certificates/cert28.jpg";
+import cert29 from "../../assets/certificates/cert29.jpg";
 
 export const certs = [
   {
@@ -150,5 +154,25 @@ export const certs = [
     title:
       "SQL Essential Training (National Association of State Boards of Accountancy)",
     link: "src/assets/certificates/pdf/cert25.pdf",
+  },
+  {
+    cert: cert26,
+    title: "Advanced CSS Media Queries",
+    link: "src/assets/certificates/pdf/cert26.pdf",
+  },
+  {
+    cert: cert27,
+    title: "Advanced Node.js: Scaling Applications",
+    link: "src/assets/certificates/pdf/cert27.pdf",
+  },
+  {
+    cert: cert28,
+    title: "Using MongoDB with Node.js",
+    link: "src/assets/certificates/pdf/cert28.pdf",
+  },
+  {
+    cert: cert29,
+    title: "Building RESTful APIs with Node.js and Express",
+    link: "src/assets/certificates/pdf/cert29.pdf",
   },
 ];
