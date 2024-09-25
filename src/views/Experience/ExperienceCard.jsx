@@ -1,14 +1,28 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
+import axios from "axios";
 import styles from "./Experience.module.css";
+import { baseURL } from "../../constant/constant";
 function ExperienceCard({ content }) {
-  const desArray = content.description;
-  localStorage.setItem("desArray", desArray);
+  const [des, setDes] = useState(content.description);
 
-  const [des, setDes] = useState([content.description]);
+  // useEffect(() => {
+  //   getData();
+  // }, []);
+
+  // async function getData() {
+  //   try {
+  //     const desData = await axios.get([`${baseURL}/experiences`]);
+  //     if (desData.data.description) {
+  //       setDes([...desData.data.description]);
+  //     }
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // }
 
   return (
-    <div className="p-4 m-3 border-2 rounded-lg bg-white z-0 max-w-sm   hover:shadow-sky-300 hover:transition-all   hover:shadow-xl  hover:duration-300 min-h-100 h-100 opacity-90">
+    <div className="p-4 m-3 border-2 rounded-lg bg-white z-0 max-w-md   hover:shadow-sky-300 hover:transition-all   hover:shadow-xl  hover:duration-300 min-h-100 h-100 opacity-90">
       {content.position ? (
         <p className="font-bold text-2xl mb-7">
           <span className={styles.label}>{content.position}</span>
@@ -21,17 +35,21 @@ function ExperienceCard({ content }) {
         <div className="col-span-3">{content.period}</div>{" "}
         <div className="col-span-2 theme1font">Location:</div>
         <div className="col-span-3">{content.location}</div>{" "}
-        {desArray ? (
-          <div>
-            <div className="col-span-2 theme1font">Description:</div>
-            <div className="col-span-3">
-              <ul>
-                {desArray &&
-                  desArray.map((item, index) => <li key={index}>{item}</li>)}
-              </ul>
-            </div>
+        <div className="col-span-2 theme1font">Description:</div>
+        <div className="col-span-3">
+          <div className="">
+            <ul className="bg-slate-100 p-2">
+              {des &&
+                des.map((item, index) => (
+                  <li key={index} className="mb-2 grid grid-cols-7">
+                    <span className="col-span-1">{index + 1}.</span>
+                    <span className="col-span-6"> {item}</span>
+                    <hr className="col-span-7 mt-1"></hr>
+                  </li>
+                ))}
+            </ul>
           </div>
-        ) : null}
+        </div>
       </div>
     </div>
   );
