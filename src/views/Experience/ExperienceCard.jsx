@@ -1,11 +1,25 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
+import axios from "axios";
 import styles from "./Experience.module.css";
+import { baseURL } from "../../constant/constant";
 function ExperienceCard({ content }) {
-  const desArray = content.description;
-  localStorage.setItem("desArray", desArray);
+  const [des, setDes] = useState();
 
-  const [des, setDes] = useState([content.description]);
+  useEffect(() => {
+    getData();
+  }, []);
+
+  async function getData() {
+    try {
+      const desData = await axios.get([`${baseURL}/experiences`]);
+      if (desData.data.description) {
+        setDes([...desData.data.description]);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   return (
     <div className="p-4 m-3 border-2 rounded-lg bg-white z-0 max-w-sm   hover:shadow-sky-300 hover:transition-all   hover:shadow-xl  hover:duration-300 min-h-100 h-100 opacity-90">
@@ -21,17 +35,14 @@ function ExperienceCard({ content }) {
         <div className="col-span-3">{content.period}</div>{" "}
         <div className="col-span-2 theme1font">Location:</div>
         <div className="col-span-3">{content.location}</div>{" "}
-        {desArray ? (
-          <div>
-            <div className="col-span-2 theme1font">Description:</div>
-            <div className="col-span-3">
-              <ul>
-                {desArray &&
-                  desArray.map((item, index) => <li key={index}>{item}</li>)}
-              </ul>
-            </div>
+        <div className="col-span-2 theme1font">Description:</div>
+        <div>
+          <div className="col-span-3">
+            <ul>
+              {des && des.map((item, index) => <li key={index}>{item}</li>)}
+            </ul>
           </div>
-        ) : null}
+        </div>
       </div>
     </div>
   );

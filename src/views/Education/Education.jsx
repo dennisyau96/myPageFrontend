@@ -10,19 +10,18 @@ function Education() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    loadData();
+    getData();
     scrollTo(0, 0);
   }, []);
 
-  async function loadData() {
+  async function getData() {
     try {
       const eduData = await axios.get([`${baseURL}/educations`]);
-
       if (eduData.data) {
         setLoading(false);
-        setEducation((prev) => eduData.data);
-        setEducation((education) => education.sort((a, b) => b.sort - a.sort));
       }
+      setEducation(eduData.data);
+      setEducation((education) => education.sort((a, b) => a.sort - b.sort));
     } catch (err) {
       console.log(err);
     }
