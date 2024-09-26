@@ -64,7 +64,7 @@ function Comment() {
                 <div className="row mb-2">
                   <div className="col gy-2  text-right">
                     <label htmlFor="person " className="text-white">
-                      Name
+                      Name:
                     </label>
                   </div>
                   <div className="col gy-2">
@@ -86,7 +86,7 @@ function Comment() {
                       htmlFor="organization responsive"
                       className="text-white"
                     >
-                      Organization (optional)
+                      Organization (optional):
                     </label>
                   </div>
                   <div className="col gy-2">
@@ -106,7 +106,7 @@ function Comment() {
                 <div className="row mb-2">
                   <div className="col gy-2 text-right">
                     <label htmlFor="comment" className="text-white">
-                      Comment
+                      Comment:
                     </label>
                   </div>
                   <div className="col gy-2">
@@ -124,7 +124,7 @@ function Comment() {
                 <div className="row mb-2">
                   <div className="col gy-2 text-right">
                     <label htmlFor="rating" className="text-white">
-                      Rating(5 is highest)
+                      Rating(5 is highest):
                     </label>
                   </div>
                   <div className="col gy-2">
@@ -149,12 +149,12 @@ function Comment() {
               </div>
             </form>
             <button
-              className="bg-slate-200 m-4 btn hover:bg-slate-600 transition-all ease-in-out duration-500 hover:text-white hover:shadow-sky-300 hover:shadow-xl"
+              className="mt-2 p-2 cursor-pointer text-white border-1 hover:text-black hover:shadow-lg hover:bg-gray-600  hover:transition-all hover:duration-200"
               onClick={(e) => {
                 leaveComment(e);
               }}
             >
-              Leave a Comment
+              Submit
             </button>
             {loading ? (
               <svg

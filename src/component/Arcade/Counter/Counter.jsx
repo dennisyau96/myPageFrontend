@@ -28,14 +28,14 @@ function Counter() {
     }
   }
   return (
-    <div className="bg-gray-800 rounded-xl px-4 py-3 max-w-96 duration-300 hover:transition-all hover:shadow-xl hover:shadow-sky-300 bg-opacity-90">
-      <h1 className=" text-xl font-bold text-white">Tally Counter</h1>
+    <div className="border-1 rounded-md px-4 py-3 max-w-96 duration-200 hover:transition-all hover:shadow-lg hover:shadow-sky-300 bg-opacity-90">
+      <h1 className=" text-xl text-white">Tally Counter</h1>
       <div className="flex gap-3">
         <div className="">
           <p className="my-2 theme3font">Customize the steps:</p>
           <div>
             <input
-              className="w-20 text-center text-2xl rounded-lg bg-slate-600 text-gray-200"
+              className="w-20 text-center text-xl text-white rounded-sm bg-black border-1"
               type="number"
               min={2}
               max={20}
@@ -50,7 +50,7 @@ function Counter() {
       <div className="grid justify-center ">
         <div className="flex justify-center cursor-pointer text-center">
           <div
-            className="bg-slate-500 text-gray-200 p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-gray-600 "
+            className="bg-slate-800 text-gray-200 p-2 m-3 rounded-md hover:shadow-md hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-gray-600 "
             onClick={() => {
               minusOne();
             }}
@@ -58,7 +58,7 @@ function Counter() {
             -1
           </div>
           <div
-            className="bg-slate-500 text-gray-200 p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-gray-600"
+            className="bg-slate-800 text-gray-200 p-2 m-3 rounded-md hover:shadow-md hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-gray-600"
             onClick={minusStep}
           >
             -{step ? step : "N"}
@@ -66,7 +66,7 @@ function Counter() {
         </div>
 
         <div
-          className=" bg-gray-950 text-white rounded-xl text-center justify-center align-middle p-3 hover:shadow-sky-500 hover:text-gray-700 cursor-pointer hover:bg-gray-300 transition-all ease-in-out duration-500 max-w-36"
+          className=" bg-black border-1 text-white hover:bg-gray-700 text-center justify-center align-middle p-3 hover:shadow-sky-500 hover:text-gray-700 cursor-pointer transition-all ease-in-out duration-300 max-w-36"
           onClick={resetCount}
         >
           <span className="text-center text-4xl block">{count}</span>
@@ -75,7 +75,7 @@ function Counter() {
 
         <div className="flex justify-center">
           <div
-            className="bg-slate-500 text-gray-200 p-2 m-3 rounded-lg hover:shadow-xl transition-all ease-in-out hover:shadow-gray-500 cursor-pointer hover:bg-gray-600"
+            className="bg-slate-400 text-gray-900 p-2 m-3 rounded-md hover:shadow-md transition-all ease-in-out hover:shadow-gray-500 cursor-pointer hover:bg-gray-600"
             onClick={() => {
               plusOne();
             }}
@@ -83,7 +83,7 @@ function Counter() {
             +1
           </div>
           <div
-            className="bg-slate-500 text-gray-200 p-2 m-3 rounded-lg hover:shadow-xl transition-all ease-in-out hover:shadow-gray-500 cursor-pointer hover:bg-gray-600"
+            className="bg-slate-400 text-gray-900 p-2 m-3 rounded-md hover:shadow-md transition-all ease-in-out hover:shadow-gray-500 cursor-pointer hover:bg-gray-600"
             onClick={plusStep}
           >
             +{step ? step : "N"}

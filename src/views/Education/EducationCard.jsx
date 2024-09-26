@@ -17,7 +17,7 @@ function EducationCard({ content, index }) {
   }
   return (
     <>
-      <div className="eduCardDiv p-4 m-4 border-2 rounded-lg  z-0 max-w-lg min-w-84 hover:shadow-xl hover:shadow-sky-300 transition-all hover:duration-200 h-auto opacity-90 ease-in-out">
+      <div className="eduCardDiv p-4 my-4 border-2 rounded-lg z-0 max-w-lg min-w-90 hover:shadow-lg hover:shadow-sky-300 transition-all hover:duration-200 h-auto opacity-90 ease-in-out">
         {/* <img className="eduCardImg" alt={content.institution} /> */}
 
         <div className="font-bold text-2xl mb-7 ">
@@ -100,7 +100,7 @@ function EducationCard({ content, index }) {
           <Link
             target="_blank"
             to={content.website}
-            className="p-2 cursor-pointer text-white  bg-gray-700  hover:shadow-xl hover:bg-gray-800 hover:text-white mt-2 hover:transition-all hover:duration-200 "
+            className="mt-2 p-2 cursor-pointer text-white border-1 hover:text-black hover:shadow-xl hover:bg-gray-600  hover:transition-all hover:duration-200 "
             onClick={() => {
               const ctr = confirm("You will be redirected to another website");
               if (!ctr) {

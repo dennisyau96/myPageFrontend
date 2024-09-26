@@ -22,7 +22,7 @@ function ExperienceCard({ content }) {
   // }
 
   return (
-    <div className="expCardDiv p-4 m-4 border-2 border-white rounded-md  z-0 max-w-md   hover:shadow-sky-300 hover:transition-all   hover:shadow-xl  hover:duration-200  h-auto opacity-90">
+    <div className="expCardDiv p-4 border-2 border-white rounded-md  z-0  hover:shadow-sky-300 hover:transition-all   hover:shadow-lg  hover:duration-200  h-auto opacity-90 max-w-md">
       {content.position ? (
         <p className="font-bold text-2xl mb-7">
           <span className={styles.label}>{content.position}</span>
@@ -42,8 +42,8 @@ function ExperienceCard({ content }) {
               {des &&
                 des.map((item, index) => (
                   <li key={index} className="mb-2 grid grid-cols-7">
-                    <span className="col-span-1">{index + 1}.</span>
-                    <span className="col-span-6"> {item}</span>
+                    <span className="col-span-1 theme4font">{index + 1}.</span>
+                    <span className="col-span-6 theme4font"> {item}</span>
                   </li>
                 ))}
             </ul>

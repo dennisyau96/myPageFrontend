@@ -20,85 +20,92 @@ export default function NumberGuessing() {
     } else if (answer < 2) {
       setAnswer(2);
     }
+    if (lifeCount < 1) {
+      setEnded(true);
+      setExploded(true);
+      setAttempt("");
+    }
   }, []);
 
   //function guess
 
-  function guess() {
-    // e.preventDefault();
+  // function guess() {
+  //   // e.preventDefault();
 
-    //case 1: null input
-    if (attempt == "" || attempt == null) {
-      return toast.error("Please Enter a Value.");
-    }
-    //handling for non integer inout
-    if (attempt % 1 != 0) {
-      setAttempt("");
-      return toast.error("Please Enter a Valid Value.");
-    }
+  //   //case 1: null input
+  //   if (attempt == "" || attempt == null) {
+  //     return toast.error("Please Enter a Value.");
+  //   }
+  //   //handling for non integer inout
+  //   if (attempt % 1 != 0) {
+  //     setAttempt("");
+  //     return toast.error("Please Enter a Valid Value.");
+  //   }
 
-    //case 2: no life left
-    if (lifeCount < 1) {
-      setExploded(true);
-      setEnded(true);
-      // setAttempt("");
-    }
+  //   //case 2: no life left
+  //   if (lifeCount < 1) {
+  //     toast("BOOM!!!");
+  //     setExploded(true);
+  //     setEnded(true);
+  //     setAttempt("");
+  //   }
 
-    //case 3: life > 0
-    if (lifeCount > 0) {
-      //case 1c --- correct
-      if (attempt == answer) {
-        setSafe(true);
-        setEnded(true);
-        setAttempt("");
-        toast.success("Congratulation!");
-        return;
-      }
-      //case 3a --- attempt out of range
-      if (attempt <= downRange || attempt >= upRange) {
-        toast.error(
-          `Please Enter a Value between ${downRange} to ${upRange}(inclusive). `
-        );
-        setAttempt("");
+  //   //case 3: life > 0
+  //   if (lifeCount > 0) {
+  //     //case 3a --- correct
+  //     if (attempt == answer) {
+  //       setSafe(true);
+  //       setEnded(true);
+  //       setAttempt("");
+  //       toast.success("Congratulation!");
+  //       return;
+  //     } else {
+  //       //wrong
+  //       //case 3bi --- attempt out of range
+  //       if (attempt <= downRange || attempt >= upRange) {
+  //         toast.error(
+  //           `Please Enter a Value between ${downRange} to ${upRange}(inclusive). `
+  //         );
+  //         setAttempt("");
+  //       }
+  //       //---case 3bii---in range
+  //       else if (attempt > downRange && attempt < upRange) {
+  //         //case 3biia --- attempt to be down range(wrong)
+  //         if (attempt < answer) {
+  //           setDownRange((p) => attempt);
+  //           dspLife(lifeCount);
+  //           toast.error("Wrong guess... ❤️-1.");
+  //           setAttempt("");
+  //         }
+  //         //case 3biib --- attempt to be up range(wrong)
+  //         else if (attempt > answer) {
+  //           setUpRange((p) => attempt);
+  //           dspLife(lifeCount);
+  //           toast.error("Wrong guess... ❤️-1.");
+  //           setAttempt("");
+  //         }
+  //         //case 3b2 --- attempt to be up range(wrong)
+  //         if (attempt > answer && attempt < upRange) {
+  //           setUpRange(attempt);
+  //           setLifeCount((l) => l - 1);
+  //           if (lifeCount < 1) {
+  //             setExploded(true);
+  //             setEnded(true);
+  //             toast.error("Wrong guess... ❤️-1.Boom!!!!");
+  //             return setAttempt("");
+  //           }
+  //           dspLife(lifeCount);
+  //           toast.error("Wrong guess... ❤️-1.");
+  //           setAttempt("");
+  //         }
+  //       }
+  //       dspLife;
+  //       return;
+  //     }
+  //   }
+  // }
 
-        // setUpRange(upRange);
-        // setDownRange(downRange);
-      }
-      //---case 3b---in range
-      else {
-        //case 3b1 --- attempt to be down range(wrong)
-        if (attempt < answer && attempt > downRange) {
-          setDownRange(attempt);
-          setLifeCount((l) => lifeCount - 1);
-          if (lifeCount < 1) {
-            setExploded(true);
-            setEnded(true);
-            toast.error("Wrong guess... ❤️-1.Boom!!!!");
-            return setAttempt("");
-          }
-          dspLife(lifeCount);
-          toast.error("Wrong guess... ❤️-1.");
-          setAttempt("");
-        }
-        //case 3b2 --- attempt to be up range(wrong)
-        if (attempt > answer && attempt < upRange) {
-          setUpRange(attempt);
-          setLifeCount((l) => l - 1);
-          if (lifeCount < 1) {
-            setExploded(true);
-            setEnded(true);
-            toast.error("Wrong guess... ❤️-1.Boom!!!!");
-            return setAttempt("");
-          }
-          dspLife(lifeCount);
-          toast.error("Wrong guess... ❤️-1.");
-          setAttempt("");
-        }
-      }
-
-      return;
-    }
-  }
+  function guess() {}
 
   //--------------------------------------------
 
@@ -148,15 +155,15 @@ export default function NumberGuessing() {
   //
   return (
     <div
-      className="bg-slate-800 rounded-xl px-4 py-3 max-w-72 duration-300 hover:transition-all hover:shadow-xl hover:shadow-sky-300 opacity-90"
+      className="border-1 rounded-md px-4 py-3 max-w-72 duration-300 hover:transition-all hover:shadow-lg hover:shadow-sky-300 opacity-90"
       id=""
     >
-      <p className="mb-3 text-xl font-bold text-white">
-        {!exploded ? "Don't explode!" : "Exploded"}
+      <p className="mb-3 text-xl  text-white">
+        {!exploded ? "Don't Explode!" : "Exploded"}
       </p>
       <p className="my-3">{lifeDsp}</p>
       {/* testing display */}
-      {/* <p className="text-white">
+      <p className="text-white">
         ans:{answer}| life:{lifeCount}
         <br></br>
         Down:{downRange}
@@ -164,26 +171,27 @@ export default function NumberGuessing() {
         Up:{upRange}
         <br></br>
         attempt:{attempt}
-      </p> */}
+      </p>
 
       {/* testing display */}
       {!ended ? (
-        <div className=" justify-center text-center justify-items-center">
-          <p className="flex flex-wrap w-auto text-white">
-            You have {lifeCount} chance(s) to guess the secret code.
+        <div className=" justify-center text-center justify-items-center justify-content-center">
+          <p className="flex flex-wrap w-auto text-white justify-center text-center justify-items-center justify-content-center">
+            Guess the Secret Code
           </p>
-          <div className="text-md bg-white rounded-lg my-2 py-2 max-w-sm">
-            Hint:
-            <span className="">
-              {downRange}-{upRange}(inclusive)
-            </span>
-          </div>
-          <div className="justify-center text-center">
+
+          <div className="justify-center text-center my-2">
             <input
               value={attempt}
               onChange={(e) => setAttempt(e.target.value)}
               className="form-control border-sky-300 "
             ></input>
+          </div>
+          <div className="text-sm text-gray-400 rounded-lg mt-2 pt-2 max-w-sm">
+            Hint:
+            <span className="">
+              {downRange}-{upRange}(inclusive)
+            </span>
           </div>
           <br />
         </div>
@@ -197,7 +205,7 @@ export default function NumberGuessing() {
         </div>
       )}
       <button
-        className="bg-slate-200 text-gray-800 p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-red-500 duration-500  "
+        className="bg-slate-200 text-gray-800 p-2 m-3  hover:shadow-lg hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-red-300 duration-300  "
         onClick={(e) => {
           guess(e);
         }}
@@ -206,7 +214,7 @@ export default function NumberGuessing() {
       </button>
       <button
         onClick={() => restart()}
-        className="bg-slate-200 text-gray-800 p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-green-500 duration-500  "
+        className="bg-slate-200 text-gray-800 p-2 m-3  hover:shadow-lg hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-green-300 duration-300  "
       >
         Restart
       </button>

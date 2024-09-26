@@ -51,11 +51,11 @@ function DiceRoller() {
   }
 
   return (
-    <div className="bg-slate-700 rounded-xl px-2 py-3 max-w-96 duration-300 hover:transition-all hover:shadow-xl hover:shadow-sky-300 bg-opacity-90">
-      <h2 className="mb-3 text-xl font-bold text-white">Dice Roller</h2>
+    <div className=" border-white border-1 rounded-md px-2 py-3 max-w-96 duration-300 hover:transition-all ease-in-out hover:shadow-lg hover:shadow-sky-300 bg-opacity-90">
+      <h2 className="mb-3 text-xl  text-white">Dice Roller</h2>
       <div className="flex flex-auto justify-center items-center ease-in-out ">
         <button
-          className="bg-slate-400 text-gray-900 p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-gray-600 "
+          className="bg-slate-800 text-gray-200 p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-gray-600 "
           onClick={() => lessDie()}
         >
           -1
@@ -71,7 +71,7 @@ function DiceRoller() {
 
       <br />
       <button
-        className="bg-slate-200 text-gray-800 p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-red-500 duration-500 "
+        className="bg-slate-200 text-gray-800 p-2 m-3  hover:shadow-lg hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-red-300 duration-500 "
         onClick={(e) => {
           rollDice(e);
         }}
@@ -80,7 +80,7 @@ function DiceRoller() {
       </button>
 
       <button
-        className="bg-slate-200 text-gray-800 p-2 m-3 rounded-lg hover:shadow-xl hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-green-500 duration-500"
+        className="bg-slate-200 text-gray-800 p-2 m-3  hover:shadow-lg hover:shadow-gray-500 transition-all ease-in-out cursor-pointer hover:bg-green-300 duration-500"
         onClick={() => {
           setDiceNumber(0);
           setResult([]);
@@ -90,7 +90,10 @@ function DiceRoller() {
       >
         Restart
       </button>
-      <div className="text-white" id="diceDisplay">
+      <div
+        className="text-white transition-all duration-200 ease-in-out"
+        id="diceDisplay"
+      >
         {rolling ? (
           <div id="rollingDiv">
             <p className="text-white">

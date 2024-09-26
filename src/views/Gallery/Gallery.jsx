@@ -56,7 +56,7 @@ export default function Gallery() {
         {/*carousel */}
         <div
           id="carouselExampleAutoplaying"
-          className="carousel slide  carousel-fade w-8/12 my-4 text-center justify-center border-2 border-gray-300 p-1  rounded-xl hover:shadow-sky-300 hover:shadow-xl duration-500 ease-in-out transition-all"
+          className="carousel slide  carousel-fade w-8/12  my-4 text-center justify-center border-2 border-gray-300 py-10 hover:shadow-sky-300 hover:shadow-md duration-500 ease-in-out transition-all"
           data-bs-ride="carousel"
           data-ride="carousel"
           data-pause="false"
@@ -66,39 +66,38 @@ export default function Gallery() {
             <div className="carousel-item active justify-center transition-all duration-500 ease-in-out">
               <img
                 src={photosSrc[index].pic}
-                className="d-block w-full rounded-lg transition-all duration-300 ease-in-out"
+                className="d-block w-full  transition-all duration-300 ease-in-out "
                 alt=""
               />
             </div>
+            <button
+              className="carousel-control-prev hover:bg-gray-100 hover:opacity-35 transition-all ease-in-out duration-300"
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="prev"
+              onClick={prevPhoto}
+            >
+              <span
+                className="carousel-control-prev-icon "
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Previous</span>
+            </button>
+
+            <button
+              className="carousel-control-next hover:bg-gray-100 hover:opacity-35 transition-all ease-in-out duration-300"
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="next"
+              onClick={nextPhoto}
+            >
+              <span
+                className="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Next</span>
+            </button>
           </div>
-
-          <button
-            className="carousel-control-prev hover:bg-gray-100 hover:opacity-35 transition-all ease-in-out duration-300"
-            type="button"
-            data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="prev"
-            onClick={prevPhoto}
-          >
-            <span
-              className="carousel-control-prev-icon "
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-
-          <button
-            className="carousel-control-next hover:bg-gray-100 hover:opacity-35 transition-all ease-in-out duration-300"
-            type="button"
-            data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="next"
-            onClick={nextPhoto}
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Next</span>
-          </button>
         </div>
         {/*carousel */}
 
@@ -129,7 +128,7 @@ export default function Gallery() {
 
           <br />
           <div>
-            <button className=" hover:shadow-xl hover:shadow-sky-300 btn cursor-pointer text-lg   hover:bg-gray-600 hover:text-slate-700 text-white  theme1  hover:transition-all hover:duration-300 mb-3">
+            <button className=" my-3 p-2 cursor-pointer text-white border-1 hover:text-black hover:shadow-lg hover:bg-gray-600  hover:transition-all hover:duration-200">
               <Link
                 className=""
                 to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"

@@ -232,7 +232,7 @@ input {
   justify-content: center;
   background-color: black;
   color: white;
-  border: solid rgb(191, 191, 191);
+  border: solid rgb(191, 191, 191) 1px;
 }
 .dieCounter:hover {
   border-radius: 5px;
