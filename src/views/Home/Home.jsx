@@ -19,10 +19,10 @@ function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="w-100 justify-center justify-items-center text-center">
       <LandingPage />
-      <div className="container-fluid text-center" id="homeStart">
-        <div className="">
+      <div className="text-center w-100" id="homeStart">
+        <div className="h-100">
           <h1 className="font-bold text-3xl mb-10 pt-40 text-center justify-center theme4font ">
             Dennis, Ming Leuk YAU
           </h1>
@@ -45,10 +45,10 @@ function Home() {
 
           <div
             id="commentLeavingDiv"
-            className="justify-center justify-items-center text-center my-4"
+            className="justify-center justify-items-center text-center my-4 w-100"
           >
             <button
-              className="px-3 rounded-md text   border-2 transition-all  hover:shadow-gray-400 hover:border-1 hover:border-gray-200 text-lg font-mono
+              className="px-3 rounded-sm text   border-2 transition-all  hover:shadow-gray-400 hover:border-1 hover:border-gray-200 text-lg font-mono
           mt-3 cursor-pointer btn text-uppercase theme2 hover:shadow-xl hover:bg-gray-700 hover:text-white font-semibold duration-500 hover:animate-pulse ease-in-out"
               data-bs-toggle="modal"
               data-bs-target="#commentModal"
@@ -75,30 +75,35 @@ function Home() {
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="text-center font-bold text-4xl theme3font justify-center w-screen ">
-          Let&apos;s have some fun!
-          <a href="#arcadeDiv" className=" block  scroll-smooth pb-52">
-            <i className="fa fa-arrow-down mt-10 text-gray-500 text-3xl    cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce "></i>
-          </a>
+          <div className="text-center font-bold text-4xl theme3font justify-center w-screen ">
+            Let&apos;s have some fun!
+            <a
+              href="#arcadeDiv"
+              className=" block  scroll-smooth pb-20 justify-center justify-items-center"
+            >
+              <i className="fa fa-arrow-down mt-10 text-gray-500 text-3xl    cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce "></i>
+            </a>
+          </div>
         </div>
 
         <div
-          className=" justify-center text-center bg-black w-screen "
+          className=" justify-center justify-items-center text-center bg-black w-screen block h-100"
           id="arcadeDiv"
         >
           <a
             href="#homeStart"
-            className=" block  scroll-smooth text-center pt-24 border-none"
+            className=" block  scroll-smooth text-center pt-20 border-none justify-center justify-items-center"
           >
             <i
               id="arcadeArrow"
-              className="fa fa-arrow-up mt-0 text-gray-500 text-3xl    cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce "
+              className="text-center fa fa-arrow-up mt-0 text-gray-500 text-3xl  cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce "
             ></i>
           </a>
-          <div className=" justify-center border-2 border-slate-400 rounded-md p-4 m-4">
-            <div className="flex flex-wrap justify-center hover:transition-all hover:duration-300 gap-4 ">
+          <div className=" justify-center justify-items-center justify-content-center text-center rounded-md p-4 m-4 flex ">
+            <div
+              className="grid grid-cols-1 text-center justify-items-center justify-center justify-content-center hover:transition-all hover:duration-300 gap-4   border-2 border-slate-400 p-5 w-1/2 "
+              id="homeArcadeDiv"
+            >
               <div className="">
                 <DiceRoller />
               </div>
@@ -108,14 +113,11 @@ function Home() {
               <div className="">
                 <Counter />
               </div>
-              <div className="">
-                <DigitalClock />
-              </div>
 
               <div>{/* <CardShuffle /> */}</div>
-            </div>
-            <div className="mt-14 theme3font animate-pulse">
-              More features are coming...
+              <div className="mt-14 theme3font animate-pulse">
+                More features are coming...
+              </div>
             </div>
           </div>
         </div>

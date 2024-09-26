@@ -10,7 +10,7 @@ function Header() {
         id="headerDiv"
         className="  sticky-top inset-x-0 top-0 right-0 left-0 shadow-lg py-1 theme1 h-auto flex w-100 opacity-90"
       >
-        <header id="header" className="block ">
+        <header id="header" className="block w-100">
           <div className=" items-start inline ">
             <Link
               id="headerName"
@@ -23,7 +23,7 @@ function Header() {
               Skills
             </span> */}
             </Link>
-            <ShrinkNavBar />
+            {/* <ShrinkNavBar /> */}
           </div>
 
           <Nav />

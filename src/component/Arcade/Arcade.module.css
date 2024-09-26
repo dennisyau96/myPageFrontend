@@ -67,7 +67,7 @@ input {
 /*----------------------------------Digital clock----------------------------------*/
 .digitalClockDiv {
   padding: 20px;
-  min-width: 100px;
+  min-width: 350px;
   display: grid;
   border-radius: 15px;
   grid-column: 1;
@@ -75,10 +75,12 @@ input {
 }
 
 .dateDiv {
-  font-size: 30px;
+  font-size: 20px;
 }
 .timeDiv {
-  font-size: 40px;
+  font-size: 30px;
+  transition: all;
+  animation-duration: 100ms;
 }
 
 .clockTitle {

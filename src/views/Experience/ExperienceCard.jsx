@@ -22,29 +22,28 @@ function ExperienceCard({ content }) {
   // }
 
   return (
-    <div className="p-4 m-3 border-2 rounded-lg bg-white z-0 max-w-md   hover:shadow-sky-300 hover:transition-all   hover:shadow-xl  hover:duration-300 min-h-100 h-100 opacity-90">
+    <div className="expCardDiv p-4 m-4 border-2 border-white rounded-md  z-0 max-w-md   hover:shadow-sky-300 hover:transition-all   hover:shadow-xl  hover:duration-200  h-auto opacity-90">
       {content.position ? (
         <p className="font-bold text-2xl mb-7">
           <span className={styles.label}>{content.position}</span>
         </p>
       ) : null}
-      <div className="grid grid-cols-5 gap-y-2">
-        <div className="col-span-2 theme1font">Organization:</div>
-        <div className="col-span-3">{content.organization}</div>
-        <div className="col-span-2 theme1font">Period:</div>
-        <div className="col-span-3">{content.period}</div>{" "}
-        <div className="col-span-2 theme1font">Location:</div>
-        <div className="col-span-3">{content.location}</div>{" "}
-        <div className="col-span-2 theme1font">Description:</div>
-        <div className="col-span-3">
-          <div className="">
-            <ul className="bg-slate-100 p-2">
+      <div className="grid grid-cols-5 gap-y-3">
+        <div className="col-span-2 theme2font">Organization: </div>
+        <div className="col-span-3 theme4font">{content.organization}</div>
+        <div className="col-span-2 theme2font">Period: </div>
+        <div className="col-span-3 theme4font">{content.period}</div>{" "}
+        <div className="col-span-2 theme2font">Location: </div>
+        <div className="col-span-3 theme4font">{content.location}</div>{" "}
+        <div className="col-span-2 theme2font">Description: </div>
+        <div className="col-span-3 theme4font">
+          <div className="border-1 border-gray-400">
+            <ul className="p-3">
               {des &&
                 des.map((item, index) => (
                   <li key={index} className="mb-2 grid grid-cols-7">
                     <span className="col-span-1">{index + 1}.</span>
                     <span className="col-span-6"> {item}</span>
-                    <hr className="col-span-7 mt-1"></hr>
                   </li>
                 ))}
             </ul>
