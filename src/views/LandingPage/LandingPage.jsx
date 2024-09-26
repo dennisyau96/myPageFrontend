@@ -1,14 +1,18 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import DigitalClock from "../../component/Arcade/DigitalClock/DigitalClock";
 // import ParticlesBG from "../../component/ParticlesBG/ParticleBG";
 export default function LandingPage() {
   const navigate = useNavigate();
   return (
     <>
       <div
-        className=" w-screen h-screen bg-black  place-self-center text-center place-content-center justify-center glow"
+        className=" w-screen h-screen bg-black  place-self-center text-center place-content-center justify-center glow justify-items-center"
         id="landingPage"
       >
+        <div className="justify-center text-center justify-items-center mb-4 ">
+          <DigitalClock />
+        </div>
         <div className="text-center  place-content-center  content-center container w-60 h-60 border-white border-1 static hover:border-3 hover:border-gray-300 hover:shadow-2xl hover:shadow-sky-300 transition:all duration-300 ease-in-out  motion-reduce:">
           <h1 className="text-white">I am Dennis</h1>
           <span className="text-white">I am a Full Stack Developer.</span>

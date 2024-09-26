@@ -10,28 +10,26 @@ export default function ProjectCard({ project }) {
 
   return (
     <>
-      <div className="card w-80 h-auto  m-4 border-2 rounded-xl hover:  hover:transition-all hover:duration-300 ease-in-out  hover:shadow-2xl hover:shadow-sky-400 hover:bg-slate-100 opacity-95">
+      <div className=" card bg-black w-80 h-auto border-1 border-gray-400 m-4  rounded-md hover:  hover:transition-all hover:duration-200 ease-in-out  hover:shadow-2xl hover:shadow-sky-400  ">
         {project.thumbnail && (
-          <a href={project.thumbnail}>
-            <img
-              src={project.thumbnail}
-              className="card-img-top rounded-xl bg-gray-950 text-white"
-              alt={project.name}
-            />
-          </a>
+          <img
+            src={project.thumbnail}
+            className="card-img-top  bg-gray-950 text-white"
+            alt={project.name}
+          />
         )}
         <div className="card-body text-center">
-          <h5 className="card-title font-bold text-xl mb-2 text-center">
+          <h5 className="card-title font-bold text-xl mb-2 text-center theme3font">
             {project.name}
           </h5>
           <h5 className="card-subtitle mb-4 theme2font text-center italic">
             {project.type}
           </h5>
-          <p className="card-text text-left mx-3">
+          <p className="card-text text-left mx-3 theme3font">
             I participated in this project as {project.role}.
           </p>
           <hr className="my-2" />
-          <p className="mt-2 card-text text-left mx-3">
+          <p className="mt-2 card-text text-left mx-3 theme3font">
             {project.remark && project.remark}
           </p>
 
@@ -44,7 +42,7 @@ export default function ProjectCard({ project }) {
                 navigate(0);
               }
             }}
-            className=" mt-3  btn cursor-pointer font-bold text-white theme1 hover:shadow-xl hover:bg-gray-700 hover:text-white hover:transition-all hover:duration-300"
+            className=" p-2 cursor-pointer text-white  bg-gray-700  hover:shadow-xl hover:bg-gray-800 hover:text-white my-3 hover:transition-all hover:duration-200"
           >
             <Link to={project.website} target="_blank">
               Visit

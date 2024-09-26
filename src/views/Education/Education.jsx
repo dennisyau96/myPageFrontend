@@ -21,7 +21,7 @@ function Education() {
         setLoading(false);
       }
       setEducation(eduData.data);
-      setEducation((education) => education.sort((a, b) => a.sort - b.sort));
+      setEducation((education) => education.sort((a, b) => b.sort - a.sort));
     } catch (err) {
       console.log(err);
     }

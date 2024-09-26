@@ -9,6 +9,7 @@ function DigitalClock() {
   const [second, setSecond] = useState("00");
   let [month, setMonth] = useState("00");
   const [year, setYear] = useState("0000");
+  const [apm, setApm] = useState(true);
   //initial dislay when reloading
   useEffect(() => {
     const now = new Date();
@@ -64,6 +65,14 @@ function DigitalClock() {
       break;
   }
 
+  function changeTimeDsp() {
+    if (apm) {
+      setApm((p) => !p);
+    } else if (!apm) {
+      setApm((p) => !p);
+    }
+  }
+
   function updateClock() {
     const now = new Date();
     setMonth(now.getMonth());
@@ -73,18 +82,37 @@ function DigitalClock() {
     setSecond(now.getSeconds());
     setYear(now.getFullYear());
   }
+
   setInterval(updateClock, 1000);
   return (
-    <div className="bg-gray-950 theme4font rounded-xl px-4 py-3 max-w-96 duration-300 hover:transition-all hover:shadow-xl hover:shadow-sky-300">
+    <div
+      className="theme4font rounded-xl  max-w-96  justify-center text-center inline "
+      id="digitalClock"
+    >
+      <span className="block text-gray-700 text-sm">Local Time</span>
       {/* <p className={styles.clockTitle}>The Time Now is</p> */}
-      <div className={styles.dateDiv}>
+      <span className={styles.dateDiv}>
         {month.toUpperCase()} {date},{year}
-      </div>
-      <div className={styles.timeDiv}>
-        {hour.toString() > 12 ? (hour - 12).toString().padStart(2, 0) : hour}:
-        {minute.toString().padStart(2, 0)}:{second.toString().padStart(2, 0)}{" "}
-        {hour > 12 ? "PM" : "AM"}
-      </div>
+      </span>
+
+      {apm ? (
+        <div className={styles.timeDiv}>
+          {hour.toString() > 12 ? (hour - 12).toString().padStart(2, 0) : hour}:
+          {minute.toString().padStart(2, 0)}:{second.toString().padStart(2, 0)}{" "}
+          {hour > 12 ? "PM" : "AM"}
+        </div>
+      ) : (
+        <div className={styles.timeDiv}>
+          {hour.toString().padStart(2, 0)}:{minute.toString().padStart(2, 0)}:
+          {second.toString().padStart(2, 0)}{" "}
+        </div>
+      )}
+      <button
+        onClick={changeTimeDsp}
+        className="btn transition-all ease-in-out text-slate-700 text-xs hover:text-slate-500"
+      >
+        {apm ? "24-hour format" : "12-hour format"}
+      </button>
     </div>
   );
 }
