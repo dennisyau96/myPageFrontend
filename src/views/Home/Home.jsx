@@ -49,7 +49,7 @@ function Home() {
           >
             <button
               className="px-3 rounded-sm text   border-2 transition-all  hover:shadow-gray-400 hover:border-1 hover:border-gray-200 text-lg font-mono
-          mt-3 cursor-pointer btn text-uppercase theme2 hover:shadow-xl hover:bg-gray-700 hover:text-white font-semibold duration-500 hover:animate-pulse ease-in-out"
+          mt-3 cursor-pointer btn text-uppercase theme2 hover:shadow-lg hover:bg-gray-700 hover:text-white font-semibold duration-500 hover:animate-pulse ease-in-out"
               data-bs-toggle="modal"
               data-bs-target="#commentModal"
               type="button"
@@ -107,9 +107,7 @@ function Home() {
               <div className="">
                 <DiceRoller />
               </div>
-              <div className="">
-                <NumberGuessing />
-              </div>
+              <div className="">{/* <NumberGuessing /> */}</div>
               <div className="">
                 <Counter />
               </div>

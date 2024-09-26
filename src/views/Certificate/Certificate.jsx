@@ -62,7 +62,7 @@ function Certificate() {
           <button
             id="certModeButton"
             onClick={switchMode}
-            className="bg-gray-700 text-white py-1 px-2 rounded-md hover:shadow-sky-300 hover:shadow-lg transition-all ease-in-out duration-300 hover:border-2 hover:border-gray-400 m-3"
+            className="my-3 p-2 cursor-pointer text-white border-1 hover:text-black hover:shadow-lg hover:bg-gray-600  hover:transition-all hover:duration-200"
           >
             List mode
           </button>

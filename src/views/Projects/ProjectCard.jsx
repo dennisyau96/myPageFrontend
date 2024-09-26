@@ -10,7 +10,7 @@ export default function ProjectCard({ project }) {
 
   return (
     <>
-      <div className=" card bg-black w-80 h-auto border-1 border-gray-400 m-4  rounded-md hover:  hover:transition-all hover:duration-200 ease-in-out  hover:shadow-2xl hover:shadow-sky-400  ">
+      <div className=" card bg-black w-80 h-auto border-1 border-gray-400 m-4  rounded-md hover:  hover:transition-all hover:duration-200 ease-in-out  hover:shadow-lg hover:shadow-sky-400  ">
         {project.thumbnail && (
           <img
             src={project.thumbnail}
@@ -42,7 +42,7 @@ export default function ProjectCard({ project }) {
                 navigate(0);
               }
             }}
-            className=" p-2 cursor-pointer text-white  bg-gray-700  hover:shadow-xl hover:bg-gray-800 hover:text-white my-3 hover:transition-all hover:duration-200"
+            className=" my-3 p-2 cursor-pointer text-white border-1 hover:text-black hover:shadow-lg hover:bg-gray-600  hover:transition-all hover:duration-200"
           >
             <Link to={project.website} target="_blank">
               Visit

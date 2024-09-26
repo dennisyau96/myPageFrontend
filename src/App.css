@@ -14,7 +14,7 @@
   }
 
   #homeArcadeDiv {
-    min-width: 350px;
+    min-width: 400px;
   }
   #digitalClock {
     min-width: 350px;
@@ -34,10 +34,10 @@
     margin-right: 0.3rem;
   }
   #homeArcadeDiv {
-    min-width: 350px;
+    min-width: 400px;
   }
   #digitalClock {
-    min-width: 350px;
+    min-width: 400px;
   }
 }
 
@@ -55,10 +55,10 @@
     margin-right: 0.3rem;
   }
   #homeArcadeDiv {
-    min-width: 350px;
+    min-width: 400px;
   }
   #digitalClock {
-    min-width: 350px;
+    min-width: 400px;
   }
 }
 
@@ -77,7 +77,7 @@
     margin-right: 0.4rem;
   }
   #digitalClock {
-    min-width: 350px;
+    min-width: 400px;
   }
 }
 
@@ -96,7 +96,7 @@
     margin-right: 0.7rem;
   }
   #digitalClock {
-    min-width: 350px;
+    min-width: 400px;
   }
 }
 
