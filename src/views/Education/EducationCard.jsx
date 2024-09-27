@@ -17,73 +17,91 @@ function EducationCard({ content, index }) {
   }
   return (
     <>
-      <div className="eduCardDiv p-4 my-4 border-2 rounded-lg z-0 max-w-lg min-w-90 hover:shadow-lg hover:shadow-sky-300 transition-all hover:duration-200 h-auto opacity-90 ease-in-out">
+      <div className="eduCardDiv p-4 my-4 border-1 rounded-lg z-0 max-w-lg min-w-90 hover:shadow-lg hover:shadow-sky-300 transition-all hover:duration-200 h-auto opacity-90 ease-in-out bg-black">
         {/* <img className="eduCardImg" alt={content.institution} /> */}
 
-        <div className="font-bold text-2xl mb-7 ">
+        <div className=" text-2xl mb-7 ">
           {content.institution ? (
             <span className={styles.label}> {content.institution}</span>
           ) : null}
 
           <p className="card-text"></p>
         </div>
+        {content.title && (
+          <div className="z-0 text-lg  theme2font text-center my-1">
+            {content.title}
+          </div>
+        )}
 
-        <div className="">
-          <ul className="list-group list-group-flush z-0 flex flex-wrap bg-black border-1 border-gray-500 p-3 gap-2">
-            {content.title && (
-              <li className=" z-0 font-semibold text-xl bg-black ">
-                <span className="theme2font">{content.title}</span>
-              </li>
-            )}
-
+        <div className=" border-1 border-gray-700">
+          <ul className="list-group list-group-flush z-0  border-1 border-gray-500 py-6 px-3 gap-3 overflow-scroll max-h-40 ">
             {content.ranking ? (
-              <li className=" z-0 bg-black grid grid-cols-2">
-                <span className={styles.label}>
-                  Times World Higher Education Ranking:
+              <li className=" z-0  grid grid-cols-6 gap-3">
+                <span className="flex col-span-2 text-sm text-slate-400 text-right">
+                  Times World Higher Edu Ranking:
                   <br />
                 </span>
-                <span className="theme4font">{content.ranking}</span>
+                <span className="theme4font col-span-4">{content.ranking}</span>
               </li>
             ) : null}
 
             {content.education_level ? (
-              <li className=" z-0 bg-black grid grid-cols-2">
-                <span className={styles.label}>Education level: </span>
-                <span className="theme4font">{content.education_level}</span>
+              <li className=" z-0  grid grid-cols-6 gap-3">
+                <span className="col-span-2 text-sm  text-slate-400 text-right">
+                  Education level:{" "}
+                </span>
+                <span className="theme4font col-span-4">
+                  {content.education_level}
+                </span>
               </li>
             ) : null}
 
             {content.major ? (
-              <li className=" z-0 bg-black grid grid-cols-2">
-                <span className={styles.label}>Major: </span>
-                <span className="theme4font">{content.major}</span>
+              <li className=" z-0  grid grid-cols-6 gap-3">
+                <span className="col-span-2 text-sm  text-slate-400 text-right">
+                  Major:{" "}
+                </span>
+                <span className="theme4font col-span-4">{content.major}</span>
               </li>
             ) : null}
 
-            <li className=" z-0 bg-black grid grid-cols-2">
-              <span className={styles.label}>Location: </span>
-              <span className="theme4font">{content.location}</span>
+            <li className=" z-0  grid grid-cols-6 gap-3">
+              <span className="col-span-2 text-sm  text-slate-400 text-right">
+                Location:{" "}
+              </span>
+              <span className="theme4font col-span-4">{content.location}</span>
             </li>
 
-            <li className=" z-0 bg-black grid grid-cols-2">
-              <span className={styles.label}>Year: </span>
-              <span className="theme4font">{content.year}</span>
+            <li className=" z-0  grid grid-cols-6 gap-3">
+              <span className="col-span-2 text-sm  text-slate-400 text-right">
+                Year:{" "}
+              </span>
+              <span className="theme4font col-span-4">{content.year}</span>
             </li>
 
             {content.honor ? (
-              <li className=" z-0 bg-black grid grid-cols-2">
-                <span className={styles.label}>Honor: </span>
-                <span className="theme4font">{content.honor}</span>
+              <li className=" z-0  grid grid-cols-6 gap-3">
+                <span className="col-span-2 text-sm  text-slate-400 text-right">
+                  Honor:{" "}
+                </span>
+                <span className="theme4font col-span-4">{content.honor}</span>
               </li>
             ) : null}
 
             {content.acheivement ? (
-              <li className=" z-0 bg-black grid grid-cols-2">
-                <span className={styles.label}>Acheivement: </span>
-                <span className="theme4font">{content.acheivement}</span>
+              <li className=" z-0  grid grid-cols-6 gap-3">
+                <span className="col-span-2 text-sm  text-slate-400 text-right">
+                  Acheivement:{" "}
+                </span>
+                <span className="theme4font col-span-2">
+                  {content.acheivement}
+                </span>
               </li>
             ) : null}
           </ul>
+        </div>
+        <div className="text-gray-400 text-xs text-center justify-center py-1">
+          Scroll down for more
         </div>
 
         {/* {content.cert ? (
@@ -96,7 +114,7 @@ function EducationCard({ content, index }) {
           </div>
         ) : null} */}
 
-        <div className=" flex flex-wrap z-0 mt-3 ">
+        <div className=" flex flex-wrap z-0 mt-3 justify-center">
           <Link
             target="_blank"
             to={content.website}

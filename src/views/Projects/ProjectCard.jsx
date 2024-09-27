@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import thumbnail from "../../assets/project/doggo.png";
 export default function ProjectCard({ project }) {
   const navigate = useNavigate();
 

@@ -122,8 +122,9 @@ function Certificate() {
         ) : null}
 
         {!album ? (
-          <div className=" p-3">
-            <ul className="justify-center border-1 border-white flex-row p-4 overflow-auto">
+          <div className=" border-1  p-3 max-h-96 overflow-auto">
+            <span className="text-slate-600 text-sm">Please scroll down</span>
+            <ul className="justify-center  border-white flex-row px-4 overflow-auto">
               {certs.map((cert, i) => (
                 <li key={i} className="text-gray-400 text-left m-1">
                   {i + 1}. {cert.title}
