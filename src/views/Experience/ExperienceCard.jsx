@@ -22,32 +22,46 @@ function ExperienceCard({ content }) {
   // }
 
   return (
-    <div className="expCardDiv p-4 border-2 border-white rounded-md  z-0  hover:shadow-sky-300 hover:transition-all   hover:shadow-lg  hover:duration-200  h-auto opacity-90 max-w-md">
+    <div className="expCardDiv p-4 border-1 border-gray-300 rounded-md  z-0  hover:shadow-sky-300 hover:transition-all   hover:shadow-lg  hover:duration-200  h-auto opacity-90 max-w-md ">
       {content.position ? (
         <p className="font-bold text-2xl mb-7">
           <span className={styles.label}>{content.position}</span>
         </p>
       ) : null}
       <div className="grid grid-cols-5 gap-y-3">
-        <div className="col-span-2 theme2font">Organization: </div>
-        <div className="col-span-3 theme4font">{content.organization}</div>
-        <div className="col-span-2 theme2font">Period: </div>
-        <div className="col-span-3 theme4font">{content.period}</div>{" "}
-        <div className="col-span-2 theme2font">Location: </div>
-        <div className="col-span-3 theme4font">{content.location}</div>{" "}
-        <div className="col-span-2 theme2font">Description: </div>
-        <div className="col-span-3 theme4font">
-          <div className="border-1 border-gray-400">
-            <ul className="p-3">
+        <div className="col-span-2 theme2font text-sm">Organization: </div>
+        <div className="col-span-3 theme4font text-sm">
+          {content.organization}
+        </div>
+        <div className="col-span-2 theme2font text-sm">Period: </div>
+        <div className="col-span-3 theme4font text-sm">
+          {content.period}
+        </div>{" "}
+        <div className="col-span-2 theme2font text-sm">Location: </div>
+        <div className="col-span-3 theme4font text-sm">
+          {content.location}
+        </div>{" "}
+        <div className="col-span-2 theme2font text-sm">Description: </div>
+        <div className="col-span-3 theme4font text-sm">
+          <div className="border-1 border-gray-700  overflow-scroll max-h-52 px-3 ">
+            <ul className="">
               {des &&
                 des.map((item, index) => (
-                  <li key={index} className="mb-2 grid grid-cols-7">
-                    <span className="col-span-1 theme4font">{index + 1}.</span>
-                    <span className="col-span-6 theme4font"> {item}</span>
+                  <li key={index} className=" grid grid-cols-7 my-3">
+                    <span className="col-span-1 text-slate-400 text-sm">
+                      {index + 1}.
+                    </span>
+                    <span className="col-span-6 theme4font text-sm ">
+                      {" "}
+                      {item}
+                    </span>
                   </li>
                 ))}
             </ul>
           </div>
+          <span className="text-gray-500 text-xs text-center">
+            Scroll down for more
+          </span>
         </div>
       </div>
     </div>
