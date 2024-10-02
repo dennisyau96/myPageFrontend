@@ -17,40 +17,45 @@ function EducationCard({ content, index }) {
   }
   return (
     <>
-      <div className="eduCardDiv p-4 my-4 border-1 rounded-lg z-0 max-w-lg min-w-90 hover:shadow-lg hover:shadow-sky-300 transition-all hover:duration-200 h-auto opacity-90 ease-in-out bg-black">
+      <div className="eduCardDiv p-3 my-2 border-1 rounded-lg z-0 max-w-md  hover:shadow-lg hover:shadow-sky-300 transition-all hover:duration-200 h-auto opacity-90 ease-in-out bg-black">
         {/* <img className="eduCardImg" alt={content.institution} /> */}
 
-        <div className=" text-2xl mb-7 ">
+        <div className=" text-xl mb-7 ">
           {content.institution ? (
-            <span className={styles.label}> {content.institution}</span>
+            <span className="text-slate-400 text-center">
+              {" "}
+              {content.institution}
+            </span>
           ) : null}
 
           <p className="card-text"></p>
         </div>
         {content.title && (
-          <div className="z-0 text-lg  theme2font text-center my-1">
+          <div className="z-0 text-md  theme2font text-center my-1">
             {content.title}
           </div>
         )}
 
-        <div className=" border-1 border-gray-700">
-          <ul className="list-group list-group-flush z-0  border-1 border-gray-500 py-6 px-3 gap-3 overflow-scroll max-h-40 ">
+        <div className=" border-gray-700">
+          <ul className="list-group list-group-flush z-0  border-1 m-2 py-6 px-5 gap-3 overflow-scroll max-h-52 ">
             {content.ranking ? (
               <li className=" z-0  grid grid-cols-6 gap-3">
                 <span className="flex col-span-2 text-sm text-slate-400 text-right">
-                  Times World Higher Edu Ranking:
+                  Times Edu Ranking:
                   <br />
                 </span>
-                <span className="theme4font col-span-4">{content.ranking}</span>
+                <span className="theme4font col-span-4 text-sm">
+                  {content.ranking}
+                </span>
               </li>
             ) : null}
 
             {content.education_level ? (
               <li className=" z-0  grid grid-cols-6 gap-3">
                 <span className="col-span-2 text-sm  text-slate-400 text-right">
-                  Education level:{" "}
+                  Edu level:{" "}
                 </span>
-                <span className="theme4font col-span-4">
+                <span className="theme4font col-span-4 text-sm">
                   {content.education_level}
                 </span>
               </li>
@@ -61,7 +66,9 @@ function EducationCard({ content, index }) {
                 <span className="col-span-2 text-sm  text-slate-400 text-right">
                   Major:{" "}
                 </span>
-                <span className="theme4font col-span-4">{content.major}</span>
+                <span className="theme4font col-span-4 text-sm">
+                  {content.major}
+                </span>
               </li>
             ) : null}
 
@@ -69,14 +76,18 @@ function EducationCard({ content, index }) {
               <span className="col-span-2 text-sm  text-slate-400 text-right">
                 Location:{" "}
               </span>
-              <span className="theme4font col-span-4">{content.location}</span>
+              <span className="theme4font col-span-4 text-sm">
+                {content.location}
+              </span>
             </li>
 
             <li className=" z-0  grid grid-cols-6 gap-3">
               <span className="col-span-2 text-sm  text-slate-400 text-right">
                 Year:{" "}
               </span>
-              <span className="theme4font col-span-4">{content.year}</span>
+              <span className="theme4font col-span-4 text-sm">
+                {content.year}
+              </span>
             </li>
 
             {content.honor ? (
@@ -84,7 +95,9 @@ function EducationCard({ content, index }) {
                 <span className="col-span-2 text-sm  text-slate-400 text-right">
                   Honor:{" "}
                 </span>
-                <span className="theme4font col-span-4">{content.honor}</span>
+                <span className="theme4font col-span-4 text-sm">
+                  {content.honor}
+                </span>
               </li>
             ) : null}
 
@@ -93,7 +106,7 @@ function EducationCard({ content, index }) {
                 <span className="col-span-2 text-sm  text-slate-400 text-right">
                   Acheivement:{" "}
                 </span>
-                <span className="theme4font col-span-2">
+                <span className="theme4font col-span-2 text-sm">
                   {content.acheivement}
                 </span>
               </li>

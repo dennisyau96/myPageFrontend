@@ -32,7 +32,7 @@ function Skills() {
   return (
     <div className="text-center justify-center justify-items-center justify-content-center transition-all duration-200 ease-in-out">
       <h1 className="font-bold text-3xl my-4 text-center theme4font">Skills</h1>
-      <pre className="text-center justify-center justify-items-center max-w-50 text-slate-600 flex text-sm">
+      <pre className="text-center justify-center justify-items-center max-w-50 text-slate-600 flex text-sm flex-wrap">
         I am passionate in learning various kind of skills using{" "}
         <a
           className="text-gray-400 underline cursor-pointer transition-all duration-200 animation-pulse"
@@ -48,17 +48,23 @@ function Skills() {
         </a>
         .
       </pre>
-      <div
-        className="flex flex-wrap gap-10 justify-center my-10 container  border-1 p-10 w-3/4"
-        id="skillsDiv"
-      >
-        {loading ? <Loading /> : null}
-        {skills.map((skill, index) => (
-          <div key={index}>
-            <SkillCard content={skill} remarks={remarks} />
-          </div>
-        ))}
-      </div>
+      {loading ? (
+        <Loading />
+      ) : (
+        <div
+          className="flex flex-wrap gap-4 justify-center my-10 container  border-1  p-10 w-3/5 transition-all duration-200 ease-in-out"
+          id="skillsDiv"
+        >
+          {skills.map((skill, index) => (
+            <div
+              key={index}
+              className="transition-all duration-200 ease-in-out "
+            >
+              <SkillCard content={skill} remarks={remarks} />
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
