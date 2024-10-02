@@ -14,7 +14,7 @@ const EmailButton = () => {
   return (
     <button
       onClick={handleEmailClick}
-      className=" btn theme4font border-white hover:border-sky-200 hover:shadow-lg border-0.5 hover:shadow-sky-700 hover:bg-slate-600 hover:text-slate-100 transition-all ease-in-out "
+      className="m-4 btn theme4font border-white hover:border-sky-200 hover:shadow-lg border-0.5 hover:shadow-sky-700 hover:bg-slate-600 hover:text-slate-100 transition-all ease-in-out "
     >
       Send Me an Email
     </button>

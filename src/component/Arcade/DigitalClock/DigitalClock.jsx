@@ -109,7 +109,7 @@ function DigitalClock() {
       )}
       <button
         onClick={changeTimeDsp}
-        className="btn transition-all ease-in-out text-slate-700 text-xs hover:text-slate-500"
+        className="btn transition-all ease-in-out text-slate-500 text-xs hover:text-slate-500"
       >
         {apm ? "24-hour format" : "12-hour format"}
       </button>

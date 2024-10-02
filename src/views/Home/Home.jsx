@@ -9,6 +9,7 @@ import NumberGuessing from "../../component/Arcade/NumberGuessing/NumberGuessing
 import Counter from "../../component/Arcade/Counter/Counter";
 import CardShuffle from "../../component/Arcade/CardShuffle/CardShuffle";
 import LandingPage from "../LandingPage/LandingPage";
+import EmailButton from "../../component/EmailButton/EmailButton";
 
 //please add one photo to each phrase
 function Home() {
@@ -48,8 +49,7 @@ function Home() {
             className="justify-center justify-items-center text-center my-4 w-100"
           >
             <button
-              className="px-3 rounded-sm text   border-2 transition-all  hover:shadow-gray-400 hover:border-1 hover:border-gray-200 text-lg font-mono
-          mt-3 cursor-pointer btn text-uppercase theme2 hover:shadow-lg hover:bg-gray-700 hover:text-white font-semibold duration-500 hover:animate-pulse ease-in-out"
+              className=" m-3 btn theme4font border-white hover:border-sky-200 hover:shadow-lg border-0.5 hover:shadow-sky-700 hover:bg-slate-600 hover:text-slate-100 transition-all ease-in-out"
               data-bs-toggle="modal"
               data-bs-target="#commentModal"
               type="button"
@@ -74,6 +74,10 @@ function Home() {
                 </div>
               </div>
             </div>
+            <span className="block text-center text-gray-500">or</span>
+            <span className="block justify-center text-center">
+              <EmailButton />
+            </span>
           </div>
           <div className="text-center font-bold text-4xl theme3font justify-center w-screen ">
             Let&apos;s have some fun!

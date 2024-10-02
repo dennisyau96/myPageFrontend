@@ -9,7 +9,7 @@ export default function ProjectCard({ project }) {
 
   return (
     <>
-      <div className=" card bg-black w-80 h-auto border-1 border-gray-400 m-4  rounded-md hover:  hover:transition-all hover:duration-200 ease-in-out  hover:shadow-lg hover:shadow-sky-400  ">
+      <div className=" card bg-black w-72 h-auto border-1 border-gray-400 m-4  rounded-md hover:  hover:transition-all hover:duration-200 ease-in-out  hover:shadow-lg hover:shadow-sky-400  ">
         {project.thumbnail && (
           <img
             src={project.thumbnail}
@@ -24,11 +24,11 @@ export default function ProjectCard({ project }) {
           <h5 className="card-subtitle mb-4 theme2font text-center italic">
             {project.type}
           </h5>
-          <p className="card-text text-left mx-3 theme3font">
+          <p className="card-text text-left mx-2 theme3font text-sm">
             I participated in this project as {project.role}.
           </p>
           <hr className="my-2" />
-          <p className="mt-2 card-text text-left mx-3 theme3font">
+          <p className="card-text text-left mx-2 theme3font text-sm">
             {project.remark && project.remark}
           </p>
 

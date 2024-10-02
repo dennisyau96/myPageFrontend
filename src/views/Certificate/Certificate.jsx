@@ -11,9 +11,9 @@ function Certificate() {
   const [loading, setLoading] = useState(true);
   const [album, setAblum] = useState(true);
   //http://localhost:5173/assets/certificates/pdf/cert1.pdf
-  const openPDF = () => {
-    window.open(certificates[index].link, "_blank");
-  };
+  // const openPDF = (index) => {
+  //   window.open(certificates[index], "_blank");
+  // };
 
   useEffect(() => {
     scrollTo(0, 0);
@@ -73,16 +73,16 @@ function Certificate() {
           ) : (
             <div
               id="carouselExampleAutoplaying"
-              className="carousel slide  w-auto my-4 text-center justify-center border-2 border-gray-300 p-4  rounded-xl hover:shadow-sky-300 hover:shadow-xl transition-all duration-500 ease-in-out"
+              className="carousel slide  w-auto my-4 text-center justify-center border-2 border-gray-300 py-4  rounded-md hover:shadow-sky-300 hover:shadow-xl transition-all duration-500 ease-in-out"
               data-bs-ride="carousel"
             >
               <div className="carousel-inner justify-center text-center">
                 <div className="carousel-item active justify-center text-center">
                   <img
                     src={certificates[index].cert}
-                    className="d-block w-100 cursor-pointer"
+                    className="d-block w-100"
                     alt={certificates[index].title}
-                    onClick={() => openPDF([index])}
+                    // onClick={() => openPDF([index])}
                   />
                 </div>
               </div>
@@ -122,12 +122,16 @@ function Certificate() {
         ) : null}
 
         {!album ? (
-          <div className=" border-1  p-3 max-h-96 overflow-auto">
+          <div className=" border-1  p-3 max-h-96 overflow-auto min-w-50 max-w-lg">
             <span className="text-slate-600 text-sm">Please scroll down</span>
-            <ul className="justify-center  border-white flex-row px-4 overflow-auto">
+            <ul className="justify-center  border-white flex-row px-4 overflow-auto ">
               {certs.map((cert, i) => (
-                <li key={i} className="text-gray-400 text-left m-1">
-                  {i + 1}. {cert.title}
+                <li
+                  key={i}
+                  className="text-gray-400 text-left my-2 grid grid-cols-10 "
+                >
+                  <span className="col-span-1 text-slate-500">{i + 1}.</span>
+                  <span className="col-span-9">{cert.title}</span>
                 </li>
               ))}
             </ul>

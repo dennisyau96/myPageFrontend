@@ -24,8 +24,8 @@ function ExperienceCard({ content }) {
   return (
     <div className="expCardDiv p-4 border-1 border-gray-300 rounded-md  z-0  hover:shadow-sky-300 hover:transition-all   hover:shadow-lg  hover:duration-200  h-auto opacity-90 max-w-md ">
       {content.position ? (
-        <p className="font-bold text-2xl mb-7">
-          <span className={styles.label}>{content.position}</span>
+        <p className=" text-2xl mb-4">
+          <span className="text-slate-500 text-center">{content.position}</span>
         </p>
       ) : null}
       <div className="grid grid-cols-5 gap-y-3">
@@ -43,7 +43,7 @@ function ExperienceCard({ content }) {
         </div>{" "}
         <div className="col-span-2 theme2font text-sm">Description: </div>
         <div className="col-span-3 theme4font text-sm">
-          <div className="border-1 border-gray-700  overflow-scroll max-h-52 px-3 ">
+          <div className="border-1 border-gray-700  overflow-scroll max-h-40 px-3 ">
             <ul className="">
               {des &&
                 des.map((item, index) => (
