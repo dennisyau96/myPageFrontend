@@ -17,7 +17,7 @@ export default function Home() {
   // const [deckUrl, setDeckUrl] = useState("../Arcade/CardShuffle/img");
 
   useEffect(() => {
-    scrollTo(0, 0);
+    // scrollTo(0, 0);
   }, []);
 
   return (
@@ -106,7 +106,7 @@ export default function Home() {
           </a>
           <div className=" justify-center justify-items-center justify-content-center text-center rounded-md p-4 m-4 flex  ">
             <div
-              className="grid grid-cols-1 text-center justify-items-center justify-center justify-content-center hover:transition-all hover:duration-300 gap-4   border-2 border-slate-400 p-5 w-3/4  overflow-auto  "
+              className="grid grid-cols-1 text-center justify-items-center justify-center justify-content-center hover:transition-all hover:duration-300 gap-4   border-2 border-slate-400 p-5 w-3/4  overflow-auto  max-h-sm"
               id="homeArcadeDiv"
             >
               <div className="">
