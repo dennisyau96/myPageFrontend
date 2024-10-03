@@ -74,7 +74,7 @@ function Certificate() {
           ) : (
             <div
               id="carouselExampleAutoplaying"
-              className="carousel slide  w-auto my-4 text-center justify-center border-2 border-gray-300 py-4  rounded-md hover:shadow-sky-300 hover:shadow-xl transition-all duration-500 ease-in-out"
+              className="carousel slide  w-auto my-4 text-center justify-center border-2 border-gray-300 py-4  hover:shadow-sky-300 hover:shadow-xl transition-all duration-500 ease-in-out"
               data-bs-ride="carousel"
             >
               <div className="carousel-inner justify-center text-center">

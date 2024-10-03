@@ -10,6 +10,7 @@ import Counter from "../../component/Arcade/Counter/Counter";
 import CardShuffle from "../../component/Arcade/CardShuffle/CardShuffle";
 import LandingPage from "../LandingPage/LandingPage";
 import EmailButton from "../../component/EmailButton/EmailButton";
+import RestaurantDecide from "../../component/Arcade/RestaurantDecide/RestaurantDecide";
 
 //please add one photo to each phrase
 export default function Home() {
@@ -111,9 +112,14 @@ export default function Home() {
               <div className="">
                 <DiceRoller />
               </div>
-              <div className="">{/* <NumberGuessing /> */}</div>
+              <div className="">
+                <NumberGuessing />
+              </div>
               <div className="">
                 <Counter />
+              </div>
+              <div className="">
+                <RestaurantDecide />
               </div>
 
               <div>{/* <CardShuffle /> */}</div>
