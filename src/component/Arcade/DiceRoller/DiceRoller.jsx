@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "../../Arcade/Arcade.module.css";
 import toast from "react-hot-toast";
+
 function DiceRoller() {
   const [diceNumber, setDiceNumber] = useState(0);
   const [rolled, setRolled] = useState(false);

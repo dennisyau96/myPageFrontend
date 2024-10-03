@@ -1,4 +1,4 @@
-const experience = [
+export const experience = [
   {
     position: "Junior Research Assistant",
     organization: "The Chinese University of Hong Kong",
@@ -26,4 +26,4 @@ const experience = [
   },
 ];
 
-export default experience;
+// export default experience;

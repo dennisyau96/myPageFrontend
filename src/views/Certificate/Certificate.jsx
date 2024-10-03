@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 //imprting all cert objects
 import styles from "./Certificate.module.css";
-import { certs } from "./certificate";
+import { certs } from "./certificates";
 import Loading from "../../component/Loading/Loading";
 
 function Certificate() {
@@ -17,7 +17,8 @@ function Certificate() {
 
   useEffect(() => {
     scrollTo(0, 0);
-    // setCertificates((prev) => certs);
+    setCertificates((prev) => certs);
+
     if (certificates != null) {
       setLoading(false);
     }

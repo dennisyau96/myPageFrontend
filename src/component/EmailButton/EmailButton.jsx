@@ -1,6 +1,6 @@
 import React from "react";
 
-const EmailButton = () => {
+function EmailButton() {
   const emailAddress = "dennisyau96@gmail.com";
   const subject = "";
   const body = "";
@@ -19,6 +19,6 @@ const EmailButton = () => {
       Send Me an Email
     </button>
   );
-};
+}
 
 export default EmailButton;

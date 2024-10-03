@@ -51,7 +51,7 @@ function Comment() {
   return (
     <div
       id="commentDiv"
-      className="bg-black transition-all ease-in-out duration-500 border-x-2 border-b-2 rounded-lg p-4"
+      className="bg-black transition-all ease-in-out duration-500 border-x-2 border-b-2 rounded-b-lg p-4"
     >
       {!after ? (
         <div className={styles.commentBefore}>

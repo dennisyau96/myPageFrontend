@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 // import { about } from "../../assets/data/about";
 import { title, currentFocus, currentLearning } from "../../assets/data/about";
 import EmailButton from "../../component/EmailButton/EmailButton";
+
 function About() {
   useEffect(() => {
     scrollTo(0, 0);

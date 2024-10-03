@@ -18,36 +18,42 @@ import pic13 from "../../../src/assets/gallery/pic13.jpg";
 import pic14 from "../../../src/assets/gallery/pic14.jpg";
 import pic15 from "../../../src/assets/gallery/pic15.jpg";
 import pic16 from "../../../src/assets/gallery/pic16.jpg";
+import pic17 from "../../../src/assets/gallery/pic17.jpg";
+
 // import pic18 from "../../../src/assets/gallery/pic8.jpg";
 // import pic19 from "../../../src/assets/gallery/pic9.jpg";
 
 import { useNavigate } from "react-router-dom";
+
 export default function Gallery() {
   const navigate = useNavigate();
   const photosSrc = [
-    { href: "../../../src/assets/gallery/pic1.jpg", pic: pic1 },
+    { href: "../../../src/assets/gallery/pic1.jpg", pic: pic1, code: 1 },
     // { href: "../../../src/assets/gallery/pic2.jpg", pic: pic2 },
     // { href: "../../../src/assets/gallery/pic3.jpg", pic: pic3 },
-    { href: "../../../src/assets/gallery/pic4.jpg", pic: pic4 },
-    { href: "../../../src/assets/gallery/pic5.jpg", pic: pic5 },
+    { href: "../../../src/assets/gallery/pic4.jpg", pic: pic4, code: 4 },
+    { href: "../../../src/assets/gallery/pic5.jpg", pic: pic5, code: 5 },
     // { href: "../../../src/assets/gallery/pic6.jpg", pic: pic6 },
     // { href: "../../../src/assets/gallery/pic7.jpg", pic: pic7 },
-    { href: "../../../src/assets/gallery/pic8.jpg", pic: pic8 },
-    { href: "../../../src/assets/gallery/pic9.jpg", pic: pic9 },
-    { href: "../../../src/assets/gallery/pic10.jpg", pic: pic10 },
-    { href: "../../../src/assets/gallery/pic11.jpg", pic: pic11 },
-    { href: "../../../src/assets/gallery/pic12.jpg", pic: pic12 },
-    { href: "../../../src/assets/gallery/pic13.jpg", pic: pic13 },
-    { href: "../../../src/assets/gallery/pic14.jpg", pic: pic14 },
-    { href: "../../../src/assets/gallery/pic15.jpg", pic: pic15 },
-    { href: "../../../src/assets/gallery/pic16.jpg", pic: pic16 },
+    { href: "../../../src/assets/gallery/pic8.jpg", pic: pic8, code: 8 },
+    { href: "../../../src/assets/gallery/pic9.jpg", pic: pic9, code: 9 },
+    { href: "../../../src/assets/gallery/pic10.jpg", pic: pic10, code: 10 },
+    { href: "../../../src/assets/gallery/pic11.jpg", pic: pic11, code: 11 },
+    { href: "../../../src/assets/gallery/pic12.jpg", pic: pic12, code: 12 },
+    { href: "../../../src/assets/gallery/pic13.jpg", pic: pic13, code: 13 },
+    { href: "../../../src/assets/gallery/pic14.jpg", pic: pic14, code: 14 },
+    { href: "../../../src/assets/gallery/pic15.jpg", pic: pic15, code: 15 },
+    { href: "../../../src/assets/gallery/pic16.jpg", pic: pic16, code: 16 },
+    { href: "../../../src/assets/gallery/pic17.jpg", pic: pic17, code: 17 },
   ];
 
   const [index, setIndex] = useState(0);
-  const [photos, setPhotos] = useState([]);
+  const [photos, setPhotos] = useState([
+    ...photosSrc.sort((a, b) => b.code - a.code),
+  ]);
 
   function nextPhoto() {
-    if (index >= photos.length - 1) {
+    if (index >= photosSrc.length - 1) {
       setIndex(0);
     } else {
       setIndex((i) => (i += 1));
@@ -55,7 +61,7 @@ export default function Gallery() {
   }
   function prevPhoto() {
     if (index <= 0) {
-      setIndex(photos.length - 1);
+      setIndex(photosSrc.length - 1);
     } else {
       setIndex((i) => (i -= 1));
     }
@@ -63,6 +69,7 @@ export default function Gallery() {
 
   useEffect(() => {
     scrollTo(0, 0);
+    photosSrc.sort((a, b) => b.code - a.code);
     setPhotos((prev) => photosSrc);
   }, []);
 

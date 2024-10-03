@@ -12,7 +12,7 @@ import LandingPage from "../LandingPage/LandingPage";
 import EmailButton from "../../component/EmailButton/EmailButton";
 
 //please add one photo to each phrase
-function Home() {
+export default function Home() {
   // const [deckUrl, setDeckUrl] = useState("../Arcade/CardShuffle/img");
 
   useEffect(() => {
@@ -127,4 +127,3 @@ function Home() {
     </div>
   );
 }
-export default Home;

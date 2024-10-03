@@ -1,5 +1,7 @@
 import { useState } from "react";
 
-export default function Lottery() {
+function Lottery() {
   return <div></div>;
 }
+
+export default Lottery;

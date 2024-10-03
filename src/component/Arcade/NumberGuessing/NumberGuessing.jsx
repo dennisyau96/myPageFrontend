@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import styles from "../Arcade.module.css";
+// import styles from "../Arcade.module.css";
 import toast from "react-hot-toast";
 
-export default function NumberGuessing() {
+function NumberGuessing() {
   const [lifeCount, setLifeCount] = useState(5);
   const [attempt, setAttempt] = useState();
   const [safe, setSafe] = useState(false);
@@ -221,3 +221,5 @@ export default function NumberGuessing() {
     </div>
   );
 }
+
+export default NumberGuessing;
