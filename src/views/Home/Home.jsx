@@ -91,7 +91,7 @@ function Home() {
         </div>
 
         <div
-          className=" justify-center justify-items-center text-center bg-black w-screen block h-100"
+          className=" justify-center justify-items-center text-center bg-black w-screen block h-100 "
           id="arcadeDiv"
         >
           <a
@@ -103,9 +103,9 @@ function Home() {
               className="text-center fa fa-arrow-up mt-0 text-gray-500 text-3xl  cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce "
             ></i>
           </a>
-          <div className=" justify-center justify-items-center justify-content-center text-center rounded-md p-4 m-4 flex ">
+          <div className=" justify-center justify-items-center justify-content-center text-center rounded-md p-4 m-4 flex  ">
             <div
-              className="grid grid-cols-1 text-center justify-items-center justify-center justify-content-center hover:transition-all hover:duration-300 gap-4   border-2 border-slate-400 p-5 w-1/2 "
+              className="grid grid-cols-1 text-center justify-items-center justify-center justify-content-center hover:transition-all hover:duration-300 gap-4   border-2 border-slate-400 p-5 w-3/4  overflow-auto  "
               id="homeArcadeDiv"
             >
               <div className="">
