@@ -19,7 +19,7 @@ import Maintenance from "./views/ErrorPage/Maintenance";
 import Footer from "./component/Footer/Footer";
 axios.defaults.auth = true;
 
-function App() {
+export default function App() {
   return (
     <div className="bg-gray-950 max-w-screen transition-all">
       <Toaster position="bottom-center" duration="5000" />
@@ -43,5 +43,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

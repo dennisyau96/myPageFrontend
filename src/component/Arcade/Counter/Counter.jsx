@@ -1,6 +1,7 @@
 import styles from "../Arcade.module.css";
 import toast from "react-hot-toast";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 
 function Counter() {
   const [count, setCount] = useState(0);
@@ -66,7 +67,7 @@ function Counter() {
         </div>
 
         <div
-          className=" bg-black border-1 text-white hover:bg-gray-700 text-center justify-center align-middle p-3 hover:shadow-sky-500 hover:text-gray-700 cursor-pointer transition-all ease-in-out duration-300 max-w-36"
+          className="  border-1 text-white hover:bg-gray-500 text-center justify-center align-middle p-3 hover:text-gray-700 cursor-pointer transition-all ease-in-out duration-500 max-w-36"
           onClick={resetCount}
         >
           <span className="text-center text-4xl block">{count}</span>

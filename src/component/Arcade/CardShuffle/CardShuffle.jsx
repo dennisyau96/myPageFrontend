@@ -1,8 +1,8 @@
-import styles from "../../Arcade/Arcade.module.css";
+// import styles from "../../Arcade/Arcade.module.css";
 import { useState } from "react";
 import { useEffect } from "react";
-import { cardsArray } from "../../../content";
-import Card from "./Card";
+// import { cardsArray } from "../../../content";
+// import Card from "./Card";
 // const cardSet = [
 //   {
 //     id: 1,
@@ -214,35 +214,32 @@ import Card from "./Card";
 //   },
 // ];
 export default function CardShuffle() {
-  const [cards, setCards] = useState([]);
-
-  useEffect(() => {
-    loadCard();
-  }, []);
-
-  function loadCard() {
-    setCards((prev) => cardsArray);
-  }
-  function removeCard(index) {
-    setCards((prev) => prev.filter((element, i) => i !== index));
-  }
-
-  return (
-    <div className={styles.boxyWH}>
-      <h1 className="mb-3 text-xl">Card Shuffle</h1>
-      <div className="flex flex-wrap gap-4 flex-row justify-center">
-        {cards.map((card, index) => (
-          <div key={index}>
-            <Card card={card} url={card.url} />
-            <button
-              onClick={() => removeCard()}
-              className="border-red-100 border-2 "
-            >
-              Delete card
-            </button>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+  // const [cards, setCards] = useState([]);
+  // useEffect(() => {
+  //   loadCard();
+  // }, []);
+  // function loadCard() {
+  //   setCards((prev) => cardsArray);
+  // }
+  // function removeCard(index) {
+  //   setCards((prev) => prev.filter((element, i) => i !== index));
+  // }
+  // return (
+  //   <div className={styles.boxyWH}>
+  //     <h1 className="mb-3 text-xl">Card Shuffle</h1>
+  //     <div className="flex flex-wrap gap-4 flex-row justify-center">
+  //       {cards.map((card, index) => (
+  //         <div key={index}>
+  //           {/* <Card card={card} url={card.url} /> */}
+  //           <button
+  //             onClick={() => removeCard()}
+  //             className="border-red-100 border-2 "
+  //           >
+  //             Delete card
+  //           </button>
+  //         </div>
+  //       ))}
+  //     </div>
+  //   </div>
+  // );
 }

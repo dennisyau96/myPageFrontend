@@ -4,7 +4,7 @@ import fbicon from "../../assets/icon/fbicon.svg";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-export default function Footer() {
+function Footer() {
   const navigate = useNavigate();
   return (
     <div className="botton-0    text-center justify-center  h-10/12 w-screen theme1 m-0 p-6">
@@ -66,3 +66,5 @@ export default function Footer() {
     </div>
   );
 }
+
+export default Footer;

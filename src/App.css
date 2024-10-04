@@ -165,6 +165,11 @@ header {
   color: rgb(226, 216, 216);
 }
 
+.smPlaceholder::placeholder {
+  font-size: 12px;
+  text-align: center;
+}
+
 /* @import "bootstrap/scss/bootstrap"; */
 /*for arcade card shuffle*/
 /*end of for card shuffle*/

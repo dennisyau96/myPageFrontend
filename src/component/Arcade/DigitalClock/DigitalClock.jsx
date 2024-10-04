@@ -10,6 +10,7 @@ function DigitalClock() {
   let [month, setMonth] = useState("00");
   const [year, setYear] = useState("0000");
   const [apm, setApm] = useState(true);
+
   //initial dislay when reloading
   useEffect(() => {
     const now = new Date();

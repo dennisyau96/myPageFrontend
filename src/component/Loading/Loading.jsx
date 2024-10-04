@@ -1,4 +1,4 @@
-export default function Loading() {
+function Loading() {
   return (
     <>
       <div className="border border-blue-300 shadow rounded-md p-4 max-w-sm w-full mx-auto my-8">
@@ -22,3 +22,4 @@ export default function Loading() {
     </>
   );
 }
+export default Loading;

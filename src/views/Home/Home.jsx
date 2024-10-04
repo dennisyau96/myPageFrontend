@@ -10,21 +10,22 @@ import Counter from "../../component/Arcade/Counter/Counter";
 import CardShuffle from "../../component/Arcade/CardShuffle/CardShuffle";
 import LandingPage from "../LandingPage/LandingPage";
 import EmailButton from "../../component/EmailButton/EmailButton";
+import RestaurantDecide from "../../component/Arcade/RestaurantDecide/RestaurantDecide";
 
 //please add one photo to each phrase
-function Home() {
+export default function Home() {
   // const [deckUrl, setDeckUrl] = useState("../Arcade/CardShuffle/img");
 
-  useEffect(() => {
-    scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   // scrollTo(0, 0);
+  // }, []);
 
   return (
     <div className="w-100 justify-center justify-items-center text-center">
       <LandingPage />
       <div className="text-center w-100" id="homeStart">
         <div className="h-100">
-          <h1 className="font-bold text-3xl mb-10 pt-40 text-center justify-center theme4font ">
+          <h1 className="font-bold text-3xl mb-10 text-center justify-center theme4font pt-28 ">
             Dennis, Ming Leuk YAU
           </h1>
           <p className="font-bold my-2 text-lg theme2font">
@@ -80,10 +81,9 @@ function Home() {
             </span>
           </div>
           <div className="text-center font-bold text-4xl theme3font justify-center w-screen ">
-            Let&apos;s have some fun!
             <a
               href="#arcadeDiv"
-              className=" block  scroll-smooth pb-20 justify-center justify-items-center"
+              className="  scroll-smooth pb-20 justify-center justify-items-center block "
             >
               <i className="fa fa-arrow-down mt-10 text-gray-500 text-3xl    cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce "></i>
             </a>
@@ -91,29 +91,37 @@ function Home() {
         </div>
 
         <div
-          className=" justify-center justify-items-center text-center bg-black w-screen block h-100 "
+          className=" justify-center justify-items-center text-center bg-black w-screen block h-100  "
           id="arcadeDiv"
         >
           <a
             href="#homeStart"
-            className=" block  scroll-smooth text-center pt-20 border-none justify-center justify-items-center"
+            className=" scroll-smooth text-center pt-20 border-none justify-center justify-items-center invisible  hover:visible cursor-pointer"
           >
             <i
               id="arcadeArrow"
-              className="text-center fa fa-arrow-up mt-0 text-gray-500 text-3xl  cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce "
+              className="text-center fa fa-arrow-up mt-0 text-gray-500 text-3xl  cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce  "
             ></i>
           </a>
-          <div className=" justify-center justify-items-center justify-content-center text-center rounded-md p-4 m-4 flex  ">
+          <span className="block text-2xl text-gray-400 mt-10">
+            Let&apos;s have some fun!
+          </span>
+          <div className=" justify-center justify-items-center justify-content-center text-center rounded-md p-3  flex  ">
             <div
-              className="grid grid-cols-1 text-center justify-items-center justify-center justify-content-center hover:transition-all hover:duration-300 gap-4   border-2 border-slate-400 p-5 w-3/4  overflow-auto  "
+              className="p-5 grid text-center justify-items-center justify-center justify-content-center hover:transition-all hover:duration-300 gap-4   border-2 border-slate-400  max-w-3/4  overflow-auto h-2/6 "
               id="homeArcadeDiv"
             >
               <div className="">
                 <DiceRoller />
               </div>
-              <div className="">{/* <NumberGuessing /> */}</div>
+              <div className="">
+                <NumberGuessing />
+              </div>
               <div className="">
                 <Counter />
+              </div>
+              <div className="">
+                <RestaurantDecide />
               </div>
 
               <div>{/* <CardShuffle /> */}</div>
@@ -127,4 +135,3 @@ function Home() {
     </div>
   );
 }
-export default Home;

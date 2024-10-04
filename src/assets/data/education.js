@@ -1,4 +1,4 @@
-const education = [
+export const education = [
   {
     title: "Primary School(Elementary School)",
     institution: "Po Leung Kuk Horizon East Primary School",
@@ -39,4 +39,4 @@ const education = [
   },
 ];
 
-export default education;
+// export default education;
