@@ -8,13 +8,13 @@ function Header() {
     <>
       <div
         id="headerDiv"
-        className="  sticky-top inset-x-0 top-0 right-0 left-0 shadow-lg py-1 theme1 h-auto flex w-100 opacity-90"
+        className="  sticky-top inset-x-0 top-0 right-0 left-0 shadow-lg py-1 theme1 h-auto flex w-100 opacity-90 animate__slideInDown"
       >
-        <header id="header" className="block w-100">
-          <div className=" items-start inline ">
+        <header id="header" className=" w-100">
+          <div className=" items-start inline " id="headerTitle">
             <Link
               id="headerName"
-              className="text-white p-4  text-2xl hover:motion-reduce:animate-pulse cursor-pointer inline hover:no-underline"
+              className="text-white p-4  text-2xl hover:motion-reduce:animate-pulse cursor-pointer hover:no-underline"
               to="/"
             >
               Dennis YAU
@@ -23,9 +23,8 @@ function Header() {
               Skills
             </span> */}
             </Link>
-            {/* <ShrinkNavBar /> */}
+            <ShrinkNavBar />
           </div>
-
           <Nav />
         </header>
       </div>

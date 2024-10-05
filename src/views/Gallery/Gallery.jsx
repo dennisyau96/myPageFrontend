@@ -75,58 +75,108 @@ export default function Gallery() {
 
   return (
     <>
-      <div className="text-center justify-center container justify-items-center justify-self-center grid grid-col-1 w-auto transition-all duration-500 ease-in-out">
+      <div className="text-center justify-center justify-items-center justify-self-center  ">
         <h1 className="font-bold text-3xl my-4 theme4font">Gallery</h1>
-        {/*carousel */}
-        <div
-          id="carouselExampleAutoplaying"
-          className="carousel slide  carousel-fade w-6/12  my-4 text-center justify-center border-2 border-gray-300 py-10 hover:shadow-sky-300 hover:shadow-md duration-500 ease-in-out transition-all max-h-1/2"
-          data-bs-ride="carousel"
-          data-ride="carousel"
-          data-pause="false"
-          data-interval="1000"
-        >
-          <div className="carousel-inner w-full justify-center ">
-            <div className="carousel-item active justify-center transition-all duration-500 ease-in-out">
-              <img
-                src={photosSrc[index].pic}
-                className="d-block w-full  transition-all duration-300 ease-in-out "
-                alt=""
-              />
-            </div>
-            <button
-              className="carousel-control-prev hover:bg-gray-100 hover:opacity-35 transition-all ease-in-out duration-300"
-              type="button"
-              data-bs-target="#carouselExampleAutoplaying"
-              data-bs-slide="prev"
-              onClick={prevPhoto}
-            >
-              <span
-                className="carousel-control-prev-icon "
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Previous</span>
-            </button>
 
-            <button
-              className="carousel-control-next hover:bg-gray-100 hover:opacity-35 transition-all ease-in-out duration-300"
-              type="button"
-              data-bs-target="#carouselExampleAutoplaying"
-              data-bs-slide="next"
-              onClick={nextPhoto}
-            >
-              <span
-                className="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Next</span>
-            </button>
+        <div
+          className="inline-block justify-center text-center justify-items-center w-2/5"
+          id="galleryCarousel"
+        >
+          {/*carousel */}
+          <div
+            id="carouselExampleAutoplaying"
+            className="carousel slide  carousel-fade   text-center justify-items-center justify-center border-2 border-gray-300  hover:shadow-sky-300 hover:shadow-md duration-500 ease-in-out transition-all max-h-1/2 block"
+            data-bs-ride="carousel"
+            data-ride="carousel"
+            data-pause="false"
+            data-interval="1000"
+          >
+            <div className="carousel-inner w-full justify-center ">
+              <div className="carousel-item active justify-center transition-all duration-500 ease-in-out">
+                <img
+                  src={photosSrc[index].pic}
+                  className="d-block w-full  transition-all duration-300 ease-in-out "
+                  alt=""
+                />
+              </div>
+              <button
+                className="carousel-control-prev hover:bg-gray-100 hover:opacity-35 transition-all ease-in-out duration-300"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev"
+                onClick={prevPhoto}
+              >
+                <span
+                  className="carousel-control-prev-icon "
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
+
+              <button
+                className="carousel-control-next hover:bg-gray-100 hover:opacity-35 transition-all ease-in-out duration-300"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next"
+                onClick={nextPhoto}
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          {/*carousel */}
+        </div>
+
+        <div className="my-2 justify-center text-center">
+          <div className={styles.QRFrame}>
+            <img
+              className={styles.QRimg}
+              alt="QR"
+              src={qr}
+              to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
+              target="_blank"
+              onClick={() => {
+                const ctr = confirm(
+                  "You will be redirected to the Instagram website"
+                );
+                if (!ctr) {
+                  navigate(0);
+                }
+              }}
+            ></img>
           </div>
         </div>
-        {/*carousel */}
+      </div>
+    </>
+  );
+}
 
-        <div className="my-4 justify-center text-center">
-          <span className="theme3font">
+{
+  /* <button className=" my-3 p-2 cursor-pointer text-white border-1 hover:text-black hover:shadow-lg hover:bg-gray-600  hover:transition-all hover:duration-200">
+              <Link
+                className=""
+                to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
+                target="_blank"
+                onClick={() => {
+                  const ctr = confirm(
+                    "You will be redirected to the Instagram website"
+                  );
+                  if (!ctr) {
+                    navigate(0);
+                  }
+                }}
+              >
+                Visit
+              </Link>
+            </button> */
+}
+
+{
+  /* <span className="theme3font">
             Want to see more photo?
             <br /> Please visit{" "}
             <Link
@@ -150,45 +200,5 @@ export default function Gallery() {
             <strong className="theme4font">Like, Share and Follow</strong>
           </div>
 
-          <br />
-          <div>
-            <button className=" my-3 p-2 cursor-pointer text-white border-1 hover:text-black hover:shadow-lg hover:bg-gray-600  hover:transition-all hover:duration-200">
-              <Link
-                className=""
-                to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
-                target="_blank"
-                onClick={() => {
-                  const ctr = confirm(
-                    "You will be redirected to the Instagram website"
-                  );
-                  if (!ctr) {
-                    navigate(0);
-                  }
-                }}
-              >
-                Visit
-              </Link>
-            </button>
-          </div>
-          <div className={styles.QRFrame}>
-            <img
-              className={styles.QRimg}
-              alt="QR"
-              src={qr}
-              to="https://www.instagram.com/den.y_photography?igsh=djJ6MGR1Ynh4enRt&utm_source=qr"
-              target="_blank"
-              onClick={() => {
-                const ctr = confirm(
-                  "You will be redirected to the Instagram website"
-                );
-                if (!ctr) {
-                  navigate(0);
-                }
-              }}
-            ></img>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+          <br /> */
 }

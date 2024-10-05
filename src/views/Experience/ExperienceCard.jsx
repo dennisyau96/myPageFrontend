@@ -43,7 +43,7 @@ function ExperienceCard({ content }) {
         </div>{" "}
         <div className="col-span-2 theme2font text-sm">Description: </div>
         <div className="col-span-3 theme4font text-sm">
-          <div className="border-1 border-gray-700  overflow-scroll max-h-40 px-3 ">
+          <div className="border-1 border-gray-700  overflow-y-scroll max-h-40 px-3 ">
             <ul className="">
               {des &&
                 des.map((item, index) => (
