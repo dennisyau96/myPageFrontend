@@ -23,7 +23,6 @@ function Header() {
               Skills
             </span> */}
             </Link>
-            <ShrinkNavBar />
           </div>
           <Nav />
         </header>

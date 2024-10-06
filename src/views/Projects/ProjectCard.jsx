@@ -9,7 +9,7 @@ export default function ProjectCard({ project }) {
 
   return (
     <>
-      <div className=" card bg-black w-72 h-auto border-1 border-gray-400 m-4  rounded-md hover:  hover:transition-all hover:duration-200 ease-in-out  hover:shadow-lg hover:shadow-sky-400  ">
+      <div className=" projectCardDiv card bg-black w-72 h-auto border-1 border-gray-400 m-4  rounded-md hover:  hover:transition-all hover:duration-200 ease-in-out  hover:shadow-lg hover:shadow-sky-400  ">
         {project.thumbnail && (
           <img
             src={project.thumbnail}

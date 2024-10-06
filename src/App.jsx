@@ -1,6 +1,9 @@
 // import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import "./AppAnimation.css";
+import "./AppMedia.css";
+
 import { Toaster } from "react-hot-toast";
 
 //import component and page
