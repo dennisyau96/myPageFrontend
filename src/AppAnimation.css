@@ -1,0 +1,186 @@
+#headerDiv {
+  animation-name: clockMove2;
+}
+#headerTitle {
+  animation-name: clockMove2;
+}
+@keyframes headerTitleMove {
+  0% {
+    left: -20vw;
+  }
+  50% {
+    left: -10vw;
+  }
+  100% {
+    left: 0vw;
+  }
+}
+
+#dClockDiv {
+  animation-name: clockMove2;
+  animation-duration: 0.8s;
+  background-color: black;
+}
+@keyframes clockMove {
+  0% {
+    /* background-color: red; */
+    left: 100vw;
+    top: 0px;
+    scale: 1;
+  }
+  60% {
+    left: -5vw;
+    top: 0px;
+    scale: 1;
+  }
+
+  100% {
+    /* background-color: red; */
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@keyframes clockMove2 {
+  0% {
+    left: 0vw;
+    top: 0px;
+    scale: 0.4;
+  }
+
+  60% {
+    left: 0;
+    top: 0px;
+    scale: 1.1;
+  }
+
+  100% {
+    left: 0px;
+    top: 0px;
+    scale: 1;
+  }
+}
+
+#introBox {
+  position: relative;
+  animation-name: introBoxMove2;
+  animation-duration: 1s;
+  background-color: black;
+}
+
+@keyframes introBoxMove {
+  0% {
+    /* background-color: red; */
+    left: -100vw;
+    top: 0px;
+    scale: 1;
+  }
+
+  60% {
+    left: 5vw;
+    top: 0px;
+    scale: 1;
+  }
+
+  100% {
+    /* background-color: red; */
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@keyframes introBoxMove2 {
+  0% {
+    /* background-color: red; */
+    bottom: -200vw;
+    scale: 1;
+    /* transition-delay: 3s; */
+  }
+
+  50% {
+    bottom: 1vw;
+    scale: 1;
+  }
+  65% {
+    bottom: -0.75vw;
+    scale: 1;
+  }
+  80% {
+    bottom: 0.5vw;
+    scale: 1;
+  }
+  90% {
+    bottom: -0.25vw;
+    scale: 1;
+  }
+
+  100% {
+    /* background-color: red; */
+    bottom: 0px;
+  }
+}
+
+.shrinkNavBtn {
+  animation-name: shrinkNavBtnMove;
+  animation-duration: 0.5s;
+}
+@keyframes shrinkNavBtnMove {
+  0% {
+    left: 10vw;
+  }
+  50% {
+    left: 5vw;
+  }
+  100% {
+    left: 0vw;
+  }
+}
+
+@keyframes eduCardDivShow {
+  0% {
+    left: 50vw;
+  }
+  /* 20% {
+    left: 80vw;
+  }
+  40% {
+    left: 60vw;
+  }
+  60% {
+    left: 40vw;
+  }
+  80% {
+    left: 20vw;
+  } */
+  80% {
+    left: -2vw;
+  }
+  90% {
+    left: +1vw;
+  }
+
+  100% {
+    left: 0vw;
+  }
+}
+.eduCardDiv {
+  animation-name: eduCardDivShow;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+.expCardDiv {
+  animation-name: eduCardDivShow;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+.projectCardDiv {
+  animation-name: eduCardDivShow;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+}

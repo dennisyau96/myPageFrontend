@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 function Footer() {
   const navigate = useNavigate();
   return (
-    <div className="botton-0    text-center justify-center  h-10/12 w-screen theme1 m-0 p-6">
+    <div className="botton-0    text-center justify-center  h-10/12 w-screen theme1 m-0 p-6 footer">
       <div className="h-1/6 ">
         <p className="justify-self-start text-white">
           <Link to="/">Dennis Yau</Link>
