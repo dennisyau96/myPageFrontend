@@ -7,13 +7,19 @@ export default function LandingPage() {
   return (
     <>
       <div
-        className=" w-screen h-screen bg-black  place-self-center text-center place-content-center justify-center glow justify-items-center"
+        className=" w-screen h-screen bg-black  place-self-center text-center place-content-center justify-center glow justify-items-center "
         id="landingPage"
       >
-        <div className="justify-center text-center justify-items-center mb-4 ">
+        <div
+          className="justify-center text-center justify-items-center mb-4 inline-block px-4 opacity-80 rounded-2xl"
+          id="dClockDiv"
+        >
           <DigitalClock />
         </div>
-        <div className="text-center  place-content-center  content-center container w-60 h-60 border-white border-1 static hover:border-3 hover:border-gray-300 hover:shadow-2xl hover:shadow-sky-300 transition:all duration-300 ease-in-out  motion-reduce:">
+        <div
+          id="introBox"
+          className="  text-center  place-content-center  content-center container w-60 h-60 border-white border-1 static hover:border-3 hover:border-gray-300 hover:shadow-2xl hover:shadow-sky-300 transition:all duration-300 ease-in-out"
+        >
           <h1 className="text-white">I am Dennis</h1>
           <span className="text-white">I am a Full Stack Developer.</span>
           <span className="block">

@@ -1,6 +1,9 @@
 // import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import "./AppAnimation.css";
+import "./AppMedia.css";
+
 import { Toaster } from "react-hot-toast";
 
 //import component and page
@@ -21,8 +24,9 @@ axios.defaults.auth = true;
 
 export default function App() {
   return (
-    <div className="bg-gray-950 max-w-screen transition-all">
+    <div className=" max-w-screen transition-all">
       <Toaster position="bottom-center" duration="5000" />
+
       <Header z-index="10" />
       <div className="mainContent relative min-h-screen mb-20 max-w-screen">
         <Routes>

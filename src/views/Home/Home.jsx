@@ -23,9 +23,9 @@ export default function Home() {
   return (
     <div className="w-100 justify-center justify-items-center text-center">
       <LandingPage />
-      <div className="text-center w-100" id="homeStart">
-        <div className="h-100">
-          <h1 className="font-bold text-3xl mb-10 text-center justify-center theme4font pt-28 ">
+      <div className="text-center w-100 " id="homeStart">
+        <div className="h-100 " id="homeIntro">
+          <h1 className="font-bold text-3xl mb-10 text-center justify-center theme4font pt-10 ">
             Dennis, Ming Leuk YAU
           </h1>
           <p className="font-bold my-2 text-lg theme2font">
@@ -103,12 +103,12 @@ export default function Home() {
               className="text-center fa fa-arrow-up mt-0 text-gray-500 text-3xl  cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce  "
             ></i>
           </a>
-          <span className="block text-2xl text-gray-400 mt-10">
+          <span className="block text-2xl text-gray-400 mt-1">
             Let&apos;s have some fun!
           </span>
           <div className=" justify-center justify-items-center justify-content-center text-center rounded-md p-3  flex  ">
             <div
-              className="p-5 grid text-center justify-items-center justify-center justify-content-center hover:transition-all hover:duration-300 gap-4   border-2 border-slate-400  max-w-3/4  overflow-auto h-2/6 "
+              className="p-5 grid text-center justify-items-center justify-center justify-content-center hover:transition-all hover:duration-300 gap-4   border-2 border-slate-400  max-w-3/4  overflow-y-auto h-96 "
               id="homeArcadeDiv"
             >
               <div className="">

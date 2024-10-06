@@ -37,7 +37,7 @@ function EducationCard({ content, index }) {
         )}
 
         <div className=" border-gray-700">
-          <ul className="list-group list-group-flush z-0  border-1 m-2 py-6 px-5 gap-3 overflow-scroll max-h-52 ">
+          <ul className="list-group list-group-flush z-0  border-1 m-2 py-6 px-5 gap-3 overflow-y-scroll max-h-52 ">
             {content.ranking ? (
               <li className=" z-0  grid grid-cols-6 gap-3">
                 <span className="flex col-span-2 text-sm text-slate-400 text-right">

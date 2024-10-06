@@ -1,0 +1,144 @@
+@media (min-width: 0px) {
+  html {
+    min-width: 400px;
+  }
+  .bigNav {
+    visibility: visible;
+    display: block;
+    flex-wrap: wrap;
+  }
+
+  #smallNavSet {
+    display: none;
+  }
+
+  .navBtn {
+    font-size: xx-small;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+  }
+
+  #homeArcadeDiv {
+    min-width: 400px;
+  }
+  #digitalClock {
+    min-width: 350px;
+  }
+  #skillsDiv {
+    min-width: 400px;
+  }
+  #galleryCarousel {
+    min-width: 400px;
+  }
+}
+@media (min-width: 450px) {
+  html {
+    min-width: 400px;
+  }
+  .bigNav {
+    visibility: visible;
+    display: block;
+    flex-wrap: wrap;
+  }
+
+  #smallNavSet {
+    display: none;
+  }
+
+  .navBtn {
+    font-size: xx-small;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+  }
+  #homeArcadeDiv {
+    min-width: 400px;
+  }
+  #digitalClock {
+    min-width: 400px;
+  }
+  #skillsDiv {
+    min-width: 400px;
+  }
+  #galleryCarousel {
+    min-width: 400px;
+  }
+}
+
+@media (min-width: 640px) {
+  .bigNav {
+    visibility: visible;
+    display: block;
+    flex-wrap: wrap;
+  }
+
+  #smallNavSet {
+    display: none;
+  }
+
+  .navBtn {
+    font-size: xx-small;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+  }
+  #homeArcadeDiv {
+    min-width: 400px;
+  }
+  #digitalClock {
+    min-width: 400px;
+  }
+  #skillsDiv {
+    min-width: 400px;
+  }
+  #galleryCarousel {
+    min-width: 400px;
+  }
+}
+
+@media (min-width: 800px) {
+  .bigNav {
+    visibility: visible;
+    display: block;
+    flex-wrap: wrap;
+  }
+  #smallNavSet {
+    display: none;
+  }
+
+  .navBtn {
+    font-size: small;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+  }
+  #digitalClock {
+    min-width: 400px;
+  }
+  #galleryCarousel {
+    min-width: 400px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .bigNav {
+    visibility: visible;
+    display: block;
+    flex-wrap: wrap;
+  }
+
+  .navBtn {
+    font-size: small;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+  }
+  #digitalClock {
+    min-width: 400px;
+  }
+  #skillsDiv {
+    min-width: 400px;
+  }
+  #galleryCarousel {
+    min-width: 400px;
+  }
+  #smallNavSet {
+    display: none;
+  }
+}

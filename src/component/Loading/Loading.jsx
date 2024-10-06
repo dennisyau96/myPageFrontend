@@ -1,7 +1,7 @@
 function Loading() {
   return (
     <>
-      <div className="border border-blue-300 shadow rounded-md p-4 max-w-sm w-full mx-auto my-8">
+      <div className="border border-blue-300 shadow rounded-md p-4 max-w-sm w-full mx-auto my-8 myLoading">
         <div className="text-slate-400 text-center mb-2 animate-pulse">
           Loading...
         </div>
