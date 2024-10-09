@@ -76,16 +76,18 @@ export default function Gallery() {
   return (
     <>
       <div className="text-center justify-center justify-items-center justify-self-center  ">
-        <h1 className="font-bold text-3xl my-4 theme4font">Gallery</h1>
+        <h1 className="font-bold text-3xl my-4 theme4font pageTitle">
+          Gallery
+        </h1>
 
         <div
-          className="inline-block justify-center text-center justify-items-center w-2/5"
+          className="inline-block justify-center text-center justify-items-center "
           id="galleryCarousel"
         >
           {/*carousel */}
           <div
             id="carouselExampleAutoplaying"
-            className="carousel slide  carousel-fade   text-center justify-items-center justify-center border-2 border-gray-300  hover:shadow-sky-300 hover:shadow-md duration-500 ease-in-out transition-all max-h-1/2 block"
+            className=" galleryCarouselDiv carousel slide  carousel-fade   text-center justify-items-center justify-center    hover:shadow-sky-300 hover:shadow-md duration-500 ease-in-out transition-all h-5/6 block"
             data-bs-ride="carousel"
             data-ride="carousel"
             data-pause="false"
@@ -95,7 +97,7 @@ export default function Gallery() {
               <div className="carousel-item active justify-center transition-all duration-500 ease-in-out">
                 <img
                   src={photosSrc[index].pic}
-                  className="d-block w-full  transition-all duration-300 ease-in-out "
+                  className="d-block w-full  transition-all duration-300 ease-in-out galleryPhotoDiv "
                   alt=""
                 />
               </div>
@@ -131,9 +133,10 @@ export default function Gallery() {
           {/*carousel */}
         </div>
 
-        <div className="my-2 justify-center text-center">
+        <div className="my-2 justify-center text-center" id="galleryQR">
           <div className={styles.QRFrame}>
             <img
+              id=""
               className={styles.QRimg}
               alt="QR"
               src={qr}

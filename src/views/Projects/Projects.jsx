@@ -26,7 +26,7 @@ export default function Projects() {
 
   return (
     <>
-      <h1 className="font-bold text-3xl my-4 text-center theme4font">
+      <h1 className="font-bold text-3xl my-4 text-center theme4font pageTitle">
         {" "}
         Projects{" "}
       </h1>

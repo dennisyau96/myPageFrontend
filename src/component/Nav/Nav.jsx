@@ -5,49 +5,28 @@ function Nav() {
   return (
     <>
       <nav className="text-right justify-end my-0 mx-4 w-auto bigNav">
-        <NavLink className=" text-white hover:animate-pulse mx-2 navBtn" to="/">
+        <NavLink className=" text-white hover:text-gray-400 mx-2 navBtn" to="/">
           Home
         </NavLink>
-        <NavLink
-          className=" text-white hover:animate-pulse  navBtn"
-          to="/education"
-        >
+        <NavLink className=" text-white  navBtn" to="/education">
           Education
         </NavLink>
-        <NavLink
-          className=" text-white hover:animate-pulse  navBtn"
-          to="/experience"
-        >
+        <NavLink className=" text-white    navBtn" to="/experience">
           Experience
         </NavLink>
-        <NavLink
-          className=" text-white hover:animate-pulse  navBtn"
-          to="/projects"
-        >
+        <NavLink className=" text-white    navBtn" to="/projects">
           Projects
         </NavLink>
-        <NavLink
-          className=" text-white hover:animate-pulse  navBtn"
-          to="/skills"
-        >
+        <NavLink className=" text-white    navBtn" to="/skills">
           Skills
         </NavLink>
-        <NavLink
-          className=" text-white hover:animate-pulse  navBtn"
-          to="/certificates"
-        >
+        <NavLink className=" text-white    navBtn" to="/certificates">
           Certificate
         </NavLink>
-        <NavLink
-          className=" text-white hover:animate-pulse  navBtn"
-          to="/gallery"
-        >
+        <NavLink className=" text-white    navBtn" to="/gallery">
           Gallery
         </NavLink>
-        <NavLink
-          className=" text-white hover:animate-pulse  navBtn"
-          to="/about"
-        >
+        <NavLink className=" text-white    navBtn" to="/about">
           About
         </NavLink>
       </nav>

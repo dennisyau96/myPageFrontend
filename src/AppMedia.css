@@ -3,17 +3,16 @@
     min-width: 400px;
   }
   .bigNav {
-    visibility: visible;
-    display: block;
+    display: flex;
     flex-wrap: wrap;
   }
 
-  #smallNavSet {
+  .smallNavSet {
     display: none;
   }
 
   .navBtn {
-    font-size: xx-small;
+    font-size: 8px;
     margin-left: 0.2rem;
     margin-right: 0.2rem;
   }
@@ -30,6 +29,18 @@
   #galleryCarousel {
     min-width: 400px;
   }
+
+  .eduCardDetail {
+    min-width: 400px;
+  }
+
+  #headerDiv {
+    min-width: 450px;
+  }
+
+  #footerDiv {
+    min-width: 450px;
+  }
 }
 @media (min-width: 450px) {
   html {
@@ -37,12 +48,12 @@
   }
   .bigNav {
     visibility: visible;
-    display: block;
+    display: flex;
     flex-wrap: wrap;
   }
 
-  #smallNavSet {
-    display: none;
+  .smallNavSet {
+    display: hidden;
   }
 
   .navBtn {
@@ -61,17 +72,23 @@
   }
   #galleryCarousel {
     min-width: 400px;
+  }
+  .eduCardDetail {
+    min-width: 400px;
+  }
+  #footerDiv {
+    min-width: 450px;
   }
 }
 
 @media (min-width: 640px) {
   .bigNav {
     visibility: visible;
-    display: block;
+    display: flex;
     flex-wrap: wrap;
   }
 
-  #smallNavSet {
+  .smallNavSet {
     display: none;
   }
 
@@ -90,6 +107,9 @@
     min-width: 400px;
   }
   #galleryCarousel {
+    min-width: 400px;
+  }
+  .eduCardDetail {
     min-width: 400px;
   }
 }
@@ -97,10 +117,10 @@
 @media (min-width: 800px) {
   .bigNav {
     visibility: visible;
-    display: block;
+    display: flex;
     flex-wrap: wrap;
   }
-  #smallNavSet {
+  .smallNavSet {
     display: none;
   }
 
@@ -138,7 +158,7 @@
   #galleryCarousel {
     min-width: 400px;
   }
-  #smallNavSet {
+  .smallNavSet {
     display: none;
   }
 }

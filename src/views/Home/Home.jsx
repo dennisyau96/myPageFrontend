@@ -16,19 +16,20 @@ import RestaurantDecide from "../../component/Arcade/RestaurantDecide/Restaurant
 export default function Home() {
   // const [deckUrl, setDeckUrl] = useState("../Arcade/CardShuffle/img");
 
-  // useEffect(() => {
-  //   // scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    // scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="w-100 justify-center justify-items-center text-center">
       <LandingPage />
       <div className="text-center w-100 " id="homeStart">
         <div className="h-100 " id="homeIntro">
-          <h1 className="font-bold text-3xl mb-10 text-center justify-center theme4font pt-10 ">
+          <h1 className="font-bold text-3xl mb-10 text-center justify-center theme4font pt-10 homeNameTitle">
             Dennis, Ming Leuk YAU
           </h1>
-          <p className="font-bold my-2 text-lg theme2font">
+
+          <p className="font-bold my-2 text-lg theme2font homeTitleTitle">
             Software Developer | Web Developer | IT | Data
             <br />
           </p>
@@ -108,15 +109,13 @@ export default function Home() {
           </span>
           <div className=" justify-center justify-items-center justify-content-center text-center rounded-md p-3  flex  ">
             <div
-              className="p-5 grid text-center justify-items-center justify-center justify-content-center hover:transition-all hover:duration-300 gap-4   border-2 border-slate-400  max-w-3/4  overflow-y-auto h-96 "
+              className="p-5 grid text-center justify-items-center justify-center justify-content-center hover:transition-all hover:duration-300 gap-4   border-2 border-slate-400    overflow-y-auto  "
               id="homeArcadeDiv"
             >
               <div className="">
                 <DiceRoller />
               </div>
-              <div className="">
-                <NumberGuessing />
-              </div>
+              <div className="">{/* <NumberGuessing /> */}</div>
               <div className="">
                 <Counter />
               </div>
