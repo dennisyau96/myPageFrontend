@@ -45,7 +45,7 @@ function RestaurantDecide() {
   return (
     <>
       <div
-        className="border-1 border-gray-600 rounded-md px-3 py-3 max-w-96 duration-300 hover:transition-all ease-in-out hover:shadow-lg hover:shadow-sky-300 bg-opacity-90 min-w-96"
+        className="border-1 border-gray-600 rounded-md px-3 py-3 max-w-96 duration-300 hover:transition-all ease-in-out hover:shadow-lg hover:shadow-sky-300 bg-opacity-90 min-w-96 LRADAnimation"
         id="restaurantDecideDiv"
       >
         <h2 className="mb-3 text-xl  text-white">
@@ -131,7 +131,7 @@ function RestaurantDecide() {
               ))}
             </ul>
             <button
-              className="btn text-gray-200 bg-slate-600 rounded-sm py-1 px-2 m-2 hover:text-gray-700 hover:bg-green-300 "
+              className=" btn text-gray-200 bg-slate-600 rounded-sm py-1 px-2 m-2 hover:text-gray-700 hover:bg-green-300 "
               onClick={() => {
                 if (count < 1) {
                   alert("There is no option.");

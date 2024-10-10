@@ -1,9 +1,4 @@
-#headerDiv {
-  animation-name: clockMove2;
-}
-#headerTitle {
-  animation-name: clockMove2;
-}
+/* ------------------- animation ------------------- */
 @keyframes headerTitleMove {
   0% {
     left: -20vw;
@@ -16,11 +11,6 @@
   }
 }
 
-#dClockDiv {
-  animation-name: clockMove2;
-  animation-duration: 0.8s;
-  background-color: black;
-}
 @keyframes clockMove {
   0% {
     /* background-color: red; */
@@ -58,14 +48,8 @@
     left: 0px;
     top: 0px;
     scale: 1;
+    opacity: 100%;
   }
-}
-
-#introBox {
-  position: relative;
-  animation-name: introBoxMove2;
-  animation-duration: 1s;
-  background-color: black;
 }
 
 @keyframes introBoxMove {
@@ -92,8 +76,9 @@
 @keyframes introBoxMove2 {
   0% {
     /* background-color: red; */
-    bottom: -200vw;
+    bottom: -10vw;
     scale: 1;
+    opacity: 50%;
     /* transition-delay: 3s; */
   }
 
@@ -117,13 +102,10 @@
   100% {
     /* background-color: red; */
     bottom: 0px;
+    opacity: 100%;
   }
 }
 
-.shrinkNavBtn {
-  animation-name: shrinkNavBtnMove;
-  animation-duration: 0.5s;
-}
 @keyframes shrinkNavBtnMove {
   0% {
     left: 10vw;
@@ -136,7 +118,7 @@
   }
 }
 
-@keyframes eduCardDivShow {
+@keyframes cardDivAnimation {
   0% {
     left: 50vw;
   }
@@ -163,24 +145,543 @@
     left: 0vw;
   }
 }
+
+@keyframes cardDivAnimation2 {
+  0% {
+    scale: 0.8;
+  }
+  50% {
+    scale: 1.1;
+  }
+  70% {
+    scale: 0.95;
+  }
+  80% {
+    scale: 1.05;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes cardDivAnimation3 {
+  0% {
+    transform: rotateY(90deg);
+  }
+  /* 50% {
+    scale: 1.1;
+  }
+  70% {
+    scale: 0.95;
+  }
+  80% {
+    scale: 1.05;
+  } */
+  100% {
+    transform: rotateY(0);
+  }
+}
+
+@keyframes cardDivAnimation4 {
+  0% {
+    scale: 1;
+  }
+  /* 50% {
+    scale: 1.1;
+  }
+  70% {
+    scale: 0.95;
+  }
+  80% {
+    scale: 1.05;
+  } */
+  100% {
+    scale: 1.3;
+  }
+}
+
+@keyframes cardDivAnimation5 {
+  0% {
+    scale: 0.4;
+  }
+  /* 50% {
+    scale: 1.1;
+  }
+  70% {
+    scale: 0.95;
+  }
+  80% {
+    scale: 1.05;
+  } */
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes pageTitleAnimation {
+  0% {
+    transform: translateY(-20px);
+    opacity: 50%;
+  }
+  100% {
+    top: 0;
+    transform: translateY(0px);
+
+    opacity: 100%;
+  }
+}
+
+@keyframes pageTitleAnimation2 {
+  0% {
+    transform: translateX(20px);
+    opacity: 50%;
+  }
+  100% {
+    transform: translateX(0px);
+
+    opacity: 100%;
+  }
+}
+
+@keyframes titleDisapperAnimation {
+  /* 0% {
+    opacity: 50%;
+    top: 20px;
+  }
+  50% {
+    opacity: 100%;
+    top: 0px;
+  }
+  100% {
+    opacity: 500%;
+    top: -20px;
+  } */
+  to {
+    opacity: 50%;
+    top: 20px;
+  }
+}
+
+@keyframes scrollIndicator {
+  0% {
+    scale: 0 1;
+  }
+  100% {
+    scale: 1 1;
+  }
+}
+
+@keyframes navBtnAnimation {
+  0% {
+    transform: translateY(-20px);
+    opacity: 20%;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+
+@keyframes generalAppearAnimation {
+  0% {
+    transform: translateY(-60px);
+    opacity: 0%;
+    scale: 0.8;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+    scale: 1;
+  }
+}
+
+@keyframes generalAppearAnimation2 {
+  0% {
+    transform: translateY(20px);
+    opacity: 0%;
+    scale: 0.7;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+    scale: 1;
+  }
+}
+
+@keyframes cardAppearAnimation {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0%;
+    scale: 0.9;
+  }
+
+  20% {
+    transform: translateY(0px);
+    opacity: 80%;
+    scale: 1;
+  }
+  70% {
+    transform: translateY(0px);
+    opacity: 100%;
+    scale: 1;
+  }
+
+  100% {
+    transform: translateY(20px);
+    opacity: 0%;
+    scale: 0.9;
+  }
+}
+@keyframes skillCardAppearAnimation {
+  0% {
+    transform: translateY(-20px);
+    opacity: 70%;
+    scale: 0.9;
+  }
+
+  50% {
+  }
+  /* 
+  20% {
+    transform: translateY(0px);
+    opacity: 80%;
+    scale: 1;
+  }
+  70% {
+    transform: translateY(0px);
+    opacity: 100%;
+    scale: 1;
+  } */
+
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+    scale: 1;
+  }
+}
+
+@keyframes generalDisappearAnimation {
+  0% {
+    transform: translateY(0px);
+    opacity: 100%;
+    scale: 1;
+  }
+  70% {
+    transform: translateY(0px);
+    opacity: 100%;
+    scale: 1;
+  }
+
+  100% {
+    transform: translateY(30px);
+    opacity: 20%;
+    scale: 0.9;
+  }
+}
+
+@keyframes generalDisappearAnimation2 {
+  0% {
+    transform: translateY(0px);
+    opacity: 100%;
+    scale: 1;
+  }
+  70% {
+    transform: translateY(0px);
+    opacity: 100%;
+    scale: 1;
+  }
+
+  100% {
+    transform: translateY(10px);
+    opacity: 20%;
+    scale: 0.9;
+  }
+}
+
+@keyframes arcadeAppearAnimation {
+  0% {
+    transform: translateY(-60px);
+    opacity: 20%;
+    scale: 0.8;
+  }
+
+  20% {
+    transform: translateY(0px);
+    opacity: 100%;
+    scale: 1;
+  }
+}
+@keyframes homeTitleTileAnimation {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0%;
+    scale: 0.8;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+    scale: 1.2;
+  }
+}
+
+@keyframes galleryQRAnimation {
+  to {
+    opacity: 100%;
+    transform: translateY(0);
+
+    top: 0px;
+  }
+}
+
+@keyframes generalLRAppDisappAnimation {
+  0% {
+    transform: translateX(50px);
+    opacity: 50%;
+  }
+
+  50% {
+    transform: translateX(0px);
+    opacity: 100%;
+  }
+  /* 15% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+
+  85% {
+    transform: translateX(0);
+    opacity: 100%;
+  } */
+  100% {
+    transform: translateX(-50px);
+    opacity: 50%;
+  }
+}
+@keyframes generalRLAppDisappAnimation {
+  0% {
+    transform: translateX(-1vw);
+    opacity: 50%;
+  }
+  15% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+
+  85% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+  100% {
+    transform: translateX(1vw);
+    opacity: 50%;
+  }
+}
+/* ------------------- class ------------------- */
+
+.LRADAnimation {
+  animation-name: generalLRAppDisappAnimation;
+  animation-timeline: view(50px 50px);
+  animation-fill-mode: both;
+}
+.RLADAnimation {
+  animation-name: generalRLAppDisappAnimation;
+  animation-timeline: view(50px 50px);
+  animation-fill-mode: both;
+}
+.homeNameTitle {
+  animation-name: navBtnAnimation;
+  animation-timeline: view(200px 200px);
+  animation-fill-mode: both;
+}
+#galleryQR {
+  animation-name: galleryQRAnimation;
+  animation-timeline: view(500px 400px);
+  opacity: 0%;
+  transform: translateY(200px);
+}
 .eduCardDiv {
-  animation-name: eduCardDivShow;
-  animation-duration: 1s;
-  animation-delay: 1s;
+  animation-name: cardAppearAnimation;
+  animation-timing-function: linear;
+  animation-timeline: view();
+  /* animation-duration: 0.4s; */
+  /* animation-delay: 1s; */
   animation-fill-mode: both;
 }
 
+.homeTitleTitle {
+  animation-name: homeTitleTileAnimation;
+  animation-timing-function: linear;
+
+  animation-timeline: view(500px 200px);
+  animation-fill-mode: both;
+  /* animation-duration: 0.4s; */
+  /* animation-delay: 1s; */
+}
+
 .expCardDiv {
-  animation-name: eduCardDivShow;
-  animation-duration: 1s;
-  animation-delay: 1s;
+  animation-name: cardAppearAnimation;
+  /* animation-delay: 1s; */
+  animation-timing-function: linear;
+  animation-timeline: view(200px 200px);
   animation-fill-mode: both;
 }
 
 .projectCardDiv {
-  animation-name: eduCardDivShow;
-  animation-timing-function: ease-in-out;
-  animation-duration: 0.5s;
-  animation-delay: 0s;
+  animation-name: cardAppearAnimation;
+  animation-timeline: view(200px 200px);
   animation-fill-mode: both;
+}
+
+.skillCardDiv {
+  animation-name: skillCardAppearAnimation;
+  animation-fill-mode: both;
+  animation-duration: 0.6s;
+}
+.skillCardDiv:hover {
+  animation-name: cardDivAnimation4;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+  transition: all;
+  transition-duration: 0.5s;
+}
+
+#headerDiv {
+  animation-name: clockMove2;
+}
+#headerTitle {
+  animation-name: clockMove2;
+}
+/* 
+#dClockDiv {
+  animation-name: clockMove2;
+  animation-duration: 0.8s;
+  background-color: black;
+} */
+
+#dClockDiv {
+  animation-name: generalDisappearAnimation;
+  animation-timeline: view(200px 200px);
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+.shrinkNavBtn {
+  animation-name: shrinkNavBtnMove;
+  animation-duration: 0.5s;
+}
+#introBox {
+  position: relative;
+  animation-name: introBoxMove2;
+  animation-duration: 0.8s;
+  background-color: black;
+}
+
+.certCarousel {
+  animation-name: cardDivAnimation3;
+  animation-timing-function: linear;
+  /* animation-timeline: scroll(); */
+  animation-duration: 0.3s;
+  animation-delay: 0s;
+}
+
+.scrollIndicator {
+  height: 0.2vh;
+  top: 0px;
+  z-index: 100;
+  background-color: white;
+  width: 100%;
+  animation-name: scrollIndicator;
+  animation-timeline: scroll();
+  scale: 0 1;
+  animation-timing-function: linear;
+}
+
+.galleryCarouselDiv {
+  /* animation-delay: 0.3s; */
+  animation-timing-function: linear;
+  animation-timeline: view();
+  animation-name: generalDisappearAnimation;
+}
+
+.pageTitle {
+  animation-name: pageTitleAnimation;
+  animation-duration: 0.5s;
+}
+
+.pageTitle2 {
+  animation-name: pageTitleAnimation2;
+  animation-duration: 0.5s;
+}
+
+.navBtn {
+  animation-name: navBtnAnimation;
+  animation-duration: 0.5s;
+  animation-fill-mode: after;
+}
+
+#certModeButton {
+  opacity: 0;
+  animation-name: clockMove2;
+  animation-duration: 0.5s;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+.generalAppearAnimation {
+  animation-name: generalAppearAnimation;
+  /* animation-delay: 1s; */
+  animation-timing-function: linear;
+  animation-timeline: view(200px 200px);
+}
+
+.generalDisappearAnimation {
+  animation-name: generalDisappearAnimation;
+  /* animation-delay: 1s; */
+  animation-timing-function: linear;
+  animation-timeline: view();
+  animation-fill-mode: both;
+}
+
+.generalDisappearAnimation2 {
+  animation-name: generalDisappearAnimation2;
+  /* animation-delay: 1s; */
+  animation-timing-function: linear;
+  animation-timeline: view(200px 200px);
+  animation-fill-mode: both;
+}
+
+.arcadeAppearAnimation {
+  animation-name: arcadeAppearAnimation;
+  animation-timing-function: linear;
+  animation-timeline: view(200px 400px);
+  animation-fill-mode: both;
+}
+
+.aboutPara {
+  animation-name: generalAppearAnimation;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+.aboutPara2 {
+  animation-name: generalAppearAnimation2;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+.aboutBtn {
+  animation-name: generalAppearAnimation;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+  opacity: 0;
 }

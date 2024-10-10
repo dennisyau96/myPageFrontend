@@ -52,7 +52,7 @@ function DiceRoller() {
   }
 
   return (
-    <div className=" border-gray-600 border-1 rounded-md px-2 py-3 max-w-96 duration-300 hover:transition-all ease-in-out hover:shadow-lg hover:shadow-sky-300 bg-opacity-90 inline-block">
+    <div className=" border-gray-600 border-1 rounded-md px-2 py-3 max-w-96 RLADAnimation hover:transition-all ease-in-out hover:shadow-lg hover:shadow-sky-300 bg-opacity-90 inline-block">
       <h2 className="mb-3 text-xl  text-white">Dice Roller</h2>
       <div className="flex flex-auto justify-center items-center ease-in-out ">
         <button

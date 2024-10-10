@@ -24,7 +24,7 @@ function SkillCard({ content, remarks }) {
 
   return (
     <div
-      className="bg-gray-900 rounded-md cursor-pointer w-auto text-gray-100 text-sm content-center px-3 py-1  text-center  hover:transition-all hover:duration-300 hover:shadow-lg hover:shadow-sky-300 h-auto hover:text-white  ease-in-out transition-all duration-500  "
+      className="skillCardDiv bg-gray-900 rounded-md cursor-pointer w-auto text-gray-100 text-sm content-center px-3 py-1  text-center  hover:transition-all hover:duration-300 hover:shadow-lg hover:shadow-sky-300 h-auto hover:text-white  ease-in-out transition-all duration-500  "
       onClick={() => {
         toggleDisplay();
       }}

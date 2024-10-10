@@ -30,7 +30,7 @@ function Education() {
   return (
     <>
       <div className="">
-        <h1 className="font-bold text-3xl my-4 text-center h-full theme4font">
+        <h1 className="font-bold text-3xl my-4 text-center h-full theme4font pageTitle">
           Education
         </h1>
 

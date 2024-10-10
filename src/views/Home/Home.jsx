@@ -16,19 +16,20 @@ import RestaurantDecide from "../../component/Arcade/RestaurantDecide/Restaurant
 export default function Home() {
   // const [deckUrl, setDeckUrl] = useState("../Arcade/CardShuffle/img");
 
-  // useEffect(() => {
-  //   // scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    // scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="w-100 justify-center justify-items-center text-center">
       <LandingPage />
       <div className="text-center w-100 " id="homeStart">
         <div className="h-100 " id="homeIntro">
-          <h1 className="font-bold text-3xl mb-10 text-center justify-center theme4font pt-10 ">
+          <h1 className="font-bold text-3xl mb-10 text-center justify-center theme4font pt-10 homeNameTitle">
             Dennis, Ming Leuk YAU
           </h1>
-          <p className="font-bold my-2 text-lg theme2font">
+
+          <p className="font-bold my-2 text-lg theme2font homeTitleTitle">
             Software Developer | Web Developer | IT | Data
             <br />
           </p>
@@ -40,8 +41,12 @@ export default function Home() {
               my study, I found myself being interested in web and software
               development. I am trying my best to learn different coding and
               programming skills and technology to prepare myself to become a
-              <span className="text-sky-300"> Web Developer</span>, or any other
-              tech-related positions. Please feel free to leave a comment below.
+              <span className="text-sky-300 arcadeAppearAnimation">
+                {" "}
+                Web Developer
+              </span>
+              , or any other tech-related positions. Please feel free to leave a
+              comment below.
             </p>
           </div>
 
@@ -50,7 +55,7 @@ export default function Home() {
             className="justify-center justify-items-center text-center my-4 w-100"
           >
             <button
-              className=" m-3 btn theme4font border-white hover:border-sky-200 hover:shadow-lg border-0.5 hover:shadow-sky-700 hover:bg-slate-600 hover:text-slate-100 transition-all ease-in-out"
+              className="  generalDisappearAnimation2 m-3 btn theme4font border-white hover:border-sky-200 hover:shadow-lg border-0.5 hover:shadow-sky-700 hover:bg-slate-600 hover:text-slate-100 transition-all ease-in-out"
               data-bs-toggle="modal"
               data-bs-target="#commentModal"
               type="button"
@@ -67,7 +72,7 @@ export default function Home() {
                 <div className="modal-content bg-slate-600">
                   <button
                     type="button"
-                    className="btn-close p-2 text-white bg-white opacity-30 transition-all ease-in-out duration-500"
+                    className="generalDisappearAnimation2 btn-close p-2 text-white bg-white opacity-30 transition-all ease-in-out duration-500"
                     aria-label="close"
                     data-bs-dismiss="modal"
                   />
@@ -76,7 +81,7 @@ export default function Home() {
               </div>
             </div>
             <span className="block text-center text-gray-500">or</span>
-            <span className="block justify-center text-center">
+            <span className="block justify-center text-center generalDisappearAnimation2">
               <EmailButton />
             </span>
           </div>
@@ -91,7 +96,7 @@ export default function Home() {
         </div>
 
         <div
-          className=" justify-center justify-items-center text-center bg-black w-screen block h-100  "
+          className=" arcadeAppearAnimation justify-center justify-items-center text-center bg-black w-screen block h-100  "
           id="arcadeDiv"
         >
           <a
@@ -108,15 +113,13 @@ export default function Home() {
           </span>
           <div className=" justify-center justify-items-center justify-content-center text-center rounded-md p-3  flex  ">
             <div
-              className="p-5 grid text-center justify-items-center justify-center justify-content-center hover:transition-all hover:duration-300 gap-4   border-2 border-slate-400  max-w-3/4  overflow-y-auto h-96 "
+              className="p-5 grid text-center justify-items-center justify-center justify-content-center hover:transition-all hover:duration-300 gap-4   border-2 border-slate-400    overflow-y-auto  "
               id="homeArcadeDiv"
             >
               <div className="">
                 <DiceRoller />
               </div>
-              <div className="">
-                <NumberGuessing />
-              </div>
+              <div className="">{/* <NumberGuessing /> */}</div>
               <div className="">
                 <Counter />
               </div>
