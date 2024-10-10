@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 
 function NumberGuessing() {
   const [lifeCount, setLifeCount] = useState(3);
-  const [attempt, setAttempt] = useState();
+  const [attempt, setAttempt] = useState(null);
   const [safe, setSafe] = useState(false);
   const [answer, setAnswer] = useState();
   const [ended, setEnded] = useState(false);
@@ -45,35 +45,40 @@ function NumberGuessing() {
         toast.error(
           `Your attempt is too big. Please pick a number within ${downRange} and ${upRange}`
         );
-      } else if (attempt < downRange) {
+        setAttempt((p) => null);
+      }
+
+      //
+      else if (attempt < downRange) {
         toast.error(
           `Your attempt is too small. Please pick a number within ${downRange} and ${upRange}`
         );
+        setAttempt((p) => null);
       }
       //no input
-      else if (attempt == null) {
+      else if (attempt == null || attempt == "") {
         toast.error(`No input.`);
       }
 
       //in range
-      else if (attempt <= upRange && attempt >= downRange) {
+      else if (attempt > downRange && attempt < upRange) {
         //correct
-        if (attempt == answer) {
+        if (attempt === answer) {
           setEnded(true);
           setSafe(true);
         }
         //incorrect
         else if (attempt != answer) {
           //smaller than answer
-          if (attempt < answer) {
-            setDownRange(attempt);
+          if (attempt < answer && attempt >= downRange) {
+            setDownRange((p) => attempt);
             toast.error("Wrong number");
-          } else if (attempt > answer) {
-            setUpRange(attempt);
+          } else if (attempt > answer && attempt <= upRange) {
+            setUpRange((p) => attempt);
             toast.error("Wrong number");
           }
           setLifeCount((p) => p - 1);
-          if (lifeCount === 0) {
+          if (lifeCount === 1) {
             setEnded(true);
             setExploded(true);
             setSafe(false);
@@ -95,7 +100,7 @@ function NumberGuessing() {
       </p>
       <p className="my-3">{" ❤️ ".repeat(lifeCount)}</p>
       {/* testing display */}
-      <p className="text-red-300 hidden ">
+      <p className="text-red-300  ">
         ans:{answer}| life:{lifeCount}
         <br></br>
         Down:{downRange}
@@ -117,6 +122,7 @@ function NumberGuessing() {
               onChange={(e) => setAttempt(e.target.value)}
               className="form-control border-sky-300 "
               value={attempt}
+              type="number"
             ></input>
           </div>
           <div className="text-sm text-gray-400 rounded-lg mt-2 pt-2 max-w-sm">
