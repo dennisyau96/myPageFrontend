@@ -196,7 +196,7 @@
     scale: 1.05;
   } */
   100% {
-    scale: 1.2;
+    scale: 1.3;
   }
 }
 
@@ -285,38 +285,145 @@
 @keyframes generalAppearAnimation {
   0% {
     transform: translateY(-60px);
-    opacity: 2 0%;
+    opacity: 0%;
     scale: 0.8;
   }
-  50% {
+
+  100% {
     transform: translateY(0px);
     opacity: 100%;
     scale: 1;
   }
+}
+
+@keyframes generalAppearAnimation2 {
+  0% {
+    transform: translateY(20px);
+    opacity: 0%;
+    scale: 0.7;
+  }
+
   100% {
-    transform: translateY(-60px);
+    transform: translateY(0px);
+    opacity: 100%;
+    scale: 1;
+  }
+}
+
+@keyframes cardAppearAnimation {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0%;
+    scale: 0.9;
+  }
+
+  20% {
+    transform: translateY(0px);
+    opacity: 80%;
+    scale: 1;
+  }
+  70% {
+    transform: translateY(0px);
+    opacity: 100%;
+    scale: 1;
+  }
+
+  100% {
+    transform: translateY(20px);
+    opacity: 0%;
+    scale: 0.9;
+  }
+}
+@keyframes skillCardAppearAnimation {
+  0% {
+    transform: translateY(-20px);
+    opacity: 70%;
+    scale: 0.9;
+  }
+
+  50% {
+  }
+  /* 
+  20% {
+    transform: translateY(0px);
+    opacity: 80%;
+    scale: 1;
+  }
+  70% {
+    transform: translateY(0px);
+    opacity: 100%;
+    scale: 1;
+  } */
+
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+    scale: 1;
+  }
+}
+
+@keyframes generalDisappearAnimation {
+  0% {
+    transform: translateY(0px);
+    opacity: 100%;
+    scale: 1;
+  }
+  70% {
+    transform: translateY(0px);
+    opacity: 100%;
+    scale: 1;
+  }
+
+  100% {
+    transform: translateY(30px);
     opacity: 20%;
     scale: 0.9;
   }
 }
 
-@keyframes homeTitleTileAnimation {
+@keyframes generalDisappearAnimation2 {
   0% {
-    transform: translateY(-50px);
-    opacity: 20%;
-    scale: 0.8;
+    transform: translateY(0px);
+    opacity: 100%;
+    scale: 1;
   }
-
-  40% {
+  70% {
     transform: translateY(0px);
     opacity: 100%;
     scale: 1;
   }
 
   100% {
+    transform: translateY(10px);
+    opacity: 20%;
+    scale: 0.9;
+  }
+}
+
+@keyframes arcadeAppearAnimation {
+  0% {
+    transform: translateY(-60px);
+    opacity: 20%;
+    scale: 0.8;
+  }
+
+  20% {
     transform: translateY(0px);
-    opacity: 56%;
+    opacity: 100%;
     scale: 1;
+  }
+}
+@keyframes homeTitleTileAnimation {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0%;
+    scale: 0.8;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+    scale: 1.2;
   }
 }
 
@@ -328,21 +435,76 @@
     top: 0px;
   }
 }
+
+@keyframes generalLRAppDisappAnimation {
+  0% {
+    transform: translateX(50px);
+    opacity: 50%;
+  }
+
+  50% {
+    transform: translateX(0px);
+    opacity: 100%;
+  }
+  /* 15% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+
+  85% {
+    transform: translateX(0);
+    opacity: 100%;
+  } */
+  100% {
+    transform: translateX(-50px);
+    opacity: 50%;
+  }
+}
+@keyframes generalRLAppDisappAnimation {
+  0% {
+    transform: translateX(-1vw);
+    opacity: 50%;
+  }
+  15% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+
+  85% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+  100% {
+    transform: translateX(1vw);
+    opacity: 50%;
+  }
+}
 /* ------------------- class ------------------- */
+
+.LRADAnimation {
+  animation-name: generalLRAppDisappAnimation;
+  animation-timeline: view(50px 50px);
+  animation-fill-mode: both;
+}
+.RLADAnimation {
+  animation-name: generalRLAppDisappAnimation;
+  animation-timeline: view(50px 50px);
+  animation-fill-mode: both;
+}
 .homeNameTitle {
   animation-name: navBtnAnimation;
-  animation-timeline: view();
+  animation-timeline: view(200px 200px);
   animation-fill-mode: both;
 }
 #galleryQR {
   animation-name: galleryQRAnimation;
-  animation-timeline: view();
+  animation-timeline: view(500px 400px);
   opacity: 0%;
   transform: translateY(200px);
 }
 .eduCardDiv {
-  animation-name: generalAppearAnimation;
-  animation-timing-function: ease-in-out;
+  animation-name: cardAppearAnimation;
+  animation-timing-function: linear;
   animation-timeline: view();
   /* animation-duration: 0.4s; */
   /* animation-delay: 1s; */
@@ -353,35 +515,38 @@
   animation-name: homeTitleTileAnimation;
   animation-timing-function: linear;
 
-  animation-timeline: view();
+  animation-timeline: view(500px 200px);
   animation-fill-mode: both;
   /* animation-duration: 0.4s; */
   /* animation-delay: 1s; */
 }
 
 .expCardDiv {
-  animation-name: generalAppearAnimation;
+  animation-name: cardAppearAnimation;
   /* animation-delay: 1s; */
   animation-timing-function: linear;
-  animation-timeline: view();
-  animation-fill-mode: both;
+  animation-timeline: view(200px 200px);
   animation-fill-mode: both;
 }
 
 .projectCardDiv {
-  animation-name: cardDivAnimation;
-  animation-timing-function: scroll();
-  animation-duration: 0.6s;
-  animation-delay: 0s;
+  animation-name: cardAppearAnimation;
+  animation-timeline: view(200px 200px);
   animation-fill-mode: both;
 }
 
+.skillCardDiv {
+  animation-name: skillCardAppearAnimation;
+  animation-fill-mode: both;
+  animation-duration: 0.6s;
+}
 .skillCardDiv:hover {
   animation-name: cardDivAnimation4;
   animation-timing-function: ease-in-out;
-  animation-duration: 0.3s;
-  animation-delay: 0s;
+  animation-duration: 0.2s;
   animation-fill-mode: both;
+  transition: all;
+  transition-duration: 0.5s;
 }
 
 #headerDiv {
@@ -390,11 +555,18 @@
 #headerTitle {
   animation-name: clockMove2;
 }
-
+/* 
 #dClockDiv {
   animation-name: clockMove2;
   animation-duration: 0.8s;
   background-color: black;
+} */
+
+#dClockDiv {
+  animation-name: generalDisappearAnimation;
+  animation-timeline: view(200px 200px);
+  animation-timing-function: linear;
+  animation-fill-mode: both;
 }
 
 .shrinkNavBtn {
@@ -429,10 +601,10 @@
 }
 
 .galleryCarouselDiv {
-  animation-duration: 0.5s;
   /* animation-delay: 0.3s; */
-  animation-fill-mode: both;
-  animation-name: cardDivAnimation3;
+  animation-timing-function: linear;
+  animation-timeline: view();
+  animation-name: generalDisappearAnimation;
 }
 
 .pageTitle {
@@ -457,4 +629,59 @@
   animation-duration: 0.5s;
   animation-delay: 0.2s;
   animation-fill-mode: both;
+}
+
+.generalAppearAnimation {
+  animation-name: generalAppearAnimation;
+  /* animation-delay: 1s; */
+  animation-timing-function: linear;
+  animation-timeline: view(200px 200px);
+}
+
+.generalDisappearAnimation {
+  animation-name: generalDisappearAnimation;
+  /* animation-delay: 1s; */
+  animation-timing-function: linear;
+  animation-timeline: view();
+  animation-fill-mode: both;
+}
+
+.generalDisappearAnimation2 {
+  animation-name: generalDisappearAnimation2;
+  /* animation-delay: 1s; */
+  animation-timing-function: linear;
+  animation-timeline: view(200px 200px);
+  animation-fill-mode: both;
+}
+
+.arcadeAppearAnimation {
+  animation-name: arcadeAppearAnimation;
+  animation-timing-function: linear;
+  animation-timeline: view(200px 400px);
+  animation-fill-mode: both;
+}
+
+.aboutPara {
+  animation-name: generalAppearAnimation;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+.aboutPara2 {
+  animation-name: generalAppearAnimation2;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+.aboutBtn {
+  animation-name: generalAppearAnimation;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+  opacity: 0;
 }

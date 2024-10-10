@@ -55,7 +55,7 @@ function Certificate() {
   return (
     <>
       <div className="text-center justify-center container justify-items-center justify-self-center grid grid-col-1 w-auto ">
-        <h1 className="font-bold text-3xl my-4 text-center theme4font">
+        <h1 className="font-bold text-3xl my-4 text-center theme4font pageTitle">
           Certificate
         </h1>
 

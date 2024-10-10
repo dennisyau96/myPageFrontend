@@ -41,8 +41,12 @@ export default function Home() {
               my study, I found myself being interested in web and software
               development. I am trying my best to learn different coding and
               programming skills and technology to prepare myself to become a
-              <span className="text-sky-300"> Web Developer</span>, or any other
-              tech-related positions. Please feel free to leave a comment below.
+              <span className="text-sky-300 arcadeAppearAnimation">
+                {" "}
+                Web Developer
+              </span>
+              , or any other tech-related positions. Please feel free to leave a
+              comment below.
             </p>
           </div>
 
@@ -51,7 +55,7 @@ export default function Home() {
             className="justify-center justify-items-center text-center my-4 w-100"
           >
             <button
-              className=" m-3 btn theme4font border-white hover:border-sky-200 hover:shadow-lg border-0.5 hover:shadow-sky-700 hover:bg-slate-600 hover:text-slate-100 transition-all ease-in-out"
+              className="  generalDisappearAnimation2 m-3 btn theme4font border-white hover:border-sky-200 hover:shadow-lg border-0.5 hover:shadow-sky-700 hover:bg-slate-600 hover:text-slate-100 transition-all ease-in-out"
               data-bs-toggle="modal"
               data-bs-target="#commentModal"
               type="button"
@@ -68,7 +72,7 @@ export default function Home() {
                 <div className="modal-content bg-slate-600">
                   <button
                     type="button"
-                    className="btn-close p-2 text-white bg-white opacity-30 transition-all ease-in-out duration-500"
+                    className="generalDisappearAnimation2 btn-close p-2 text-white bg-white opacity-30 transition-all ease-in-out duration-500"
                     aria-label="close"
                     data-bs-dismiss="modal"
                   />
@@ -77,7 +81,7 @@ export default function Home() {
               </div>
             </div>
             <span className="block text-center text-gray-500">or</span>
-            <span className="block justify-center text-center">
+            <span className="block justify-center text-center generalDisappearAnimation2">
               <EmailButton />
             </span>
           </div>
@@ -92,7 +96,7 @@ export default function Home() {
         </div>
 
         <div
-          className=" justify-center justify-items-center text-center bg-black w-screen block h-100  "
+          className=" arcadeAppearAnimation justify-center justify-items-center text-center bg-black w-screen block h-100  "
           id="arcadeDiv"
         >
           <a
