@@ -98,7 +98,7 @@ function DiceRoller() {
         {rolling ? (
           <div id="rollingDiv">
             <p className="text-white">
-              The dice are beening rolled...{" "}
+              The dice are being rolled...{" "}
               <svg
                 className="animate-spin h-5 w-5 mr-3"
                 viewBox="0 0 24 24"

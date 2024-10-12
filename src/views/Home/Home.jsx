@@ -21,7 +21,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="w-100 justify-center justify-items-center text-center">
+    <div className="w-100 justify-center justify-items-center text-center ">
       <LandingPage />
       <div className="text-center w-100 " id="homeStart">
         <div className="h-100 " id="homeIntro">
@@ -29,14 +29,14 @@ export default function Home() {
             Dennis, Ming Leuk YAU
           </h1>
 
-          <p className="font-bold my-2 text-lg theme2font homeTitleTitle">
+          <p className="font-bold my-2 text-lg theme2font homeTitleTitle justify-center inline-block">
             Software Developer | Web Developer | IT | Data
             <br />
           </p>
 
           <img className="w-full h-full"></img>
           <div className="container block  justify-center">
-            <p className="text-justify  theme3font max-w-screen-sm container">
+            <p className=" homeIntroPara text-justify  theme3font max-w-screen-sm container">
               I graduated from Douglas College in August 2024, Vancouver. During
               my study, I found myself being interested in web and software
               development. I am trying my best to learn different coding and
@@ -55,7 +55,7 @@ export default function Home() {
             className="justify-center justify-items-center text-center my-4 w-100"
           >
             <button
-              className="  generalDisappearAnimation2 m-3 btn theme4font border-white hover:border-sky-200 hover:shadow-lg border-0.5 hover:shadow-sky-700 hover:bg-slate-600 hover:text-slate-100 transition-all ease-in-out"
+              className="  LRADAnimation m-3 btn theme4font border-white hover:border-sky-200 hover:shadow-lg border-0.5 hover:shadow-sky-700 hover:bg-slate-600 hover:text-slate-100 transition-all ease-in-out"
               data-bs-toggle="modal"
               data-bs-target="#commentModal"
               type="button"
@@ -81,7 +81,7 @@ export default function Home() {
               </div>
             </div>
             <span className="block text-center text-gray-500">or</span>
-            <span className="block justify-center text-center generalDisappearAnimation2">
+            <span className="block justify-center text-center RLADAnimation">
               <EmailButton />
             </span>
           </div>
@@ -116,14 +116,14 @@ export default function Home() {
               className="p-5 grid text-center justify-items-center justify-center justify-content-center hover:transition-all hover:duration-300 gap-4   border-2 border-slate-400    overflow-y-auto  "
               id="homeArcadeDiv"
             >
-              <div className="">
+              <div className="RLADAnimation">
                 <DiceRoller />
               </div>
-              <div className="">{/* <NumberGuessing /> */}</div>
-              <div className="">
+              <div className="RLADAnimation">{/* <NumberGuessing /> */}</div>
+              <div className="RLADAnimation">
                 <Counter />
               </div>
-              <div className="">
+              <div className="RLADAnimation">
                 <RestaurantDecide />
               </div>
 

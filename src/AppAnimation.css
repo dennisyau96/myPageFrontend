@@ -1,4 +1,5 @@
 /* ------------------- animation ------------------- */
+
 @keyframes headerTitleMove {
   0% {
     left: -20vw;
@@ -292,7 +293,7 @@
   100% {
     transform: translateY(0px);
     opacity: 100%;
-    scale: 1;
+    scale: 1.2;
   }
 }
 
@@ -313,7 +314,7 @@
 @keyframes cardAppearAnimation {
   0% {
     transform: translateY(-20px);
-    opacity: 0%;
+    opacity: 20%;
     scale: 0.9;
   }
 
@@ -330,7 +331,7 @@
 
   100% {
     transform: translateY(20px);
-    opacity: 0%;
+    opacity: 20%;
     scale: 0.9;
   }
 }
@@ -387,7 +388,7 @@
     opacity: 100%;
     scale: 1;
   }
-  70% {
+  50% {
     transform: translateY(0px);
     opacity: 100%;
     scale: 1;
@@ -397,6 +398,25 @@
     transform: translateY(10px);
     opacity: 20%;
     scale: 0.9;
+  }
+}
+
+@keyframes generalAppearAnimation3 {
+  0% {
+    transform: translateY(20px);
+    opacity: 50%;
+    scale: 0.7;
+  }
+  50% {
+    transform: translateY(0px);
+    opacity: 100%;
+    scale: 1;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+    scale: 1;
   }
 }
 
@@ -428,43 +448,22 @@
 }
 
 @keyframes galleryQRAnimation {
-  to {
+  0% {
+    opacity: 0%;
+    transform: translateY(20vh);
+  }
+  70% {
     opacity: 100%;
     transform: translateY(0);
-
-    top: 0px;
   }
 }
 
 @keyframes generalLRAppDisappAnimation {
   0% {
-    transform: translateX(50px);
-    opacity: 50%;
+    transform: translateX(-10px);
+    opacity: 0%;
   }
 
-  50% {
-    transform: translateX(0px);
-    opacity: 100%;
-  }
-  /* 15% {
-    transform: translateX(0);
-    opacity: 100%;
-  }
-
-  85% {
-    transform: translateX(0);
-    opacity: 100%;
-  } */
-  100% {
-    transform: translateX(-50px);
-    opacity: 50%;
-  }
-}
-@keyframes generalRLAppDisappAnimation {
-  0% {
-    transform: translateX(-1vw);
-    opacity: 50%;
-  }
   15% {
     transform: translateX(0);
     opacity: 100%;
@@ -475,213 +474,361 @@
     opacity: 100%;
   }
   100% {
-    transform: translateX(1vw);
-    opacity: 50%;
+    transform: translateX(10vw);
+    opacity: 0%;
+  }
+}
+@keyframes generalRLAppDisappAnimation {
+  0% {
+    transform: translateX(10px);
+    opacity: 0%;
+  }
+
+  15% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+
+  85% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+  100% {
+    transform: translateX(-10vw);
+    opacity: 0%;
+  }
+}
+@keyframes footerAnimation {
+  0% {
+    opacait: 100%;
+    transform: translateY(-70px);
+    scale: 0.7;
+  }
+  100% {
+    opacait: 100%;
+  }
+}
+
+@keyframes galleryIntroPageAnimation {
+  0% {
+    scale: 1;
+    opacity: 100%;
+  }
+
+  100% {
+    scale: 2;
+    opacity: 0%;
+    transform: translateY(100px);
+  }
+}
+
+@keyframes galleryIntroParaAnimation {
+  0% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes landingPageAnimation {
+  0% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+    scale: 2;
   }
 }
 /* ------------------- class ------------------- */
+@supports (animation-timeline: view(), scroll()) {
+  #landingPage {
+    background-image: url("../src//assets/gallery/picself2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 90vh;
 
-.LRADAnimation {
-  animation-name: generalLRAppDisappAnimation;
-  animation-timeline: view(50px 50px);
-  animation-fill-mode: both;
-}
-.RLADAnimation {
-  animation-name: generalRLAppDisappAnimation;
-  animation-timeline: view(50px 50px);
-  animation-fill-mode: both;
-}
-.homeNameTitle {
-  animation-name: navBtnAnimation;
-  animation-timeline: view(200px 200px);
-  animation-fill-mode: both;
-}
-#galleryQR {
-  animation-name: galleryQRAnimation;
-  animation-timeline: view(500px 400px);
-  opacity: 0%;
-  transform: translateY(200px);
-}
-.eduCardDiv {
-  animation-name: cardAppearAnimation;
-  animation-timing-function: linear;
-  animation-timeline: view();
-  /* animation-duration: 0.4s; */
-  /* animation-delay: 1s; */
-  animation-fill-mode: both;
-}
+    animation-name: landingPageAnimation;
+    animation-timeline: view();
+    animation-range: exit;
+    animation-fill-mode: both;
+  }
 
-.homeTitleTitle {
-  animation-name: homeTitleTileAnimation;
-  animation-timing-function: linear;
+  #footerDiv > div {
+    animation-name: footerAnimation;
+    animation-timeline: scroll();
+    animation-timing-function: linear;
+  }
+  .LRADAnimation {
+    animation-name: generalLRAppDisappAnimation;
+    animation-timeline: view(50px 50px);
+    animation-fill-mode: both;
+  }
+  .RLADAnimation {
+    animation-name: generalRLAppDisappAnimation;
+    animation-timeline: view(50px 50px);
+    animation-fill-mode: both;
+  }
+  .homeNameTitle {
+    animation-name: navBtnAnimation;
+    animation-timeline: view(200px 200px);
+    animation-fill-mode: both;
+  }
+  #galleryQR {
+    animation-name: galleryQRAnimation;
+    animation-timeline: view();
+    animation-fill-mode: both;
+    /* animation-range: entry; */
+    opacity: 0%;
+    /* transform: translateY(200px); */
+  }
+  .eduCardDiv {
+    animation-name: cardAppearAnimation;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    /* animation-duration: 0.4s; */
+    /* animation-delay: 1s; */
+    animation-fill-mode: both;
+  }
 
-  animation-timeline: view(500px 200px);
-  animation-fill-mode: both;
-  /* animation-duration: 0.4s; */
-  /* animation-delay: 1s; */
-}
+  .homeIntroPara {
+    animation-name: generalAppearAnimation3;
+    animation-timing-function: linear;
+    animation-range: entry exit;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+    animation-timeline: view(600px 10px);
+    animation-fill-mode: both;
+  }
 
-.expCardDiv {
-  animation-name: cardAppearAnimation;
-  /* animation-delay: 1s; */
-  animation-timing-function: linear;
-  animation-timeline: view(200px 200px);
-  animation-fill-mode: both;
-}
+  .homeTitleTitle {
+    max-width: 90vw;
+    flex-wrap: wrap;
+    flex: auto;
+    animation-name: homeTitleTileAnimation;
+    animation-timing-function: linear;
+    animation-range: normal;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+    animation-timeline: view(100px 100px);
+    animation-fill-mode: both;
+    /* animation-duration: 0.4s; */
+    /* animation-delay: 1s; */
+  }
 
-.projectCardDiv {
-  animation-name: cardAppearAnimation;
-  animation-timeline: view(200px 200px);
-  animation-fill-mode: both;
-}
+  .expCardDiv {
+    animation-name: cardAppearAnimation;
+    /* animation-delay: 1s; */
+    animation-timing-function: linear;
+    animation-timeline: view(200px 200px);
+    animation-fill-mode: both;
+  }
 
-.skillCardDiv {
-  animation-name: skillCardAppearAnimation;
-  animation-fill-mode: both;
-  animation-duration: 0.6s;
-}
-.skillCardDiv:hover {
-  animation-name: cardDivAnimation4;
-  animation-timing-function: ease-in-out;
-  animation-duration: 0.2s;
-  animation-fill-mode: both;
-  transition: all;
-  transition-duration: 0.5s;
-}
+  .projectCardDiv {
+    animation-name: cardAppearAnimation;
+    animation-timeline: view(200px 200px);
+    animation-fill-mode: both;
+  }
 
-#headerDiv {
-  animation-name: clockMove2;
-}
-#headerTitle {
-  animation-name: clockMove2;
-}
-/* 
-#dClockDiv {
-  animation-name: clockMove2;
-  animation-duration: 0.8s;
-  background-color: black;
-} */
+  .skillCardDiv:hover {
+    animation-name: cardDivAnimation4;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.2s;
+    animation-fill-mode: both;
+    transition: all;
+    transition-duration: 0.5s;
+  }
 
-#dClockDiv {
-  animation-name: generalDisappearAnimation;
-  animation-timeline: view(200px 200px);
-  animation-timing-function: linear;
-  animation-fill-mode: both;
-}
+  #headerDiv {
+    animation-name: clockMove2;
+  }
+  #headerTitle {
+    animation-name: clockMove2;
+  }
 
-.shrinkNavBtn {
-  animation-name: shrinkNavBtnMove;
-  animation-duration: 0.5s;
-}
-#introBox {
-  position: relative;
-  animation-name: introBoxMove2;
-  animation-duration: 0.8s;
-  background-color: black;
-}
+  #dClockDiv {
+    animation-name: generalDisappearAnimation;
+    animation-timeline: view(100px 200px);
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+    background-color: rgba(22, 4, 4, 0.186);
+    padding: 5px;
 
-.certCarousel {
-  animation-name: cardDivAnimation3;
-  animation-timing-function: linear;
-  /* animation-timeline: scroll(); */
-  animation-duration: 0.3s;
-  animation-delay: 0s;
-}
+    /* mask-image: radial-gradient(circle, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    -webkit-mask-image: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0)
+    ); */
+  }
 
-.scrollIndicator {
-  height: 0.2vh;
-  top: 0px;
-  z-index: 100;
-  background-color: white;
-  width: 100%;
-  animation-name: scrollIndicator;
-  animation-timeline: scroll();
-  scale: 0 1;
-  animation-timing-function: linear;
-}
+  .shrinkNavBtn {
+    animation-name: shrinkNavBtnMove;
+    animation-duration: 0.5s;
+  }
+  #introBox {
+    position: relative;
+    animation-name: introBoxMove2;
+    animation-duration: 0.8s;
+    background-color: black;
+  }
 
-.galleryCarouselDiv {
-  /* animation-delay: 0.3s; */
-  animation-timing-function: linear;
-  animation-timeline: view();
-  animation-name: generalDisappearAnimation;
-}
+  .certCarousel {
+    animation-name: cardDivAnimation3;
+    animation-timing-function: linear;
+    /* animation-timeline: scroll(); */
+    animation-duration: 0.3s;
+    animation-delay: 0s;
+  }
 
-.pageTitle {
-  animation-name: pageTitleAnimation;
-  animation-duration: 0.5s;
-}
+  .scrollIndicator {
+    height: 0.2vh;
+    top: 0px;
+    z-index: 100;
+    background-color: white;
+    width: 100%;
+    animation-name: scrollIndicator;
+    animation-timeline: scroll();
+    scale: 0 1;
+    animation-timing-function: linear;
+  }
 
-.pageTitle2 {
-  animation-name: pageTitleAnimation2;
-  animation-duration: 0.5s;
-}
+  .galleryCarouselDiv {
+    /* animation-delay: 0.3s; */
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry;
+    animation-name: generalAppearAnimation;
+    max-width: 1000px;
+    max-height: 70vh;
+    animation-fill-mode: both;
+  }
 
-.navBtn {
-  animation-name: navBtnAnimation;
-  animation-duration: 0.5s;
-  animation-fill-mode: after;
-}
+  #galleryIntroPage {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    transform-origin: center;
 
-#certModeButton {
-  opacity: 0;
-  animation-name: clockMove2;
-  animation-duration: 0.5s;
-  animation-delay: 0.2s;
-  animation-fill-mode: both;
-}
+    animation-name: landingPageAnimation;
+    animation-timeline: view(00px);
+    animation-range: exit;
+    animation-fill-mode: both;
+    background-image: url("../src/assets/gallery/picSelf.JPG");
+    height: 80vh;
+    width: 100%;
+    /* background-attachment: scroll, local; */
 
-.generalAppearAnimation {
-  animation-name: generalAppearAnimation;
-  /* animation-delay: 1s; */
-  animation-timing-function: linear;
-  animation-timeline: view(200px 200px);
-}
+    /* 
+    background-repeat: no-repeat;
+    transform-origin: center;
+    background-position: center;
+    opacity: 100%;
+    animation-name: landingPageAnimation;
+    animation-timeline: view();
+    animation-range: normal;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    background-size: contain; */
+  }
 
-.generalDisappearAnimation {
-  animation-name: generalDisappearAnimation;
-  /* animation-delay: 1s; */
-  animation-timing-function: linear;
-  animation-timeline: view();
-  animation-fill-mode: both;
-}
+  .galleryIntroPara {
+    background-color: rgba(0, 0, 0, 0.512);
+    padding: 20px;
+    border-radius: 10px;
+    background-attachment: scroll();
+  }
 
-.generalDisappearAnimation2 {
-  animation-name: generalDisappearAnimation2;
-  /* animation-delay: 1s; */
-  animation-timing-function: linear;
-  animation-timeline: view(200px 200px);
-  animation-fill-mode: both;
-}
+  .pageTitle {
+    animation-name: pageTitleAnimation;
+    animation-duration: 0.5s;
+  }
 
-.arcadeAppearAnimation {
-  animation-name: arcadeAppearAnimation;
-  animation-timing-function: linear;
-  animation-timeline: view(200px 400px);
-  animation-fill-mode: both;
-}
+  .pageTitle2 {
+    animation-name: pageTitleAnimation2;
+    animation-duration: 0.5s;
+  }
 
-.aboutPara {
-  animation-name: generalAppearAnimation;
-  animation-duration: 0.8s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0.3s;
-  animation-fill-mode: both;
-}
+  .navBtn {
+    animation-name: navBtnAnimation;
+    animation-duration: 0.5s;
+    animation-fill-mode: after;
+  }
 
-.aboutPara2 {
-  animation-name: generalAppearAnimation2;
-  animation-duration: 0.8s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0.2s;
-  animation-fill-mode: both;
-}
+  #certModeButton {
+    opacity: 0;
+    animation-name: clockMove2;
+    animation-duration: 0.5s;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+  }
 
-.aboutBtn {
-  animation-name: generalAppearAnimation;
-  animation-duration: 0.8s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0.2s;
-  animation-fill-mode: both;
-  opacity: 0;
+  .generalAppearAnimation {
+    animation-name: generalAppearAnimation;
+    /* animation-delay: 1s; */
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry;
+  }
+
+  .generalDisappearAnimation {
+    animation-name: generalDisappearAnimation;
+    /* animation-delay: 1s; */
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-fill-mode: both;
+    animation-range-start: 200px;
+    animation-range-end: 100px;
+  }
+
+  .generalDisappearAnimation2 {
+    animation-name: generalDisappearAnimation2;
+    /* animation-delay: 1s; */
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: 100px exit;
+  }
+
+  .arcadeAppearAnimation {
+    animation-name: arcadeAppearAnimation;
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: normal;
+
+    animation-fill-mode: both;
+  }
+
+  .aboutPara {
+    animation-name: generalAppearAnimation;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
+  }
+
+  .aboutPara2 {
+    animation-name: generalAppearAnimation2;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+  }
+
+  .aboutBtn {
+    animation-name: generalAppearAnimation;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+    opacity: 0;
+  }
+
+  .listModeCertDiv {
+    animation-name: generalAppearAnimation;
+    animation-duration: 0.5s;
+    animation-delay: 0.2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+  }
 }

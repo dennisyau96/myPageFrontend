@@ -123,7 +123,7 @@ function Certificate() {
         ) : null}
 
         {!album ? (
-          <div className=" border-1  p-3 max-h-96 overflow-auto min-w-50 max-w-lg">
+          <div className=" border-1  p-3 max-h-96 overflow-auto min-w-50 max-w-lg listModeCertDiv">
             <span className="text-slate-600 text-sm">Please scroll down</span>
             <ul className="justify-center  border-white flex-row px-4 overflow-auto ">
               {certs.map((cert, i) => (

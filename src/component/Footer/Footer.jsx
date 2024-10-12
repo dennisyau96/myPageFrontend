@@ -4,7 +4,7 @@ import fbicon from "../../assets/icon/fbicon.svg";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-function Footer() {
+function Footer({ visitCount }) {
   const navigate = useNavigate();
   return (
     <div
@@ -66,6 +66,7 @@ function Footer() {
           </a>
         </div>
       </div>
+      <div className="text-gray-500 text-left ">{visitCount}</div>
     </div>
   );
 }

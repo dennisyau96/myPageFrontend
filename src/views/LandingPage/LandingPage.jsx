@@ -18,7 +18,7 @@ export default function LandingPage() {
         </div>
         <div
           id="introBox"
-          className="  text-center  place-content-center  content-center container w-60 h-60 border-white border-1 static hover:border-3 hover:border-gray-300 hover:shadow-2xl hover:shadow-sky-300 transition:all duration-300 ease-in-out"
+          className="  text-center  place-content-center  content-center container w-60 h-60  border-gray-400  border-1 static hover:border-3 hover:border-gray-300 hover:shadow-2xl hover:shadow-sky-300 transition:all duration-300 ease-in-out"
         >
           <h1 className="text-white">I am Dennis</h1>
           <span className="text-white">I am a Full Stack Developer.</span>

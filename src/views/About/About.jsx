@@ -11,8 +11,8 @@ function About() {
 
   return (
     <>
-      <div>
-        <h1 className="font-bold text-3xl my-4 text-center theme4font pageTitle">
+      <div className="aboutPageDiv">
+        <h1 className="font-bold text-3xl my-4 text-center theme4font pageTitle container">
           About me
         </h1>
         <span className="theme2font text-center container-fluid block max-w-screen-sm p-4 theme3font ">
