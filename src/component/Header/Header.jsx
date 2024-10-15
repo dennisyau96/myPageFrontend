@@ -8,24 +8,22 @@ function Header() {
     <>
       <div
         id="headerDiv"
-        className="  sticky-top inset-x-0 top-0 right-0 left-0 shadow-lg py-1 theme1 h-auto flex flex-wrap w-full opacity-90 animate__slideInDown"
+        className="sticky-top inset-x-0 top-0 right-0 left-0 shadow-lg  theme1 h-auto  w-full opacity-95 px-3 py-3 "
       >
-        <header id="header" className=" w-100">
-          <div className=" items-start block " id="headerTitle">
+        <header className=" flex-wrap block" id="header">
+          <div className="flex-wrap inline" id="headerTitle">
             <Link
               id="headerName"
-              className="text-white p-4  text-2xl hover:motion-reduce:animate-pulse cursor-pointer hover:no-underline pageTitle2"
+              className="text-white cursor-pointer inline p-3"
               to="/"
             >
               Dennis YAU
-              {/* <span className="text-sm">
-              The Simpliest Way to Demostrate my Web Development Experience and
-              Skills
-            </span> */}
             </Link>
+            <ShrinkNavBar />
           </div>
-          {/* <ShrinkNavBar /> */}
-          <Nav />
+          <div className="text-right block ">
+            <Nav />
+          </div>
         </header>
         <div className="scrollIndicator"></div>
       </div>

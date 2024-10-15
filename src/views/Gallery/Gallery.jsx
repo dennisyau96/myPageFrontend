@@ -91,25 +91,29 @@ export default function Gallery() {
 
   return (
     <>
-      <div className="text-center justify-center justify-items-center justify-self-center   ">
-        <h1 className="font-bold text-3xl my-4 theme4font pageTitle opacity-100">
-          Gallery
-        </h1>
-        <div
-          id="galleryIntroPage"
-          className="galleryIntroPage  block w-full  content-center align-middle  "
-        >
-          <span className="opacity-100 content-center align-middle inline-block galleryIntroPara  m-4 text-justify w-50 justify-center justify-items-center justify-self-center justify-content-lg-center text-white ">
+      <div className="text-center Xcenter ">
+        <h1 className="font-bold text-3xl my-4 theme4font ">Gallery</h1>
+        <div id="galleryIntroPage" className=" block content-center ">
+          <span
+            id="galleryIntroPara"
+            className="  align-middle inline-block galleryIntroPara m-4 Xcenter text-white "
+          >
             I am a photography hobbist. I started shooting photo since 2017. I
             was inspired by my co-worker at a conservation organization at that
             time. Pictures of wildlifes, landscape and street are my area of
             interest.
           </span>
+          <a
+            href="#galleryCarouselPage"
+            className=" block  scroll-smooth pb-auto inset-0 py-20"
+          >
+            <i className="fa fa-arrow-down mt-1 text-gray-500 text-3xl  hover:scale-120  cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce "></i>
+          </a>
         </div>
 
         <div
-          className="inline-block justify-center text-center justify-items-center "
-          id="galleryCarousel"
+          className="inline-block  text-center content-center align-middle "
+          id="galleryCarouselPage"
         >
           {/*carousel */}
           <div
@@ -126,6 +130,7 @@ export default function Gallery() {
                   src={photosSrc[index].pic}
                   className="d-block w-full  transition-all duration-300 ease-in-out galleryPhotoDiv "
                   alt=""
+                  id="galleryImg"
                 />
               </div>
               <button
@@ -160,10 +165,9 @@ export default function Gallery() {
           {/*carousel */}
         </div>
 
-        <div className="my-2 justify-center text-center pt-20" id="galleryQR">
+        <div className="  text-center content-center" id="galleryQRpage">
           <div className={styles.QRFrame}>
             <img
-              id=""
               className={styles.QRimg}
               alt="QR"
               src={qr}

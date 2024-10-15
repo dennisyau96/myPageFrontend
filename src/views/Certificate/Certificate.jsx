@@ -54,7 +54,7 @@ function Certificate() {
 
   return (
     <>
-      <div className="text-center justify-center container justify-items-center justify-self-center grid grid-col-1 w-auto ">
+      <div className="text-center Xcenter grid grid-col-1  ">
         <h1 className="font-bold text-3xl my-4 text-center theme4font pageTitle">
           Certificate
         </h1>
@@ -74,14 +74,14 @@ function Certificate() {
           ) : (
             <div
               id="carouselExampleAutoplaying"
-              className=" certCarousel carousel slide  w-auto my-4 text-center justify-center border-2 border-gray-300 py-4  hover:shadow-sky-300 hover:shadow-xl transition-all duration-500 ease-in-out"
+              className=" certCarousel carousel slide my-4 text-center justify-center border-2 border-gray-300 py-4  hover:shadow-sky-300 hover:shadow-xl transition-all duration-500 ease-in-out"
               data-bs-ride="carousel"
             >
               <div className="carousel-inner justify-center text-center">
                 <div className="carousel-item active justify-center text-center">
                   <img
                     src={certificates[index].cert}
-                    className="d-block w-100"
+                    className="d-block "
                     alt={certificates[index].title}
                     // onClick={() => openPDF([index])}
                   />
@@ -123,7 +123,7 @@ function Certificate() {
         ) : null}
 
         {!album ? (
-          <div className=" border-1  p-3 max-h-96 overflow-auto min-w-50 max-w-lg listModeCertDiv">
+          <div className=" border-1  p-3 max-h-96 overflow-auto listModeCertDiv">
             <span className="text-slate-600 text-sm">Please scroll down</span>
             <ul className="justify-center  border-white flex-row px-4 overflow-auto ">
               {certs.map((cert, i) => (
