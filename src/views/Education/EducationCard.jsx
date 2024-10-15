@@ -44,7 +44,7 @@ function EducationCard({ content, index }) {
                   Times Edu Ranking:
                   <br />
                 </span>
-                <span className="theme4font col-span-4 text-sm">
+                <span className="theme4font col-span-4 text-sm text-left">
                   {content.ranking}
                 </span>
               </li>
@@ -55,7 +55,7 @@ function EducationCard({ content, index }) {
                 <span className="col-span-2 text-sm  text-slate-400 text-right">
                   Edu level:{" "}
                 </span>
-                <span className="theme4font col-span-4 text-sm">
+                <span className="theme4font col-span-4 text-sm text-left">
                   {content.education_level}
                 </span>
               </li>
@@ -66,7 +66,7 @@ function EducationCard({ content, index }) {
                 <span className="col-span-2 text-sm  text-slate-400 text-right">
                   Major:{" "}
                 </span>
-                <span className="theme4font col-span-4 text-sm">
+                <span className="theme4font col-span-4 text-sm text-left">
                   {content.major}
                 </span>
               </li>
@@ -76,7 +76,7 @@ function EducationCard({ content, index }) {
               <span className="col-span-2 text-sm  text-slate-400 text-right">
                 Location:{" "}
               </span>
-              <span className="theme4font col-span-4 text-sm">
+              <span className="theme4font col-span-4 text-sm text-left">
                 {content.location}
               </span>
             </li>
@@ -85,7 +85,7 @@ function EducationCard({ content, index }) {
               <span className="col-span-2 text-sm  text-slate-400 text-right">
                 Year:{" "}
               </span>
-              <span className="theme4font col-span-4 text-sm">
+              <span className="theme4font col-span-4 text-sm text-left">
                 {content.year}
               </span>
             </li>
@@ -95,7 +95,7 @@ function EducationCard({ content, index }) {
                 <span className="col-span-2 text-sm  text-slate-400 text-right">
                   Honor:{" "}
                 </span>
-                <span className="theme4font col-span-4 text-sm">
+                <span className="theme4font col-span-4 text-sm text-left">
                   {content.honor}
                 </span>
               </li>
@@ -106,7 +106,7 @@ function EducationCard({ content, index }) {
                 <span className="col-span-2 text-sm  text-slate-400 text-right">
                   Acheivement:{" "}
                 </span>
-                <span className="theme4font col-span-2 text-sm">
+                <span className="theme4font col-span-2 text-sm text-left">
                   {content.acheivement}
                 </span>
               </li>

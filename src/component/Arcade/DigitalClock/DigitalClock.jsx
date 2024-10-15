@@ -86,8 +86,8 @@ function DigitalClock() {
 
   setInterval(updateClock, 1000);
   return (
-    <div className="theme4font Xcenter" id="digitalClock">
-      <span className="block text-gray-700 text-sm">Local Time</span>
+    <div className="theme4font Xcenter digitalClock" id="digitalClock">
+      <span className="block text-gray-200 text-sm">Local Time</span>
       <span className={styles.dateDiv}>
         {month.toUpperCase()} {date},{year}
       </span>
@@ -106,7 +106,7 @@ function DigitalClock() {
       )}
       <button
         onClick={changeTimeDsp}
-        className="btn transition-all ease-in-out text-slate-500 text-xs hover:text-slate-500"
+        className="btn transition-all duration-300 ease-in-out text-slate-300 text-xs hover:text-slate-700 hover:bg-slate-50 hover:bg-opacity-50 hover:scale-125 "
       >
         {apm ? "24-hour format" : "12-hour format"}
       </button>
