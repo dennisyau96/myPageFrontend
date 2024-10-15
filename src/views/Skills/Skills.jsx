@@ -34,7 +34,7 @@ function Skills() {
       <h1 className="font-bold text-3xl my-4 text-center theme4font pageTitle">
         Skills
       </h1>
-      <span className="text-center justify-center justify-items-center max-w-50 text-slate-600  text-sm flex-wrap inline">
+      <span className=" skillPagePara text-center justify-center justify-items-center max-w-50 text-slate-600  text-sm flex-wrap inline">
         I am passionate in learning various kind of skills using{" "}
       </span>
       <a

@@ -19,7 +19,15 @@ import pic14 from "../../../src/assets/gallery/pic14.jpg";
 import pic15 from "../../../src/assets/gallery/pic15.jpg";
 import pic16 from "../../../src/assets/gallery/pic16.jpg";
 import pic17 from "../../../src/assets/gallery/pic17.jpg";
-
+import pic18 from "../../../src/assets/gallery/pic18.jpg";
+import pic19 from "../../../src/assets/gallery/pic19.jpg";
+import pic20 from "../../../src/assets/gallery/pic20.jpg";
+import pic21 from "../../../src/assets/gallery/pic21.jpg";
+import pic22 from "../../../src/assets/gallery/pic22.jpg";
+import pic23 from "../../../src/assets/gallery/pic23.jpg";
+import pic24 from "../../../src/assets/gallery/pic24.jpg";
+import pic25 from "../../../src/assets/gallery/pic25.jpg";
+// import pic27 from "../../../src/assets/gallery/pic27.jpg";
 // import pic18 from "../../../src/assets/gallery/pic8.jpg";
 // import pic19 from "../../../src/assets/gallery/pic9.jpg";
 
@@ -45,6 +53,14 @@ export default function Gallery() {
     { href: "../../../src/assets/gallery/pic15.jpg", pic: pic15, code: 15 },
     { href: "../../../src/assets/gallery/pic16.jpg", pic: pic16, code: 16 },
     { href: "../../../src/assets/gallery/pic17.jpg", pic: pic17, code: 17 },
+    { href: "../../../src/assets/gallery/pic18.jpg", pic: pic18, code: 18 },
+    { href: "../../../src/assets/gallery/pic19.jpg", pic: pic19, code: 19 },
+    { href: "../../../src/assets/gallery/pic20.jpg", pic: pic20, code: 20 },
+    { href: "../../../src/assets/gallery/pic21.jpg", pic: pic21, code: 21 },
+    { href: "../../../src/assets/gallery/pic22.jpg", pic: pic22, code: 24 },
+    { href: "../../../src/assets/gallery/pic23.jpg", pic: pic23, code: 22 },
+    { href: "../../../src/assets/gallery/pic24.jpg", pic: pic24, code: 25 },
+    { href: "../../../src/assets/gallery/pic25.jpg", pic: pic25, code: 23 },
   ];
 
   const [index, setIndex] = useState(0);
@@ -69,20 +85,35 @@ export default function Gallery() {
 
   useEffect(() => {
     scrollTo(0, 0);
-    photosSrc.sort((a, b) => b.code - a.code);
+    photosSrc.sort((a, b) => a.code - b.code);
     setPhotos((prev) => photosSrc);
   }, []);
 
   return (
     <>
-      <div className="text-center justify-center justify-items-center justify-self-center  ">
-        <h1 className="font-bold text-3xl my-4 theme4font pageTitle">
-          Gallery
-        </h1>
+      <div className="text-center Xcenter ">
+        <h1 className="font-bold text-3xl my-4 theme4font ">Gallery</h1>
+        <div id="galleryIntroPage" className=" block content-center ">
+          <span
+            id="galleryIntroPara"
+            className="  align-middle inline-block galleryIntroPara m-4 Xcenter text-white "
+          >
+            I am a photography hobbist. I started shooting photo since 2017. I
+            was inspired by my co-worker at a conservation organization at that
+            time. Pictures of wildlifes, landscape and street are my area of
+            interest.
+          </span>
+          <a
+            href="#galleryCarouselPage"
+            className=" block  scroll-smooth pb-auto inset-0 py-20"
+          >
+            <i className="fa fa-arrow-down mt-1 text-gray-500 text-3xl  hover:scale-120  cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce "></i>
+          </a>
+        </div>
 
         <div
-          className="inline-block justify-center text-center justify-items-center "
-          id="galleryCarousel"
+          className="inline-block  text-center content-center align-middle "
+          id="galleryCarouselPage"
         >
           {/*carousel */}
           <div
@@ -99,6 +130,7 @@ export default function Gallery() {
                   src={photosSrc[index].pic}
                   className="d-block w-full  transition-all duration-300 ease-in-out galleryPhotoDiv "
                   alt=""
+                  id="galleryImg"
                 />
               </div>
               <button
@@ -133,10 +165,9 @@ export default function Gallery() {
           {/*carousel */}
         </div>
 
-        <div className="my-2 justify-center text-center" id="galleryQR">
+        <div className="  text-center content-center" id="galleryQRpage">
           <div className={styles.QRFrame}>
             <img
-              id=""
               className={styles.QRimg}
               alt="QR"
               src={qr}
