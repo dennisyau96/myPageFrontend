@@ -3,7 +3,7 @@
     display: none;
   }
   #shrinkNav {
-    display: block;
+    display: inline;
   }
   .shrinkNavBtn {
     width: 100%;
@@ -39,7 +39,7 @@
     display: none;
   }
   #shrinkNav {
-    display: block;
+    display: inline;
   }
 
   .shrinkNavBtn {

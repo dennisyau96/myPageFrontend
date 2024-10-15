@@ -14,7 +14,7 @@ export default function ErrorPage() {
 
   return (
     <div id="ErrorDiv" className={styles.errorPage}>
-      <h1 className="font-bold text-3xl my-4 theme4font">
+      <h1 className="font-bold text-3xl my-4 theme4font pageTitle">
         Oops! Somethings went wrong.{" "}
       </h1>
       <p className="theme3font">
