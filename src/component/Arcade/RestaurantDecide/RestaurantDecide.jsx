@@ -45,7 +45,7 @@ function RestaurantDecide() {
   return (
     <>
       <div
-        className="border-1 border-gray-600 rounded-md px-3 py-3 max-w-96 duration-300 hover:transition-all ease-in-out hover:shadow-lg hover:shadow-sky-300 bg-opacity-90 min-w-96 LRADAnimation"
+        className="border-1 border-gray-600 rounded-md px-3 py-3 mx-3 duration-300 hover:transition-all ease-in-out hover:shadow-lg hover:shadow-sky-300 bg-opacity-90  inline-block"
         id="restaurantDecideDiv"
       >
         <h2 className="mb-3 text-xl  text-white">

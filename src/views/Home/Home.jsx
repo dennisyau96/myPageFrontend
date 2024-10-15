@@ -21,117 +21,100 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="w-100 justify-center justify-items-center text-center ">
+    <div className="Xcenter ">
       <LandingPage />
-      <div className="text-center w-100 " id="homeStart">
-        <div className="h-100 " id="homeIntro">
-          <h1 className="font-bold text-3xl mb-10 text-center justify-center theme4font pt-10 homeNameTitle">
-            Dennis, Ming Leuk YAU
-          </h1>
 
-          <p className="font-bold my-2 text-lg theme2font homeTitleTitle justify-center inline-block">
-            Software Developer | Web Developer | IT | Data
-            <br />
-          </p>
+      <div className="block mb-10 Ycenter align-middle" id="homeP2">
+        <h1
+          className="   text-center Xcenter theme4font  flex-wrap "
+          id="homeNameTitle"
+        >
+          Dennis, Ming Leuk YAU
+        </h1>
+        <p
+          className=" theme2font Xcenter  block text-center flex-wrap"
+          id="homeTitleTitle"
+        >
+          Software Developer | Web Developer | IT | Data
+        </p>
+        <img className=""></img>
 
-          <img className="w-full h-full"></img>
-          <div className="container block  justify-center">
-            <p className=" homeIntroPara text-justify  theme3font max-w-screen-sm container">
-              I graduated from Douglas College in August 2024, Vancouver. During
-              my study, I found myself being interested in web and software
-              development. I am trying my best to learn different coding and
-              programming skills and technology to prepare myself to become a
-              <span className="text-sky-300 arcadeAppearAnimation">
-                {" "}
-                Web Developer
-              </span>
-              , or any other tech-related positions. Please feel free to leave a
-              comment below.
-            </p>
-          </div>
-
+        <div className="Xcenter  theme2font text-justify p-4 theme3font block content-center align-middle">
           <div
-            id="commentLeavingDiv"
-            className="justify-center justify-items-center text-center my-4 w-100"
+            className="theme3font flex-wrap text-justify Xcenter content-center  inline-block"
+            id="homeIntroPara"
           >
-            <button
-              className="  LRADAnimation m-3 btn theme4font border-white hover:border-sky-200 hover:shadow-lg border-0.5 hover:shadow-sky-700 hover:bg-slate-600 hover:text-slate-100 transition-all ease-in-out"
-              data-bs-toggle="modal"
-              data-bs-target="#commentModal"
-              type="button"
-            >
-              Leave a Comment
-            </button>
-
-            <div
-              className="modal fade transition-all ease-in-out duration-500"
-              id="commentModal"
-              role="alert"
-            >
-              <div className="modal-dialog" role="document">
-                <div className="modal-content bg-slate-600">
-                  <button
-                    type="button"
-                    className="generalDisappearAnimation2 btn-close p-2 text-white bg-white opacity-30 transition-all ease-in-out duration-500"
-                    aria-label="close"
-                    data-bs-dismiss="modal"
-                  />
-                  <Comment />
-                </div>
-              </div>
-            </div>
-            <span className="block text-center text-gray-500">or</span>
-            <span className="block justify-center text-center RLADAnimation">
-              <EmailButton />
-            </span>
-          </div>
-          <div className="text-center font-bold text-4xl theme3font justify-center w-screen ">
-            <a
-              href="#arcadeDiv"
-              className="  scroll-smooth pb-20 justify-center justify-items-center block "
-            >
-              <i className="fa fa-arrow-down mt-10 text-gray-500 text-3xl    cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce "></i>
-            </a>
+            I graduated from Douglas College in August 2024, Vancouver. During
+            my study, I found myself being interested in web and software
+            development. I am trying my best to learn different coding and
+            programming skills and technology to prepare myself to become a
+            <span className="text-sky-300 "> Web Developer</span>, or any other
+            tech-related positions. Please feel free to leave a comment below.
           </div>
         </div>
-
-        <div
-          className=" arcadeAppearAnimation justify-center justify-items-center text-center bg-black w-screen block h-100  "
-          id="arcadeDiv"
-        >
-          <a
-            href="#homeStart"
-            className=" scroll-smooth text-center pt-20 border-none justify-center justify-items-center invisible  hover:visible cursor-pointer"
+        <div id="homeBtnDiv" className="block Xcenter text-center flex-wrap">
+          <button
+            className="  LRADAnimation m-2 btn theme4font border-white hover:border-sky-200 hover:shadow-lg border-0.5 hover:shadow-sky-700 hover:bg-slate-600 hover:text-slate-100 transition-all ease-in-out"
+            data-bs-toggle="modal"
+            data-bs-target="#commentModal"
+            type="button"
           >
-            <i
-              id="arcadeArrow"
-              className="text-center fa fa-arrow-up mt-0 text-gray-500 text-3xl  cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce  "
-            ></i>
-          </a>
-          <span className="block text-2xl text-gray-400 mt-1">
-            Let&apos;s have some fun!
-          </span>
-          <div className=" justify-center justify-items-center justify-content-center text-center rounded-md p-3  flex  ">
-            <div
-              className="p-5 grid text-center justify-items-center justify-center justify-content-center hover:transition-all hover:duration-300 gap-4   border-2 border-slate-400    overflow-y-auto  "
-              id="homeArcadeDiv"
-            >
-              <div className="RLADAnimation">
-                <DiceRoller />
-              </div>
-              <div className="RLADAnimation">{/* <NumberGuessing /> */}</div>
-              <div className="RLADAnimation">
-                <Counter />
-              </div>
-              <div className="RLADAnimation">
-                <RestaurantDecide />
-              </div>
+            Leave a Comment
+          </button>
 
-              <div>{/* <CardShuffle /> */}</div>
-              <div className="mt-14 theme3font animate-pulse">
-                More features are coming...
+          <div
+            className="modal fade transition-all ease-in-out duration-500"
+            id="commentModal"
+            role="alert"
+          >
+            <div className="modal-dialog" role="document">
+              <div className="modal-content bg-slate-600">
+                <button
+                  type="button"
+                  className=" btn-close p-2 text-white bg-white opacity-30 transition-all ease-in-out duration-500"
+                  aria-label="close"
+                  data-bs-dismiss="modal"
+                />
+                <Comment />
               </div>
             </div>
+          </div>
+          <span className=" text-gray-500" id="homeOrSpan">
+            or
+          </span>
+
+          <EmailButton />
+        </div>
+
+        <div className="theme3font text-center py-20" id="home2ArrowDiv">
+          <a href="#homeP3" className="py-10">
+            <i className="fa fa-arrow-down text-gray-500 text-3xl cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce "></i>
+          </a>
+        </div>
+      </div>
+
+      <div className=" bg-black text-center block  " id="homeP3">
+        <span className=" text-gray-400 block pt-10 text-2xl">
+          Let&apos;s have fun!
+        </span>
+        <div
+          className="py-5 flex-wrap flex  mx-4 my-4 border-1 border-slate-400  overflow-y-auto  gap-y-10  Xcenter "
+          id="homeArcadeDiv"
+        >
+          <div className="">
+            <DiceRoller />
+          </div>
+          <div className="">{/* <NumberGuessing /> */}</div>
+          <div className="">
+            <Counter />
+          </div>
+          <div className="">
+            <RestaurantDecide />
+          </div>
+
+          <div>{/* <CardShuffle /> */}</div>
+          <div className=" theme3font animate-pulse">
+            More features are coming...
           </div>
         </div>
       </div>

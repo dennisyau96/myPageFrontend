@@ -8,7 +8,7 @@ function Footer({ visitCount }) {
   const navigate = useNavigate();
   return (
     <div
-      className="botton-0    text-center justify-center  h-10/12 w-screen theme1 m-0 p-6 footer "
+      className="botton-0 inset-x-0 text-center justify-center right-0 left-0 h-10/12  theme1 m-0 p-6 footer w-full"
       id="footerDiv"
     >
       <div className="h-1/6 ">

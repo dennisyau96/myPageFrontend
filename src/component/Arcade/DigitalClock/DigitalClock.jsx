@@ -86,12 +86,8 @@ function DigitalClock() {
 
   setInterval(updateClock, 1000);
   return (
-    <div
-      className="theme4font rounded-xl  max-w-96  justify-center text-center inline "
-      id="digitalClock"
-    >
+    <div className="theme4font Xcenter" id="digitalClock">
       <span className="block text-gray-700 text-sm">Local Time</span>
-      {/* <p className={styles.clockTitle}>The Time Now is</p> */}
       <span className={styles.dateDiv}>
         {month.toUpperCase()} {date},{year}
       </span>

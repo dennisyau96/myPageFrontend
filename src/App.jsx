@@ -36,11 +36,10 @@ export default function App() {
   }, []);
 
   return (
-    <div className=" max-w-screen transition-all ">
+    <div className="overflow-auto scrollable" id="appDiv">
       <Toaster position="bottom-center" duration="5000" />
-
-      <Header z-index="10" />
-      <div className="mainContent relative min-h-screen mb-20 max-w-screen ">
+      <Header />
+      <div className="w-full" id="mainContent">
         <Routes>
           <Route path="/">
             <Route index element={<Home />} />
