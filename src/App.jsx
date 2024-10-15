@@ -20,15 +20,26 @@ import About from "./views/About/About";
 import axios from "axios";
 import Maintenance from "./views/ErrorPage/Maintenance";
 import Footer from "./component/Footer/Footer";
+import { useEffect, useState } from "react";
 axios.defaults.auth = true;
 
 export default function App() {
-  return (
-    <div className=" max-w-screen transition-all">
-      <Toaster position="bottom-center" duration="5000" />
+  const [visitCount, setVisitCount] = useState(0);
 
-      <Header z-index="10" />
-      <div className="mainContent relative min-h-screen mb-20 max-w-screen">
+  useEffect(() => {
+    var count = localStorage.getItem("visitCount");
+    // count = 0;
+    const newCount = count ? parseInt(count) + 1 : 1;
+    localStorage.setItem("visitCount", newCount);
+    setVisitCount(newCount);
+    // setVisitCount(0);
+  }, []);
+
+  return (
+    <div className="overflow-auto scrollable" id="appDiv">
+      <Toaster position="bottom-center" duration="5000" />
+      <Header />
+      <div className="w-full" id="mainContent">
         <Routes>
           <Route path="/">
             <Route index element={<Home />} />
@@ -43,7 +54,7 @@ export default function App() {
           </Route>
         </Routes>
       </div>
-      <Footer />
+      <Footer visitCount={visitCount} />
     </div>
   );
 }

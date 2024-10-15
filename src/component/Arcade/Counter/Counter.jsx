@@ -29,7 +29,10 @@ function Counter() {
     }
   }
   return (
-    <div className="border-1 border-gray-600 rounded-md px-4 py-3 max-w-96  hover:transition-all hover:shadow-lg hover:shadow-sky-300 bg-opacity-90 LRADAnimation">
+    <div
+      className="border-1 border-gray-600 rounded-md px-4 py-3 Xcenter text-center  hover:transition-all hover:shadow-lg hover:shadow-sky-300 bg-opacity-90 inline-block"
+      id="counterDiv"
+    >
       <h1 className=" text-xl text-white">Tally Counter</h1>
       <div className="flex gap-3">
         <div className="">

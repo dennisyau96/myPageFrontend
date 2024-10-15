@@ -52,7 +52,10 @@ function DiceRoller() {
   }
 
   return (
-    <div className=" border-gray-600 border-1 rounded-md px-2 py-3 max-w-96 RLADAnimation hover:transition-all ease-in-out hover:shadow-lg hover:shadow-sky-300 bg-opacity-90 inline-block">
+    <div
+      className=" border-gray-600 border-1 rounded-md px-2 py-3   hover:transition-all ease-in-out hover:shadow-lg hover:shadow-sky-300 bg-opacity-90 inline-block"
+      id="diceRollerDiv"
+    >
       <h2 className="mb-3 text-xl  text-white">Dice Roller</h2>
       <div className="flex flex-auto justify-center items-center ease-in-out ">
         <button
@@ -98,7 +101,7 @@ function DiceRoller() {
         {rolling ? (
           <div id="rollingDiv">
             <p className="text-white">
-              The dice are beening rolled...{" "}
+              The dice are being rolled...{" "}
               <svg
                 className="animate-spin h-5 w-5 mr-3"
                 viewBox="0 0 24 24"
