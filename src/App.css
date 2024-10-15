@@ -64,7 +64,7 @@ html {
 body {
   font-family: "Courier", "Courier New", "Georgia", "Times New Roman", serif;
   background-color: black;
-  overflow-x: hidden;
+  overflow-x: none;
 }
 
 /* --------------------------class of part----------------------------------------------------------------- */
@@ -77,7 +77,7 @@ body {
 
 #landingPage {
   min-width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #homeP2 {
@@ -88,7 +88,6 @@ body {
 #homeP3 {
   min-width: 100vw;
   min-height: 100vh;
-  max-height: 100vh;
 }
 
 #mainContent {
@@ -109,6 +108,8 @@ body {
 }
 
 #footerDiv {
+  z-index: 9999;
+  min-width: 100%;
 }
 
 #homeNameTitle {
@@ -152,7 +153,7 @@ body {
 /*Gallery ID*/
 
 #galleryIntroPage {
-  height: 90vh;
+  min-height: 90vh;
 }
 
 #galleryImg {

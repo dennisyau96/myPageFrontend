@@ -8,7 +8,7 @@ function Header() {
     <>
       <div
         id="headerDiv"
-        className="sticky-top inset-x-0 top-0 right-0 left-0 shadow-lg  theme1 h-auto  w-full opacity-95 px-3 py-3 "
+        className="sticky-top  top-0 right-0 left-0 shadow-lg  theme1 h-auto  w-full opacity-95 px-3 py-3 "
       >
         <header className=" flex-wrap block" id="header">
           <div className="flex-wrap inline" id="headerTitle">
