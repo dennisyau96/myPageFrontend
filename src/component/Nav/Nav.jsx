@@ -8,31 +8,56 @@ function Nav() {
         className="text-right justify-end my-0 px-1 flex flex-wrap"
         id="standardNav"
       >
-        <NavLink
-          className=" text-white hover:text-gray-400 standardNavBtn"
-          to="/"
-        >
+        <NavLink id="stdNavBtn1" className=" text-white standardNavBtn" to="/">
           Home
         </NavLink>
-        <NavLink className=" text-white standardNavBtn" to="/education">
+        <NavLink
+          id="stdNavBtn1"
+          className=" text-white standardNavBtn"
+          to="/education"
+        >
           Education
         </NavLink>
-        <NavLink className=" text-white    standardNavBtn" to="/experience">
+        <NavLink
+          id="stdNavBtn2"
+          className=" text-white standardNavBtn"
+          to="/experience"
+        >
           Experience
         </NavLink>
-        <NavLink className=" text-white    standardNavBtn" to="/projects">
+        <NavLink
+          id="stdNavBtn3"
+          className=" text-white standardNavBtn"
+          to="/projects"
+        >
           Projects
         </NavLink>
-        <NavLink className=" text-white    standardNavBtn" to="/skills">
+        <NavLink
+          id="stdNavBtn4"
+          className=" text-white standardNavBtn"
+          to="/skills"
+        >
           Skills
         </NavLink>
-        <NavLink className=" text-white    standardNavBtn" to="/certificates">
+        <NavLink
+          id="stdNavBtn5"
+          className=" text-white standardNavBtn"
+          to="/certificates"
+        >
           Certificate
         </NavLink>
-        <NavLink className=" text-white    standardNavBtn" to="/gallery">
+        <NavLink
+          id="stdNavBtn6"
+          className=" text-white standardNavBtn"
+          to="/gallery"
+        >
           Gallery
         </NavLink>
-        <NavLink className=" text-white    standardNavBtn" to="/about">
+        <NavLink
+          id="stdNavBtn7"
+          className=" text-white standardNavBtn"
+          to="/about"
+        >
           About
         </NavLink>
       </nav>

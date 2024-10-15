@@ -53,7 +53,13 @@
 }
 .dropdown-item:hover {
   background-color: rgb(147, 147, 147);
-  color: rgb(71, 71, 71);
+  color: rgb(11, 6, 6);
+  text-decoration: underline;
+}
+
+.dropdown-item:active {
+  background-color: rgb(22, 29, 62);
+  color: rgb(163, 179, 255);
 }
 
 /* ------------------------type of element------------------------------------------------------------------------------------------- */
@@ -152,6 +158,18 @@ body {
 
 #restaurantDecideDiv {
   max-width: 90%;
+}
+
+/*Education ID*/
+#eduDiv {
+  display: grid;
+  grid-column: 1;
+}
+
+/*Experience ID*/
+#expDiv {
+  display: grid;
+  grid-column: 1;
 }
 
 /*Gallery ID*/

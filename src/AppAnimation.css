@@ -1,0 +1,83 @@
+/*home*/
+
+/*edu*/
+
+/*exp*/
+
+/*proj*/
+
+/*skills*/
+
+/*cert*/
+
+/*gallery*/
+
+/*about*/
+
+/*header*/
+
+@keyframes headerNameAnm {
+  0% {
+    opacity: 0%;
+    scale: 2;
+  }
+  100% {
+    opacity: 100%;
+    scale: 1;
+  }
+}
+
+@keyframes stdNavAnm {
+  0% {
+    opacity: 0%;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+#headerName {
+  animation-name: headerNameAnm;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+
+#standardNav {
+  animation-name: stdNavAnm;
+  animation-duration: 0.5s;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+#shrinkNavToggle {
+  animation-name: stdNavAnm;
+  animation-duration: 0.5s;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+#dropDownList {
+  animation-name: stdNavAnm;
+  animation-duration: 0.4s;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+/*footer*/
+
+@keyframes footerAnm {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+#headerName {
+  animation-name: footerAnm;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
