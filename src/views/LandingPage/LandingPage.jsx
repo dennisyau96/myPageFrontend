@@ -65,7 +65,7 @@ export default function LandingPage() {
         </span>
 
         <a href="#homeP2" className=" block  scroll-smooth pb-auto inset-0">
-          <i className="fa fa-arrow-down mt-1 text-gray-500 text-3xl  hover:scale-120  cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce "></i>
+          <i className="fa fa-arrow-down m-3 text-gray-500 text-3xl  hover:scale-120  cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce "></i>
         </a>
       </div>
     </div>

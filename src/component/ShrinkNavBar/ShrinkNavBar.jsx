@@ -8,19 +8,16 @@ export default function ShrinkNavBar() {
     setCollapsed(!collapsed);
   }
   return (
-    <div
-      className="transition-all duration-200 flex flex-wrap text-right"
-      id="shrinkNav"
-    >
+    <div className="transition-all duration-500  text-right" id="shrinkNav">
       <button
-        className="navbar-toggler-icon navbar-toggler text-gray-200 mx-3"
+        className="navbar-toggler-icon navbar-toggler text-gray-200 mx-3 border-1 inline"
         onClick={() => toggle()}
       >
-        <span className="navbar-toggler-icon text-3xl">=</span>
+        <span className="navbar-toggler-icon text-3xl ">=</span>
       </button>
       {collapsed ? null : (
-        <div id="dropDownList" className="transition-all duration-200 mt-3">
-          <ul className="transition-all duration-200">
+        <div id="dropDownList" className="transition-all duration-500 mt-3">
+          <ul className="transition-all duration-500">
             <li>
               <NavLink
                 className=" text-white hover:text-gray-400 shrinkNavBtn dropdown-item "
