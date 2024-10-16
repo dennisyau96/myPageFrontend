@@ -54,7 +54,7 @@ export default function Home() {
         </div>
         <div id="homeBtnDiv" className="block Xcenter text-center flex-wrap">
           <button
-            className="  LRADAnimation m-2 btn theme4font border-white hover:border-sky-200 hover:shadow-lg border-0.5 hover:shadow-sky-700 hover:bg-slate-600 hover:text-slate-100 transition-all ease-in-out"
+            className="   m-2 btn theme4font border-white hover:border-sky-200 hover:shadow-lg border-0.5 hover:shadow-sky-700 hover:bg-slate-600 hover:text-slate-100 transition-all ease-in-out"
             data-bs-toggle="modal"
             data-bs-target="#commentModal"
             type="button"

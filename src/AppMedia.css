@@ -3,7 +3,7 @@
     display: none;
   }
   #shrinkNav {
-    display: block;
+    display: inline;
   }
   .shrinkNavBtn {
     width: 100%;
@@ -32,6 +32,17 @@
     display: grid;
     grid-column: 1;
   }
+
+  .eduCardSubTitle {
+    display: none;
+  }
+  .eduCardSubContent {
+    text-align: center;
+    column-span: 6;
+  }
+  .contentRow {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 430px) {
@@ -39,7 +50,7 @@
     display: none;
   }
   #shrinkNav {
-    display: block;
+    display: inline;
   }
 
   .shrinkNavBtn {
@@ -70,6 +81,21 @@
     overflow-y: auto;
     display: flex;
   }
+  .eduCardSubTitle {
+    display: inline;
+    text-align: right;
+    column-span: 2;
+  }
+  .eduCardSubContent {
+    text-align: left;
+    column-span: 4;
+  }
+  .contentRow {
+    display: block;
+  }
+  #home2ArrowDiv {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -94,6 +120,9 @@
     scale: 1.3;
   }
   #homeBtnDiv {
+  }
+  #home2ArrowDiv {
+    display: none;
   }
 }
 

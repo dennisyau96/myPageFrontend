@@ -14,8 +14,8 @@ export default function LandingPage() {
         id="homeIntroBox"
         className=" border-1 Xcenter Ycenter text-center p-5 inline-block bg-black opacity-90"
       >
-        <h1 className="text-white">I am Dennis</h1>
-        <span className="text-white">I am a Full Stack Developer.</span>
+        <h1 className="text-white">I am Dennis.</h1>
+        <span className="text-white">A Full Stack Developer.</span>
         <span className="block">
           <Link
             className=""
@@ -65,7 +65,7 @@ export default function LandingPage() {
         </span>
 
         <a href="#homeP2" className=" block  scroll-smooth pb-auto inset-0">
-          <i className="fa fa-arrow-down m-3 text-gray-500 text-3xl  hover:scale-120  cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce "></i>
+          <i className="fa fa-arrow-down m-3 text-gray-500 text-3xl  hover:scale-120  cursor-pointer transition-all ease-in-out animate-bounce motion-reduce:animate-bounce "></i>
         </a>
       </div>
     </div>

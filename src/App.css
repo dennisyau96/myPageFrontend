@@ -53,12 +53,12 @@
 }
 .dropdown-item:hover {
   background-color: rgb(147, 147, 147);
-  color: rgb(11, 6, 6);
+  color: rgb(111, 111, 111);
   text-decoration: underline;
 }
 
 .dropdown-item:active {
-  background-color: rgb(22, 29, 62);
+  background-color: rgb(103, 103, 103);
   color: rgb(163, 179, 255);
 }
 
@@ -75,15 +75,18 @@ body {
 
 /* --------------------------class of part----------------------------------------------------------------- */
 
-/*--------------------------ID----------------------------*/
-
-#aboutPageDiv {
-  min-height: 100vh;
+.eduCardDiv {
 }
+/*--------------------------ID----------------------------*/
 
 #landingPage {
   min-width: 100vw;
   min-height: 100vh;
+  background-image: url("../../Frontend/src/assets/gallery/picself2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 #homeP2 {
@@ -107,14 +110,20 @@ body {
   max-width: 90%;
 } */
 
-#dClockDiv {
+#digitalClock {
+  background-color: rgba(0, 0, 0, 0.436);
+  display: inline-block;
+  padding: 3%;
+  border-radius: 10px;
 }
 
-#standardNav {
+#headerTitle {
+  display: block;
 }
 
 #headerName {
   font-size: 1.5rem;
+  display: inline-block;
 }
 
 #footerDiv {
@@ -162,14 +171,10 @@ body {
 
 /*Education ID*/
 #eduDiv {
-  display: grid;
-  grid-column: 1;
 }
 
 /*Experience ID*/
 #expDiv {
-  display: grid;
-  grid-column: 1;
 }
 
 /*Gallery ID*/
@@ -192,7 +197,14 @@ body {
 }
 
 /*about*/
+#aboutPageTitle {
+  /* background-color: rgba(0, 0, 0, 0.493); */
+  padding: 1.2rem;
+  border-radius: 10px;
+  text-shadow: 3px 4px 5px rgb(103, 101, 101);
+}
 #aboutPageDiv {
+  background-color: rgba(125, 125, 125, 0.566);
   min-height: 100vh;
   min-width: 100vw;
 }
@@ -204,7 +216,30 @@ body {
   min-height: 100vh;
 }
 
+#aboutCoverLayer {
+  background-image: url("../../Frontend/src/assets/gallery/picself.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 #aboutPara1 {
   max-width: 80%;
   justify-self: center;
+  background-color: rgba(0, 0, 0, 0.593);
+
+  padding: 1.8rem;
+  border-radius: 10px;
+  text-shadow: 3px 4px 5px rgb(103, 101, 101);
+}
+
+#aboutPara2 {
+  max-width: 80%;
+  justify-self: center;
+  background-color: rgba(0, 0, 0, 0.593);
+
+  padding: 1.8rem;
+  border-radius: 10px;
+  text-shadow: 3px 4px 5px rgb(103, 101, 101);
 }
