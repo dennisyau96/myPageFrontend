@@ -35,7 +35,7 @@ function Education() {
         </h1>
 
         <div
-          className=" flex flex-wrap m-10 justify-center gap-8 text-center Xcenter"
+          className=" flex flex-wrap m-10 p-10 justify-center gap-8 text-center Xcenter"
           id="eduDiv"
         >
           {education.map((edu, index) => (

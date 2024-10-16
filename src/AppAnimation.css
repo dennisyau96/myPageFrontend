@@ -115,10 +115,59 @@
 /*cert*/
 
 /*gallery*/
+@keyframes galleryIntroPageDappAnm {
+  0% {
+    opacity: 0%;
+    scale: 2;
+  }
+  100% {
+    opacity: 100%;
+    scale: 1;
+  }
+}
+#galleryIntroPage {
+  animation-name: galleryIntroPageDappAnm;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+}
 
 /*about*/
+@keyframes aboutParaDivAnm {
+  0% {
+    opacity: 0%;
+    scale: 1.5;
+  }
+  100% {
+    opacity: 100%;
+    scale: 1;
+  }
+}
+
+#aboutParaDiv {
+  animation-name: aboutParaDivAnm;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+}
 
 /*header*/
+
+@keyframes scrollIndicatorAnm {
+  to {
+    scale: 1 1;
+    width: 100%;
+  }
+}
+
+.scrollIndicator {
+  animation-name: scrollIndicatorAnm;
+  height: 15px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  scale: 0 1;
+  z-index: 1000;
+  transform-origin: left;
+}
 
 @keyframes headerNameAnm {
   0% {
@@ -167,27 +216,6 @@
   animation-duration: 0.4s;
   animation-delay: 0.2s;
   animation-fill-mode: both;
-}
-
-@keyframes scrollIndicatorAnm {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-.scrollIndicator {
-  animation-name: scrollIndicatorAnm;
-  height: 2px;
-  animation-timeline: scroll();
-  background-color: white;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  scale: 0 1;
-  z-index: 1000;
 }
 
 /*footer*/

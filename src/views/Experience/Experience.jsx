@@ -34,7 +34,7 @@ export default function Experience() {
         Experience{" "}
       </h1>
       <div
-        className="flex flex-wrap justify-center text-center Xcenter gap-8 my-10 "
+        className="flex flex-wrap justify-center text-center Xcenter gap-8 my-10 p-10 "
         id="expDiv"
       >
         {loading ? <Loading /> : null}

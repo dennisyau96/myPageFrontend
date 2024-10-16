@@ -107,7 +107,7 @@ export default function Gallery() {
             href="#galleryCarouselPage"
             className=" block  scroll-smooth pb-auto inset-0 py-20"
           >
-            <i className="fa fa-arrow-down mt-1 text-gray-500 text-3xl  hover:scale-120  cursor-pointer transition-all ease-in-out hover:animate-bounce hover:motion-reduce:animate-bounce "></i>
+            <i className="fa fa-arrow-down mt-1 text-gray-500 text-3xl  hover:scale-120  cursor-pointer transition-all ease-in-out animate-bounce motion-reduce:animate-bounce "></i>
           </a>
         </div>
 
