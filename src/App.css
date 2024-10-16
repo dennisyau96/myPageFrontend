@@ -1,3 +1,273 @@
+/*Animation*/
+/*general*/
+@keyframes pageTitleAnm {
+  0% {
+    opacity: 0%;
+    /* scale: 0.8; */
+    transform: translateY(-1rem);
+  }
+  0% {
+    opacity: 100%;
+    /* scale: 1; */
+    transform: translateY(0rem);
+  }
+}
+.pageTitle {
+  animation-name: pageTitleAnm;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+/*home*/
+
+@keyframes dClockAppAnm {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+
+#digitalClock {
+  animation-name: dClockAppAnm;
+  animation-duration: 0.5s;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+@keyframes landingPageAppAnm {
+  0% {
+    scale: 1.5;
+    opacity: 0%;
+  }
+  100% {
+    scale: 1;
+    opacity: 100%;
+  }
+}
+
+@keyframes landingPageDappAnm {
+  0% {
+    scale: 1.5;
+    opacity: 0%;
+  }
+  100% {
+    scale: 1;
+    opacity: 100%;
+  }
+}
+
+/* #landingPage {
+  animation-name: landingPageDappAnm;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-timeline: scroll();
+} */
+
+.landingPage {
+  animation-name: landingPageDappAnm;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.3s;
+}
+
+@keyframes homeNameTitleBothAnm {
+  0% {
+    opacity: 0%;
+    transform: translateX(-50px);
+  }
+  50% {
+    opacity: 100%;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0%;
+    transform: translateX(50px);
+  }
+}
+
+#homeNameTitle {
+  animation-name: homeNameTitleBothAnm;
+  animation-timing-function: linear;
+  animation-timeline: view();
+  animation-range: exit;
+}
+@keyframes homeP2Anm {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+#homeP2 {
+  animation-name: homeP2Anm;
+  animation-timing-function: linear;
+  animation-timeline: inherit;
+}
+
+/*edu*/
+@keyframes eduCardAnm {
+  0% {
+    opacity: 40%;
+    scale: 0.8;
+  }
+  50% {
+    opacity: 100%;
+    scale: 1;
+  }
+  100% {
+    opacity: 40%;
+    scale: 0.8;
+  }
+}
+.eduCardDiv {
+  animation-name: eduCardAnm;
+  animation-timeline: view(200px 200px);
+}
+/*exp*/
+
+/*proj*/
+
+/*skills*/
+
+/*cert*/
+
+/*gallery*/
+@keyframes galleryIntroPageDappAnm {
+  0% {
+    opacity: 0%;
+    scale: 2;
+  }
+  100% {
+    opacity: 100%;
+    scale: 1;
+  }
+}
+#galleryIntroPage {
+  animation-name: galleryIntroPageDappAnm;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+}
+
+/*about*/
+@keyframes aboutParaDivAnm {
+  0% {
+    opacity: 0%;
+    scale: 1.5;
+  }
+  100% {
+    opacity: 100%;
+    scale: 1;
+  }
+}
+
+/* #aboutParaDiv {
+  animation-name: aboutParaDivAnm;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+} */
+#aboutCoverLayer {
+  animation-name: aboutParaDivAnm;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+}
+
+/*header*/
+
+@keyframes scrollIndicatorAnm {
+  to {
+    scale: 1 1;
+    width: 100%;
+  }
+}
+
+.scrollIndicator {
+  animation-name: scrollIndicatorAnm;
+  height: 15px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  scale: 0 1;
+  z-index: 1000;
+  transform-origin: left;
+}
+
+@keyframes headerNameAnm {
+  0% {
+    opacity: 0%;
+    scale: 2;
+  }
+  100% {
+    opacity: 100%;
+    scale: 1;
+  }
+}
+
+@keyframes stdNavAnm {
+  0% {
+    opacity: 0%;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+#headerName {
+  animation-name: headerNameAnm;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+
+#standardNav {
+  animation-name: stdNavAnm;
+  animation-duration: 0.5s;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+#shrinkNavToggle {
+  animation-name: stdNavAnm;
+  animation-duration: 0.5s;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+#dropDownList {
+  animation-name: stdNavAnm;
+  animation-duration: 0.4s;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+/*footer*/
+
+@keyframes footerAnm {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+#headerName {
+  animation-name: footerAnm;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+
+/*---------------------------Animation--------------------------------*/
+
 /* --------------------------style for use----------------------------------------------------------------- */
 
 .theme1 {
@@ -74,7 +344,23 @@ body {
 }
 
 /* --------------------------class of part----------------------------------------------------------------- */
+.scroll-watcher {
+  height: 2px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  scale: 0 1;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
 
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
+}
 .eduCardDiv {
 }
 /*--------------------------ID----------------------------*/
@@ -204,9 +490,13 @@ body {
   text-shadow: 3px 4px 5px rgb(103, 101, 101);
 }
 #aboutPageDiv {
-  background-color: rgba(125, 125, 125, 0.566);
   min-height: 100vh;
   min-width: 100vw;
+  background-image: url("../../Frontend/src/assets/gallery/picself.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 #aboutParaDiv {
   justify-content: center;

@@ -8,7 +8,7 @@ function Header() {
     <>
       <div
         id="headerDiv"
-        className="sticky-top  top-0 right-0 left-0 shadow-lg  theme1 h-auto  w-full opacity-95 px-3 py-3 block "
+        className="headerDiv sticky-top  top-0 right-0 left-0 shadow-lg  theme1 h-auto  w-full opacity-95 px-3 py-3 block "
       >
         <header className=" " id="header">
           <div className="" id="headerTitle">

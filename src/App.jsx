@@ -36,7 +36,8 @@ export default function App() {
   }, []);
 
   return (
-    <div className="overflow-auto scrollable" id="appDiv">
+    <div className="overflow-auto " id="appDiv">
+      <div className="scroll-watcher"></div>
       <Toaster position="bottom-center" duration="5000" />
       <Header />
       <div className="w-full" id="mainContent">

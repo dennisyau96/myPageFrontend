@@ -32,7 +32,7 @@ export default function Home() {
           Dennis, Ming Leuk YAU
         </h1>
         <p
-          className=" theme2font Xcenter  block text-center flex-wrap"
+          className=" theme2font Xcenter  block text-center flex-wrap font-bold"
           id="homeTitleTitle"
         >
           Software Developer | Web Developer | IT | Data
@@ -44,10 +44,12 @@ export default function Home() {
             className="theme3font flex-wrap text-justify Xcenter content-center  inline-block"
             id="homeIntroPara"
           >
-            I graduated from Douglas College in August 2024, Vancouver. During
-            my study, I found myself being interested in web and software
-            development. I am trying my best to learn different coding and
-            programming skills and technology to prepare myself to become a
+            I graduated from{" "}
+            <span className="text-sky-300 ">Douglas College</span> in August
+            2024, Vancouver. During my study, I found myself being interested in
+            web and software development. I keep on learning different coding
+            and programming skills and technologies to prepare myself to become
+            a competitive
             <span className="text-sky-300 "> Web Developer</span>, or any other
             tech-related positions. Please feel free to leave a comment below.
           </div>

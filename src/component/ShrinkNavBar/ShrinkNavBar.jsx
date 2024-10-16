@@ -8,9 +8,12 @@ export default function ShrinkNavBar() {
     setCollapsed(!collapsed);
   }
   return (
-    <div className="transition-all duration-500 text-right " id="shrinkNav">
+    <div
+      className="transition-all duration-500 text-right shrinkNav"
+      id="shrinkNav"
+    >
       <button
-        className=" navbar-toggler text-gray-200 mx-3 border-1 "
+        className=" navbar-toggler text-gray-200 mx-3 border-1 shrinkNavToggle"
         id="shrinkNavToggle"
         onClick={() => toggle()}
       >
@@ -19,7 +22,7 @@ export default function ShrinkNavBar() {
       {collapsed ? null : (
         <div
           id="dropDownList"
-          className=" mt-3 transition-all duration-500"
+          className=" mt-3 transition-all duration-500 dropDownList"
           aria-expanded="false"
         >
           <ul className="">

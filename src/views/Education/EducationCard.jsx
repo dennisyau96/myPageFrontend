@@ -17,7 +17,10 @@ function EducationCard({ content, index }) {
   }
   return (
     <>
-      <div className="eduCardDiv p-3 my-2 border-1 rounded-lg z-0 max-w-md  hover:shadow-lg hover:shadow-sky-300 transition-all hover:duration-200 h-auto opacity-90 ease-in-out bg-black">
+      <div
+        id="eduCardDiv"
+        className="eduCardDiv p-3 my-2 border-1 rounded-lg z-0 max-w-md  hover:shadow-lg hover:shadow-sky-300 transition-all hover:duration-200 h-auto opacity-90 ease-in-out bg-black"
+      >
         {/* <img className="eduCardImg" alt={content.institution} /> */}
 
         <div className=" text-xl mb-7 ">
