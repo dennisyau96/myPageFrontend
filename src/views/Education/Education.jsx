@@ -34,7 +34,10 @@ function Education() {
           Education
         </h1>
 
-        <div className=" flex flex-wrap m-10 justify-center gap-8" id="eduDiv">
+        <div
+          className=" flex flex-wrap m-10 p-10 justify-center gap-8 text-center Xcenter"
+          id="eduDiv"
+        >
           {education.map((edu, index) => (
             <div key={index}>
               <EducationCard content={edu} />

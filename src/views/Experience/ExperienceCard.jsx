@@ -29,20 +29,28 @@ function ExperienceCard({ content }) {
         </p>
       ) : null}
       <div className="grid grid-cols-5 gap-y-3">
-        <div className="col-span-2 theme2font text-sm">Organization: </div>
-        <div className="col-span-3 theme4font text-sm">
+        <div className="col-span-2 theme2font text-sm text-right mr-3">
+          Organization:{" "}
+        </div>
+        <div className="col-span-3 theme4font text-sm text-left ml-3">
           {content.organization}
         </div>
-        <div className="col-span-2 theme2font text-sm">Period: </div>
-        <div className="col-span-3 theme4font text-sm">
+        <div className="col-span-2 theme2font text-sm text-right mr-3">
+          Period:{" "}
+        </div>
+        <div className="col-span-3 theme4font text-sm text-left ml-3">
           {content.period}
         </div>{" "}
-        <div className="col-span-2 theme2font text-sm">Location: </div>
-        <div className="col-span-3 theme4font text-sm">
+        <div className="col-span-2 theme2font text-sm text-right mr-3">
+          Location:{" "}
+        </div>
+        <div className="col-span-3 theme4font text-sm text-left ml-3">
           {content.location}
         </div>{" "}
-        <div className="col-span-2 theme2font text-sm">Description: </div>
-        <div className="col-span-3 theme4font text-sm">
+        <div className="col-span-2 theme2font text-sm text-right mr-3">
+          Description:{" "}
+        </div>
+        <div className="col-span-3 theme4font text-sm text-left ml-3">
           <div className="border-1 border-gray-700  overflow-y-scroll max-h-40 px-3 ">
             <ul className="">
               {des &&
