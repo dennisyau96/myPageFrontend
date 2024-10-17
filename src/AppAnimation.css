@@ -2,17 +2,17 @@
 /*general*/
 @keyframes pageTitleAnm {
   0% {
-    transform: translateY(-20px);
     opacity: 40%;
+    scale: 0.5;
   }
   100% {
-    transform: translateY(0px);
     opacity: 100%;
+    scale: 1;
   }
 }
 .pageTitle {
   animation-name: pageTitleAnm;
-  animation-duration: 0.4s;
+  animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
 }
 .scroll-watcher {
@@ -33,26 +33,6 @@
   to {
     scale: 1 1;
   }
-}
-
-@keyframes pageTitleAnm {
-  0% {
-    opacity: 0%;
-    /* scale: 0.8; */
-    transform: translateY(-1rem);
-  }
-  0% {
-    opacity: 100%;
-    /* scale: 1; */
-    transform: translateY(0rem);
-  }
-}
-.pageTitle {
-  animation-name: pageTitleAnm;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0.2s;
-  animation-fill-mode: both;
 }
 
 /*home*/
@@ -110,6 +90,52 @@
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
   animation-delay: 0.3s;
+
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: url("../../Frontend/src/assets/gallery/picself2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+@keyframes typeWriterAnm {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.typeWriterSpan {
+  animation: typeWriterAnm;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 0.7s;
+  font-weight: 900;
+  color: rgb(127, 160, 203);
+}
+
+@keyframes homeWDSpanAnm {
+  0% {
+    background-color: rgba(255, 255, 255, 0.553);
+    color: white;
+  }
+  100% {
+    background-color: none;
+  }
+}
+
+.homeWDSpan {
+  animation-name: homeWDSpanAnm;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 0.7s;
+  animation-direction: normal;
+  padding: 0.2rem;
 }
 
 @keyframes homeNameTitleBothAnm {
@@ -217,6 +243,21 @@
 }
 
 /*cert*/
+
+@keyframes certModeBtnAnm {
+  0% {
+    scale: 1 1;
+    opacity: 100%;
+  }
+  100% {
+    scale: 0.8 1;
+    opacity: 0%;
+  }
+}
+.certModeButton {
+  animation: certModeBtnAnm linear;
+  view-timeline-axis: view();
+}
 
 /*gallery*/
 @keyframes galleryIntroPageDappAnm {
