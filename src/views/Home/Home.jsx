@@ -26,7 +26,7 @@ export default function Home() {
       <LandingPage />
 
       <div className="block mb-10 Ycenter align-middle homeP2" id="homeP2">
-        <div className="homeP2Main">
+        <div className="homeP2Main Xcenter text-center">
           <h1
             className="   text-center Xcenter theme4font  flex-wrap homeNameTitle"
             id="homeNameTitle"
@@ -34,7 +34,7 @@ export default function Home() {
             Dennis, Ming Leuk YAU
           </h1>
           <p
-            className=" theme2font Xcenter  block text-center flex-wrap font-bold homeTitleTitle"
+            className=" theme2font Xcenter inline-block text-center flex-wrap font-bold homeTitleTitle"
             id="homeTitleTitle"
           >
             Software Developer | Web Developer | IT | Data
@@ -133,6 +133,7 @@ export default function Home() {
           </a>
         </div>
       </div>
+      <div className="homeP2GlowBar"></div>
 
       <div className=" bg-black text-center block homeP3 " id="homeP3">
         <span className=" text-gray-400 block pt-10 text-2xl">
