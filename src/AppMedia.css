@@ -100,13 +100,14 @@
 
 @media screen and (min-width: 800px) {
   #standardNav {
-    display: block;
+    display: inline-block;
   }
   #shrinkNav {
     display: none;
   }
   .standardNavBtn {
-    margin: 0.5vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
     font-size: 0.7rem;
   }
   #homeIntroBox {
@@ -128,13 +129,14 @@
 
 @media screen and (min-width: 1024px) {
   #standardNav {
-    display: block;
+    display: inline-block;
   }
   #shrinkNav {
     display: none;
   }
   .standardNavBtn {
-    margin: 0.5vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
     font-size: 0.85rem;
   }
   #homeIntroBox {

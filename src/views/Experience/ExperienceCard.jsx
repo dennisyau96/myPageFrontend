@@ -22,7 +22,10 @@ function ExperienceCard({ content }) {
   // }
 
   return (
-    <div className="expCardDiv p-4 border-1 border-gray-300 rounded-md  z-0  hover:shadow-sky-300 hover:transition-all   hover:shadow-lg  hover:duration-200  h-auto opacity-90 max-w-md ">
+    <div
+      className="expCardDiv p-4 border-1 border-gray-300 rounded-md  z-0  hover:shadow-sky-300 hover:transition-all   hover:shadow-lg  hover:duration-200  h-auto opacity-90 max-w-md "
+      id="expCardDiv"
+    >
       {content.position ? (
         <p className=" text-2xl mb-4">
           <span className="text-slate-500 text-center">{content.position}</span>

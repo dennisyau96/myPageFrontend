@@ -46,22 +46,6 @@
   align-content: center;
 }
 
-.dropdown-item {
-  display: block;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.dropdown-item:hover {
-  background-color: rgb(147, 147, 147);
-  color: rgb(111, 111, 111);
-  text-decoration: underline;
-}
-
-.dropdown-item:active {
-  background-color: rgb(103, 103, 103);
-  color: rgb(163, 179, 255);
-}
-
 /* ------------------------type of element------------------------------------------------------------------------------------------- */
 html {
   scroll-behavior: smooth;
@@ -77,9 +61,9 @@ body {
 
 .eduCardDiv {
 }
-/*--------------------------ID----------------------------*/
+/*--------------------------ID class----------------------------*/
 
-#landingPage {
+#landingPageDiv {
   min-width: 100vw;
   min-height: 100vh;
   background-image: url("../../Frontend/src/assets/gallery/picself2.jpg");
@@ -92,6 +76,10 @@ body {
 #homeP2 {
   min-width: 100vw;
   min-height: 100vh;
+}
+
+#homeP2Main {
+  z-index: 3;
 }
 
 #homeP3 {
@@ -117,19 +105,7 @@ body {
   border-radius: 10px;
 }
 
-#headerTitle {
-  display: block;
-}
-
-#headerName {
-  font-size: 1.5rem;
-  display: inline-block;
-}
-
-#footerDiv {
-  z-index: 9999;
-  min-width: 100%;
-}
+/*header*/
 
 #homeNameTitle {
   font-size: 1.5rem;
@@ -179,34 +155,44 @@ body {
 
 /*Gallery ID*/
 
-#galleryIntroPage {
+.galleryIntroPage {
   min-height: 90vh;
 }
 
-#galleryImg {
+.galleryImg {
   min-width: 100vw;
   max-height: 120vh;
 }
-#galleryIntroPara {
+.galleryIntroPara {
   max-width: 70%;
   text-align: justify;
 }
 
-#galleryQRpage {
+.galleryQRpage {
   min-height: 70vh;
 }
 
+/*cert*/
+.listModeCertDiv {
+  max-height: 40rem;
+  margin: 1.8rem;
+}
+
 /*about*/
-#aboutPageTitle {
+.aboutPageTitle {
   /* background-color: rgba(0, 0, 0, 0.493); */
   padding: 1.2rem;
   border-radius: 10px;
   text-shadow: 3px 4px 5px rgb(103, 101, 101);
 }
-#aboutPageDiv {
-  background-color: rgba(125, 125, 125, 0.566);
+.aboutPageDiv {
   min-height: 100vh;
   min-width: 100vw;
+  background-image: url("../../Frontend/src/assets/gallery/picself.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 #aboutParaDiv {
   justify-content: center;
@@ -216,7 +202,7 @@ body {
   min-height: 100vh;
 }
 
-#aboutCoverLayer {
+.aboutCoverLayer {
   background-image: url("../../Frontend/src/assets/gallery/picself.jpg");
   background-position: center;
   background-size: cover;
@@ -224,7 +210,7 @@ body {
   background-attachment: fixed;
 }
 
-#aboutPara1 {
+.aboutPara1 {
   max-width: 80%;
   justify-self: center;
   background-color: rgba(0, 0, 0, 0.593);
@@ -234,7 +220,7 @@ body {
   text-shadow: 3px 4px 5px rgb(103, 101, 101);
 }
 
-#aboutPara2 {
+.aboutPara2 {
   max-width: 80%;
   justify-self: center;
   background-color: rgba(0, 0, 0, 0.593);
@@ -242,4 +228,64 @@ body {
   padding: 1.8rem;
   border-radius: 10px;
   text-shadow: 3px 4px 5px rgb(103, 101, 101);
+}
+
+/*header and footer*/
+#header {
+}
+
+#headerTitle {
+  display: block;
+}
+
+#headerName {
+  font-size: 1.5rem;
+  display: inline-block;
+}
+#headerName:hover {
+  font-size: 1.7rem;
+  display: inline-block;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.shrinkNavToggle:hover {
+  scale: 1.4;
+  display: inline-block;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.standardNavBtn:hover {
+  scale: 1.4;
+  transform-origin: right;
+  transition-duration: 0.5s;
+}
+
+.shrinkNavBtn {
+  padding-top: 0.2rem;
+}
+.shrinkNavBtn:hover {
+  transition-duration: 0.5s;
+}
+
+.dropdown-item {
+  display: block;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.dropdown-item:hover {
+  background-color: rgb(147, 147, 147);
+  color: rgb(111, 111, 111);
+  scale: 1.1;
+}
+
+.dropdown-item:active {
+  background-color: rgb(103, 103, 103);
+  color: rgb(163, 179, 255);
+}
+
+.footerDiv {
+  z-index: 9999;
+  min-width: 100%;
 }
