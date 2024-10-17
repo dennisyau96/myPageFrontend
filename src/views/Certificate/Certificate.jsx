@@ -9,7 +9,7 @@ function Certificate() {
   const [index, setIndex] = useState(0);
   const [certificates, setCertificates] = useState([...certs]);
   const [loading, setLoading] = useState(true);
-  const [album, setAblum] = useState(true);
+  const [cert, setCert] = useState(true);
   //http://localhost:5173/assets/certificates/pdf/cert1.pdf
   // const openPDF = (index) => {
   //   window.open(certificates[index], "_blank");
@@ -22,7 +22,7 @@ function Certificate() {
     if (certificates != null) {
       setLoading(false);
     }
-    certificates.sort((b, a) => b - a);
+    certificates.sort((a, b) => b.cert - a.cert);
   }, []);
 
   function nextCert() {
@@ -43,18 +43,18 @@ function Certificate() {
 
   function switchMode() {
     let button = document.getElementById("certModeButton");
-    if (album == true) {
+    if (cert == true) {
       button.textContent = "Album mode";
-      setAblum(false);
-    } else if (album == false) {
+      setCert(false);
+    } else if (cert == false) {
       button.textContent = "List mode";
-      setAblum(true);
+      setCert(true);
     }
   }
 
   return (
     <>
-      <div className="text-center Xcenter grid grid-col-1  ">
+      <div className="text-center Xcenter certPageDiv" id="certPageDiv">
         <h1 className="font-bold text-3xl my-4 text-center theme4font pageTitle">
           Certificate
         </h1>
@@ -63,31 +63,31 @@ function Certificate() {
           <button
             id="certModeButton"
             onClick={switchMode}
-            className="my-3 p-2 cursor-pointer text-white border-1 hover:text-black hover:shadow-lg hover:bg-gray-600  hover:transition-all hover:duration-200"
+            className="my-3 p-2 cursor-pointer text-white border-1 hover:text-black hover:shadow-lg hover:bg-gray-600  hover:transition-all hover:duration-200 certModeButton"
           >
             List mode
           </button>
         </div>
-        {album ? (
+        {cert ? (
           loading ? (
             <Loading />
           ) : (
             <div
               id="carouselExampleAutoplaying"
-              className=" certCarousel carousel slide my-4 text-center justify-center border-2 border-gray-300 py-4  hover:shadow-sky-300 hover:shadow-xl transition-all duration-500 ease-in-out"
+              className=" certCarousel carousel slide m-4 text-center Xcenter justify-center border-2 border-gray-300 py-4  hover:shadow-sky-300 hover:shadow-xl w-auto "
               data-bs-ride="carousel"
             >
-              <div className="carousel-inner justify-center text-center">
-                <div className="carousel-item active justify-center text-center">
+              <div className="carousel-inner Xcenter  text-center">
+                <div className="carousel-item active Xcenter text-center">
                   <img
                     src={certificates[index].cert}
-                    className="d-block "
+                    className="d-block Xcenter w-100"
                     alt={certificates[index].title}
                     // onClick={() => openPDF([index])}
                   />
                 </div>
               </div>
-              <div className="text-center theme4font mt-2 ">
+              <div className="text-center Xcenter theme4font mt-2 ">
                 {index + 1}. {certificates[index].title}
               </div>
 
@@ -122,8 +122,11 @@ function Certificate() {
           )
         ) : null}
 
-        {!album ? (
-          <div className=" border-1  p-3 max-h-96 overflow-auto listModeCertDiv">
+        {!cert ? (
+          <div
+            className=" border-1  overflow-auto listModeCertDiv"
+            id="listModeCertDiv"
+          >
             <span className="text-slate-600 text-sm">Please scroll down</span>
             <ul className="justify-center  border-white flex-row px-4 overflow-auto ">
               {certs.map((cert, i) => (
@@ -131,8 +134,8 @@ function Certificate() {
                   key={i}
                   className="text-gray-400 text-left my-2 grid grid-cols-10 "
                 >
-                  <span className="col-span-1 text-slate-500">{i + 1}.</span>
-                  <span className="col-span-9">{cert.title}</span>
+                  <span className="col-span-1 theme2font">{i + 1}. </span>
+                  <span className="col-span-9 theme4font">{cert.title}</span>
                 </li>
               ))}
             </ul>

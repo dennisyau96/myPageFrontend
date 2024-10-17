@@ -8,26 +8,25 @@ function Header() {
     <>
       <div
         id="headerDiv"
-        className="headerDiv sticky-top  top-0 right-0 left-0 shadow-lg  theme1 h-auto  w-full opacity-95 px-3 py-3 block "
+        className="headerDiv sticky-top top-0 right-0 left-0 theme2 w-full opacity-95  pt-1 block "
       >
         <header className=" " id="header">
           <div className="" id="headerTitle">
             <Link
               id="headerName"
-              className="text-white cursor-pointer  p-3  "
+              className="text-white cursor-pointer  px-3  "
               to="/"
             >
               Dennis YAU
             </Link>
-            <ShrinkNavBar />
           </div>
-          <div className="text-right  ">
+          <div className="text-right ">
             <Nav />
+            <ShrinkNavBar />
           </div>
         </header>
         <div className="scrollIndicator"></div>
       </div>
-      <div id="scrollIndicator" className="scrollIndicator"></div>
     </>
   );
 }

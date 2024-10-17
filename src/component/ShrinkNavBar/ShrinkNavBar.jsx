@@ -22,7 +22,7 @@ export default function ShrinkNavBar() {
       {collapsed ? null : (
         <div
           id="dropDownList"
-          className=" mt-3 transition-all duration-500 dropDownList"
+          className=" mt-1 transition-all duration-500 dropDownList py-2 theme1"
           aria-expanded="false"
         >
           <ul className="">

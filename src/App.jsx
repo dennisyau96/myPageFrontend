@@ -36,8 +36,8 @@ export default function App() {
   }, []);
 
   return (
-    <div className="overflow-auto " id="appDiv">
-      <div className="scroll-watcher"></div>
+    <div className="overflow-auto appDiv" id="appDiv">
+      <div className="scroll-watcher" id="scroll-watcher"></div>
       <Toaster position="bottom-center" duration="5000" />
       <Header />
       <div className="w-full" id="mainContent">
@@ -55,6 +55,7 @@ export default function App() {
           </Route>
         </Routes>
       </div>
+
       <Footer visitCount={visitCount} />
     </div>
   );

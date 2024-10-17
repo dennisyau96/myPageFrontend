@@ -5,7 +5,7 @@ function Nav() {
   return (
     <>
       <nav
-        className="text-right justify-end my-0 px-1 flex flex-wrap standardNav"
+        className="text-right justify-end my-0 px-1 flex flex-wrap standardNav right-0"
         id="standardNav"
       >
         <NavLink id="stdNavBtn1" className=" text-white standardNavBtn" to="/">

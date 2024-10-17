@@ -26,17 +26,19 @@ export default function Projects() {
 
   return (
     <>
-      <h1 className="font-bold text-3xl my-4  theme4font pageTitle text-center Xcenter">
-        {" "}
-        Projects{" "}
-      </h1>
-      <div className="flex flex-wrap justify-center">
-        {loading ? <Loading /> : null}
-        {projects.map((project, index) => (
-          <div key={index}>
-            <ProjectCard project={project} />
-          </div>
-        ))}
+      <div>
+        <h1 className="font-bold text-3xl my-4  theme4font pageTitle text-center Xcenter">
+          {" "}
+          Projects{" "}
+        </h1>
+        <div className="flex flex-wrap justify-center text-center Xcenter gap-8 my-10 p-10 projDiv">
+          {loading ? <Loading /> : null}
+          {projects.map((project, index) => (
+            <div key={index} id="projectDiv" className="projectDiv">
+              <ProjectCard project={project} />
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
