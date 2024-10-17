@@ -51,10 +51,10 @@ export default function Home() {
               2024, Vancouver. During my study, I found myself being interested
               in web and software development. I keep on learning different
               coding and programming skills and technologies to prepare myself
-              to become a competitive
-              <span className="text-sky-300 "> Web Developer</span>, or any
-              other tech-related positions. Please feel free to leave a comment
-              below.
+              to become a competitive{" "}
+              <span className="text-sky-300 homeWDSpan">Web Developer</span>, or
+              any other tech-related positions. Please feel free to leave a
+              comment below.
             </div>
           </div>
           <div

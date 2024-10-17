@@ -26,12 +26,12 @@ export default function Projects() {
 
   return (
     <>
-      <div>
+      <div className="projectPageDiv">
         <h1 className="font-bold text-3xl my-4  theme4font pageTitle text-center Xcenter">
           {" "}
           Projects{" "}
         </h1>
-        <div className="flex flex-wrap justify-center text-center Xcenter gap-8 my-10 p-10 projDiv">
+        <div className="flex flex-wrap justify-center text-center Xcenter gap-8 my-10 p-10 projectDiv">
           {loading ? <Loading /> : null}
           {projects.map((project, index) => (
             <div key={index} id="projectDiv" className="projectDiv">

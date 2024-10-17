@@ -49,23 +49,26 @@ function Skills() {
       >
         LinkedIn Learning.
       </a>
-      {loading ? (
-        <Loading />
-      ) : (
-        <div
-          className="skillsDiv flex flex-wrap gap-4 justify-center my-10 container  border-1  p-10 w-3/5 transition-all duration-200 ease-in-out"
-          id="skillsDiv"
-        >
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="transition-all duration-200 ease-in-out "
-            >
-              <SkillCard content={skill} remarks={remarks} />
-            </div>
-          ))}
-        </div>
-      )}
+      <div className="skillsDiv">
+        {" "}
+        {loading ? (
+          <Loading />
+        ) : (
+          <div
+            className="skillsDiv flex flex-wrap gap-4 justify-center my-10 container  border-1  p-10 w-3/5 transition-all duration-200 ease-in-out"
+            id="skillsDiv"
+          >
+            {skills.map((skill, index) => (
+              <div
+                key={index}
+                className="transition-all duration-200 ease-in-out skillsDiv "
+              >
+                <SkillCard content={skill} remarks={remarks} />
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

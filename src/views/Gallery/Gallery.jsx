@@ -92,7 +92,9 @@ export default function Gallery() {
   return (
     <>
       <div className="text-center Xcenter galleryPageDiv" id="galleryPageDiv">
-        <h1 className="font-bold text-3xl my-4 theme4font ">Gallery</h1>
+        <h1 className="font-bold text-3xl my-4 theme4font pageTitle">
+          Gallery
+        </h1>
         <div
           id="galleryIntroPage"
           className=" block content-center galleryIntroPage"
