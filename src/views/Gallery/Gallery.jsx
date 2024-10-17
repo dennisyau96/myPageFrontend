@@ -91,9 +91,12 @@ export default function Gallery() {
 
   return (
     <>
-      <div className="text-center Xcenter ">
+      <div className="text-center Xcenter galleryPageDiv" id="galleryPageDiv">
         <h1 className="font-bold text-3xl my-4 theme4font ">Gallery</h1>
-        <div id="galleryIntroPage" className=" block content-center ">
+        <div
+          id="galleryIntroPage"
+          className=" block content-center galleryIntroPage"
+        >
           <span
             id="galleryIntroPara"
             className="  align-middle inline-block galleryIntroPara m-4 Xcenter text-white "
@@ -105,20 +108,20 @@ export default function Gallery() {
           </span>
           <a
             href="#galleryCarouselPage"
-            className=" block  scroll-smooth pb-auto inset-0 py-20"
+            className=" block scroll-smooth pb-auto inset-0 py-20"
           >
             <i className="fa fa-arrow-down mt-1 text-gray-500 text-3xl  hover:scale-120  cursor-pointer transition-all ease-in-out animate-bounce motion-reduce:animate-bounce "></i>
           </a>
         </div>
 
         <div
-          className="inline-block  text-center content-center align-middle "
+          className="inline-block  text-center content-center align-middle galleryCarouselPage"
           id="galleryCarouselPage"
         >
           {/*carousel */}
           <div
             id="carouselExampleAutoplaying"
-            className=" galleryCarouselDiv carousel slide  carousel-fade   text-center justify-items-center justify-center    hover:shadow-sky-300 hover:shadow-md duration-500 ease-in-out transition-all h-5/6 block"
+            className="carouselExampleAutoplaying galleryCarouselDiv carousel slide  carousel-fade   text-center justify-items-center justify-center    hover:shadow-sky-300 hover:shadow-md duration-500 ease-in-out transition-all h-5/6 block"
             data-bs-ride="carousel"
             data-ride="carousel"
             data-pause="false"
@@ -165,7 +168,10 @@ export default function Gallery() {
           {/*carousel */}
         </div>
 
-        <div className="  text-center content-center" id="galleryQRpage">
+        <div
+          className="  text-center content-center galleryQRpage"
+          id="galleryQRpage"
+        >
           <div className={styles.QRFrame}>
             <img
               className={styles.QRimg}

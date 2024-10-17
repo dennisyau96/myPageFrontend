@@ -5,14 +5,17 @@ import DigitalClock from "../../component/Arcade/DigitalClock/DigitalClock";
 export default function LandingPage() {
   const navigate = useNavigate();
   return (
-    <div className="bg-black Xcenter Ycenter text-center " id="landingPage">
+    <div
+      className="bg-black Xcenter Ycenter text-center landingPageDiv"
+      id="landingPageDiv"
+    >
       <div className="Xcenter">
         <DigitalClock />
       </div>
 
       <div
         id="homeIntroBox"
-        className=" border-1 Xcenter Ycenter text-center p-5 inline-block bg-black opacity-90"
+        className="homeIntroBox border-1 Xcenter Ycenter text-center p-5 inline-block bg-black opacity-90"
       >
         <h1 className="text-white">I am Dennis.</h1>
         <span className="text-white">A Full Stack Developer.</span>

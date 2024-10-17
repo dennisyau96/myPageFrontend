@@ -53,7 +53,7 @@ function Skills() {
         <Loading />
       ) : (
         <div
-          className="flex flex-wrap gap-4 justify-center my-10 container  border-1  p-10 w-3/5 transition-all duration-200 ease-in-out"
+          className="skillsDiv flex flex-wrap gap-4 justify-center my-10 container  border-1  p-10 w-3/5 transition-all duration-200 ease-in-out"
           id="skillsDiv"
         >
           {skills.map((skill, index) => (

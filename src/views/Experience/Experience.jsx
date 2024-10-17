@@ -29,20 +29,19 @@ export default function Experience() {
 
   return (
     <>
-      <h1 className="font-bold text-3xl my-4 text-center theme4font pageTitle">
-        {" "}
-        Experience{" "}
-      </h1>
-      <div
-        className="flex flex-wrap justify-center text-center Xcenter gap-8 my-10 p-10 "
-        id="expDiv"
-      >
-        {loading ? <Loading /> : null}
-        {experience.map((exp, index) => (
-          <div key={index}>
-            <ExperienceCard content={exp} />
-          </div>
-        ))}
+      <div className="expPageDiv" id="expPageDiv">
+        <h1 className="font-bold text-3xl my-4 text-center theme4font pageTitle">
+          {" "}
+          Experience{" "}
+        </h1>
+        <div className="flex flex-wrap justify-center text-center Xcenter gap-8 my-10 p-10 expDiv">
+          {loading ? <Loading /> : null}
+          {experience.map((exp, index) => (
+            <div key={index} className="expDiv" id="expDiv">
+              <ExperienceCard content={exp} />
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

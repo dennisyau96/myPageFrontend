@@ -29,17 +29,14 @@ function Education() {
 
   return (
     <>
-      <div className="">
+      <div className="eduPageDiv" id="eduPageDiv">
         <h1 className="font-bold text-3xl my-4 text-center h-full theme4font pageTitle">
           Education
         </h1>
 
-        <div
-          className=" flex flex-wrap m-10 p-10 justify-center gap-8 text-center Xcenter"
-          id="eduDiv"
-        >
+        <div className=" flex flex-wrap justify-center text-center Xcenter gap-8 my-10 p-10 eduDiv ">
           {education.map((edu, index) => (
-            <div key={index}>
+            <div key={index} id="eduDiv" className="eduDiv">
               <EducationCard content={edu} />
             </div>
           ))}

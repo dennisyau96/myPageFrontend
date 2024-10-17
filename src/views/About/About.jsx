@@ -11,35 +11,40 @@ function About() {
 
   return (
     <>
-      <div id="aboutCoverLayer">
-        <div className="content-center Xcenter text-center" id="aboutPageDiv">
-          <h1
-            className="font-bold text-3xl my-4  Xcenter text-center inline-block theme4font pageTitle "
-            id="aboutPageTitle"
-          >
-            About me
-          </h1>
-          <div className=" theme4font text-justify  block " id="aboutParaDiv">
-            <div className=" Xcenter inline-block " id="aboutPara1">
-              I am Dennis Yau. I am a{" "}
-              <span className="text-sky-300">Full Stack Web Developmer</span>{" "}
-              and <span className="text-sky-300">Software Developmer</span>. I
-              am continuously learning on various coding skills such as advanced{" "}
-              <span className="text-sky-300">{currentLearning}</span>. I am
-              currently focused on{" "}
-              <span className="text-sky-300">{currentFocus}</span>.
-            </div>
-            <span
-              className=" text-center Xcenter inline-block theme4font my-10 "
-              id="aboutPara2"
-            >
-              I am more than happy to receive your email for any job or
-              collaboration.
-            </span>
-            <span className="block justify-center text-center aboutBtn">
-              <EmailButton />
-            </span>
+      <div
+        className="content-center Xcenter text-center aboutPageDiv"
+        id="aboutPageDiv"
+      >
+        <h1
+          className="font-bold text-3xl my-4  Xcenter text-center inline-block theme4font pageTitle aboutPageTitle"
+          id="aboutPageTitle"
+        >
+          About me
+        </h1>
+        <div
+          className=" theme4font text-justify  block aboutParaDiv"
+          id="aboutParaDiv"
+        >
+          <div className=" Xcenter inline-block aboutPara1" id="aboutPara1">
+            I am Dennis Yau, a{" "}
+            <span className="text-sky-300">Full Stack Web Developmer</span> and{" "}
+            <span className="text-sky-300">Software Developmer</span>. I started
+            my IT journey since Sep 2023. Exploring the new coding technology is
+            my daily routine. My main focus is{" "}
+            <span className="text-sky-300">{currentFocus}</span>. Currently, I
+            am also learning{" "}
+            <span className="text-sky-300">{currentLearning}</span>.
           </div>
+          <span
+            className=" text-center Xcenter inline-block theme4font my-10 aboutPara2"
+            id="aboutPara2"
+          >
+            I am more than happy to receive your email for any job or
+            collaboration.
+          </span>
+          <span className="block justify-center text-center aboutBtn">
+            <EmailButton />
+          </span>
         </div>
       </div>
     </>

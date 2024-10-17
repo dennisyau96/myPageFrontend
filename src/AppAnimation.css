@@ -1,4 +1,40 @@
+/*Animation*/
 /*general*/
+@keyframes pageTitleAnm {
+  0% {
+    transform: translateY(-20px);
+    opacity: 40%;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+.pageTitle {
+  animation-name: pageTitleAnm;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+}
+.scroll-watcher {
+  height: 0.75vh;
+  position: fixed;
+  top: 0;
+  z-index: 100000;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  scale: 0 1;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+  transform-origin: center;
+  /* box-shadow: 5px 4px white 0.5; */
+}
+
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
+}
+
 @keyframes pageTitleAnm {
   0% {
     opacity: 0%;
@@ -32,25 +68,48 @@
   }
 }
 
-#digitalClock {
+.digitalClock {
   animation-name: dClockAppAnm;
   animation-duration: 0.5s;
   animation-delay: 0.3s;
   animation-fill-mode: both;
 }
 
-@keyframes landingPageDappAnm {
+@keyframes landingPageAppAnm {
   0% {
+    scale: 1.5;
+    opacity: 0%;
+  }
+  100% {
     scale: 1;
     opacity: 100%;
   }
-  100% {
-    scale: 2;
+}
+
+@keyframes landingPageDappAnm {
+  0% {
+    scale: 1.5;
     opacity: 0%;
+  }
+  100% {
+    scale: 1;
+    opacity: 100%;
   }
 }
 
-#landingPage {
+/* #landingPage {
+  animation-name: landingPageDappAnm;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-timeline: scroll();
+} */
+
+.landingPageDiv {
+  animation-name: landingPageDappAnm;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.3s;
 }
 
 @keyframes homeNameTitleBothAnm {
@@ -67,23 +126,8 @@
     transform: translateX(50px);
   }
 }
-@keyframes homeIntroBoxAnm {
-  0% {
-    scale: 1;
-    opacity: 100%;
-  }
-  100% {
-    scale: 1.5;
-    opacity: 100%;
-  }
-}
-#homeIntroBox {
-  animation-name: homeIntroBoxAnm;
-  /* animation-timeline: view(100px 100px); */
-  animation-timing-function: linear;
-}
 
-#homeNameTitle {
+.homeNameTitle {
   animation-name: homeNameTitleBothAnm;
   animation-timing-function: linear;
   animation-timeline: view();
@@ -98,7 +142,7 @@
   }
 }
 
-#homeP2 {
+.homeP2 {
   animation-name: homeP2Anm;
   animation-timing-function: linear;
   animation-timeline: inherit;
@@ -106,11 +150,71 @@
 
 /*edu*/
 
+@keyframes eduDivAnm {
+  0% {
+    opacity: 40%;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.eduDiv {
+  animation-name: eduDivAnm;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes eduCardAnm {
+  0% {
+    opacity: 40%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.eduCardDiv {
+  animation-name: eduCardAnm;
+  animation-timing-function: linear;
+  animation-duration: view();
+}
 /*exp*/
+.expDiv {
+  animation-name: eduDivAnm;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes expCardAnm {
+  0% {
+    opacity: 40%;
+    scale: 0.8;
+  }
+  100% {
+    opacity: 100%;
+    scale: 1;
+  }
+}
+
+.expCardDiv {
+  animation-name: eduCardAnm;
+  animation-timing-function: linear;
+  animation-duration: view();
+}
 
 /*proj*/
+.projectDiv {
+  animation-name: eduDivAnm;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
 
 /*skills*/
+.skillsDiv {
+  animation-name: eduDivAnm;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
 
 /*cert*/
 
@@ -125,7 +229,7 @@
     scale: 1;
   }
 }
-#galleryIntroPage {
+.galleryIntroPage {
   animation-name: galleryIntroPageDappAnm;
   animation-timing-function: ease-in-out;
   animation-duration: 0.5s;
@@ -143,31 +247,18 @@
   }
 }
 
-#aboutParaDiv {
+/* #aboutParaDiv {
+  animation-name: aboutParaDivAnm;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+} */
+.aboutCoverLayer {
   animation-name: aboutParaDivAnm;
   animation-timing-function: ease-in-out;
   animation-duration: 0.5s;
 }
 
 /*header*/
-
-@keyframes scrollIndicatorAnm {
-  to {
-    scale: 1 1;
-    width: 100%;
-  }
-}
-
-.scrollIndicator {
-  animation-name: scrollIndicatorAnm;
-  height: 15px;
-  background-color: white;
-  position: fixed;
-  top: 0;
-  scale: 0 1;
-  z-index: 1000;
-  transform-origin: left;
-}
 
 @keyframes headerNameAnm {
   0% {
@@ -183,35 +274,35 @@
 @keyframes stdNavAnm {
   0% {
     opacity: 0%;
-    transform: translateY(10px);
+    transform: translateY(-10px);
   }
   100% {
     opacity: 100%;
   }
 }
 
-#headerName {
+.headerName {
   animation-name: headerNameAnm;
   animation-duration: 0.5s;
   animation-delay: 0.5s;
   animation-fill-mode: both;
 }
 
-#standardNav {
+.standardNav {
   animation-name: stdNavAnm;
   animation-duration: 0.5s;
   animation-delay: 0.3s;
   animation-fill-mode: both;
 }
 
-#shrinkNavToggle {
+.shrinkNavToggle {
   animation-name: stdNavAnm;
   animation-duration: 0.5s;
   animation-delay: 0.3s;
   animation-fill-mode: both;
 }
 
-#dropDownList {
+.shrinkNavBtn {
   animation-name: stdNavAnm;
   animation-duration: 0.4s;
   animation-delay: 0.2s;
@@ -228,9 +319,82 @@
     opacity: 100;
   }
 }
-#headerName {
+.headerName {
   animation-name: footerAnm;
   animation-duration: 0.5s;
   animation-delay: 0.5s;
   animation-fill-mode: both;
 }
+
+/*Animation BG*/
+/*Floating Ball*/
+.floatingBallBGDiv {
+  height: 60vh;
+  background-color: rgba(0, 0, 0, 0);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+.bubbles {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: -1;
+  height: 5vh;
+  justify-content: space-between;
+}
+
+.bubbles span {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background-color: #f1f1f1;
+  margin: 0 9px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px #4f67dc44, 0 0 50px #f1f1f1, 0 0 100px #f1f1f1;
+  animation: bubbleAnm 15s linear infinite;
+  animation-duration: calc(100s / var(--i));
+  z-index: 0;
+}
+
+.bubbles span:nth-child(2n) {
+  position: relative;
+  width: 10px;
+  height: 10px;
+
+  background-color: #f1f1f1;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px #ff2d7644, 0 0 50px #f1f1f1, 0 0 100px #f1f1f1;
+  animation: bubbleAnm 15s linear infinite;
+  animation-duration: calc(100s / var(--i));
+}
+.bubbles span:nth-child(5n) {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background-color: #f1f1f1;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px #2dff8144, 0 0 50px #f1f1f1, 0 0 100px #f1f1f1;
+  animation: bubbleAnm 15s linear infinite;
+  animation-duration: calc(100s / var(--i));
+}
+@keyframes bubbleAnm {
+  0% {
+    transform: translateY(100vh) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY() scale(1);
+    opacity: 100;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/*---------------------------Animation--------------------------------*/
