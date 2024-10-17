@@ -54,7 +54,6 @@ html {
 body {
   font-family: "Courier", "Courier New", "Georgia", "Times New Roman", serif;
   background-color: black;
-  overflow-x: none;
 }
 
 /* --------------------------class of part----------------------------------------------------------------- */
@@ -176,6 +175,14 @@ body {
 .listModeCertDiv {
   max-height: 40rem;
   margin: 1.8rem;
+}
+.certDiv {
+  max-width: 1000px;
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+  justify-self: center;
+  display: inline-block;
 }
 
 /*about*/

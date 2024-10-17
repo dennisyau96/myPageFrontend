@@ -92,7 +92,9 @@ export default function Gallery() {
   return (
     <>
       <div className="text-center Xcenter galleryPageDiv" id="galleryPageDiv">
-        <h1 className="font-bold text-3xl my-4 theme4font ">Gallery</h1>
+        <h1 className="font-bold text-3xl my-4 theme4font pageTitle">
+          Gallery
+        </h1>
         <div
           id="galleryIntroPage"
           className=" block content-center galleryIntroPage"
@@ -101,10 +103,11 @@ export default function Gallery() {
             id="galleryIntroPara"
             className="  align-middle inline-block galleryIntroPara m-4 Xcenter text-white "
           >
-            I am a photography hobbist. I started shooting photo since 2017. I
-            was inspired by my co-worker at a conservation organization at that
-            time. Pictures of wildlifes, landscape and street are my area of
-            interest.
+            I am a{" "}
+            <span className="homeWDSpan text-sky-600">photography hobbist</span>
+            . I started shooting photo since 2017. I was inspired by my
+            co-worker at a conservation organization at that time. Pictures of
+            wildlifes, landscape and street are my area of interest.
           </span>
           <a
             href="#galleryCarouselPage"
@@ -131,7 +134,7 @@ export default function Gallery() {
               <div className="carousel-item active justify-center transition-all duration-500 ease-in-out">
                 <img
                   src={photosSrc[index].pic}
-                  className="d-block w-full  transition-all duration-300 ease-in-out galleryPhotoDiv "
+                  className="d-block w-full  transition-all duration-300 ease-in-out galleryPhotoImg "
                   alt=""
                   id="galleryImg"
                 />

@@ -18,7 +18,9 @@ export default function LandingPage() {
         className="homeIntroBox border-1 Xcenter Ycenter text-center p-5 inline-block bg-black opacity-90"
       >
         <h1 className="text-white">I am Dennis.</h1>
-        <span className="text-white">A Full Stack Developer.</span>
+        <span className="text-white">
+          A Full Stack Developer.<span className="typeWriterSpan">|</span>
+        </span>
         <span className="block">
           <Link
             className=""

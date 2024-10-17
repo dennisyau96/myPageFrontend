@@ -1,6 +1,562 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      /*Animation*/
+      /*general*/
+      @keyframes pageTitleAnm {
+        0% {
+          opacity: 40%;
+          scale: 0.5;
+        }
+        100% {
+          opacity: 100%;
+          scale: 1;
+        }
+      }
+      .pageTitle {
+        animation-name: pageTitleAnm;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-in-out;
+      }
+      .scroll-watcher {
+        height: 0.6vh;
+        position: fixed;
+        top: 0;
+        z-index: 100000;
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        scale: 0 1;
+        animation: scroll-watcher linear;
+        animation-timeline: scroll();
+        transform-origin: center;
+        /* box-shadow: 5px 4px white 0.5; */
+      }
+
+      @keyframes scroll-watcher {
+        0% {
+          background-color: rgb(255, 255, 255);
+        }
+
+        100% {
+          scale: 1 1;
+          background-color: rgb(255, 255, 255);
+        }
+      }
+
+      /*home*/
+
+      @keyframes dClockAppAnm {
+        0% {
+          transform: translateY(-100px);
+          opacity: 0%;
+        }
+        100% {
+          transform: translateY(0px);
+          opacity: 100%;
+        }
+      }
+
+      .digitalClock {
+        animation-name: dClockAppAnm;
+        animation-duration: 0.5s;
+        animation-delay: 0.3s;
+        animation-fill-mode: both;
+      }
+
+      @keyframes landingPageAppAnm {
+        0% {
+          scale: 1.5;
+          opacity: 0%;
+        }
+        100% {
+          scale: 1;
+          opacity: 100%;
+        }
+      }
+
+      @keyframes landingPageDappAnm {
+        0% {
+          scale: 1.5;
+          opacity: 0%;
+        }
+        100% {
+          scale: 1;
+          opacity: 100%;
+        }
+      }
+
+      /* #landingPage {
+  animation-name: landingPageDappAnm;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-timeline: scroll();
+} */
+
+      .landingPageDiv {
+        animation-name: landingPageDappAnm;
+        animation-duration: 0.5s;
+        animation-fill-mode: both;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0.3s;
+
+        min-width: 100vw;
+        min-height: 100vh;
+        background-image: url("../../Frontend/src/assets/gallery/picself2.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      @keyframes typeWriterAnm {
+        0% {
+          opacity: 0;
+        }
+        30% {
+          opacity: 100%;
+        }
+        100% {
+          opacity: 100%;
+        }
+      }
+      .typeWriterSpan {
+        animation: typeWriterAnm;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: 0.7s;
+        font-weight: 900;
+        color: rgb(127, 160, 203);
+      }
+
+      @keyframes homeWDSpanAnm {
+        0% {
+          background-color: rgba(255, 255, 255, 0.553);
+          color: white;
+        }
+        100% {
+          background-color: none;
+        }
+      }
+
+      .homeWDSpan {
+        animation-name: homeWDSpanAnm;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: 1s;
+        animation-direction: normal;
+        padding: 0.2rem;
+      }
+
+      @keyframes homeNameTitleBothAnm {
+        0% {
+          opacity: 0%;
+          transform: translateX(-50px);
+        }
+        50% {
+          opacity: 100%;
+          transform: translateX(0px);
+        }
+        100% {
+          opacity: 0%;
+          transform: translateX(50px);
+        }
+      }
+
+      .homeNameTitle {
+        animation-name: homeNameTitleBothAnm;
+        animation-timing-function: linear;
+        animation-timeline: view();
+        animation-range: exit;
+      }
+      @keyframes homeTitleTitleAnm {
+        0% {
+          background-color: #f1f1f1;
+        }
+        50% {
+          color: black;
+        }
+        100% {
+          background-color: none;
+        }
+      }
+      #homeTitleTitle {
+        animation-name: homeTitleTitleAnm;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      @keyframes homeP2Anm {
+        0% {
+          opacity: 100%;
+        }
+        100% {
+          opacity: 0%;
+        }
+      }
+
+      .homeP2 {
+        animation-name: homeP2Anm;
+        animation-timing-function: linear;
+        animation-timeline: inherit;
+      }
+
+      @keyframes homeP2GlowBarAnm {
+        0% {
+          transform: translateY(-20px);
+          background-image: linear-gradient(
+            to top,
+            rgba(228, 228, 228, 0.179),
+            rgba(228, 228, 228, 0.279),
+            rgba(258, 258, 258, 0.487)
+          );
+        }
+        100% {
+          transform: translateY(20px);
+          background-image: linear-gradient(
+            to top,
+            rgba(225, 102, 102, 0.179),
+            rgba(190, 10, 10, 0.887),
+            rgba(181, 62, 62, 0.279) 7
+          );
+        }
+      }
+      .homeP2GlowBar {
+        animation-name: homeP2GlowBarAnm;
+        animation-timeline: scroll();
+        height: 10px;
+        width: 100%;
+        background-image: linear-gradient(
+          to top,
+          rgba(228, 228, 228, 0.179),
+          rgba(228, 228, 228, 0.279),
+          rgba(258, 258, 258, 0.487)
+        );
+        box-shadow: 0px -5px 5px;
+      }
+      /*edu*/
+
+      @keyframes eduDivAnm {
+        0% {
+          opacity: 40%;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 100%;
+        }
+      }
+
+      .eduDiv {
+        animation-name: eduDivAnm;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+      }
+      @keyframes eduCardAnm {
+        0% {
+          opacity: 40%;
+        }
+        100% {
+          opacity: 100%;
+        }
+      }
+      .eduCardDiv {
+        animation-name: eduCardAnm;
+        animation-timing-function: linear;
+        animation-duration: view();
+      }
+      /*exp*/
+      .expDiv {
+        animation-name: eduDivAnm;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+      }
+
+      @keyframes expCardAnm {
+        0% {
+          opacity: 40%;
+          scale: 0.8;
+        }
+        100% {
+          opacity: 100%;
+          scale: 1;
+        }
+      }
+
+      .expCardDiv {
+        animation-name: eduCardAnm;
+        animation-timing-function: linear;
+        animation-duration: view();
+      }
+
+      /*proj*/
+      .projectDiv {
+        animation-name: eduDivAnm;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+      }
+
+      /*skills*/
+      .skillsDiv {
+        animation-name: eduDivAnm;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+      }
+
+      /*cert*/
+
+      @keyframes certModeBtnAnm {
+        0% {
+          scale: 1 1;
+          opacity: 100%;
+        }
+        100% {
+          scale: 0.8 1;
+          opacity: 0%;
+        }
+      }
+      .certModeButton {
+        animation: certModeBtnAnm linear;
+        view-timeline-axis: view();
+      }
+
+      /*gallery*/
+
+      @-webkit-keyframes spinningSquareAnm {
+        0% {
+          transform: rotateX(90deg);
+        }
+        /* 25% {
+    transform: rotateY(90deg);
+  }
+  50% {
+    transform: rotateZ(90deg);
+  }
+  75% {
+    transform: rotateX(90deg);
+  } */
+
+        100% {
+          transform: rotateX(180deg);
+        }
+      }
+
+      .spinningSquare {
+        width: 100px;
+        height: 100px;
+        border-color: rgb(81, 143, 231);
+        border-width: 2px;
+        background-color: rgb(255, 255, 255);
+        animation: spinningSquareAnm linear;
+        animation-timeline: scroll(100px 100px);
+      }
+
+      @keyframes galleryIntroPageDappAnm {
+        0% {
+          opacity: 0%;
+          scale: 2;
+        }
+        100% {
+          opacity: 100%;
+          scale: 1;
+        }
+      }
+      .galleryIntroPage {
+        animation-name: galleryIntroPageDappAnm;
+        animation-timing-function: ease-in-out;
+        animation-duration: 0.5s;
+      }
+      @keyframes galleryImgAnm {
+        0% {
+          transform: translateY(0px);
+        }
+        100% {
+          transform: translateY(-20px);
+        }
+      }
+      .galleryPhotoImg {
+        animation-name: galleryImgAnm;
+        animation-duration: 0.5s;
+      }
+      @-webkit-keyframes galleryQRpageAnm {
+        0% {
+          opacity: 40%;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 100%;
+          transform: translateY(0px);
+        }
+      }
+
+      .galleryQRpage {
+        animation-name: galleryQRpageAnm;
+        animation-timeline: scroll();
+      }
+
+      /*about*/
+      @keyframes aboutParaDivAnm {
+        0% {
+          opacity: 0%;
+          scale: 1.5;
+        }
+        100% {
+          opacity: 100%;
+          scale: 1;
+        }
+      }
+
+      /* #aboutParaDiv {
+  animation-name: aboutParaDivAnm;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+} */
+      .aboutCoverLayer {
+        animation-name: aboutParaDivAnm;
+        animation-timing-function: ease-in-out;
+        animation-duration: 0.5s;
+      }
+
+      /*header*/
+
+      @keyframes headerNameAnm {
+        0% {
+          opacity: 0%;
+          scale: 2;
+        }
+        100% {
+          opacity: 100%;
+          scale: 1;
+        }
+      }
+
+      @keyframes stdNavAnm {
+        0% {
+          opacity: 0%;
+          transform: translateY(-10px);
+        }
+        100% {
+          opacity: 100%;
+        }
+      }
+
+      .headerName {
+        animation-name: headerNameAnm;
+        animation-duration: 0.5s;
+        animation-delay: 0.5s;
+        animation-fill-mode: both;
+      }
+
+      .standardNav {
+        animation-name: stdNavAnm;
+        animation-duration: 0.5s;
+        animation-delay: 0.3s;
+        animation-fill-mode: both;
+      }
+
+      .shrinkNavToggle {
+        animation-name: stdNavAnm;
+        animation-duration: 0.5s;
+        animation-delay: 0.3s;
+        animation-fill-mode: both;
+      }
+
+      .shrinkNavBtn {
+        animation-name: stdNavAnm;
+        animation-duration: 0.4s;
+        animation-delay: 0.2s;
+        animation-fill-mode: both;
+      }
+
+      /*footer*/
+
+      @keyframes footerAnm {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 100;
+        }
+      }
+      .headerName {
+        animation-name: footerAnm;
+        animation-duration: 0.5s;
+        animation-delay: 0.5s;
+        animation-fill-mode: both;
+      }
+
+      /*Animation BG*/
+      /*Floating Ball*/
+      .floatingBallBGDiv {
+        height: 60vh;
+        background-color: rgba(0, 0, 0, 0);
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 0;
+      }
+      .bubbles {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        z-index: -1;
+        height: 5vh;
+        justify-content: space-between;
+      }
+
+      .bubbles span {
+        position: relative;
+        width: 10px;
+        height: 10px;
+        background-color: #f1f1f1;
+        margin: 0 9px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 5px #4f67dc44, 0 0 50px #f1f1f1, 0 0 100px #f1f1f1;
+        animation: bubbleAnm 15s linear infinite;
+        animation-duration: calc(100s / var(--i));
+        z-index: 0;
+      }
+
+      .bubbles span:nth-child(2n) {
+        position: relative;
+        width: 10px;
+        height: 10px;
+
+        background-color: #f1f1f1;
+        margin: 0 4px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 6px #ff2d7644, 0 0 50px #f1f1f1, 0 0 100px #f1f1f1;
+        animation: bubbleAnm 15s linear infinite;
+        animation-duration: calc(100s / var(--i));
+      }
+      .bubbles span:nth-child(5n) {
+        position: relative;
+        width: 10px;
+        height: 10px;
+        background-color: #f1f1f1;
+        margin: 0 4px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 6px #2dff8144, 0 0 50px #f1f1f1, 0 0 100px #f1f1f1;
+        animation: bubbleAnm 15s linear infinite;
+        animation-duration: calc(100s / var(--i));
+      }
+      @keyframes bubbleAnm {
+        0% {
+          transform: translateY(100vh) scale(0);
+          opacity: 0;
+        }
+        50% {
+          transform: translateY() scale(1);
+          opacity: 100;
+        }
+        100% {
+          transform: translateY(-100vh) scale(0.5);
+          opacity: 0;
+        }
+      }
+
+      /*---------------------------Animation--------------------------------*/
+    </style>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -117,10 +673,10 @@
 
     <link href="../Frontend/src/AppMedia.css" rel="stylesheet" />
 
-    <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
+    <!-- <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script> -->
   </head>
 
   <body>
-    <div id="root" className="bg-black"></div>
+    <div id="root" className=""></div>
   </body>
 </html>
