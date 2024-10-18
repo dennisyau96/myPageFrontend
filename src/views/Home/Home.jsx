@@ -136,7 +136,7 @@ export default function Home() {
       <div className="homeP2GlowBar"></div>
 
       <div className=" bg-black text-center block homeP3 " id="homeP3">
-        <span className=" text-gray-400 block pt-10 text-2xl">
+        <span className=" text-gray-400 block  text-2xl ">
           Let&apos;s have fun!
         </span>
         <div
@@ -155,9 +155,10 @@ export default function Home() {
           </div>
 
           <div>{/* <CardShuffle /> */}</div>
-          <div className=" theme3font animate-pulse">
-            More features are coming...
-          </div>
+        </div>
+        <span className="loadingSquare inline-block"></span>
+        <div className=" theme3font animate-pulse">
+          More features are coming...
         </div>
       </div>
     </div>
