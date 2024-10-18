@@ -19,7 +19,7 @@ export default function LandingPage() {
       >
         <h1 className="text-white">I am Dennis.</h1>
         <span className="text-white">
-          A Full Stack Developer.<span className="typeWriterSpan">|</span>
+          A Full Stack Developer.<span className=" inline-block">|</span>
         </span>
         <span className="block">
           <Link
