@@ -107,7 +107,7 @@ function EducationCard({ content, index }) {
             {content.acheivement ? (
               <li className=" z-0  contentRow grid-cols-6 gap-3">
                 <span className="col-span-2 text-sm  text-slate-400  eduCardSubTitle">
-                  award(s):{" "}
+                  Award:{" "}
                 </span>
                 <span className="theme4font col-span-2 text-sm eduCardSubContent">
                   {content.acheivement}

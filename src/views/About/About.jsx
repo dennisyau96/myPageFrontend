@@ -28,9 +28,9 @@ function About() {
           <div className=" Xcenter inline-block aboutPara1" id="aboutPara1">
             I am Dennis Yau, a{" "}
             <span className="text-sky-300">Full Stack Web Developmer</span> and{" "}
-            <span className="text-sky-300">Software Developmer</span>. I started
-            my IT journey since Sep 2023. Exploring the new coding technology is
-            my daily routine. My main focus is{" "}
+            <span className="text-sky-300">Software Developer</span>. I have
+            started my IT journey since Sep 2023. Exploring the new coding
+            technology is my daily routine. My main focus is{" "}
             <span className="text-sky-300">{currentFocus}</span>. Currently, I
             am also learning{" "}
             <span className="text-sky-300">{currentLearning}</span>.
@@ -39,8 +39,8 @@ function About() {
             className=" text-center Xcenter inline-block theme4font my-10 aboutPara2"
             id="aboutPara2"
           >
-            I am more than happy to receive your email for any job or
-            collaboration.
+            I am more than happy to receive your email for any jobs or
+            collaborations.
           </span>
           <span className="block justify-center text-center aboutBtn">
             <EmailButton />

@@ -133,7 +133,7 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <div className="homeP2GlowBar"></div>
+      <div className="homeP2GlowBar pb-5"></div>
 
       <div className=" bg-black text-center block homeP3 " id="homeP3">
         <span className=" text-gray-400 block  text-2xl ">
