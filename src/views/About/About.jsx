@@ -27,7 +27,7 @@ function About() {
         >
           <div className=" Xcenter inline-block aboutPara1" id="aboutPara1">
             I am Dennis Yau, a{" "}
-            <span className="text-sky-300">Full Stack Web Developmer</span> and{" "}
+            <span className="text-sky-300">Full Stack Web Developer</span> and{" "}
             <span className="text-sky-300">Software Developer</span>. I have
             started my IT journey since Sep 2023. Exploring the new coding
             technology is my daily routine. My main focus is{" "}
