@@ -64,7 +64,7 @@ body {
 
 #landingPageDiv {
   min-width: 100vw;
-  min-height: 100vh;
+  min-height: 110vh;
   background-image: url("../../Frontend/src/assets/gallery/picself2.jpg");
   background-position: center;
   background-size: cover;
@@ -200,6 +200,14 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+
+  /* min-height: 100vh;
+  min-width: 100vw;
+  background-image: url("../../Frontend/src/assets/gallery/picself.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll; */
 }
 #aboutParaDiv {
   justify-content: center;
