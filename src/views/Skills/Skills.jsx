@@ -36,19 +36,21 @@ function Skills() {
       </h1>
       <span className=" skillPagePara text-center justify-center justify-items-center max-w-50 text-slate-600  text-sm flex-wrap inline">
         I am passionate in learning various kind of skills using{" "}
+        <a
+          className="text-gray-400 underline cursor-pointer transition-all duration-200 animation-pulse inline"
+          target="_blank"
+          href="https://learning.linkedin.com/cx/get-started?src=go-pa&trk=sem-ga_campid.20913255557_asid.161076147087_crid.686759883542_kw.linkedin%20learning_d.c_tid.kwd-296672886869_n.g_mt.b_geo.9001499&mcid=7148407339128156199&cid=&gad_source=1&gbraid=0AAAAADQDH5QIRJdehAsW_-QA1icSpuSGj&gclid=Cj0KCQjwjNS3BhChARIsAOxBM6o5Hl9feXRtqyfsDYgwgFVOcwjN1s9Nq8-n2D4t8AwyjsCbilsmQ-QaAqWHEALw_wcB&gclsrc=aw.ds"
+          onClick={() => {
+            if (!confirm("You will be directed to an external website.")) {
+              navigate(0);
+            }
+          }}
+        >
+          LinkedIn Learning
+        </a>
+        .
       </span>
-      <a
-        className="text-gray-400 underline cursor-pointer transition-all duration-200 animation-pulse inline"
-        target="_blank"
-        href="https://learning.linkedin.com/cx/get-started?src=go-pa&trk=sem-ga_campid.20913255557_asid.161076147087_crid.686759883542_kw.linkedin%20learning_d.c_tid.kwd-296672886869_n.g_mt.b_geo.9001499&mcid=7148407339128156199&cid=&gad_source=1&gbraid=0AAAAADQDH5QIRJdehAsW_-QA1icSpuSGj&gclid=Cj0KCQjwjNS3BhChARIsAOxBM6o5Hl9feXRtqyfsDYgwgFVOcwjN1s9Nq8-n2D4t8AwyjsCbilsmQ-QaAqWHEALw_wcB&gclsrc=aw.ds"
-        onClick={() => {
-          if (!confirm("You will be directed to an external website.")) {
-            navigate(0);
-          }
-        }}
-      >
-        LinkedIn Learning.
-      </a>
+
       <div className="skillsDiv">
         {" "}
         {loading ? (
