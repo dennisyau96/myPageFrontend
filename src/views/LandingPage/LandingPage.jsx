@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import DigitalClock from "../../component/Arcade/DigitalClock/DigitalClock";
+import BGpic from "../../assets/gallery/picSelf2.jpg";
 // import ParticlesBG from "../../component/ParticlesBG/ParticleBG";
 export default function LandingPage() {
   const navigate = useNavigate();
@@ -8,6 +9,11 @@ export default function LandingPage() {
     <div
       className="bg-black Xcenter Ycenter text-center landingPageDiv"
       id="landingPageDiv"
+      style={{
+        backgroundImage: "../../assets/gallery/picSelf2.jpg",
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed",
+      }}
     >
       <div className="Xcenter">
         <DigitalClock />
