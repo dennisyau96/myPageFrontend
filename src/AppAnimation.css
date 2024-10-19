@@ -120,19 +120,19 @@
   animation-timeline: scroll();
 } */
 
-.landingPageDiv {
+.homeIntroBox {
   animation-name: landingPageDappAnm;
   animation-duration: 0.5s;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
   animation-delay: 0.3s;
-  min-width: 100vw;
-  min-height: 100vh;
-  background-image: url("../../Frontend/src/assets/gallery/picself2.jpg");
+  /* min-width: 100vw;
+  min-height: 100vh; */
+  /* background-image: url("../../Frontend/src/assets/gallery/picself2.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 }
 @keyframes typeWriterAnm {
   0% {
@@ -418,18 +418,11 @@
   animation-duration: 0.5s;
 }
 
-.aboutPageDiv {
+.aboutParaDiv {
   animation-name: aboutParaDivAnm;
   animation-timing-function: normal;
   animation-duration: 0.5s;
   transform-origin: center;
-  min-height: 100vh;
-  min-width: 100vw;
-  background-image: url("../../Frontend/src/assets/gallery/picself.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
 }
 
 /*header*/
