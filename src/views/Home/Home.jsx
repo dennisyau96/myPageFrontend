@@ -133,9 +133,9 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <div className="homeP2GlowBar pb-5"></div>
+      {/* <div className="homeP2GlowBar pb-5"></div> */}
 
-      <div className=" bg-black text-center block homeP3 " id="homeP3">
+      <div className=" bg-gray-500 text-center block homeP3 " id="homeP3">
         <span className=" text-gray-400 block  text-2xl ">
           Let&apos;s have fun!
         </span>
@@ -157,7 +157,7 @@ export default function Home() {
           <div>{/* <CardShuffle /> */}</div>
         </div>
         <span className="loadingSquare inline-block"></span>
-        <div className=" theme3font animate-pulse">
+        <div className=" theme3font animate-pulse mb-4">
           More features are coming...
         </div>
       </div>
