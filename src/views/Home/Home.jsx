@@ -135,8 +135,8 @@ export default function Home() {
       </div>
       {/* <div className="homeP2GlowBar pb-5"></div> */}
 
-      <div className=" bg-gray-500 text-center block homeP3 " id="homeP3">
-        <span className=" text-gray-400 block  text-2xl ">
+      <div className=" bg-gray-900 text-center block homeP3 " id="homeP3">
+        <span className=" text-gray-400 block  text-2xl p-3 pt-4">
           Let&apos;s have fun!
         </span>
         <div
